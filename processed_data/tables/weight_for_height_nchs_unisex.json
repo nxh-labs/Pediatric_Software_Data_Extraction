@@ -1,0 +1,855 @@
+{
+  "name": "Table de référence poids pour taille unisexe NCHS",
+  "code": "weight_for_height_nchs_unisex",
+  "data": [
+    {
+      "value": 120.5,
+      "severeNeg": 15.5,
+      "moderateNeg": 17.7,
+      "outComeTargetValueNeg": 18.8,
+      "median": 22.1,
+      "isUnisex": true
+    },
+    {
+      "value": 121,
+      "severeNeg": 15.6,
+      "moderateNeg": 17.8,
+      "outComeTargetValueNeg": 19,
+      "median": 22.3,
+      "isUnisex": true
+    },
+    {
+      "value": 121.5,
+      "severeNeg": 15.8,
+      "moderateNeg": 18,
+      "outComeTargetValueNeg": 19.1,
+      "median": 22.5,
+      "isUnisex": true
+    },
+    {
+      "value": 122,
+      "severeNeg": 15.9,
+      "moderateNeg": 18.2,
+      "outComeTargetValueNeg": 19.3,
+      "median": 22.7,
+      "isUnisex": true
+    },
+    {
+      "value": 122.5,
+      "severeNeg": 16.1,
+      "moderateNeg": 18.4,
+      "outComeTargetValueNeg": 19.5,
+      "median": 23,
+      "isUnisex": true
+    },
+    {
+      "value": 123,
+      "severeNeg": 16.2,
+      "moderateNeg": 18.6,
+      "outComeTargetValueNeg": 19.7,
+      "median": 23.2,
+      "isUnisex": true
+    },
+    {
+      "value": 123.5,
+      "severeNeg": 16.4,
+      "moderateNeg": 18.8,
+      "outComeTargetValueNeg": 19.9,
+      "median": 23.5,
+      "isUnisex": true
+    },
+    {
+      "value": 124,
+      "severeNeg": 16.6,
+      "moderateNeg": 19,
+      "outComeTargetValueNeg": 20.1,
+      "median": 23.7,
+      "isUnisex": true
+    },
+    {
+      "value": 124.5,
+      "severeNeg": 16.8,
+      "moderateNeg": 19.2,
+      "outComeTargetValueNeg": 20.4,
+      "median": 24,
+      "isUnisex": true
+    },
+    {
+      "value": 125,
+      "severeNeg": 16.9,
+      "moderateNeg": 19.4,
+      "outComeTargetValueNeg": 20.6,
+      "median": 24.2,
+      "isUnisex": true
+    },
+    {
+      "value": 125.5,
+      "severeNeg": 17.1,
+      "moderateNeg": 19.6,
+      "outComeTargetValueNeg": 20.8,
+      "median": 24.5,
+      "isUnisex": true
+    },
+    {
+      "value": 126,
+      "severeNeg": 17.3,
+      "moderateNeg": 19.8,
+      "outComeTargetValueNeg": 21,
+      "median": 24.7,
+      "isUnisex": true
+    },
+    {
+      "value": 126.5,
+      "severeNeg": 17.5,
+      "moderateNeg": 20,
+      "outComeTargetValueNeg": 21.2,
+      "median": 25,
+      "isUnisex": true
+    },
+    {
+      "value": 127,
+      "severeNeg": 17.7,
+      "moderateNeg": 20.2,
+      "outComeTargetValueNeg": 21.5,
+      "median": 25.3,
+      "isUnisex": true
+    },
+    {
+      "value": 127.5,
+      "severeNeg": 17.9,
+      "moderateNeg": 20.4,
+      "outComeTargetValueNeg": 21.7,
+      "median": 25.5,
+      "isUnisex": true
+    },
+    {
+      "value": 128,
+      "severeNeg": 18.1,
+      "moderateNeg": 20.7,
+      "outComeTargetValueNeg": 21.9,
+      "median": 25.8,
+      "isUnisex": true
+    },
+    {
+      "value": 128.5,
+      "severeNeg": 18.3,
+      "moderateNeg": 20.9,
+      "outComeTargetValueNeg": 22.2,
+      "median": 26.1,
+      "isUnisex": true
+    },
+    {
+      "value": 129,
+      "severeNeg": 18.5,
+      "moderateNeg": 21.1,
+      "outComeTargetValueNeg": 22.4,
+      "median": 26.4,
+      "isUnisex": true
+    },
+    {
+      "value": 129.5,
+      "severeNeg": 18.7,
+      "moderateNeg": 21.3,
+      "outComeTargetValueNeg": 22.7,
+      "median": 26.7,
+      "isUnisex": true
+    },
+    {
+      "value": 130,
+      "severeNeg": 18.9,
+      "moderateNeg": 21.6,
+      "outComeTargetValueNeg": 22.9,
+      "median": 27,
+      "isUnisex": true
+    },
+    {
+      "value": 130.5,
+      "severeNeg": 19.1,
+      "moderateNeg": 21.8,
+      "outComeTargetValueNeg": 23.2,
+      "median": 27.3,
+      "isUnisex": true
+    },
+    {
+      "value": 131,
+      "severeNeg": 19.3,
+      "moderateNeg": 22.1,
+      "outComeTargetValueNeg": 23.4,
+      "median": 27.6,
+      "isUnisex": true
+    },
+    {
+      "value": 131.5,
+      "severeNeg": 19.5,
+      "moderateNeg": 22.3,
+      "outComeTargetValueNeg": 23.7,
+      "median": 27.9,
+      "isUnisex": true
+    },
+    {
+      "value": 132,
+      "severeNeg": 19.7,
+      "moderateNeg": 22.5,
+      "outComeTargetValueNeg": 24,
+      "median": 28.2,
+      "isUnisex": true
+    },
+    {
+      "value": 132.5,
+      "severeNeg": 19.9,
+      "moderateNeg": 22.8,
+      "outComeTargetValueNeg": 24.2,
+      "median": 28.5,
+      "isUnisex": true
+    },
+    {
+      "value": 133,
+      "severeNeg": 20.2,
+      "moderateNeg": 23,
+      "outComeTargetValueNeg": 24.5,
+      "median": 28.8,
+      "isUnisex": true
+    },
+    {
+      "value": 133.5,
+      "severeNeg": 20.4,
+      "moderateNeg": 23.3,
+      "outComeTargetValueNeg": 24.7,
+      "median": 29.1,
+      "isUnisex": true
+    },
+    {
+      "value": 134,
+      "severeNeg": 20.6,
+      "moderateNeg": 23.5,
+      "outComeTargetValueNeg": 25,
+      "median": 29.4,
+      "isUnisex": true
+    },
+    {
+      "value": 134.5,
+      "severeNeg": 20.8,
+      "moderateNeg": 23.8,
+      "outComeTargetValueNeg": 25.3,
+      "median": 29.7,
+      "isUnisex": true
+    },
+    {
+      "value": 135,
+      "severeNeg": 21.1,
+      "moderateNeg": 24.1,
+      "outComeTargetValueNeg": 25.6,
+      "median": 30.1,
+      "isUnisex": true
+    },
+    {
+      "value": 135.5,
+      "severeNeg": 21.3,
+      "moderateNeg": 24.3,
+      "outComeTargetValueNeg": 25.8,
+      "median": 30.4,
+      "isUnisex": true
+    },
+    {
+      "value": 136,
+      "severeNeg": 21.5,
+      "moderateNeg": 24.6,
+      "outComeTargetValueNeg": 26.1,
+      "median": 30.7,
+      "isUnisex": true
+    },
+    {
+      "value": 136.5,
+      "severeNeg": 21.7,
+      "moderateNeg": 24.8,
+      "outComeTargetValueNeg": 26.4,
+      "median": 31,
+      "isUnisex": true
+    },
+    {
+      "value": 137,
+      "severeNeg": 22,
+      "moderateNeg": 25.1,
+      "outComeTargetValueNeg": 26.7,
+      "median": 31.4,
+      "isUnisex": true
+    },
+    {
+      "value": 137.5,
+      "severeNeg": 22.2,
+      "moderateNeg": 25.4,
+      "outComeTargetValueNeg": 27,
+      "median": 31.7,
+      "isUnisex": true
+    },
+    {
+      "value": 138,
+      "severeNeg": 22.4,
+      "moderateNeg": 25.6,
+      "outComeTargetValueNeg": 27.2,
+      "median": 32.1,
+      "isUnisex": true
+    },
+    {
+      "value": 138.5,
+      "severeNeg": 22.7,
+      "moderateNeg": 25.9,
+      "outComeTargetValueNeg": 27.5,
+      "median": 32.4,
+      "isUnisex": true
+    },
+    {
+      "value": 139,
+      "severeNeg": 22.9,
+      "moderateNeg": 26.2,
+      "outComeTargetValueNeg": 27.8,
+      "median": 32.7,
+      "isUnisex": true
+    },
+    {
+      "value": 139.5,
+      "severeNeg": 23.1,
+      "moderateNeg": 26.4,
+      "outComeTargetValueNeg": 28.1,
+      "median": 33.1,
+      "isUnisex": true
+    },
+    {
+      "value": 140,
+      "severeNeg": 23.4,
+      "moderateNeg": 26.7,
+      "outComeTargetValueNeg": 28.4,
+      "median": 33.4,
+      "isUnisex": true
+    },
+    {
+      "value": 140.5,
+      "severeNeg": 23.6,
+      "moderateNeg": 27,
+      "outComeTargetValueNeg": 28.7,
+      "median": 33.7,
+      "isUnisex": true
+    },
+    {
+      "value": 141,
+      "severeNeg": 23.9,
+      "moderateNeg": 27.3,
+      "outComeTargetValueNeg": 29,
+      "median": 34.1,
+      "isUnisex": true
+    },
+    {
+      "value": 141.5,
+      "severeNeg": 24.1,
+      "moderateNeg": 27.5,
+      "outComeTargetValueNeg": 29.2,
+      "median": 34.4,
+      "isUnisex": true
+    },
+    {
+      "value": 142,
+      "severeNeg": 24.3,
+      "moderateNeg": 27.8,
+      "outComeTargetValueNeg": 29.5,
+      "median": 34.8,
+      "isUnisex": true
+    },
+    {
+      "value": 142.5,
+      "severeNeg": 24.6,
+      "moderateNeg": 28.1,
+      "outComeTargetValueNeg": 29.8,
+      "median": 35.1,
+      "isUnisex": true
+    },
+    {
+      "value": 143,
+      "severeNeg": 24.8,
+      "moderateNeg": 28.3,
+      "outComeTargetValueNeg": 30.1,
+      "median": 35.4,
+      "isUnisex": true
+    },
+    {
+      "value": 143.5,
+      "severeNeg": 25,
+      "moderateNeg": 28.6,
+      "outComeTargetValueNeg": 30.4,
+      "median": 35.8,
+      "isUnisex": true
+    },
+    {
+      "value": 144,
+      "severeNeg": 25.3,
+      "moderateNeg": 28.9,
+      "outComeTargetValueNeg": 30.7,
+      "median": 36.1,
+      "isUnisex": true
+    },
+    {
+      "value": 144.5,
+      "severeNeg": 25.5,
+      "moderateNeg": 29.2,
+      "outComeTargetValueNeg": 31,
+      "median": 36.5,
+      "isUnisex": true
+    },
+    {
+      "value": 145,
+      "severeNeg": 25.8,
+      "moderateNeg": 29.4,
+      "outComeTargetValueNeg": 31.3,
+      "median": 36.8,
+      "isUnisex": true
+    },
+    {
+      "value": 145.5,
+      "severeNeg": 26,
+      "moderateNeg": 29.7,
+      "outComeTargetValueNeg": 31.6,
+      "median": 37.1,
+      "isUnisex": true
+    },
+    {
+      "value": 146,
+      "severeNeg": 26.2,
+      "moderateNeg": 30,
+      "outComeTargetValueNeg": 31.9,
+      "median": 37.5,
+      "isUnisex": true
+    },
+    {
+      "value": 146.5,
+      "severeNeg": 26.5,
+      "moderateNeg": 30.3,
+      "outComeTargetValueNeg": 32.2,
+      "median": 37.8,
+      "isUnisex": true
+    },
+    {
+      "value": 147,
+      "severeNeg": 26.7,
+      "moderateNeg": 30.5,
+      "outComeTargetValueNeg": 32.4,
+      "median": 38.2,
+      "isUnisex": true
+    },
+    {
+      "value": 147.5,
+      "severeNeg": 27,
+      "moderateNeg": 30.8,
+      "outComeTargetValueNeg": 32.7,
+      "median": 38.5,
+      "isUnisex": true
+    },
+    {
+      "value": 148,
+      "severeNeg": 27.2,
+      "moderateNeg": 31.1,
+      "outComeTargetValueNeg": 33,
+      "median": 38.9,
+      "isUnisex": true
+    },
+    {
+      "value": 148.5,
+      "severeNeg": 27.4,
+      "moderateNeg": 31.4,
+      "outComeTargetValueNeg": 33.3,
+      "median": 39.2,
+      "isUnisex": true
+    },
+    {
+      "value": 149,
+      "severeNeg": 27.7,
+      "moderateNeg": 31.6,
+      "outComeTargetValueNeg": 33.6,
+      "median": 39.5,
+      "isUnisex": true
+    },
+    {
+      "value": 149.5,
+      "severeNeg": 27.9,
+      "moderateNeg": 31.9,
+      "outComeTargetValueNeg": 33.9,
+      "median": 39.9,
+      "isUnisex": true
+    },
+    {
+      "value": 150,
+      "severeNeg": 28.2,
+      "moderateNeg": 32.2,
+      "outComeTargetValueNeg": 34.2,
+      "median": 40.3,
+      "isUnisex": true
+    },
+    {
+      "value": 150.5,
+      "severeNeg": 28.4,
+      "moderateNeg": 32.5,
+      "outComeTargetValueNeg": 34.5,
+      "median": 40.6,
+      "isUnisex": true
+    },
+    {
+      "value": 151,
+      "severeNeg": 28.7,
+      "moderateNeg": 32.8,
+      "outComeTargetValueNeg": 34.8,
+      "median": 41,
+      "isUnisex": true
+    },
+    {
+      "value": 151.5,
+      "severeNeg": 28.9,
+      "moderateNeg": 33.1,
+      "outComeTargetValueNeg": 35.1,
+      "median": 41.3,
+      "isUnisex": true
+    },
+    {
+      "value": 152,
+      "severeNeg": 29.2,
+      "moderateNeg": 33.4,
+      "outComeTargetValueNeg": 35.4,
+      "median": 41.7,
+      "isUnisex": true
+    },
+    {
+      "value": 152.5,
+      "severeNeg": 29.4,
+      "moderateNeg": 33.7,
+      "outComeTargetValueNeg": 35.8,
+      "median": 42.1,
+      "isUnisex": true
+    },
+    {
+      "value": 153,
+      "severeNeg": 29.7,
+      "moderateNeg": 34,
+      "outComeTargetValueNeg": 36.1,
+      "median": 42.4,
+      "isUnisex": true
+    },
+    {
+      "value": 153.5,
+      "severeNeg": 30,
+      "moderateNeg": 34.3,
+      "outComeTargetValueNeg": 36.4,
+      "median": 42.8,
+      "isUnisex": true
+    },
+    {
+      "value": 154,
+      "severeNeg": 30.2,
+      "moderateNeg": 34.6,
+      "outComeTargetValueNeg": 36.7,
+      "median": 43.2,
+      "isUnisex": true
+    },
+    {
+      "value": 154.5,
+      "severeNeg": 30.5,
+      "moderateNeg": 34.9,
+      "outComeTargetValueNeg": 37.1,
+      "median": 43.6,
+      "isUnisex": true
+    },
+    {
+      "value": 155,
+      "severeNeg": 30.8,
+      "moderateNeg": 35.2,
+      "outComeTargetValueNeg": 37.4,
+      "median": 44,
+      "isUnisex": true
+    },
+    {
+      "value": 155.5,
+      "severeNeg": 30.9,
+      "moderateNeg": 35.4,
+      "outComeTargetValueNeg": 37.6,
+      "median": 44.2,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 156,
+      "severeNeg": 31.2,
+      "moderateNeg": 35.7,
+      "outComeTargetValueNeg": 37.9,
+      "median": 44.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 156.5,
+      "severeNeg": 31.5,
+      "moderateNeg": 36,
+      "outComeTargetValueNeg": 38.2,
+      "median": 45,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 157,
+      "severeNeg": 31.8,
+      "moderateNeg": 36.3,
+      "outComeTargetValueNeg": 38.6,
+      "median": 45.4,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 157.5,
+      "severeNeg": 32.1,
+      "moderateNeg": 36.7,
+      "outComeTargetValueNeg": 38.9,
+      "median": 45.8,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 158,
+      "severeNeg": 32.4,
+      "moderateNeg": 37,
+      "outComeTargetValueNeg": 39.3,
+      "median": 46.2,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 158.5,
+      "severeNeg": 32.7,
+      "moderateNeg": 37.3,
+      "outComeTargetValueNeg": 39.6,
+      "median": 46.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 159,
+      "severeNeg": 33,
+      "moderateNeg": 37.7,
+      "outComeTargetValueNeg": 40,
+      "median": 47.1,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 159.5,
+      "severeNeg": 33.3,
+      "moderateNeg": 38,
+      "outComeTargetValueNeg": 40.4,
+      "median": 47.5,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 160,
+      "severeNeg": 33.6,
+      "moderateNeg": 38.4,
+      "outComeTargetValueNeg": 40.8,
+      "median": 48,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 160.5,
+      "severeNeg": 33.9,
+      "moderateNeg": 38.7,
+      "outComeTargetValueNeg": 41.1,
+      "median": 48.4,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 161,
+      "severeNeg": 34.2,
+      "moderateNeg": 39.1,
+      "outComeTargetValueNeg": 41.5,
+      "median": 48.8,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 161.5,
+      "severeNeg": 34.5,
+      "moderateNeg": 39.4,
+      "outComeTargetValueNeg": 41.9,
+      "median": 49.3,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 162,
+      "severeNeg": 34.8,
+      "moderateNeg": 39.8,
+      "outComeTargetValueNeg": 42.3,
+      "median": 49.8,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 162.5,
+      "severeNeg": 35.1,
+      "moderateNeg": 40.2,
+      "outComeTargetValueNeg": 42.7,
+      "median": 50.2,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 163,
+      "severeNeg": 35.5,
+      "moderateNeg": 40.5,
+      "outComeTargetValueNeg": 43.1,
+      "median": 50.7,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 163.5,
+      "severeNeg": 35.8,
+      "moderateNeg": 40.9,
+      "outComeTargetValueNeg": 43.5,
+      "median": 51.1,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 164,
+      "severeNeg": 36.1,
+      "moderateNeg": 41.3,
+      "outComeTargetValueNeg": 43.9,
+      "median": 51.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 164.5,
+      "severeNeg": 36.5,
+      "moderateNeg": 41.7,
+      "outComeTargetValueNeg": 44.3,
+      "median": 52.1,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 165,
+      "severeNeg": 36.8,
+      "moderateNeg": 42.1,
+      "outComeTargetValueNeg": 44.7,
+      "median": 52.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 165.5,
+      "severeNeg": 37.2,
+      "moderateNeg": 42.5,
+      "outComeTargetValueNeg": 45.1,
+      "median": 53.1,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 166,
+      "severeNeg": 37.5,
+      "moderateNeg": 42.9,
+      "outComeTargetValueNeg": 45.6,
+      "median": 53.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 166.5,
+      "severeNeg": 37.9,
+      "moderateNeg": 43.3,
+      "outComeTargetValueNeg": 46,
+      "median": 54.1,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 167,
+      "severeNeg": 38.2,
+      "moderateNeg": 43.7,
+      "outComeTargetValueNeg": 46.4,
+      "median": 54.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 167.5,
+      "severeNeg": 38.6,
+      "moderateNeg": 44.1,
+      "outComeTargetValueNeg": 46.9,
+      "median": 55.1,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 168,
+      "severeNeg": 38.9,
+      "moderateNeg": 44.5,
+      "outComeTargetValueNeg": 47.3,
+      "median": 55.6,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 168.5,
+      "severeNeg": 39.3,
+      "moderateNeg": 44.9,
+      "outComeTargetValueNeg": 47.7,
+      "median": 56.2,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 169,
+      "severeNeg": 39.7,
+      "moderateNeg": 45.4,
+      "outComeTargetValueNeg": 48.2,
+      "median": 56.7,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 169.5,
+      "severeNeg": 40.1,
+      "moderateNeg": 45.8,
+      "outComeTargetValueNeg": 48.7,
+      "median": 57.3,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 170,
+      "severeNeg": 40.5,
+      "moderateNeg": 46.3,
+      "outComeTargetValueNeg": 49.2,
+      "median": 57.8,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 170.5,
+      "severeNeg": 40.9,
+      "moderateNeg": 46.7,
+      "outComeTargetValueNeg": 49.6,
+      "median": 58.4,
+      "isUnisex": false,
+      "sex": "M"
+    },
+    {
+      "value": 171,
+      "severeNeg": 41.3,
+      "moderateNeg": 47.2,
+      "outComeTargetValueNeg": 50.1,
+      "median": 59,
+      "isUnisex": false,
+      "sex": "M"
+    }
+  ],
+  "standard": "nchs"
+}
