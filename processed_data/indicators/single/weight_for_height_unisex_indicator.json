@@ -1,0 +1,73 @@
+{
+  "code": "wflh_unisex",
+  "name": "Weight For Length/Height (OMS 2006, UNISEX)",
+  "neededMeasureCodes": [
+    "weight",
+    "lenhei"
+  ],
+  "axeX": {
+    "value": "(lenhei - (lenhei % 1)) + ((lenhei % 1)<=0.2 ? 0:((lenhei %1)>=0.8?1:0.5))",
+    "variables": [
+      "lenhei"
+    ]
+  },
+  "axeY": {
+    "value": "weight",
+    "variables": [
+      "weight"
+    ]
+  },
+  "availableRefCharts": [],
+  "availableRefTables": [
+    {
+      "tableCode": "weight_for_length_who_2006_unisex",
+      "condition": {
+        "value": "0==0",
+        "variables": []
+      }
+    }
+  ],
+  "usageConditions": {
+    "value": "lenhei >= 45 && lenhei <= 120",
+    "variables": [
+      "lenhei"
+    ]
+  },
+  "interpretations": [
+    {
+      "name": "Normal",
+      "code": "normal",
+      "range": "0",
+      "condition": {
+        "value": "zscore >= (-2) && zscore <= 1",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Wasted",
+      "code": "wasted",
+      "range": "below -2",
+      "condition": {
+        "value": "zscore < (-2) && zscore >= (-3)",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Severely wasted",
+      "code": "severely_wasted",
+      "range": "below -3",
+      "condition": {
+        "value": "zscore < (-3)",
+        "variables": [
+          "zscore"
+        ]
+      }
+    }
+  ],
+  "zScoreComputingStrategy": "lenhei_based",
+  "standardShape": "growth_table"
+}

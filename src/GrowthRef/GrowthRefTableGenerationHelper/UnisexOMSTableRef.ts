@@ -1,9 +1,6 @@
-import {
-  GrowthReferenceTableProps,
-  GrowthStandard,
-  TableData,
-} from "../../types";
-import { createGrowthRefTableOMS, extractDataFromExcel } from "../../utils";
+import { TableData, GrowthReferenceTableProps } from "../../../types";
+import { createGrowthRefTableOMS, extractDataFromExcel } from "../../../utils";
+
 
 const lenheiTableExtractionCallBack = (excelFileRowObject: any): TableData => {
   return {

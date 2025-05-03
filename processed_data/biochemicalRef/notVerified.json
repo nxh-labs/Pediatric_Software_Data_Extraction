@@ -1,0 +1,824 @@
+[
+  {
+    "name": "Aspartate amino-transférase",
+    "code": "biochemical_ast",
+    "unit": "U/l",
+    "availableUnits": ["U/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [13, true],
+          "max": [38, true]
+        },
+        "under": ["AST basse"],
+        "over": ["AST élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1 && age_in_month < 216",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [15, true],
+          "max": [45, true]
+        },
+        "under": ["AST basse"],
+        "over": ["AST élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 216 && sex === 'M'",
+          "variables": ["age_in_month", "sex"]
+        },
+        "range": {
+          "min": [10, true],
+          "max": [40, true]
+        },
+        "under": ["AST basse"],
+        "over": ["AST élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 216 && sex === 'F'",
+          "variables": ["age_in_month", "sex"]
+        },
+        "range": {
+          "min": [9, true],
+          "max": [32, true]
+        },
+        "under": ["AST basse"],
+        "over": ["AST élevée"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Taux de prothrombine",
+    "code": "biochemical_tp",
+    "unit": "%",
+    "availableUnits": ["%"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [70, true],
+          "max": [100, true]
+        },
+        "under": ["TP bas"],
+        "over": ["TP élevé"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Temps de céphaline activée",
+    "code": "biochemical_tca",
+    "unit": "sec",
+    "availableUnits": ["sec"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [30, true],
+          "max": [35, true]
+        },
+        "under": ["TCA bas"],
+        "over": ["TCA élevé"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Protéines totales",
+    "code": "biochemical_proteins_total",
+    "unit": "g/l",
+    "availableUnits": ["g/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [44, true],
+          "max": [76, true]
+        },
+        "under": ["Hypoprotéinémie"],
+        "over": ["Hyperprotéinémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [64, true],
+          "max": [83, true]
+        },
+        "under": ["Hypoprotéinémie"],
+        "over": ["Hyperprotéinémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Albumine",
+    "code": "biochemical_albumin",
+    "unit": "g/l",
+    "availableUnits": ["g/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [28, true],
+          "max": [44, true]
+        },
+        "under": ["Hypoalbuminémie"],
+        "over": ["Hyperalbuminémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [35, true],
+          "max": [50, true]
+        },
+        "under": ["Hypoalbuminémie"],
+        "over": ["Hyperalbuminémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Protéine C-réactive",
+    "code": "biochemical_crp",
+    "unit": "mg/l",
+    "availableUnits": ["mg/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [0, true],
+          "max": [6, true]
+        },
+        "under": ["CRP normale"],
+        "over": ["Syndrome inflammatoire"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Fer sérique",
+    "code": "biochemical_iron",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "sex === 'M'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [11.6, true],
+          "max": [31.3, true]
+        },
+        "under": ["Hyposidérémie"],
+        "over": ["Hypersidérémie"]
+      },
+      {
+        "condition": {
+          "value": "sex === 'F'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [9, true],
+          "max": [30.4, true]
+        },
+        "under": ["Hyposidérémie"],
+        "over": ["Hypersidérémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Ferritine",
+    "code": "biochemical_ferritin",
+    "unit": "µg/l",
+    "availableUnits": ["µg/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "sex === 'M'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [20, true],
+          "max": [250, true]
+        },
+        "under": ["Ferritine basse"],
+        "over": ["Ferritine élevée"]
+      },
+      {
+        "condition": {
+          "value": "sex === 'F'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [15, true],
+          "max": [150, true]
+        },
+        "under": ["Ferritine basse"],
+        "over": ["Ferritine élevée"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Transferrine",
+    "code": "biochemical_transferrin",
+    "unit": "g/l",
+    "availableUnits": ["g/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [2, true],
+          "max": [3.6, true]
+        },
+        "under": ["Transferrine basse"],
+        "over": ["Transferrine élevée"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Coefficient de saturation de la transferrine",
+    "code": "biochemical_transferrin_saturation",
+    "unit": "%",
+    "availableUnits": ["%"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [20, true],
+          "max": [40, true]
+        },
+        "under": ["Coefficient de saturation bas"],
+        "over": ["Coefficient de saturation élevé"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Zinc",
+    "code": "biochemical_zinc",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [10.7, true],
+          "max": [15.3, true]
+        },
+        "under": ["Hypozincémie"],
+        "over": ["Hyperzincémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [11.5, true],
+          "max": [18.5, true]
+        },
+        "under": ["Hypozincémie"],
+        "over": ["Hyperzincémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Cuivre",
+    "code": "biochemical_copper",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 6",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [3.1, true],
+          "max": [7.9, true]
+        },
+        "under": ["Hypocuprémie"],
+        "over": ["Hypercuprémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 6 && age_in_month < 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [8.7, true],
+          "max": [17.3, true]
+        },
+        "under": ["Hypocuprémie"],
+        "over": ["Hypercuprémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [11, true],
+          "max": [22, true]
+        },
+        "under": ["Hypocuprémie"],
+        "over": ["Hypercuprémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Sélénium",
+    "code": "biochemical_selenium",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [0.32, true],
+          "max": [0.9, true]
+        },
+        "under": ["Hyposélénémie"],
+        "over": ["Hypersélénémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [0.89, true],
+          "max": [1.65, true]
+        },
+        "under": ["Hyposélénémie"],
+        "over": ["Hypersélénémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Zinc",
+    "code": "biochemical_zinc",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [10.7, true],
+          "max": [15.3, true]
+        },
+        "under": ["Hypozincémie"],
+        "over": ["Hyperzincémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [11.5, true],
+          "max": [18.5, true]
+        },
+        "under": ["Hypozincémie"],
+        "over": ["Hyperzincémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Cuivre",
+    "code": "biochemical_copper",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 6",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [3.1, true],
+          "max": [7.9, true]
+        },
+        "under": ["Hypocuprémie"],
+        "over": ["Hypercuprémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 6 && age_in_month < 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [8.7, true],
+          "max": [17.3, true]
+        },
+        "under": ["Hypocuprémie"],
+        "over": ["Hypercuprémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 12",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [11, true],
+          "max": [22, true]
+        },
+        "under": ["Hypocuprémie"],
+        "over": ["Hypercuprémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Sélénium",
+    "code": "biochemical_selenium",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [0.32, true],
+          "max": [0.9, true]
+        },
+        "under": ["Hyposélénémie"],
+        "over": ["Hypersélénémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [0.89, true],
+          "max": [1.65, true]
+        },
+        "under": ["Hyposélénémie"],
+        "over": ["Hypersélénémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Fer sérique",
+    "code": "biochemical_iron",
+    "unit": "µmol/l",
+    "availableUnits": ["µmol/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "sex === 'M'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [11.6, true],
+          "max": [31.3, true]
+        },
+        "under": ["Hyposidérémie"],
+        "over": ["Hypersidérémie"]
+      },
+      {
+        "condition": {
+          "value": "sex === 'F'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [9, true],
+          "max": [30.4, true]
+        },
+        "under": ["Hyposidérémie"],
+        "over": ["Hypersidérémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Ferritine",
+    "code": "biochemical_ferritin",
+    "unit": "µg/l",
+    "availableUnits": ["µg/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "sex === 'M'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [20, true],
+          "max": [250, true]
+        },
+        "under": ["Ferritine basse"],
+        "over": ["Ferritine élevée"]
+      },
+      {
+        "condition": {
+          "value": "sex === 'F'",
+          "variables": ["sex"]
+        },
+        "range": {
+          "min": [15, true],
+          "max": [150, true]
+        },
+        "under": ["Ferritine basse"],
+        "over": ["Ferritine élevée"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Transferrine",
+    "code": "biochemical_transferrin",
+    "unit": "g/l",
+    "availableUnits": ["g/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [2, true],
+          "max": [3.6, true]
+        },
+        "under": ["Transferrine basse"],
+        "over": ["Transferrine élevée"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Coefficient de saturation de la transferrine",
+    "code": "biochemical_transferrin_saturation",
+    "unit": "%",
+    "availableUnits": ["%"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [20, true],
+          "max": [40, true]
+        },
+        "under": ["Coefficient de saturation bas"],
+        "over": ["Coefficient de saturation élevé"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Phosphatases alcalines",
+    "code": "biochemical_alp",
+    "unit": "U/l",
+    "availableUnits": ["U/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 2",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [140, true],
+          "max": [315, true]
+        },
+        "under": ["PAL basse"],
+        "over": ["PAL élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 2 && age_in_month < 6",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [110, true],
+          "max": [390, true]
+        },
+        "under": ["PAL basse"],
+        "over": ["PAL élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 6 && age_in_month < 36",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [140, true],
+          "max": [320, true]
+        },
+        "under": ["PAL basse"],
+        "over": ["PAL élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 36 && age_in_month < 180",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [125, true],
+          "max": [410, true]
+        },
+        "under": ["PAL basse"],
+        "over": ["PAL élevée"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 180 && age_in_month <= 228",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [40, true],
+          "max": [138, true]
+        },
+        "under": ["PAL basse"],
+        "over": ["PAL élevée"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Taux de prothrombine",
+    "code": "biochemical_tp",
+    "unit": "%",
+    "availableUnits": ["%"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [70, true],
+          "max": [100, true]
+        },
+        "under": ["TP bas"],
+        "over": ["TP élevé"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Temps de céphaline activée",
+    "code": "biochemical_tca",
+    "unit": "sec",
+    "availableUnits": ["sec"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [30, true],
+          "max": [35, true]
+        },
+        "under": ["TCA bas"],
+        "over": ["TCA élevé"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Protéines totales",
+    "code": "biochemical_proteins_total",
+    "unit": "g/l",
+    "availableUnits": ["g/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [44, true],
+          "max": [76, true]
+        },
+        "under": ["Hypoprotéinémie"],
+        "over": ["Hyperprotéinémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [64, true],
+          "max": [83, true]
+        },
+        "under": ["Hypoprotéinémie"],
+        "over": ["Hyperprotéinémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Albumine",
+    "code": "biochemical_albumin",
+    "unit": "g/l",
+    "availableUnits": ["g/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "age_in_month < 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [28, true],
+          "max": [44, true]
+        },
+        "under": ["Hypoalbuminémie"],
+        "over": ["Hyperalbuminémie"]
+      },
+      {
+        "condition": {
+          "value": "age_in_month >= 1",
+          "variables": ["age_in_month"]
+        },
+        "range": {
+          "min": [35, true],
+          "max": [50, true]
+        },
+        "under": ["Hypoalbuminémie"],
+        "over": ["Hyperalbuminémie"]
+      }
+    ],
+    "source": "Normes biologiques"
+  },
+  {
+    "name": "Protéine C-réactive",
+    "code": "biochemical_crp",
+    "unit": "mg/l",
+    "availableUnits": ["mg/l"],
+    "ranges": [
+      {
+        "condition": {
+          "value": "true",
+          "variables": []
+        },
+        "range": {
+          "min": [0, true],
+          "max": [6, true]
+        },
+        "under": ["CRP normale"],
+        "over": ["Syndrome inflammatoire"]
+      }
+    ],
+    "source": "Normes biologiques"
+  }
+]

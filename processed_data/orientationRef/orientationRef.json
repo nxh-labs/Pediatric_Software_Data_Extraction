@@ -1,0 +1,167 @@
+[
+  {
+    "name": "HOME: Enfant normal",
+    "code": "ORIENTATION_HOME",
+    "admissionCriteria": [
+      {
+        "value": "muac >= 125",
+        "variables": [
+          "muac"
+        ]
+      }
+    ],
+    "admissionType": []
+  },
+  {
+    "name": "CRENAM: Centre de prise en charge de la malnutrition aiguë modérée",
+    "code": "ORIENTATION_CRENAM",
+    "admissionCriteria": [
+      {
+        "value": "(age_in_month >= 6) && (((wflh_unisex >= (-3)) && (wflh_unisex<(-2)))||((muac>=115) && (muac<125))) && (clinical_edema == 0)",
+        "variables": [
+          "age_in_month",
+          "wflh_unisex",
+          "muac",
+          "clinical_edema"
+        ]
+      },
+      {
+        "value": "history_previous_treatment == 'ORIENTATION_CNT'",
+        "variables": [
+          "history_previous_treatment"
+        ]
+      }
+    ],
+    "admissionType": [
+      {
+        "name": "Nouvelle Admission",
+        "code": "ADMISSION_TYPE_NEW",
+        "condition": {
+          "variables": [
+            "crenam_orientation_number"
+          ],
+          "value": "crenam_orientation_number == 0"
+        }
+      },
+      {
+        "name": "Rechute",
+        "code": "ADMISSION_TYPE_RELAPSE",
+        "condition": {
+          "variables": [
+            "crenam_orientation_number"
+          ],
+          "value": "crenam_orientation_number > 0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "CNA: Centre de prise en charge de la malnutrtition aigue",
+    "code": "ORIENTATION_CNA",
+    "admissionCriteria": [
+      {
+        "value": "(wflh_unisex<(-3)) &&((muac>=115) && (muac<125)) && (clinical_edema == 0) && (appetite_test_result == 'Positive') && (complications_number == 0)",
+        "variables": [
+          "clinical_edema",
+          "wflh_unisex",
+          "muac",
+          "appetite_test_result",
+          "complications_number"
+        ]
+      }
+    ],
+    "admissionType": [
+      {
+        "name": "Nouvelle Admission",
+        "code": "ADMISSION_TYPE_NEW",
+        "condition": {
+          "variables": [
+            "cna_orientation_number"
+          ],
+          "value": "cna_orientation_number == 0"
+        }
+      },
+      {
+        "name": "Admissions de patients déjà sous traitement de MAS",
+        "code": "ADMISSION_TYPE_ALREADY_MAS",
+        "condition": {
+          "variables": [
+            "cna_orientation_number",
+            "cnt_orientation_number",
+            "previous_cna_treatment_month"
+          ],
+          "value": "cnt_orientation_number > 0 || ((cna_orientation_number > 0 ) && (previous_cna_treatment_month > 2))"
+        }
+      }
+    ]
+  },
+  {
+    "name": "CNT: Centre de prise en charge de la malnutrtition aigue Severe avec complication",
+    "code": "ORIENTATION_CNT",
+    "admissionCriteria": [
+      {
+        "value": "(age_in_month >= 6 && age_in_month < 96) && ((wflh_unisex < (-3)) || (clinical_edema == 1) || (muac < 115) || (complications_number > 0) || (appetite_test_result == 'Negative'))",
+        "variables": [
+          "age_in_month",
+          "wflh_unisex",
+          "clinical_edema",
+          "complications_number"
+        ]
+      },
+      {
+        "value": "(age_in_month >= 96 && age_in_month < 228) && ((wfh_unisex_nchs < (-3)) || (clinical_edema == 1)|| (complications_number > 0) || (appetite_test_result == 'Negative'))",
+        "variables": [
+          "age_in_month",
+          "wfh_unisex_nchs",
+          "clinical_edema",
+          "complications_number",
+          "appetite_test_result"
+        ]
+      },
+      {
+        "value": "(age_in_month < 6 && ((wfa < (-3)) || (clinical_edema == 1)|| (complications_number > 0))) || ((age_in_month>=6 && weight < 3) && (wflh_unisex < (-3) || (clinical_edema == 1)|| (complications_number > 0)))",
+        "variables": [
+          "age_in_month",
+          "weight",
+          "clinical_edema",
+          "wfa",
+          "wflh_unisex",
+          "complications_number"
+        ]
+      }
+    ],
+    "admissionType": [
+      {
+        "name": "Admission Directe",
+        "code": "ADMISSION_TYPE_DIRECT",
+        "condition": {
+          "variables": [
+            "cna_orientation_number"
+          ],
+          "value": "cna_orientation_number == 0"
+        }
+      },
+      {
+        "name": "Reference",
+        "code": "ADMISSION_TYPE_REF",
+        "condition": {
+          "variables": [
+            "cna_orientation_number",
+            "age_in_month"
+          ],
+          "value": "cna_orientation_number == 0 || age_in_month < 6"
+        }
+      },
+      {
+        "name": "Transfert interne du CNA",
+        "code": "ADMISSION_TYPE_INTERNAL_TRANSFER",
+        "condition": {
+          "variables": [
+            "cna_orientation_number"
+          ],
+          "value": "cna_orientation_number > 0"
+        }
+      }
+    ]
+  }
+]

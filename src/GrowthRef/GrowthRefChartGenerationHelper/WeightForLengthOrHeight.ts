@@ -1,13 +1,6 @@
-import {
-  GrowthReferenceChartProps,
-  IChartData,
-} from "../../types";
-import {
-  createChartData,
-  createCurvePoints,
-  createGrowthRefChartOMS,
-  extractDataFromExcel,
-} from "../../utils";
+import { IChartData, GrowthReferenceChartProps } from "../../../types";
+import { createChartData, createCurvePoints, createGrowthRefChartOMS, extractDataFromExcel } from "../../../utils";
+
 
 export const lengthTableExtractionCallBack = (excelFileRowObject: any): IChartData => {
   const { Length, M, L, S } = excelFileRowObject;

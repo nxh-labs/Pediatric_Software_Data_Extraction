@@ -3,3 +3,14 @@ export * from "./TableData";
 export * from "./GrowthStandard";
 export * from "./GrowthRefChart";
 export * from "./GrowthRefTable";
+export * from "./BiochemicalRange";
+export * from "./BiochemicalReference";
+export * from "./clinicalRef";
+export * from "./clinicalSignData";
+export * from "./NutritionalRiskFactor";
+export * from "./DiagnosticRule";
+export * from "./AnthropometricMeasure";
+export * from "./ValidationRule";
+
+export * from "./OrientationRef";
+export * from "./AppetiteTestRef";

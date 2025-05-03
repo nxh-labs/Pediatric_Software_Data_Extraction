@@ -1,0 +1,84 @@
+{
+  "code": "hc_for_age",
+  "name": "Head Circumference For Age",
+  "neededMeasureCodes": [
+    "head_circumference",
+    "age_in_day"
+  ],
+  "axeX": {
+    "value": "age_in_day",
+    "variables": [
+      "age_in_day"
+    ]
+  },
+  "axeY": {
+    "value": "head_circumference",
+    "variables": [
+      "head_circumference"
+    ]
+  },
+  "availableRefCharts": [
+    {
+      "chartCode": "growth_ref_chart_hcfa_boys_0_5",
+      "condition": {
+        "value": "sex == 'M'",
+        "variables": [
+          "sex"
+        ]
+      }
+    },
+    {
+      "chartCode": "growth_ref_chart_hcfa_girls_0_5",
+      "condition": {
+        "value": "sex == 'F'",
+        "variables": [
+          "sex"
+        ]
+      }
+    }
+  ],
+  "availableRefTables": [],
+  "usageConditions": {
+    "value": "age_in_day <= 1856",
+    "variables": [
+      "age_in_day"
+    ]
+  },
+  "interpretations": [
+    {
+      "name": "Macrocephaly",
+      "code": "macrocephaly",
+      "range": "above +2",
+      "condition": {
+        "value": "zscore > 2",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Normal",
+      "code": "normal",
+      "range": "0",
+      "condition": {
+        "value": "zscore >= (-2) && zscore <= 2",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Microcephaly",
+      "code": "microcephaly",
+      "range": "below -2",
+      "condition": {
+        "value": "zscore < (-2)",
+        "variables": [
+          "zscore"
+        ]
+      }
+    }
+  ],
+  "zScoreComputingStrategy": "age_based",
+  "standardShape": "growth_curve"
+}

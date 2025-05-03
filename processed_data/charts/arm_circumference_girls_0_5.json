@@ -1,6 +1,6 @@
 {
-  "name": "Courbe de référence périmètre brachial pour l'âge (filles 0-5 ans)",
-  "code": "growth_ref_chart_acfa_girls_0_5",
+  "name": "Courbe de référence périmètre brachial pour l'âge (filles 3 mois-5 ans)",
+  "code": "growth_ref_chart_acfa_girls_3m_5",
   "sex": "F",
   "standard": "oms",
   "data": [

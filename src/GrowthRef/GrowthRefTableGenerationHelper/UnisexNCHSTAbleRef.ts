@@ -1,9 +1,7 @@
-import {
-  GrowthReferenceTableProps,
-  GrowthStandard,
-  TableData,
-} from "../../types";
-import { createGrowthRefTableNCHS, extractDataFromExcel } from "../../utils";
+import { TableData, GrowthReferenceTableProps } from "../../../types";
+import { createGrowthRefTableNCHS, extractDataFromExcel } from "../../../utils";
+
+
 const nchsUnisexTableExtractionCallback = (
   excelFileRowObject: any
 ): TableData => {

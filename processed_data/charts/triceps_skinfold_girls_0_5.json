@@ -1,6 +1,6 @@
 {
   "name": "Courbe de référence pli cutané tricipital pour l'âge (filles 0-5 ans)",
-  "code": "growth_ref_chart_tsfa_girls_0_5",
+  "code": "growth_ref_chart_tsfa_girls_3m_5",
   "sex": "F",
   "standard": "oms",
   "data": [

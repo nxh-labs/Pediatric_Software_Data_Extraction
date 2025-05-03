@@ -1,0 +1,139 @@
+{
+  "code": "wflh",
+  "name": "Weight For Length/Height",
+  "neededMeasureCodes": [
+    "weight",
+    "lenhei"
+  ],
+  "axeX": {
+    "value": "lenhei",
+    "variables": [
+      "lenhei"
+    ]
+  },
+  "axeY": {
+    "value": "weight",
+    "variables": [
+      "weight"
+    ]
+  },
+  "availableRefCharts": [
+    {
+      "chartCode": "growth_ref_chart_wfl_boys_45_110",
+      "condition": {
+        "value": "sex == 'M' && age_in_day <= 731",
+        "variables": [
+          "sex",
+          "age_in_day"
+        ]
+      }
+    },
+    {
+      "chartCode": "growth_ref_chart_wfl_girls_45_110",
+      "condition": {
+        "value": "sex == 'F' && age_in_day <= 731",
+        "variables": [
+          "sex",
+          "age_in_day"
+        ]
+      }
+    },
+    {
+      "chartCode": "growth_ref_chart_wfh_boys_65_120",
+      "condition": {
+        "value": "sex == 'M' && age_in_day > 731",
+        "variables": [
+          "sex",
+          "age_in_day"
+        ]
+      }
+    },
+    {
+      "chartCode": "growth_ref_chart_wfh_girls_65_120",
+      "condition": {
+        "value": "sex == 'F' && age_in_day > 731",
+        "variables": [
+          "sex",
+          "age_in_day"
+        ]
+      }
+    }
+  ],
+  "availableRefTables": [],
+  "usageConditions": {
+    "value": "lenhei >= 45 && lenhei <= 120",
+    "variables": [
+      "lenhei"
+    ]
+  },
+  "interpretations": [
+    {
+      "name": "Obese",
+      "code": "obese",
+      "range": "above +3",
+      "condition": {
+        "value": "zscore > 3",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Overweight",
+      "code": "overweight",
+      "range": "above +2",
+      "condition": {
+        "value": "zscore > 2 && zscore <= 3",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Risk of overweight",
+      "code": "risk_of_overweight",
+      "range": "above +1",
+      "condition": {
+        "value": "zscore > 1 && zscore <= 2",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Normal",
+      "code": "normal",
+      "range": "0",
+      "condition": {
+        "value": "zscore >= (-2) && zscore <= 1",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Wasted",
+      "code": "wasted",
+      "range": "below -2",
+      "condition": {
+        "value": "zscore < (-2) && zscore >= (-3)",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Severely wasted",
+      "code": "severely_wasted",
+      "range": "below -3",
+      "condition": {
+        "value": "zscore < (-3)",
+        "variables": [
+          "zscore"
+        ]
+      }
+    }
+  ],
+  "zScoreComputingStrategy": "lenhei_based",
+  "standardShape": "growth_curve"
+}

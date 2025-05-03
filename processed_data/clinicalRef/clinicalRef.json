@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Hyperthermie",
+    "code": "clinical_hyperthermia",
+    "description": "Une hyperthermie est définie par une température corporelle supérieure ou égale à 38.5°C",
+    "evaluationRule": {
+      "value": "vital_sign_temperature >= 38.5",
+      "variables": [
+        "vital_sign_temperature"
+      ]
+    },
+    "data": [
+      {
+        "name": "Température corporelle",
+        "code": "vital_sign_temperature",
+        "question": "Quelle est la température axillaire du patient (en degrés Celsius) ?",
+        "dataType": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Hypothermie",
+    "code": "clinical_hypothermia",
+    "description": "Une hypothermie est définie par une température corporelle inférieure à 35°C",
+    "evaluationRule": {
+      "value": "vital_sign_temperature < 35",
+      "variables": [
+        "vital_sign_temperature"
+      ]
+    },
+    "data": [
+      {
+        "name": "Température corporelle",
+        "code": "vital_sign_temperature",
+        "question": "Quelle est la température corporelle du patient (température axillaire) ?",
+        "dataType": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Hypoglycémie",
+    "code": "clinical_hypoglycemia",
+    "description": "Une hypoglycémie est suspectée lorsque le patient présente : des paupières ouvertes pendant le sommeil, une température corporelle inférieure à 36.5°C et/ou une altération du niveau de conscience",
+    "evaluationRule": {
+      "value": "(question_eyelids_during_sleep == 1) || (vital_sign_temperature < 36.5 && question_consciousness_level == 1)",
+      "variables": [
+        "question_eyelids_during_sleep",
+        "vital_sign_temperature",
+        "question_consciousness_level"
+      ]
+    },
+    "data": [
+      {
+        "name": "Aspect des paupières pendant le sommeil",
+        "code": "question_eyelids_during_sleep",
+        "question": "L'enfant garde-t-il les yeux partiellement ouverts pendant son sommeil ?",
+        "dataType": "boolean",
+        "required": true
+      },
+      {
+        "name": "Température corporelle",
+        "code": "vital_sign_temperature",
+        "question": "Quelle est la température corporelle du patient (température axillaire) ?",
+        "dataType": "number",
+        "required": true
+      },
+      {
+        "name": "Clarté et conscience",
+        "code": "question_consciousness_level",
+        "question": "L'enfant présente-t-il une diminution de sa réactivité ou de son niveau de conscience ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Diarrhée",
+    "code": "clinical_diarrhea",
+    "description": "Une diarrhée est définie par un nombre de selles liquides supérieur ou égal à trois par jour",
+    "evaluationRule": {
+      "value": "data_liquid_stool_count_per_day >= 3",
+      "variables": [
+        "data_liquid_stool_count_per_day"
+      ]
+    },
+    "data": [
+      {
+        "name": "Nombre de selles liquides par jour",
+        "code": "data_liquid_stool_count_per_day",
+        "question": "Combien de selles liquides l'enfant a-t-il eu durant les dernières 24 heures ?",
+        "dataType": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Vomissement",
+    "code": "clinical_vomiting",
+    "description": "Un vomissement est défini par un nombre de vomissements supérieur ou égal à 1 par jour",
+    "evaluationRule": {
+      "value": "data_vomiting_count >= 1",
+      "variables": [
+        "data_vomiting_count"
+      ]
+    },
+    "data": [
+      {
+        "name": "Nombre de vomissements par jour",
+        "code": "data_vomiting_count",
+        "question": "Quel est le nombre de vomissements au cours des dernières 24h ?",
+        "dataType": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Patient Sévèrement malade",
+    "code": "clinical_severe_sickness",
+    "description": "Un patient est sévèrement malade lorsque le patient a une condition générale altérée, ou une hypothermie, ou une hyperthermie",
+    "evaluationRule": {
+      "value": "(data_general_condition =='altered') || (vital_sign_temperature >= 38.5) || (vital_sign_temperature < 35)",
+      "variables": [
+        "data_general_condition",
+        "vital_sign_temperature"
+      ]
+    },
+    "data": [
+      {
+        "name": "État Général",
+        "code": "data_general_condition",
+        "question": "Comment évaluez-vous l'état général du patient ? (normal ou altéré)",
+        "dataType": "enum",
+        "required": true,
+        "enumValue": [
+          "altered",
+          "normal"
+        ]
+      },
+      {
+        "name": "Température Corporelle",
+        "code": "vital_sign_temperature",
+        "question": "Quelle est la température corporelle du patient (température axillaire) ?",
+        "dataType": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "Détresse respiratoire",
+    "code": "clinical_respiratory_distress",
+    "description": "Le patient présente une détresse respiratoire lorsque la fréquence respiratoire par minute est supérieure à l'intervalle normal pour l'âge ou présente un tirage sous-costal.",
+    "evaluationRule": {
+      "value": "(observation_subcostal_retraction == 1) ||\n        (age_in_month < 2 && vital_sign_respiratory_rate > 60) ||\n        (age_in_month >= 2 && age_in_month < 12 && vital_sign_respiratory_rate > 50) ||\n        (age_in_month >= 12 && age_in_month < 60 && vital_sign_respiratory_rate > 40) ||\n        (age_in_month >= 60 && vital_sign_respiratory_rate > 30)",
+      "variables": [
+        "vital_sign_respiratory_rate",
+        "observation_subcostal_retraction",
+        "age_in_month"
+      ]
+    },
+    "data": [
+      {
+        "name": "Fréquence respiratoire",
+        "code": "vital_sign_respiratory_rate",
+        "question": "Combien de respirations par minute l'enfant effectue-t-il (sur une minute complète) ?",
+        "dataType": "number",
+        "required": true
+      },
+      {
+        "name": "Tirage sous-costal",
+        "code": "observation_subcostal_retraction",
+        "question": "Observez-vous un creusement sous les côtes lors de la respiration de l'enfant ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ]
+  }
+]

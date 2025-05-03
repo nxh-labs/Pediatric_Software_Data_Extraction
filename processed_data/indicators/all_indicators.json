@@ -1,0 +1,847 @@
+{
+  "bmi": {
+    "code": "bmi_for_age",
+    "name": "Body Mass Index For Age",
+    "neededMeasureCodes": ["weight", "height", "age_in_day", "age_in_month"],
+    "axeX": {
+      "value": "age_in_month > 60.97741273100616 ? age_in_month: age_in_day",
+      "variables": ["age_in_month", "age_in_day"]
+    },
+    "axeY": {
+      "value": "weight/((lenhei/100)^2)",
+      "variables": ["weight", "lenhei"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_bfa_boys_0_5",
+        "condition": {
+          "value": "sex == 'M' && age_in_day <= 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_bfa_girls_0_5",
+        "condition": {
+          "value": "sex == 'F' && age_in_day <= 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_bfa_boys_5_19",
+        "condition": {
+          "value": "sex == 'M' && age_in_day > 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_bfa_girls_5_19",
+        "condition": {
+          "value": "sex == 'F' && age_in_day > 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_day >= 0 && age_in_month <= 228",
+      "variables": ["age_in_month"]
+    },
+    "interpretations": [
+      {
+        "name": "Severe obesity",
+        "code": "severe_obesity_5_19",
+        "range": "above +3",
+        "condition": {
+          "value": "age_in_day > 1856 && zscore > 3",
+          "variables": ["zscore", "age_in_day"]
+        }
+      },
+      {
+        "name": "Obesity",
+        "code": "obesity_0_5",
+        "range": "above +3",
+        "condition": {
+          "value": "age_in_day <= 1856 && zscore > 3",
+          "variables": ["zscore", "age_in_day"]
+        }
+      },
+      {
+        "name": "Overweight",
+        "code": "overweight_0_5",
+        "range": "above +2",
+        "condition": {
+          "value": "age_in_day <= 1856 && zscore > 2 && zscore <= 3",
+          "variables": ["zscore", "age_in_day"]
+        }
+      },
+      {
+        "name": "Obesity",
+        "code": "obesity_5_19",
+        "range": "above +2",
+        "condition": {
+          "value": "age_in_day > 1856 && zscore > 2 && zscore <= 3",
+          "variables": ["zscore", "age_in_day"]
+        }
+      },
+      {
+        "name": "Overweight",
+        "code": "overweight_5_19",
+        "range": "above +1",
+        "condition": {
+          "value": "age_in_day > 1856 && zscore > 1 && zscore <= 2",
+          "variables": ["zscore", "age_in_day"]
+        }
+      },
+      {
+        "name": "Overweight Risk",
+        "code": "overweight_risk",
+        "range": "above +1",
+        "condition": {
+          "value": "age_in_day <= 1856 && zscore > 1 && zscore <= 2",
+          "variables": ["zscore", "age_in_day"]
+        }
+      },
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Wasted",
+        "code": "wasted",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severely wasted",
+        "code": "severely_wasted",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "headCircumference": {
+    "code": "hc_for_age",
+    "name": "Head Circumference For Age",
+    "neededMeasureCodes": ["head_circumference", "age_in_day"],
+    "axeX": {
+      "value": "age_in_day",
+      "variables": ["age_in_day"]
+    },
+    "axeY": {
+      "value": "head_circumference",
+      "variables": ["head_circumference"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_hcfa_boys_0_5",
+        "condition": {
+          "value": "sex == 'M'",
+          "variables": ["sex"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_hcfa_girls_0_5",
+        "condition": {
+          "value": "sex == 'F'",
+          "variables": ["sex"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_day <= 1856",
+      "variables": ["age_in_day"]
+    },
+    "interpretations": [
+      {
+        "name": "Macrocephaly",
+        "code": "macrocephaly",
+        "range": "above +2",
+        "condition": {
+          "value": "zscore > 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Microcephaly",
+        "code": "microcephaly",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "heightForAge": {
+    "code": "hfa",
+    "name": "Height/Length For Age",
+    "neededMeasureCodes": ["lenhei", "age_in_day", "age_in_month"],
+    "axeX": {
+      "value": "age_in_month > 60.97741273100616 ? age_in_month: age_in_day",
+      "variables": ["age_in_month", "age_in_day"]
+    },
+    "axeY": {
+      "value": "lenhei",
+      "variables": ["lenhei"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_lhfa_boys_0_5",
+        "condition": {
+          "value": "sex == 'M' && age_in_day <= 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_lhfa_girls_0_5",
+        "condition": {
+          "value": "sex == 'F' && age_in_day <= 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_hfa_boys_5_19",
+        "condition": {
+          "value": "sex == 'M' && age_in_day > 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_hfa_girls_5_19",
+        "condition": {
+          "value": "sex == 'F' && age_in_day > 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_month <= 228",
+      "variables": ["age_in_month"]
+    },
+    "interpretations": [
+      {
+        "name": "Tall",
+        "code": "Tall",
+        "range": "above +3",
+        "condition": {
+          "value": "zscore > 3",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "above +2",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 3",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Stunted",
+        "code": "stunted",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severely stunted",
+        "code": "severely_stunted",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "muacForAge": {
+    "code": "muac_for_age",
+    "name": "Mid-Upper Arm Circumference For Age",
+    "neededMeasureCodes": ["muac", "age_in_day"],
+    "axeX": {
+      "value": "age_in_day",
+      "variables": ["age_in_day"]
+    },
+    "axeY": {
+      "value": "muac",
+      "variables": ["muac"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_acfa_boys_3m_5",
+        "condition": {
+          "value": "sex == 'M'",
+          "variables": ["sex"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_acfa_girls_3m_5",
+        "condition": {
+          "value": "sex == 'F'",
+          "variables": ["sex"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_day >= 91 && age_in_day <= 1856",
+      "variables": ["age_in_day"]
+    },
+    "interpretations": [
+      {
+        "name": "Well nourished",
+        "code": "well_nourished",
+        "range": "above +1",
+        "condition": {
+          "value": "zscore >= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore < 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Moderate acute malnutrition",
+        "code": "moderate_acute_malnutrition",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severe acute malnutrition",
+        "code": "severe_acute_malnutrition",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "subscapularSkinfold": {
+    "code": "ssf_for_age",
+    "name": "Subscapular Skinfold For Age",
+    "neededMeasureCodes": ["ssf", "age_in_day"],
+    "axeX": {
+      "value": "age_in_day",
+      "variables": ["age_in_day"]
+    },
+    "axeY": {
+      "value": "ssf",
+      "variables": ["ssf"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_ssfa_boys_3m_5",
+        "condition": {
+          "value": "sex == 'M'",
+          "variables": ["sex"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_ssfa_girls_3m_5",
+        "condition": {
+          "value": "sex == 'F'",
+          "variables": ["sex"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_day >= 91 && age_in_day <= 1856",
+      "variables": ["age_in_day"]
+    },
+    "interpretations": [
+      {
+        "name": "High trunk fat",
+        "code": "high_trunk_fat",
+        "range": "above +2",
+        "condition": {
+          "value": "zscore > 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Above average trunk fat",
+        "code": "above_average_trunk_fat",
+        "range": "above +1",
+        "condition": {
+          "value": "zscore > 1 && zscore <= 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal trunk fat",
+        "code": "normal_trunk_fat",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Below average trunk fat",
+        "code": "below_average_trunk_fat",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Low trunk fat",
+        "code": "low_trunk_fat",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "tricepsSkinfold": {
+    "code": "tsf_for_age",
+    "name": "Triceps Skinfold For Age",
+    "neededMeasureCodes": ["tsf", "age_in_day"],
+    "axeX": {
+      "value": " age_in_day",
+      "variables": ["age_in_day"]
+    },
+    "axeY": {
+      "value": "tsf",
+      "variables": ["tsf"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_tsfa_boys_3m_5",
+        "condition": {
+          "value": "sex == 'M' ",
+          "variables": ["sex"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_tsfa_girls_3m_5",
+        "condition": {
+          "value": "sex == 'F' ",
+          "variables": ["sex"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_day >= 91 && age_in_day <= 1856",
+      "variables": ["age_in_day"]
+    },
+    "interpretations": [
+      {
+        "name": "High fat stores",
+        "code": "high_fat_stores",
+        "range": "above +2",
+        "condition": {
+          "value": "zscore > 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Above average fat stores",
+        "code": "above_average_fat_stores",
+        "range": "above +1",
+        "condition": {
+          "value": "zscore > 1 && zscore <= 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal fat stores",
+        "code": "normal_fat_stores",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Below average fat stores",
+        "code": "below_average_fat_stores",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Low fat stores",
+        "code": "low_fat_stores",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "weightForAge": {
+    "code": "wfa",
+    "name": "Weight For Age",
+    "neededMeasureCodes": ["weight", "age_in_day", "age_in_month"],
+    "axeX": {
+      "value": "age_in_month > 60.97741273100616 ? age_in_month: age_in_day",
+      "variables": ["age_in_month", "age_in_day"]
+    },
+    "axeY": {
+      "value": "weight",
+      "variables": ["weight"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_wfa_boys_0_5",
+        "condition": {
+          "value": "sex == 'M' && age_in_day <= 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_wfa_girls_0_5",
+        "condition": {
+          "value": "sex == 'F' && age_in_day <= 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_wfa_boys_5_10",
+        "condition": {
+          "value": "sex == 'M' && age_in_day > 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_wfa_girls_5_10",
+        "condition": {
+          "value": "sex == 'F' && age_in_day > 1856",
+          "variables": ["sex", "age_in_day"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "age_in_month <= 120",
+      "variables": ["age_in_month"]
+    },
+    "interpretations": [
+      {
+        "name": "High weight for age",
+        "code": "high_weight",
+        "range": "above +3",
+        "condition": {
+          "value": "zscore > 3",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Possible growth problem",
+        "code": "possible_growth_problem",
+        "range": "above +2",
+        "condition": {
+          "value": "zscore > 2 && zscore <= 3",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Underweight",
+        "code": "underweight",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severely underweight",
+        "code": "severely_underweight",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "age_based",
+    "standardShape": "growth_curve"
+  },
+  "weightForHeightNCHS": {
+    "code": "wfh_unisex_nchs",
+    "name": "Weight For Length/Height (NCHS)",
+    "neededMeasureCodes": ["weight", "lenhei"],
+    "axeX": {
+      "value": "(lenhei - (lenhei % 1)) + ((lenhei % 1)<=0.2 ? 0:((lenhei %1)>=0.8?1:0.5))",
+      "variables": ["lenhei"]
+    },
+    "axeY": {
+      "value": "weight",
+      "variables": ["weight"]
+    },
+    "availableRefCharts": [],
+    "availableRefTables": [
+      {
+        "tableCode": "weight_for_height_nchs_unisex",
+        "condition": {
+          "value": "0==0",
+          "variables": []
+        }
+      }
+    ],
+    "usageConditions": {
+      "value": "lenhei > 120 && lenhei <= 171",
+      "variables": ["lenhei"]
+    },
+    "interpretations": [
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Wasted",
+        "code": "wasted",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severely wasted",
+        "code": "severely_wasted",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "lenhei_based",
+    "standardShape": "growth_table"
+  },
+  "weightForHeight": {
+    "code": "wflh",
+    "name": "Weight For Length/Height",
+    "neededMeasureCodes": ["weight", "lenhei"],
+    "axeX": {
+      "value": "lenhei",
+      "variables": ["lenhei"]
+    },
+    "axeY": {
+      "value": "weight",
+      "variables": ["weight"]
+    },
+    "availableRefCharts": [
+      {
+        "chartCode": "growth_ref_chart_wfl_boys_45_110",
+        "condition": {
+          "value": "sex == 'M' && age_in_day <= 731",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_wfl_girls_45_110",
+        "condition": {
+          "value": "sex == 'F' && age_in_day <= 731",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_wfh_boys_65_120",
+        "condition": {
+          "value": "sex == 'M' && age_in_day > 731",
+          "variables": ["sex", "age_in_day"]
+        }
+      },
+      {
+        "chartCode": "growth_ref_chart_wfh_girls_65_120",
+        "condition": {
+          "value": "sex == 'F' && age_in_day > 731",
+          "variables": ["sex", "age_in_day"]
+        }
+      }
+    ],
+    "availableRefTables": [],
+    "usageConditions": {
+      "value": "lenhei >= 45 && lenhei <= 120",
+      "variables": ["lenhei"]
+    },
+    "interpretations": [
+      {
+        "name": "Obese",
+        "code": "obese",
+        "range": "above +3",
+        "condition": {
+          "value": "zscore > 3",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Overweight",
+        "code": "overweight",
+        "range": "above +2",
+        "condition": {
+          "value": "zscore > 2 && zscore <= 3",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Risk of overweight",
+        "code": "risk_of_overweight",
+        "range": "above +1",
+        "condition": {
+          "value": "zscore > 1 && zscore <= 2",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Wasted",
+        "code": "wasted",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severely wasted",
+        "code": "severely_wasted",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "lenhei_based",
+    "standardShape": "growth_curve"
+  },
+  "weightForHeightUnisex": {
+    "code": "wflh_unisex",
+    "name": "Weight For Length/Height (OMS 2006, UNISEX)",
+    "neededMeasureCodes": ["weight", "lenhei"],
+    "axeX": {
+      "value": "(lenhei - (lenhei % 1)) + ((lenhei % 1)<=0.2 ? 0:((lenhei %1)>=0.8?1:0.5))",
+      "variables": ["lenhei"]
+    },
+    "axeY": {
+      "value": "weight",
+      "variables": ["weight"]
+    },
+    "availableRefCharts": [],
+    "availableRefTables": [
+      {
+        "tableCode": "weight_for_length_who_2006_unisex",
+        "condition": {
+          "value": "0==0",
+          "variables": []
+        }
+      }
+    ],
+    "usageConditions": {
+      "value": "lenhei >= 45 && lenhei <= 120",
+      "variables": ["lenhei"]
+    },
+    "interpretations": [
+      {
+        "name": "Normal",
+        "code": "normal",
+        "range": "0",
+        "condition": {
+          "value": "zscore >= (-2) && zscore <= 1",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Wasted",
+        "code": "wasted",
+        "range": "below -2",
+        "condition": {
+          "value": "zscore < (-2) && zscore >= (-3)",
+          "variables": ["zscore"]
+        }
+      },
+      {
+        "name": "Severely wasted",
+        "code": "severely_wasted",
+        "range": "below -3",
+        "condition": {
+          "value": "zscore < (-3)",
+          "variables": ["zscore"]
+        }
+      }
+    ],
+    "zScoreComputingStrategy": "lenhei_based",
+    "standardShape": "growth_table"
+  }
+}

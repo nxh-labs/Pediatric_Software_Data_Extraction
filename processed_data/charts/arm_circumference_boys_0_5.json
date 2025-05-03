@@ -1,6 +1,6 @@
 {
-  "name": "Courbe de référence périmètre brachial pour l'âge (garçons 0-5 ans)",
-  "code": "growth_ref_chart_acfa_boys_0_5",
+  "name": "Courbe de référence périmètre brachial pour l'âge (garçons 3 mois-5 ans)",
+  "code": "growth_ref_chart_acfa_boys_3m_5",
   "sex": "M",
   "standard": "oms",
   "data": [
