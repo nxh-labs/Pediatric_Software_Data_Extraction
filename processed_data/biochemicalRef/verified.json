@@ -3,43 +3,81 @@
     "name": "Sodium",
     "code": "biochemical_na",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 1",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [130, true],
-          "max": [146, true]
+          "min": [
+            130,
+            true
+          ],
+          "max": [
+            146,
+            true
+          ]
         },
-        "under": ["Hyponatrémie"],
-        "over": ["Hypernatrémie"]
+        "under": [
+          "Hyponatrémie"
+        ],
+        "over": [
+          "Hypernatrémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month < 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [133, true],
-          "max": [146, true]
+          "min": [
+            133,
+            true
+          ],
+          "max": [
+            146,
+            true
+          ]
         },
-        "under": ["Hyponatrémie"],
-        "over": ["Hypernatrémie"]
+        "under": [
+          "Hyponatrémie"
+        ],
+        "over": [
+          "Hypernatrémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [136, true],
-          "max": [146, true]
+          "min": [
+            136,
+            true
+          ],
+          "max": [
+            146,
+            true
+          ]
         },
-        "under": ["Hyponatrémie"],
-        "over": ["Hypernatrémie"]
+        "under": [
+          "Hyponatrémie"
+        ],
+        "over": [
+          "Hypernatrémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -48,43 +86,81 @@
     "name": "Potassium",
     "code": "biochemical_k",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 1",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [3.6, true],
-          "max": [6.1, true]
+          "min": [
+            3.6,
+            true
+          ],
+          "max": [
+            6.1,
+            true
+          ]
         },
-        "under": ["Hypokaliémie"],
-        "over": ["Hyperkaliémie"]
+        "under": [
+          "Hypokaliémie"
+        ],
+        "over": [
+          "Hyperkaliémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month < 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [3.7, true],
-          "max": [5.8, true]
+          "min": [
+            3.7,
+            true
+          ],
+          "max": [
+            5.8,
+            true
+          ]
         },
-        "under": ["Hypokaliémie"],
-        "over": ["Hyperkaliémie"]
+        "under": [
+          "Hypokaliémie"
+        ],
+        "over": [
+          "Hyperkaliémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 12 && age_in_month <= 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [3.2, true],
-          "max": [5.1, true]
+          "min": [
+            3.2,
+            true
+          ],
+          "max": [
+            5.1,
+            true
+          ]
         },
-        "under": ["Hypokaliémie"],
-        "over": ["Hyperkaliémie"]
+        "under": [
+          "Hypokaliémie"
+        ],
+        "over": [
+          "Hyperkaliémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -93,31 +169,57 @@
     "name": "Chlorure",
     "code": "biochemical_cl",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [96, true],
-          "max": [110, true]
+          "min": [
+            96,
+            true
+          ],
+          "max": [
+            110,
+            true
+          ]
         },
-        "under": ["Hypochlorémie"],
-        "over": ["Hyperchlorémie"]
+        "under": [
+          "Hypochlorémie"
+        ],
+        "over": [
+          "Hyperchlorémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 12 && age_in_month <= 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [98, true],
-          "max": [106, true]
+          "min": [
+            98,
+            true
+          ],
+          "max": [
+            106,
+            true
+          ]
         },
-        "under": ["Hypochlorémie"],
-        "over": ["Hyperchlorémie"]
+        "under": [
+          "Hypochlorémie"
+        ],
+        "over": [
+          "Hyperchlorémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -126,43 +228,82 @@
     "name": "Calcium",
     "code": "biochemical_ca",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_day < 7",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [1.8, true],
-          "max": [2.75, true]
+          "min": [
+            1.8,
+            true
+          ],
+          "max": [
+            2.75,
+            true
+          ]
         },
-        "under": ["Hypocalcémie"],
-        "over": ["Hypercalcémie"]
+        "under": [
+          "Hypocalcémie"
+        ],
+        "over": [
+          "Hypercalcémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_day >= 7 && age_in_day < 21",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [2, true],
-          "max": [2.75, true]
+          "min": [
+            2,
+            true
+          ],
+          "max": [
+            2.75,
+            true
+          ]
         },
-        "under": ["Hypocalcémie"],
-        "over": ["Hypercalcémie"]
+        "under": [
+          "Hypocalcémie"
+        ],
+        "over": [
+          "Hypercalcémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_day >= 21 && age_in_month <= 228",
-          "variables": ["age_in_day", "age_in_month"]
+          "variables": [
+            "age_in_day",
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [2.2, true],
-          "max": [2.7, true]
+          "min": [
+            2.2,
+            true
+          ],
+          "max": [
+            2.7,
+            true
+          ]
         },
-        "under": ["Hypocalcémie"],
-        "over": ["Hypercalcémie"]
+        "under": [
+          "Hypocalcémie"
+        ],
+        "over": [
+          "Hypercalcémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -171,31 +312,58 @@
     "name": "Magnésium",
     "code": "biochemical_mg",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_day >= 7 && age_in_month < 3",
-          "variables": ["age_in_day", "age_in_month"]
+          "variables": [
+            "age_in_day",
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [0.65, true],
-          "max": [1.02, true]
+          "min": [
+            0.65,
+            true
+          ],
+          "max": [
+            1.02,
+            true
+          ]
         },
-        "under": ["Hypomagnésémie"],
-        "over": ["Hypermagnésémie"]
+        "under": [
+          "Hypomagnésémie"
+        ],
+        "over": [
+          "Hypermagnésémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 3 && age_in_month <= 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [0.75, true],
-          "max": [0.96, true]
+          "min": [
+            0.75,
+            true
+          ],
+          "max": [
+            0.96,
+            true
+          ]
         },
-        "under": ["Hypomagnésémie"],
-        "over": ["Hypermagnésémie"]
+        "under": [
+          "Hypomagnésémie"
+        ],
+        "over": [
+          "Hypermagnésémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -204,55 +372,106 @@
     "name": "Urée",
     "code": "biochemical_urea",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_day < 4",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [1.5, true],
-          "max": [8, true]
+          "min": [
+            1.5,
+            true
+          ],
+          "max": [
+            8,
+            true
+          ]
         },
-        "under": ["Urée basse"],
-        "over": ["Urée élevée"]
+        "under": [
+          "Urée basse"
+        ],
+        "over": [
+          "Urée élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_day >= 4 && age_in_month < 1",
-          "variables": ["age_in_day", "age_in_month"]
+          "variables": [
+            "age_in_day",
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [1, true],
-          "max": [4.2, true]
+          "min": [
+            1,
+            true
+          ],
+          "max": [
+            4.2,
+            true
+          ]
         },
-        "under": ["Urée basse"],
-        "over": ["Urée élevée"]
+        "under": [
+          "Urée basse"
+        ],
+        "over": [
+          "Urée élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month < 72",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [1.6, true],
-          "max": [6.5, true]
+          "min": [
+            1.6,
+            true
+          ],
+          "max": [
+            6.5,
+            true
+          ]
         },
-        "under": ["Urée basse"],
-        "over": ["Urée élevée"]
+        "under": [
+          "Urée basse"
+        ],
+        "over": [
+          "Urée élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 72 && age_in_month <= 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [2.5, true],
-          "max": [7.5, true]
+          "min": [
+            2.5,
+            true
+          ],
+          "max": [
+            7.5,
+            true
+          ]
         },
-        "under": ["Urée basse"],
-        "over": ["Urée élevée"]
+        "under": [
+          "Urée basse"
+        ],
+        "over": [
+          "Urée élevée"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -261,43 +480,81 @@
     "name": "Créatinine",
     "code": "biochemical_creatinine",
     "unit": "mmol/24h",
-    "availableUnits": ["mmol/24h"],
+    "availableUnits": [
+      "mmol/24h"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 1",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [0.15, true],
-          "max": [0.45, true]
+          "min": [
+            0.15,
+            true
+          ],
+          "max": [
+            0.45,
+            true
+          ]
         },
-        "under": ["Créatinine basse"],
-        "over": ["Créatinine élevée"]
+        "under": [
+          "Créatinine basse"
+        ],
+        "over": [
+          "Créatinine élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month < 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [0.5, true],
-          "max": [1.5, true]
+          "min": [
+            0.5,
+            true
+          ],
+          "max": [
+            1.5,
+            true
+          ]
         },
-        "under": ["Créatinine basse"],
-        "over": ["Créatinine élevée"]
+        "under": [
+          "Créatinine basse"
+        ],
+        "over": [
+          "Créatinine élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 12 && age_in_month < 72",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [1.5, true],
-          "max": [3.5, true]
+          "min": [
+            1.5,
+            true
+          ],
+          "max": [
+            3.5,
+            true
+          ]
         },
-        "under": ["Créatinine basse"],
-        "over": ["Créatinine élevée"]
+        "under": [
+          "Créatinine basse"
+        ],
+        "over": [
+          "Créatinine élevée"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -306,31 +563,57 @@
     "name": "Glucose",
     "code": "biochemical_glucose",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 1",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [2.8, true],
-          "max": [4.4, true]
+          "min": [
+            2.8,
+            true
+          ],
+          "max": [
+            4.4,
+            true
+          ]
         },
-        "under": ["Hypoglycémie"],
-        "over": ["Hyperglycémie"]
+        "under": [
+          "Hypoglycémie"
+        ],
+        "over": [
+          "Hyperglycémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month < 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [3.3, true],
-          "max": [5.5, true]
+          "min": [
+            3.3,
+            true
+          ],
+          "max": [
+            5.5,
+            true
+          ]
         },
-        "under": ["Hypoglycémie"],
-        "over": ["Hyperglycémie"]
+        "under": [
+          "Hypoglycémie"
+        ],
+        "over": [
+          "Hyperglycémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -339,31 +622,57 @@
     "name": "Alanine amino-transférase",
     "code": "biochemical_alt",
     "unit": "U/l",
-    "availableUnits": ["U/l"],
+    "availableUnits": [
+      "U/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 1",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [3, true],
-          "max": [27, true]
+          "min": [
+            3,
+            true
+          ],
+          "max": [
+            27,
+            true
+          ]
         },
-        "under": ["ALT basse"],
-        "over": ["ALT élevée"]
+        "under": [
+          "ALT basse"
+        ],
+        "over": [
+          "ALT élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month <= 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [7, true],
-          "max": [40, true]
+          "min": [
+            7,
+            true
+          ],
+          "max": [
+            40,
+            true
+          ]
         },
-        "under": ["ALT basse"],
-        "over": ["ALT élevée"]
+        "under": [
+          "ALT basse"
+        ],
+        "over": [
+          "ALT élevée"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -372,67 +681,129 @@
     "name": "Gamma glutamyl transférase",
     "code": "biochemical_ggt",
     "unit": "U/l",
-    "availableUnits": ["U/l"],
+    "availableUnits": [
+      "U/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 1",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [10, true],
-          "max": [270, true]
+          "min": [
+            10,
+            true
+          ],
+          "max": [
+            270,
+            true
+          ]
         },
-        "under": ["GGT basse"],
-        "over": ["GGT élevée"]
+        "under": [
+          "GGT basse"
+        ],
+        "over": [
+          "GGT élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 1 && age_in_month < 2",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [10, true],
-          "max": [160, true]
+          "min": [
+            10,
+            true
+          ],
+          "max": [
+            160,
+            true
+          ]
         },
-        "under": ["GGT basse"],
-        "over": ["GGT élevée"]
+        "under": [
+          "GGT basse"
+        ],
+        "over": [
+          "GGT élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 2 && age_in_month < 4",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [7, true],
-          "max": [100, true]
+          "min": [
+            7,
+            true
+          ],
+          "max": [
+            100,
+            true
+          ]
         },
-        "under": ["GGT basse"],
-        "over": ["GGT élevée"]
+        "under": [
+          "GGT basse"
+        ],
+        "over": [
+          "GGT élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 4 && age_in_month < 7",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [5, true],
-          "max": [45, true]
+          "min": [
+            5,
+            true
+          ],
+          "max": [
+            45,
+            true
+          ]
         },
-        "under": ["GGT basse"],
-        "over": ["GGT élevée"]
+        "under": [
+          "GGT basse"
+        ],
+        "over": [
+          "GGT élevée"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 7 && age_in_month <= 228",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [5, true],
-          "max": [25, true]
+          "min": [
+            5,
+            true
+          ],
+          "max": [
+            25,
+            true
+          ]
         },
-        "under": ["GGT basse"],
-        "over": ["GGT élevée"]
+        "under": [
+          "GGT basse"
+        ],
+        "over": [
+          "GGT élevée"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -441,67 +812,129 @@
     "name": "Bilirubine totale",
     "code": "biochemical_bilirubin_total",
     "unit": "µmol/l",
-    "availableUnits": ["µmol/l"],
+    "availableUnits": [
+      "µmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "(age_in_day * 24)< 12",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [0, true],
-          "max": [102, true]
+          "min": [
+            0,
+            true
+          ],
+          "max": [
+            102,
+            true
+          ]
         },
-        "under": ["Bilirubine basse"],
-        "over": ["Hyperbilirubinémie"]
+        "under": [
+          "Bilirubine basse"
+        ],
+        "over": [
+          "Hyperbilirubinémie"
+        ]
       },
       {
         "condition": {
           "value": "(age_in_day * 24) >= 12 && (age_in_day * 24) < 24",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [0, true],
-          "max": [145, true]
+          "min": [
+            0,
+            true
+          ],
+          "max": [
+            145,
+            true
+          ]
         },
-        "under": ["Bilirubine basse"],
-        "over": ["Hyperbilirubinémie"]
+        "under": [
+          "Bilirubine basse"
+        ],
+        "over": [
+          "Hyperbilirubinémie"
+        ]
       },
       {
         "condition": {
           "value": "(age_in_day * 24)>= 24 && (age_in_day * 24) <= 48",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [0, true],
-          "max": [196, true]
+          "min": [
+            0,
+            true
+          ],
+          "max": [
+            196,
+            true
+          ]
         },
-        "under": ["Bilirubine basse"],
-        "over": ["Hyperbilirubinémie"]
+        "under": [
+          "Bilirubine basse"
+        ],
+        "over": [
+          "Hyperbilirubinémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_day >= 3 && age_in_day < 5",
-          "variables": ["age_in_day"]
+          "variables": [
+            "age_in_day"
+          ]
         },
         "range": {
-          "min": [0, true],
-          "max": [256, true]
+          "min": [
+            0,
+            true
+          ],
+          "max": [
+            256,
+            true
+          ]
         },
-        "under": ["Bilirubine basse"],
-        "over": ["Hyperbilirubinémie"]
+        "under": [
+          "Bilirubine basse"
+        ],
+        "over": [
+          "Hyperbilirubinémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_day >= 5",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [0, true],
-          "max": [17, true]
+          "min": [
+            0,
+            true
+          ],
+          "max": [
+            17,
+            true
+          ]
         },
-        "under": ["Bilirubine basse"],
-        "over": ["Hyperbilirubinémie"]
+        "under": [
+          "Bilirubine basse"
+        ],
+        "over": [
+          "Hyperbilirubinémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -510,91 +943,181 @@
     "name": "Cholestérol total",
     "code": "biochemical_cholesterol_total",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [1.8, true],
-          "max": [4.55, true]
+          "min": [
+            1.8,
+            true
+          ],
+          "max": [
+            4.55,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month <= 48 && age_in_month >= 12",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [1.8, true],
-          "max": [4.55, true]
+          "min": [
+            1.8,
+            true
+          ],
+          "max": [
+            4.55,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 60 && age_in_month <= 108",
-          "variables": ["age_in_month"]
+          "variables": [
+            "age_in_month"
+          ]
         },
         "range": {
-          "min": [3.1, true],
-          "max": [5.2, true]
+          "min": [
+            3.1,
+            true
+          ],
+          "max": [
+            5.2,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 120 && age_in_month <=168  && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [3.2, true],
-          "max": [5.2, true]
+          "min": [
+            3.2,
+            true
+          ],
+          "max": [
+            5.2,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 120 && age_in_month <=168  && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [3.1, true],
-          "max": [5.25, true]
+          "min": [
+            3.1,
+            true
+          ],
+          "max": [
+            5.25,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 180 && age_in_month < 228 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [3.1, true],
-          "max": [5.2, true]
+          "min": [
+            3.1,
+            true
+          ],
+          "max": [
+            5.2,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 180 && age_in_month < 228 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [2.9, true],
-          "max": [5.1, true]
+          "min": [
+            2.9,
+            true
+          ],
+          "max": [
+            5.1,
+            true
+          ]
         },
-        "under": ["Cholestérol total bas"],
-        "over": ["Hypercholestérolémie"]
+        "under": [
+          "Cholestérol total bas"
+        ],
+        "over": [
+          "Hypercholestérolémie"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -603,115 +1126,234 @@
     "name": "HDL Cholestérol",
     "code": "biochemical_hdl",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 24 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.41, true],
-          "max": [1.29, true]
+          "min": [
+            0.41,
+            true
+          ],
+          "max": [
+            1.29,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month < 24 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.31, true],
-          "max": [0.96, true]
+          "min": [
+            0.31,
+            true
+          ],
+          "max": [
+            0.96,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 24 && age_in_month <= 48 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.85, true],
-          "max": [1.29, true]
+          "min": [
+            0.85,
+            true
+          ],
+          "max": [
+            1.29,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 24 && age_in_month <= 48 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.65, true],
-          "max": [0.96, true]
+          "min": [
+            0.65,
+            true
+          ],
+          "max": [
+            0.96,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 60 && age_in_month <= 108 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [1.06, true],
-          "max": [1.58, true]
+          "min": [
+            1.06,
+            true
+          ],
+          "max": [
+            1.58,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 60 && age_in_month <= 108 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.8, true],
-          "max": [1.19, true]
+          "min": [
+            0.8,
+            true
+          ],
+          "max": [
+            1.19,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 120 && age_in_month <= 168 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [1.11, true],
-          "max": [1.63, true]
+          "min": [
+            1.11,
+            true
+          ],
+          "max": [
+            1.63,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 180 && age_in_month <= 228 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [1.11, true],
-          "max": [1.71, true]
+          "min": [
+            1.11,
+            true
+          ],
+          "max": [
+            1.71,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 120 && age_in_month <= 228 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.8, true],
-          "max": [1.22, true]
+          "min": [
+            0.8,
+            true
+          ],
+          "max": [
+            1.22,
+            true
+          ]
         },
-        "under": ["HDL bas"],
-        "over": ["HDL élevé"]
+        "under": [
+          "HDL bas"
+        ],
+        "over": [
+          "HDL élevé"
+        ]
       }
     ],
     "source": "Normes biologiques"
@@ -720,103 +1362,209 @@
     "name": "Triglycérides",
     "code": "biochemical_triglycerides",
     "unit": "mmol/l",
-    "availableUnits": ["mmol/l"],
+    "availableUnits": [
+      "mmol/l"
+    ],
     "ranges": [
       {
         "condition": {
           "value": "age_in_month < 48 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.35, true],
-          "max": [1.2, true]
+          "min": [
+            0.35,
+            true
+          ],
+          "max": [
+            1.2,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month < 48 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.35, true],
-          "max": [1.1, true]
+          "min": [
+            0.35,
+            true
+          ],
+          "max": [
+            1.1,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 48 && age_in_month <= 108 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.4, true],
-          "max": [1.25, true]
+          "min": [
+            0.4,
+            true
+          ],
+          "max": [
+            1.25,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 48 && age_in_month <= 108 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.35, true],
-          "max": [1.2, true]
+          "min": [
+            0.35,
+            true
+          ],
+          "max": [
+            1.2,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 120 && age_in_month < 168 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.4, true],
-          "max": [1.55, true]
+          "min": [
+            0.4,
+            true
+          ],
+          "max": [
+            1.55,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 120 && age_in_month < 168 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.35, true],
-          "max": [1.5, true]
+          "min": [
+            0.35,
+            true
+          ],
+          "max": [
+            1.5,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 168 && age_in_month <= 228 && sex == 'F'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.45, true],
-          "max": [1.45, true]
+          "min": [
+            0.45,
+            true
+          ],
+          "max": [
+            1.45,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       },
       {
         "condition": {
           "value": "age_in_month >= 168 && age_in_month <= 228 && sex == 'M'",
-          "variables": ["age_in_month", "sex"]
+          "variables": [
+            "age_in_month",
+            "sex"
+          ]
         },
         "range": {
-          "min": [0.4, true],
-          "max": [1.5, true]
+          "min": [
+            0.4,
+            true
+          ],
+          "max": [
+            1.5,
+            true
+          ]
         },
-        "under": ["Triglycérides bas"],
-        "over": ["Hypertriglycéridémie"]
+        "under": [
+          "Triglycérides bas"
+        ],
+        "over": [
+          "Hypertriglycéridémie"
+        ]
       }
     ],
     "source": "Normes biologiques"

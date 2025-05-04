@@ -4,3 +4,6 @@ export * from "./IndicatorGeneration";
 export * from "./ClinicalRef";
 export * from "./OrientationRef";
 export * from "./AppetiteTestRef";
+export * from "./AnthropometricMeasure";
+export * from "./NutritionalRiskFactor";
+export * from "./DiagnosticRule";

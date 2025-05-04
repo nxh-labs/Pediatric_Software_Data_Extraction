@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Weight (Body weight)",
+    "code": "weight",
+    "unit": "kg",
+    "availableUnit": [
+      "kg",
+      "g"
+    ],
+    "description": "Child's total body weight",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "(weight >= 0.35 )&& (weight < 120)",
+        "variables": [
+          "weight"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Length",
+    "code": "length",
+    "unit": "cm",
+    "availableUnit": [
+      "cm",
+      "m"
+    ],
+    "description": "Recumbent length measurement (typically used for children under 2 years)",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "length >= 30 && (length<=120)",
+        "variables": [
+          "length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Height",
+    "code": "height",
+    "unit": "cm",
+    "availableUnit": [
+      "cm",
+      "m"
+    ],
+    "description": "Standing height measurement (typically used for children 2 years and older)",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "height >= 30 && (height<=200)",
+        "variables": [
+          "height"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Head Circumference (HC)",
+    "code": "head_circumference",
+    "unit": "cm",
+    "availableUnit": [
+      "cm"
+    ],
+    "description": "Measurement around the largest part of the head",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "head_circumference >= 20 && head_circumference < 65",
+        "variables": [
+          "head_circumference"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mid-Upper Arm Circumference (MUAC)",
+    "code": "muac",
+    "unit": "mm",
+    "availableUnit": [
+      "cm",
+      "mm"
+    ],
+    "description": "Circumference of the upper arm measured at the mid-point",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "muac >= 65 && muac < 350",
+        "variables": [
+          "muac"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Triceps Skinfold Thickness (TSF)",
+    "code": "tsf",
+    "unit": "mm",
+    "availableUnit": [
+      "mm"
+    ],
+    "description": "Thickness of skinfold on the back of the upper arm",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "tsf >= 2 && tsf < 50",
+        "variables": [
+          "tsf"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Subscapular Skinfold Thickness (SSF)",
+    "code": "ssf",
+    "unit": "mm",
+    "availableUnit": [
+      "mm"
+    ],
+    "description": "Thickness of skinfold below the shoulder blade",
+    "validationRules": [
+      {
+        "condition": "0==0",
+        "rule": "ssf >= 2 && ssf < 50",
+        "variables": [
+          "ssf"
+        ]
+      }
+    ]
+  }
+]

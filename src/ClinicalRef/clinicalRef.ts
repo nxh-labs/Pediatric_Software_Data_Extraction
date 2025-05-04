@@ -12,6 +12,7 @@ import {
 } from "../../constants";
 import { ClinicalSignReference } from "../../types";
 import { f } from "../../utils";
+import { diagnosticClinicalRefs } from "./diagnosticClinicalRef";
 
 export const clinicalSignRefs: ClinicalSignReference[] = [
   {
@@ -216,4 +217,5 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
       },
     ],
   },
+  ...diagnosticClinicalRefs,
 ];

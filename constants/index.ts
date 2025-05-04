@@ -176,6 +176,17 @@ export const CLINICAL_SIGNS = {
   SEVERE_SICKNESS: "clinical_severe_sickness",
   RESPIRATORY_DISTRESS: "clinical_respiratory_distress",
   EDEMA: "clinical_edema",
+  SKIN: "clinical_skin_sign",
+  HAIR: "clinical_hair_sign",
+  NAILS: "clinical_nails_sign",
+  CORNEA: "clinical_cornea_sign",
+  MOUTH: "clinical_mouth_sign",
+  HEMORRHAGE: "clinical_hemorrhage",
+  MUSCLE: "clinical_muscle_sign",
+  NEURO: "clinical_neuro_signs",
+  LIVER: "clinical_liver_signs",
+  JOINT: "clinical_joiint_signs", // Pour l'élargissement des articulations
+  CARDIAC: "clinical_cardiac_signs", // Pour la tachycardie
 } as const;
 
 export const VITAL_SIGNS = {
@@ -185,6 +196,41 @@ export const VITAL_SIGNS = {
 
 export const OBSERVATIONS = {
   SUBCOSTAL_RETRACTION: "observation_subcostal_retraction",
+  EDEMA_PRESENCE: "observation_edema_presence",
+  EDEMA_GODET_COUNT: "observation_edema_godet_count",
+
+  // Signes cutanés
+  SKIN_CHANGES: "observation_skin_changes",
+
+  // Signes capillaires
+  HAIR_CHANGES: "observation_hair_changes",
+
+  // Signes des ongles
+  NAIL_CHANGES: "observation_nail_changes",
+
+  // Signes de la cornée
+  CORNEA_CHANGES: "observation_cornea_changes",
+
+  // Signes buccaux
+  MOUTH_CHANGES: "observation_mouth_changes",
+
+  // Signes hémorragiques
+  HEMORRHAGE_SIGNS: "observation_hemorrhage_signs",
+
+  // État musculaire
+  MUSCLE_LOSS: "observation_muscle_loss",
+
+  // Signes neurologiques
+  NEURO_SIGNS: "observation_neuro_signs",
+
+  // État du foie
+  HEPATOMEGALY: "observation_hepatomegaly",
+
+  // Articulations
+  JOINT_ENLARGEMENT: "observation_joint_enlargement",
+
+  // Signes cardiaques
+  TACHYCARDIA: "observation_tachycardia",
 } as const;
 
 export const QUESTIONS = {
@@ -233,3 +279,13 @@ export const TREATMENT_HISTORY_VARIABLES_CODES = {
   PREVIOUS_CNA_TREATMENT_MONTH: "previous_cna_treatment_month",
 } as const;
 export { ConditionResult } from "smartcal";
+export enum DIAGNOSTIC_CODES {
+  SEVERE_ACUTE_MALNUTRITION = "SEVERE_ACUTE_MALNUTRITION",
+  MODERATE_ACUTE_MALNUTRITION = "MODERATE_ACUTE_MALNUTRITION",
+  SEVERE_CHRONIC_MALNUTRITION = "SEVERE_CHRONIC_MALNUTRITION",
+  MODERATE_CHRONIC_MALNUTRITION = "MODERATE_CHRONIC_MALNUTRITION",
+  SEVERE_UNDERWEIGHT = "SEVERE_UNDERWEIGHT",
+  MODERATE_UNDERWEIGHT = "MODERATE_UNDERWEIGHT",
+  OBESITY = "OBESITY",
+  OVERWEIGHT = "OVERWEIGHT"
+}

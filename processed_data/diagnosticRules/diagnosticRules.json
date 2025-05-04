@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Malnutrition aiguë sévère",
+    "code": "SEVERE_ACUTE_MALNUTRITION",
+    "conditions": [
+      {
+        "value": "wflh_unisex < (-3)",
+        "variables": [
+          "wflh_unisex"
+        ]
+      },
+      {
+        "value": "muac < 115",
+        "variables": [
+          "muac"
+        ]
+      },
+      {
+        "value": "observation_edema_presence == 1",
+        "variables": [
+          "observation_edema_presence"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Malnutrition aiguë modérée",
+    "code": "MODERATE_ACUTE_MALNUTRITION",
+    "conditions": [
+      {
+        "value": "wflh_unisex >= (-3) && wflh_unisex < (-2)",
+        "variables": [
+          "wflh_unisex"
+        ]
+      },
+      {
+        "value": "muac >= 115 && muac < 125",
+        "variables": [
+          "muac"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Malnutrition chronique sévère",
+    "code": "SEVERE_CHRONIC_MALNUTRITION",
+    "conditions": [
+      {
+        "value": "hfa < (-3)",
+        "variables": [
+          "hfa"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Malnutrition chronique modérée",
+    "code": "MODERATE_CHRONIC_MALNUTRITION",
+    "conditions": [
+      {
+        "value": "hfa >= (-3) && hfa < (-2)",
+        "variables": [
+          "hfa"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Insuffisance pondérale sévère",
+    "code": "SEVERE_UNDERWEIGHT",
+    "conditions": [
+      {
+        "value": "wfa < (-3)",
+        "variables": [
+          "wfa"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Insuffisance pondérale modérée",
+    "code": "MODERATE_UNDERWEIGHT",
+    "conditions": [
+      {
+        "value": "wfa >= (-3) && wfa < (-2)",
+        "variables": [
+          "wfa"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Obésité",
+    "code": "OBESITY",
+    "conditions": [
+      {
+        "value": "bmi_for_age > 3",
+        "variables": [
+          "bmi_for_age"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Surpoids",
+    "code": "OVERWEIGHT",
+    "conditions": [
+      {
+        "value": "bmi_for_age > 2 && bmi_for_age <= 3",
+        "variables": [
+          "bmi_for_age"
+        ]
+      }
+    ]
+  }
+]

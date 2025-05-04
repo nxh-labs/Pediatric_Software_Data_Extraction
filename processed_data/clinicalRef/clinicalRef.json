@@ -175,5 +175,216 @@
         "required": true
       }
     ]
+  },
+  {
+    "name": "Œdèmes bilatéraux",
+    "code": "clinical_edema",
+    "evaluationRule": {
+      "value": "observation_edema_presence == 1",
+      "variables": [
+        "observation_edema_presence"
+      ]
+    },
+    "data": [
+      {
+        "name": "Présence d'œdèmes bilatéraux",
+        "code": "observation_edema_presence",
+        "question": "L'enfant présente-t-il des œdèmes bilatéraux prenant le godet ?",
+        "dataType": "boolean",
+        "required": true
+      },
+      {
+        "name": "Degré de sévérité des œdèmes",
+        "code": "observation_edema_godet_count",
+        "question": "Quel est le degré de sévérité des œdèmes ? (0=Absent, 1=Léger/pieds, 2=Modéré/jambes et mains, 3=Sévère/généralisé)",
+        "dataType": "range",
+        "dataRange": [
+          0,
+          3
+        ],
+        "required": true
+      }
+    ],
+    "description": "Accumulation bilatérale de liquide dans les tissus mous, prenant le godet à la pression. Indicateur de déficit protéique."
+  },
+  {
+    "name": "Signes cutanés",
+    "code": "clinical_skin_sign",
+    "evaluationRule": {
+      "value": "observation_skin_changes == 1",
+      "variables": [
+        "observation_skin_changes"
+      ]
+    },
+    "data": [
+      {
+        "name": "État de la peau",
+        "code": "observation_skin_changes",
+        "question": "Observez-vous des altérations cutanées (peau sèche, crevasses) ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Altérations cutanées pouvant indiquer des carences en vitamine A, zinc ou acides gras essentiels"
+  },
+  {
+    "name": "Signes capillaires",
+    "code": "clinical_hair_sign",
+    "evaluationRule": {
+      "value": "observation_hair_changes == 1",
+      "variables": [
+        "observation_hair_changes"
+      ]
+    },
+    "data": [
+      {
+        "name": "État des cheveux",
+        "code": "observation_hair_changes",
+        "question": "Les cheveux sont-ils secs, cassants, ternes ou anormalement fins ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Altérations capillaires pouvant indiquer des carences en protéines ou zinc"
+  },
+  {
+    "name": "État des ongles",
+    "code": "clinical_nails_sign",
+    "evaluationRule": {
+      "value": "observation_nail_changes == 1",
+      "variables": [
+        "observation_nail_changes"
+      ]
+    },
+    "data": [
+      {
+        "name": "Altérations des ongles",
+        "code": "observation_nail_changes",
+        "question": "Les ongles présentent-ils des striations ou des déformations ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Modifications des ongles pouvant indiquer des carences en protéines ou zinc"
+  },
+  {
+    "name": "Signes de la cornée",
+    "code": "clinical_cornea_sign",
+    "evaluationRule": {
+      "value": "observation_cornea_changes == 1",
+      "variables": [
+        "observation_cornea_changes"
+      ]
+    },
+    "data": [
+      {
+        "name": "État de la cornée",
+        "code": "observation_cornea_changes",
+        "question": "Observez-vous une sclérose ou une opacité de la cornée ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Altérations de la cornée pouvant indiquer une carence en vitamine A"
+  },
+  {
+    "name": "Signes buccaux",
+    "code": "clinical_mouth_sign",
+    "evaluationRule": {
+      "value": "observation_mouth_changes == 1",
+      "variables": [
+        "observation_mouth_changes"
+      ]
+    },
+    "data": [
+      {
+        "name": "État de la langue et la bouche",
+        "code": "observation_mouth_changes",
+        "question": "Y a-t-il présence d'une langue dépapillée ou d'une stomatite excoriante ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Altérations buccales pouvant indiquer des carences en vitamine B12, folates, riboflavine, fer, ou niacine"
+  },
+  {
+    "name": "Signes hémorragiques",
+    "code": "clinical_hemorrhage",
+    "evaluationRule": {
+      "value": "observation_hemorrhage_signs == 1",
+      "variables": [
+        "observation_hemorrhage_signs"
+      ]
+    },
+    "data": [
+      {
+        "name": "Signes hémorragiques",
+        "code": "observation_hemorrhage_signs",
+        "question": "Observez-vous des pétéchies ou des ecchymoses ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Signes hémorragiques pouvant indiquer des carences en vitamines K ou C"
+  },
+  {
+    "name": "État musculaire",
+    "code": "clinical_muscle_sign",
+    "evaluationRule": {
+      "value": "observation_muscle_loss == 1",
+      "variables": [
+        "observation_muscle_loss"
+      ]
+    },
+    "data": [
+      {
+        "name": "Perte musculaire",
+        "code": "observation_muscle_loss",
+        "question": "Observez-vous une perte de la masse musculaire ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Perte de masse musculaire pouvant indiquer des carences en protéines ou sélénium"
+  },
+  {
+    "name": "Signes neurologiques",
+    "code": "clinical_neuro_signs",
+    "evaluationRule": {
+      "value": "observation_neuro_signs == 1",
+      "variables": [
+        "observation_neuro_signs"
+      ]
+    },
+    "data": [
+      {
+        "name": "Signes neurologiques",
+        "code": "observation_neuro_signs",
+        "question": "L'enfant présente-t-il des paresthésies ou une ataxie ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Signes neurologiques pouvant indiquer des carences en thiamine ou vitamine B12"
+  },
+  {
+    "name": "État du foie",
+    "code": "clinical_liver_signs",
+    "evaluationRule": {
+      "value": "observation_hepatomegaly == 1",
+      "variables": [
+        "observation_hepatomegaly"
+      ]
+    },
+    "data": [
+      {
+        "name": "Hépatomégalie",
+        "code": "observation_hepatomegaly",
+        "question": "Constatez-vous une hépatomégalie ?",
+        "dataType": "boolean",
+        "required": true
+      }
+    ],
+    "description": "Hépatomégalie pouvant indiquer des carences en protéines"
   }
 ]
