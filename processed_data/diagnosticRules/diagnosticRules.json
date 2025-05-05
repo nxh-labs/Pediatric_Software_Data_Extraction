@@ -16,9 +16,9 @@
         ]
       },
       {
-        "value": "observation_edema_presence == 1",
+        "value": "clinical_edema == 1",
         "variables": [
-          "observation_edema_presence"
+          "clinical_edema"
         ]
       }
     ]

@@ -7,3 +7,5 @@ export * from "./AppetiteTestRef";
 export * from "./AnthropometricMeasure";
 export * from "./NutritionalRiskFactor";
 export * from "./DiagnosticRule";
+export * from "./Medicines";
+export * from "./Milk";

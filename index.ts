@@ -7,6 +7,8 @@ import {
   saveOrientationRefs,
   saveAnthropometricMeasures,
   saveDiagnosticRules,
+  saveMedicines,
+  saveMilks,
 } from "./src";
 
 saveAnthropometricMeasures();
@@ -17,3 +19,5 @@ saveClinicalRefs();
 saveDiagnosticRules();
 saveAppetiteTestRefs();
 saveOrientationRefs();
+saveMedicines();
+saveMilks();

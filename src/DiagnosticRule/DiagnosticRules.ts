@@ -1,12 +1,12 @@
 import { DiagnosticRule } from "../../types";
 import { fExp } from "../../utils";
-import { 
-  CLINICAL_SIGNS, 
+import {
+  CLINICAL_SIGNS,
   ZScorePossibleValueLimit,
   ConditionResult,
   AnthroSystemCodes,
   OBSERVATIONS,
-  DIAGNOSTIC_CODES
+  DIAGNOSTIC_CODES,
 } from "../../constants";
 
 export const diagnosticRules: DiagnosticRule[] = [
@@ -26,10 +26,10 @@ export const diagnosticRules: DiagnosticRule[] = [
       },
       // Condition 3: Présence d'œdèmes bilatéraux
       {
-        value: fExp`${OBSERVATIONS.EDEMA_PRESENCE} == ${ConditionResult.True}`,
-        variables: [OBSERVATIONS.EDEMA_PRESENCE],
-      }
-    ]
+        value: fExp`${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}`,
+        variables: [CLINICAL_SIGNS.EDEMA],
+      },
+    ],
   },
   {
     name: "Malnutrition aiguë modérée",
@@ -44,8 +44,8 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.MUAC} >= 115 && ${AnthroSystemCodes.MUAC} < 125`,
         variables: [AnthroSystemCodes.MUAC],
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Malnutrition chronique sévère",
@@ -55,8 +55,8 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.HFA} < ${ZScorePossibleValueLimit.neg3}`,
         variables: [AnthroSystemCodes.HFA],
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Malnutrition chronique modérée",
@@ -66,8 +66,8 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.HFA} >= ${ZScorePossibleValueLimit.neg3} && ${AnthroSystemCodes.HFA} < ${ZScorePossibleValueLimit.neg2}`,
         variables: [AnthroSystemCodes.HFA],
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Insuffisance pondérale sévère",
@@ -77,8 +77,8 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.WFA} < ${ZScorePossibleValueLimit.neg3}`,
         variables: [AnthroSystemCodes.WFA],
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Insuffisance pondérale modérée",
@@ -88,8 +88,8 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.WFA} >= ${ZScorePossibleValueLimit.neg3} && ${AnthroSystemCodes.WFA} < ${ZScorePossibleValueLimit.neg2}`,
         variables: [AnthroSystemCodes.WFA],
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Obésité",
@@ -98,8 +98,8 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.BMI_FOR_AGE} > ${ZScorePossibleValueLimit.pos3}`,
         variables: [AnthroSystemCodes.BMI_FOR_AGE],
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Surpoids",
@@ -108,7 +108,7 @@ export const diagnosticRules: DiagnosticRule[] = [
       {
         value: fExp`${AnthroSystemCodes.BMI_FOR_AGE} > ${ZScorePossibleValueLimit.pos2} && ${AnthroSystemCodes.BMI_FOR_AGE} <= ${ZScorePossibleValueLimit.pos3}`,
         variables: [AnthroSystemCodes.BMI_FOR_AGE],
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];

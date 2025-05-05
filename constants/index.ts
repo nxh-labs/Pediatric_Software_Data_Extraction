@@ -277,6 +277,7 @@ export const TREATMENT_HISTORY_VARIABLES_CODES = {
   CNA_ORIENTATION_NUMBER: "cna_orientation_number",
   CNT_ORIENTATION_NUMBER: "cnt_orientation_number",
   PREVIOUS_CNA_TREATMENT_MONTH: "previous_cna_treatment_month",
+  CURRENT_ORIENTATION: "history_current_orientation",
 } as const;
 export { ConditionResult } from "smartcal";
 export enum DIAGNOSTIC_CODES {
@@ -287,5 +288,15 @@ export enum DIAGNOSTIC_CODES {
   SEVERE_UNDERWEIGHT = "SEVERE_UNDERWEIGHT",
   MODERATE_UNDERWEIGHT = "MODERATE_UNDERWEIGHT",
   OBESITY = "OBESITY",
-  OVERWEIGHT = "OVERWEIGHT"
+  OVERWEIGHT = "OVERWEIGHT",
+}
+export enum UnitType {
+  MASSE = "masse",
+  VOLUME = "volume",
+  CONCENTRATION = "concentration",
+}
+
+export enum WeightRangeLimit {
+  MIN = "min_weight",
+  MAX = "max_weight",
 }

@@ -14,3 +14,5 @@ export * from "./ValidationRule";
 
 export * from "./OrientationRef";
 export * from "./AppetiteTestRef";
+export * from "./Medicine";
+export * from "./Milk";
