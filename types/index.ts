@@ -11,8 +11,8 @@ export * from "./NutritionalRiskFactor";
 export * from "./DiagnosticRule";
 export * from "./AnthropometricMeasure";
 export * from "./ValidationRule";
-
 export * from "./OrientationRef";
 export * from "./AppetiteTestRef";
 export * from "./Medicine";
 export * from "./Milk";
+export * from "./Unit";
