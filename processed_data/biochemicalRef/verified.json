@@ -1,7 +1,7 @@
 [
   {
     "name": "Sodium",
-    "code": "biochemical_na",
+    "code": "biochemical_iono_na",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -84,7 +84,7 @@
   },
   {
     "name": "Potassium",
-    "code": "biochemical_k",
+    "code": "biochemical_iono_k",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -167,7 +167,7 @@
   },
   {
     "name": "Chlorure",
-    "code": "biochemical_cl",
+    "code": "biochemical_iono_cl",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -226,7 +226,7 @@
   },
   {
     "name": "Calcium",
-    "code": "biochemical_ca",
+    "code": "biochemical_iono_ca",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -310,7 +310,7 @@
   },
   {
     "name": "Magnésium",
-    "code": "biochemical_mg",
+    "code": "biochemical_iono_mg",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -370,7 +370,7 @@
   },
   {
     "name": "Urée",
-    "code": "biochemical_urea",
+    "code": "biochemical_kidney_urea",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -478,7 +478,7 @@
   },
   {
     "name": "Créatinine",
-    "code": "biochemical_creatinine",
+    "code": "bichemical_kidney_creatinine",
     "unit": "mmol/24h",
     "availableUnits": [
       "mmol/24h"
@@ -561,7 +561,7 @@
   },
   {
     "name": "Glucose",
-    "code": "biochemical_glucose",
+    "code": "biochemical_blood_glucose",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -620,7 +620,7 @@
   },
   {
     "name": "Alanine amino-transférase",
-    "code": "biochemical_alt",
+    "code": "biochemical_enzy_alt",
     "unit": "U/l",
     "availableUnits": [
       "U/l"
@@ -679,7 +679,7 @@
   },
   {
     "name": "Gamma glutamyl transférase",
-    "code": "biochemical_ggt",
+    "code": "biochemical_enzy_ggt",
     "unit": "U/l",
     "availableUnits": [
       "U/l"
@@ -810,7 +810,7 @@
   },
   {
     "name": "Bilirubine totale",
-    "code": "biochemical_bilirubin_total",
+    "code": "biochemical_enzy_bilirubin_total",
     "unit": "µmol/l",
     "availableUnits": [
       "µmol/l"
@@ -941,7 +941,7 @@
   },
   {
     "name": "Cholestérol total",
-    "code": "biochemical_cholesterol_total",
+    "code": "biochemical_fat_cholesterol_total",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -1124,7 +1124,7 @@
   },
   {
     "name": "HDL Cholestérol",
-    "code": "biochemical_hdl",
+    "code": "biochemical_fat_hdl",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"
@@ -1360,7 +1360,7 @@
   },
   {
     "name": "Triglycérides",
-    "code": "biochemical_triglycerides",
+    "code": "bichemical_fat_triglycerides",
     "unit": "mmol/l",
     "availableUnits": [
       "mmol/l"

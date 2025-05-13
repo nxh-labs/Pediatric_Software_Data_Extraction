@@ -1,5 +1,6 @@
 import {
   AnthroSystemCodes,
+  BIOCHEMICAL_REF_CODES,
   HOURS_IN_DAY,
   MAX_AGE_IN_MONTH_IN_PEDIATRIC,
   MONTH_IN_YEARS,
@@ -12,7 +13,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   // Ionogramme sanguin
   {
     name: "Sodium",
-    code: "biochemical_na",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_IONO_NA,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -50,7 +51,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Potassium",
-    code: "biochemical_k",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_IONO_K,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -90,7 +91,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Chlorure",
-    code: "biochemical_cl",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_IONO_CL,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -119,7 +120,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Calcium",
-    code: "biochemical_ca",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_IONO_CA,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -162,7 +163,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Magnésium",
-    code: "biochemical_mg",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_IONO_MG,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -198,7 +199,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   // Fonction rénale
   {
     name: "Urée",
-    code: "biochemical_urea",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_KIDNEY_UREA,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -256,7 +257,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Créatinine",
-    code: "biochemical_creatinine",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_KIDNEY_CREA,
     unit: "mmol/24h",
     availableUnits: ["mmol/24h"],
     ranges: [
@@ -300,7 +301,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   // Bilan glycémique
   {
     name: "Glucose",
-    code: "biochemical_glucose",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_BLOOD_GLUCOSE,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -331,7 +332,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   // Bilan enzymatique
   {
     name: "Alanine amino-transférase",
-    code: "biochemical_alt",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_ENZY_ALT,
     unit: "U/l",
     availableUnits: ["U/l"],
     ranges: [
@@ -361,7 +362,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
 
   {
     name: "Gamma glutamyl transférase",
-    code: "biochemical_ggt",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_ENZY_GGT,
     unit: "U/l",
     availableUnits: ["U/l"],
     ranges: [
@@ -423,7 +424,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Bilirubine totale",
-    code: "biochemical_bilirubin_total",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_ENZY_BILIRUBIN_TOTAL ,
     unit: "µmol/l",
     availableUnits: ["µmol/l"],
     ranges: [
@@ -497,7 +498,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   // Bilan lipidique
   {
     name: "Cholestérol total",
-    code: "biochemical_cholesterol_total",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_FAT_CHELESTEROL_TOTAL,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -601,7 +602,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "HDL Cholestérol",
-    code: "biochemical_hdl",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_FAT_HDL,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [
@@ -741,7 +742,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Triglycérides",
-    code: "biochemical_triglycerides",
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_FAT_TG,
     unit: "mmol/l",
     availableUnits: ["mmol/l"],
     ranges: [

@@ -291,24 +291,47 @@ export enum DIAGNOSTIC_CODES {
   OVERWEIGHT = "OVERWEIGHT",
 }
 export enum UnitType {
-  LENGTH = 'LENGTH',
-  WEIGHT = 'WEIGHT',
-  CONCENTRATION = 'CONCENTRATION',
-  ENZYME = 'ENZYME',
-  TIME = 'TIME',
-  VOLUME = 'VOLUME',
-  TEMPERATURE = 'TEMPERATURE',
-  FREQUENCY = 'FREQUENCY',
-  PERCENTAGE = 'PERCENTAGE',
-  PRESSURE = 'PRESSURE',
-  SURFACE = 'SURFACE',
-  FLUID_RATE = 'FLUID_RATE',
-  FLOW_RATE = 'FLOW_RATE',
-  SCORE = 'SCORE',
-  PERCENTILE = 'PERCENTILE',
+  LENGTH = "LENGTH",
+  WEIGHT = "WEIGHT",
+  CONCENTRATION = "CONCENTRATION",
+  ENZYME = "ENZYME",
+  TIME = "TIME",
+  VOLUME = "VOLUME",
+  TEMPERATURE = "TEMPERATURE",
+  FREQUENCY = "FREQUENCY",
+  PERCENTAGE = "PERCENTAGE",
+  PRESSURE = "PRESSURE",
+  SURFACE = "SURFACE",
+  FLUID_RATE = "FLUID_RATE",
+  FLOW_RATE = "FLOW_RATE",
+  SCORE = "SCORE",
+  PERCENTILE = "PERCENTILE",
 }
 
 export enum WeightRangeLimit {
   MIN = "min_weight",
   MAX = "max_weight",
+}
+
+
+export const BIOCHEMICAL_REF_CODES = {
+  BIOCHEMICAL_IONO_NA:'biochemical_iono_na',
+  BIOCHEMICAL_IONO_K: 'biochemical_iono_k',
+  BIOCHEMICAL_IONO_CL: 'biochemical_iono_cl',
+  BIOCHEMICAL_IONO_CA : 'biochemical_iono_ca',
+  BIOCHEMICAL_IONO_MG : 'biochemical_iono_mg',
+  BIOCHEMICAL_KIDNEY_UREA: 'biochemical_kidney_urea',
+  BIOCHEMICAL_KIDNEY_CREA: 'bichemical_kidney_creatinine',
+  BIOCHEMICAL_BLOOD_GLUCOSE: 'biochemical_blood_glucose',
+  BIOCHEMICAL_ENZY_ALT: 'biochemical_enzy_alt',
+  BIOCHEMICAL_ENZY_GGT: 'biochemical_enzy_ggt',
+  BIOCHEMICAL_ENZY_BILIRUBIN_TOTAL: 'biochemical_enzy_bilirubin_total',
+  BIOCHEMICAL_FAT_CHELESTEROL_TOTAL: 'biochemical_fat_cholesterol_total',
+  BIOCHEMICAL_FAT_HDL: 'biochemical_fat_hdl',
+  BIOCHEMICAL_FAT_TG: 'bichemical_fat_triglycerides',
+  
+
+
+
+
 }

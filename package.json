@@ -6,6 +6,9 @@
   "dependencies": {
     "xlsx": "^0.18.5"
   },
+  "scripts": {
+    "build": "ts-node index.ts"
+  },
   "devDependencies": {
     "@types/node": "^22.15.3",
     "smartcal": "^1.0.8",

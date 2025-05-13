@@ -559,7 +559,7 @@ const antifungals: Medicine[] = [
     category: MedicineCategory.ANTIFUNGALS,
     administrationRoutes: [AdministrationRoute.ORAL],
     baseDosage: {
-      label: "400.000 UI/kg/jour",
+      label: "400.000 UI/jour",
       min: 400000,
       max: 400000,
       unit: DosageUnit.UI,

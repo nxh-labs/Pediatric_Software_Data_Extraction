@@ -13,7 +13,7 @@ export interface AppetiteTestRef {
       APPETITE_TEST_SACHET_FRACTION_PARTITION,
       APPETITE_TEST_SACHET_FRACTION_PARTITION
     ];
-    potRange: [number, number];
+    potRange: [number, number | null];
   }[];
   otherData: {
     fields: [];

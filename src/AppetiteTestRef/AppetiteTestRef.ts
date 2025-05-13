@@ -59,7 +59,7 @@ export const appetiteTestRef: AppetiteTestRef = {
         APPETITE_TEST_SACHET_FRACTION_PARTITION.ONE,
         APPETITE_TEST_SACHET_FRACTION_PARTITION.INFINITY,
       ],
-      potRange: [150, Infinity],
+      potRange: [150, null],
     },
   ],
   otherData: {
