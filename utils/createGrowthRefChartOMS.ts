@@ -1,4 +1,5 @@
-import { GrowthStandard, IChartData } from "../types";
+import { GrowthStandard } from "../constants";
+import {  IChartData } from "../types";
 
 export function createGrowthRefChartOMS(
   name: string,

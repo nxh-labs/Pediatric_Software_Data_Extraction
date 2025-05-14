@@ -5,7 +5,7 @@ import {
   COMPLICATION_CODES,
   ConditionResult,
 } from "../../constants";
-import { Milk, MilkType, RecommendedMilkQuantityPerDay } from "../../types";
+import { Milk, MilkType, RecommendedMilkPerDay } from "../../types";
 import { fExp } from "../../utils";
 
 export const milkRefs: Milk[] = [
@@ -27,273 +27,273 @@ export const milkRefs: Milk[] = [
       variables: [AnthroSystemCodes.WEIGHT],
     },
     recommendedMilkPerDay: [
-      RecommendedMilkQuantityPerDay.FIVE,
-      RecommendedMilkQuantityPerDay.HEIGHT,
-      RecommendedMilkQuantityPerDay.SIX,
+      RecommendedMilkPerDay.FIVE,
+      RecommendedMilkPerDay.HEIGHT,
+      RecommendedMilkPerDay.SIX,
     ],
-    recommendedMilkPerWeightRanges: [
+    recommendationPerRanges: [
       {
-        weightRanges: {
+        weightRange: {
           min: 2,
           max: 2.1,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 40,
-          [RecommendedMilkQuantityPerDay.SIX]: 50,
-          [RecommendedMilkQuantityPerDay.FIVE]: 65,
+          [RecommendedMilkPerDay.HEIGHT]: 40,
+          [RecommendedMilkPerDay.SIX]: 50,
+          [RecommendedMilkPerDay.FIVE]: 65,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 2.2,
           max: 2.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 45,
-          [RecommendedMilkQuantityPerDay.SIX]: 60,
-          [RecommendedMilkQuantityPerDay.FIVE]: 70,
+          [RecommendedMilkPerDay.HEIGHT]: 45,
+          [RecommendedMilkPerDay.SIX]: 60,
+          [RecommendedMilkPerDay.FIVE]: 70,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 2.5,
           max: 2.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 50,
-          [RecommendedMilkQuantityPerDay.SIX]: 65,
-          [RecommendedMilkQuantityPerDay.FIVE]: 75,
+          [RecommendedMilkPerDay.HEIGHT]: 50,
+          [RecommendedMilkPerDay.SIX]: 65,
+          [RecommendedMilkPerDay.FIVE]: 75,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 2.8,
           max: 2.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 55,
-          [RecommendedMilkQuantityPerDay.SIX]: 70,
-          [RecommendedMilkQuantityPerDay.FIVE]: 80,
+          [RecommendedMilkPerDay.HEIGHT]: 55,
+          [RecommendedMilkPerDay.SIX]: 70,
+          [RecommendedMilkPerDay.FIVE]: 80,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 3.0,
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 60,
-          [RecommendedMilkQuantityPerDay.SIX]: 75,
-          [RecommendedMilkQuantityPerDay.FIVE]: 85,
+          [RecommendedMilkPerDay.HEIGHT]: 60,
+          [RecommendedMilkPerDay.SIX]: 75,
+          [RecommendedMilkPerDay.FIVE]: 85,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 3.5,
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 65,
-          [RecommendedMilkQuantityPerDay.SIX]: 80,
-          [RecommendedMilkQuantityPerDay.FIVE]: 95,
+          [RecommendedMilkPerDay.HEIGHT]: 65,
+          [RecommendedMilkPerDay.SIX]: 80,
+          [RecommendedMilkPerDay.FIVE]: 95,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 4.0,
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 70,
-          [RecommendedMilkQuantityPerDay.SIX]: 85,
-          [RecommendedMilkQuantityPerDay.FIVE]: 110,
+          [RecommendedMilkPerDay.HEIGHT]: 70,
+          [RecommendedMilkPerDay.SIX]: 85,
+          [RecommendedMilkPerDay.FIVE]: 110,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 4.5,
           max: 4.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 80,
-          [RecommendedMilkQuantityPerDay.SIX]: 95,
-          [RecommendedMilkQuantityPerDay.FIVE]: 120,
+          [RecommendedMilkPerDay.HEIGHT]: 80,
+          [RecommendedMilkPerDay.SIX]: 95,
+          [RecommendedMilkPerDay.FIVE]: 120,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 5.0,
           max: 5.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 90,
-          [RecommendedMilkQuantityPerDay.SIX]: 110,
-          [RecommendedMilkQuantityPerDay.FIVE]: 130,
+          [RecommendedMilkPerDay.HEIGHT]: 90,
+          [RecommendedMilkPerDay.SIX]: 110,
+          [RecommendedMilkPerDay.FIVE]: 130,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 5.5,
           max: 5.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 100,
-          [RecommendedMilkQuantityPerDay.SIX]: 120,
-          [RecommendedMilkQuantityPerDay.FIVE]: 150,
+          [RecommendedMilkPerDay.HEIGHT]: 100,
+          [RecommendedMilkPerDay.SIX]: 120,
+          [RecommendedMilkPerDay.FIVE]: 150,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 6.0,
           max: 6.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 110,
-          [RecommendedMilkQuantityPerDay.SIX]: 140,
-          [RecommendedMilkQuantityPerDay.FIVE]: 175,
+          [RecommendedMilkPerDay.HEIGHT]: 110,
+          [RecommendedMilkPerDay.SIX]: 140,
+          [RecommendedMilkPerDay.FIVE]: 175,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 7.0,
           max: 7.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 125,
-          [RecommendedMilkQuantityPerDay.SIX]: 160,
-          [RecommendedMilkQuantityPerDay.FIVE]: 200,
+          [RecommendedMilkPerDay.HEIGHT]: 125,
+          [RecommendedMilkPerDay.SIX]: 160,
+          [RecommendedMilkPerDay.FIVE]: 200,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 8.0,
           max: 8.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 140,
-          [RecommendedMilkQuantityPerDay.SIX]: 180,
-          [RecommendedMilkQuantityPerDay.FIVE]: 225,
+          [RecommendedMilkPerDay.HEIGHT]: 140,
+          [RecommendedMilkPerDay.SIX]: 180,
+          [RecommendedMilkPerDay.FIVE]: 225,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 9.0,
           max: 9.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 155,
-          [RecommendedMilkQuantityPerDay.SIX]: 190,
-          [RecommendedMilkQuantityPerDay.FIVE]: 250,
+          [RecommendedMilkPerDay.HEIGHT]: 155,
+          [RecommendedMilkPerDay.SIX]: 190,
+          [RecommendedMilkPerDay.FIVE]: 250,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 10.0,
           max: 10.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 170,
-          [RecommendedMilkQuantityPerDay.SIX]: 200,
-          [RecommendedMilkQuantityPerDay.FIVE]: 275,
+          [RecommendedMilkPerDay.HEIGHT]: 170,
+          [RecommendedMilkPerDay.SIX]: 200,
+          [RecommendedMilkPerDay.FIVE]: 275,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 11.0,
           max: 11.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 190,
-          [RecommendedMilkQuantityPerDay.SIX]: 230,
-          [RecommendedMilkQuantityPerDay.FIVE]: 275,
+          [RecommendedMilkPerDay.HEIGHT]: 190,
+          [RecommendedMilkPerDay.SIX]: 230,
+          [RecommendedMilkPerDay.FIVE]: 275,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 12.0,
           max: 12.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 205,
-          [RecommendedMilkQuantityPerDay.SIX]: 250,
-          [RecommendedMilkQuantityPerDay.FIVE]: 300,
+          [RecommendedMilkPerDay.HEIGHT]: 205,
+          [RecommendedMilkPerDay.SIX]: 250,
+          [RecommendedMilkPerDay.FIVE]: 300,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 13.0,
           max: 13.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 230,
-          [RecommendedMilkQuantityPerDay.SIX]: 275,
-          [RecommendedMilkQuantityPerDay.FIVE]: 350,
+          [RecommendedMilkPerDay.HEIGHT]: 230,
+          [RecommendedMilkPerDay.SIX]: 275,
+          [RecommendedMilkPerDay.FIVE]: 350,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 14.0,
           max: 14.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 250,
-          [RecommendedMilkQuantityPerDay.SIX]: 290,
-          [RecommendedMilkQuantityPerDay.FIVE]: 375,
+          [RecommendedMilkPerDay.HEIGHT]: 250,
+          [RecommendedMilkPerDay.SIX]: 290,
+          [RecommendedMilkPerDay.FIVE]: 375,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 15.0,
           max: 19.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 260,
-          [RecommendedMilkQuantityPerDay.SIX]: 300,
-          [RecommendedMilkQuantityPerDay.FIVE]: 400,
+          [RecommendedMilkPerDay.HEIGHT]: 260,
+          [RecommendedMilkPerDay.SIX]: 300,
+          [RecommendedMilkPerDay.FIVE]: 400,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 20.0,
           max: 24.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 290,
-          [RecommendedMilkQuantityPerDay.SIX]: 320,
-          [RecommendedMilkQuantityPerDay.FIVE]: 450,
+          [RecommendedMilkPerDay.HEIGHT]: 290,
+          [RecommendedMilkPerDay.SIX]: 320,
+          [RecommendedMilkPerDay.FIVE]: 450,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 25.0,
           max: 29.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 300,
-          [RecommendedMilkQuantityPerDay.SIX]: 350,
-          [RecommendedMilkQuantityPerDay.FIVE]: 450,
+          [RecommendedMilkPerDay.HEIGHT]: 300,
+          [RecommendedMilkPerDay.SIX]: 350,
+          [RecommendedMilkPerDay.FIVE]: 450,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 30.0,
           max: 39.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 320,
-          [RecommendedMilkQuantityPerDay.SIX]: 370,
-          [RecommendedMilkQuantityPerDay.FIVE]: 500,
+          [RecommendedMilkPerDay.HEIGHT]: 320,
+          [RecommendedMilkPerDay.SIX]: 370,
+          [RecommendedMilkPerDay.FIVE]: 500,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 40.0,
           max: 60.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 350,
-          [RecommendedMilkQuantityPerDay.SIX]: 400,
-          [RecommendedMilkQuantityPerDay.FIVE]: 500,
+          [RecommendedMilkPerDay.HEIGHT]: 350,
+          [RecommendedMilkPerDay.SIX]: 400,
+          [RecommendedMilkPerDay.FIVE]: 500,
         },
       },
     ],
@@ -315,215 +315,215 @@ export const milkRefs: Milk[] = [
       variables: [AnthroSystemCodes.WEIGHT],
     },
     recommendedMilkPerDay: [
-      RecommendedMilkQuantityPerDay.SIX,
-      RecommendedMilkQuantityPerDay.FIVE,
+      RecommendedMilkPerDay.SIX,
+      RecommendedMilkPerDay.FIVE,
     ],
-    recommendedMilkPerWeightRanges: [
+    recommendationPerRanges: [
       {
-        weightRanges: {
+        weightRange: {
           min: 3,
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 75,
-          [RecommendedMilkQuantityPerDay.FIVE]: 85,
+          [RecommendedMilkPerDay.SIX]: 75,
+          [RecommendedMilkPerDay.FIVE]: 85,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 3.5,
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 80,
-          [RecommendedMilkQuantityPerDay.FIVE]: 95,
+          [RecommendedMilkPerDay.SIX]: 80,
+          [RecommendedMilkPerDay.FIVE]: 95,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 4,
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 85,
-          [RecommendedMilkQuantityPerDay.FIVE]: 110,
+          [RecommendedMilkPerDay.SIX]: 85,
+          [RecommendedMilkPerDay.FIVE]: 110,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 4.5,
           max: 4.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 95,
-          [RecommendedMilkQuantityPerDay.FIVE]: 120,
+          [RecommendedMilkPerDay.SIX]: 95,
+          [RecommendedMilkPerDay.FIVE]: 120,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 5,
           max: 5.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 110,
-          [RecommendedMilkQuantityPerDay.FIVE]: 130,
+          [RecommendedMilkPerDay.SIX]: 110,
+          [RecommendedMilkPerDay.FIVE]: 130,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 5.5,
           max: 5.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 120,
-          [RecommendedMilkQuantityPerDay.FIVE]: 150,
+          [RecommendedMilkPerDay.SIX]: 120,
+          [RecommendedMilkPerDay.FIVE]: 150,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 6,
           max: 6.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 140,
-          [RecommendedMilkQuantityPerDay.FIVE]: 175,
+          [RecommendedMilkPerDay.SIX]: 140,
+          [RecommendedMilkPerDay.FIVE]: 175,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 7,
           max: 7.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 160,
-          [RecommendedMilkQuantityPerDay.FIVE]: 200,
+          [RecommendedMilkPerDay.SIX]: 160,
+          [RecommendedMilkPerDay.FIVE]: 200,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 8,
           max: 8.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 180,
-          [RecommendedMilkQuantityPerDay.FIVE]: 225,
+          [RecommendedMilkPerDay.SIX]: 180,
+          [RecommendedMilkPerDay.FIVE]: 225,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 9,
           max: 9.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 190,
-          [RecommendedMilkQuantityPerDay.FIVE]: 250,
+          [RecommendedMilkPerDay.SIX]: 190,
+          [RecommendedMilkPerDay.FIVE]: 250,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 10,
           max: 10.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 200,
-          [RecommendedMilkQuantityPerDay.FIVE]: 275,
+          [RecommendedMilkPerDay.SIX]: 200,
+          [RecommendedMilkPerDay.FIVE]: 275,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 11,
           max: 11.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 230,
-          [RecommendedMilkQuantityPerDay.FIVE]: 275,
+          [RecommendedMilkPerDay.SIX]: 230,
+          [RecommendedMilkPerDay.FIVE]: 275,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 12,
           max: 12.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 250,
-          [RecommendedMilkQuantityPerDay.FIVE]: 300,
+          [RecommendedMilkPerDay.SIX]: 250,
+          [RecommendedMilkPerDay.FIVE]: 300,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 13,
           max: 13.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 275,
-          [RecommendedMilkQuantityPerDay.FIVE]: 350,
+          [RecommendedMilkPerDay.SIX]: 275,
+          [RecommendedMilkPerDay.FIVE]: 350,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 14,
           max: 14.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 290,
-          [RecommendedMilkQuantityPerDay.FIVE]: 375,
+          [RecommendedMilkPerDay.SIX]: 290,
+          [RecommendedMilkPerDay.FIVE]: 375,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 15,
           max: 19.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 300,
-          [RecommendedMilkQuantityPerDay.FIVE]: 400,
+          [RecommendedMilkPerDay.SIX]: 300,
+          [RecommendedMilkPerDay.FIVE]: 400,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 20,
           max: 24.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 320,
-          [RecommendedMilkQuantityPerDay.FIVE]: 450,
+          [RecommendedMilkPerDay.SIX]: 320,
+          [RecommendedMilkPerDay.FIVE]: 450,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 25,
           max: 29.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 350,
-          [RecommendedMilkQuantityPerDay.FIVE]: 450,
+          [RecommendedMilkPerDay.SIX]: 350,
+          [RecommendedMilkPerDay.FIVE]: 450,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 30,
           max: 39.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 370,
-          [RecommendedMilkQuantityPerDay.FIVE]: 500,
+          [RecommendedMilkPerDay.SIX]: 370,
+          [RecommendedMilkPerDay.FIVE]: 500,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 40,
           max: 60,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.SIX]: 400,
-          [RecommendedMilkQuantityPerDay.FIVE]: 500,
+          [RecommendedMilkPerDay.SIX]: 400,
+          [RecommendedMilkPerDay.FIVE]: 500,
         },
       },
     ],
     notes: [],
   },
   {
-    type: MilkType.F100_dilue,
+    type: MilkType.F100Diluted,
     name: "Lait F100 - dilué",
     condition: {
       value: fExp`((${AnthroSystemCodes.WEIGHT} < 3) || (${AnthroSystemCodes.AGE_IN_MONTH} < 6)) && ${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}`,
@@ -537,96 +537,96 @@ export const milkRefs: Milk[] = [
       value: fExp`130 * ${AnthroSystemCodes.WEIGHT}`,
       variables: [AnthroSystemCodes.WEIGHT],
     },
-    recommendedMilkPerDay: [RecommendedMilkQuantityPerDay.HEIGHT],
-    recommendedMilkPerWeightRanges: [
+    recommendedMilkPerDay: [RecommendedMilkPerDay.HEIGHT],
+    recommendationPerRanges: [
       {
-        weightRanges: {
+        weightRange: {
           min: 0,
           max: 1.2,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 25,
+          [RecommendedMilkPerDay.HEIGHT]: 25,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 1.3,
           max: 1.5,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 30,
+          [RecommendedMilkPerDay.HEIGHT]: 30,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 1.6,
           max: 1.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 35,
+          [RecommendedMilkPerDay.HEIGHT]: 35,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 1.8,
           max: 2.1,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 40,
+          [RecommendedMilkPerDay.HEIGHT]: 40,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 2.2,
           max: 2.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 45,
+          [RecommendedMilkPerDay.HEIGHT]: 45,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 2.5,
           max: 2.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 50,
+          [RecommendedMilkPerDay.HEIGHT]: 50,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 2.8,
           max: 2.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 55,
+          [RecommendedMilkPerDay.HEIGHT]: 55,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 3.0,
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 60,
+          [RecommendedMilkPerDay.HEIGHT]: 60,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 3.5,
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 65,
+          [RecommendedMilkPerDay.HEIGHT]: 65,
         },
       },
       {
-        weightRanges: {
+        weightRange: {
           min: 4.0,
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkQuantityPerDay.HEIGHT]: 70,
+          [RecommendedMilkPerDay.HEIGHT]: 70,
         },
       },
     ],

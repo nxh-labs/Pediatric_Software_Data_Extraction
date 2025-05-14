@@ -3,6 +3,19 @@ export enum ZScoreComputingStrategyType {
   LENHEIBASED = "lenhei_based",
   TABLEBASED = "table_based",
 }
+/**
+ * @enum GrowthStandard
+ * Définit les standards de référence pour la croissance des enfants.
+ * @property OMS - Organisation Mondiale de la Santé (WHO)
+ * @property NCHS - National Center for Health Statistics
+ * @property CDC - Centers for Disease Control and Prevention
+ */
+export enum GrowthStandard {
+  OMS = "oms",
+  NCHS = "nchs",
+  CDC = "cdc",
+}
+
 export enum StandardShape {
   TABLE = "growth_table",
   CURVE = "growth_curve",
@@ -131,6 +144,9 @@ export enum GrowthIndicatorRange {
   BELOW_M3 = "below -3",
   BELOW_M4 = "below -4",
 }
+/**
+ * @note This is sex enum for data treatment not for the domain
+ */
 export enum Sex {
   MALE = "'M'",
   FEMALE = "'F'",
@@ -257,6 +273,20 @@ export enum ClinicalDataType {
 }
 export const COMPLICATION_CODES = {
   COMPLICATIONS_NUMBER: "complications_number",
+  DEHYDRATION: "DEHYD",
+  DIARRHEA: "DIARR",
+  VOMITING: "VOMIT",
+  PNEUMONIA: "PNEUM",
+  SKIN_LESIONS: "SKIN",
+  HYPOTHERMIA: "HYPOTH",
+  FEVER: "FEVER",
+  ANEMIA: "ANEM",
+  LETHARGY: "LETH",
+  CONVULSION: "CONV",
+  VITA_DEFICIENCY: "VITA",
+  SNG_REQUIRED: "SNG",
+  CANDIDOSIS: "CAND",
+  HIV_TB: "HIVTB",
 };
 export const ORIENTATION_REF_CODES = {
   ORIENTED_TO_HOME: "ORIENTATION_HOME",
@@ -313,25 +343,25 @@ export enum WeightRangeLimit {
   MAX = "max_weight",
 }
 
-
 export const BIOCHEMICAL_REF_CODES = {
-  BIOCHEMICAL_IONO_NA:'biochemical_iono_na',
-  BIOCHEMICAL_IONO_K: 'biochemical_iono_k',
-  BIOCHEMICAL_IONO_CL: 'biochemical_iono_cl',
-  BIOCHEMICAL_IONO_CA : 'biochemical_iono_ca',
-  BIOCHEMICAL_IONO_MG : 'biochemical_iono_mg',
-  BIOCHEMICAL_KIDNEY_UREA: 'biochemical_kidney_urea',
-  BIOCHEMICAL_KIDNEY_CREA: 'bichemical_kidney_creatinine',
-  BIOCHEMICAL_BLOOD_GLUCOSE: 'biochemical_blood_glucose',
-  BIOCHEMICAL_ENZY_ALT: 'biochemical_enzy_alt',
-  BIOCHEMICAL_ENZY_GGT: 'biochemical_enzy_ggt',
-  BIOCHEMICAL_ENZY_BILIRUBIN_TOTAL: 'biochemical_enzy_bilirubin_total',
-  BIOCHEMICAL_FAT_CHELESTEROL_TOTAL: 'biochemical_fat_cholesterol_total',
-  BIOCHEMICAL_FAT_HDL: 'biochemical_fat_hdl',
-  BIOCHEMICAL_FAT_TG: 'bichemical_fat_triglycerides',
-  
+  BIOCHEMICAL_IONO_NA: "biochemical_iono_na",
+  BIOCHEMICAL_IONO_K: "biochemical_iono_k",
+  BIOCHEMICAL_IONO_CL: "biochemical_iono_cl",
+  BIOCHEMICAL_IONO_CA: "biochemical_iono_ca",
+  BIOCHEMICAL_IONO_MG: "biochemical_iono_mg",
+  BIOCHEMICAL_KIDNEY_UREA: "biochemical_kidney_urea",
+  BIOCHEMICAL_KIDNEY_CREA: "bichemical_kidney_creatinine",
+  BIOCHEMICAL_BLOOD_GLUCOSE: "biochemical_blood_glucose",
+  BIOCHEMICAL_ENZY_ALT: "biochemical_enzy_alt",
+  BIOCHEMICAL_ENZY_GGT: "biochemical_enzy_ggt",
+  BIOCHEMICAL_ENZY_BILIRUBIN_TOTAL: "biochemical_enzy_bilirubin_total",
+  BIOCHEMICAL_FAT_CHELESTEROL_TOTAL: "biochemical_fat_cholesterol_total",
+  BIOCHEMICAL_FAT_HDL: "biochemical_fat_hdl",
+  BIOCHEMICAL_FAT_TG: "bichemical_fat_triglycerides",
+} as const;
 
-
-
-
+export enum BiochemicalRangeStatus {
+  UNDER = "under",
+  NORMAL = "normal",
+  OVER = "over",
 }

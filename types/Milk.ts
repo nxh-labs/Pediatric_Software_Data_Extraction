@@ -1,30 +1,32 @@
-import { ICondition as Formula, ICondition } from "../src";
+import { ICondition } from "../src/IndicatorGeneration/types";
+
+
 
 export enum MilkType {
   F100 = "f100",
   F75 = "f75",
-  F100_dilue = "f100 - dilué",
+  F100Diluted = "f100_diluted",
 }
-export enum RecommendedMilkQuantityPerDay {
+export enum RecommendedMilkPerDay {
   HEIGHT = "8",
   FIVE = "5",
   SIX = "6",
 }
 export interface RecommendedMilkPerWeightRanges {
-  weightRanges: {
+  weightRange: {
     min: number;
     max: number;
   };
   recommendedQuantityPerMilkRecommendationPerDay: Partial<
-    Record<RecommendedMilkQuantityPerDay, number>
+    Record<RecommendedMilkPerDay, number>
   >;
 }
 export interface Milk {
   name: string;
   type: MilkType;
-  doseFormula: Formula;
+  doseFormula: ICondition;
   condition: ICondition;
-  recommendedMilkPerDay: RecommendedMilkQuantityPerDay[];
+  recommendedMilkPerDay: RecommendedMilkPerDay[];
   notes: string[];
-  recommendedMilkPerWeightRanges: RecommendedMilkPerWeightRanges[];
+  recommendationPerRanges: RecommendedMilkPerWeightRanges[];
 }

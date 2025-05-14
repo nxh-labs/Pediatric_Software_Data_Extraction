@@ -10,6 +10,7 @@ import {
   saveMedicines,
   saveMilks,
   saveUnits,
+  saveComplications,
 } from "./src";
 
 saveAnthropometricMeasures();
@@ -22,4 +23,5 @@ saveAppetiteTestRefs();
 saveOrientationRefs();
 saveMedicines();
 saveMilks();
+saveComplications()
 saveUnits()

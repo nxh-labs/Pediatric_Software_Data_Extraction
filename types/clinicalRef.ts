@@ -1,4 +1,6 @@
-import { ICondition } from "../src";
+
+
+import { ICondition } from "../src/IndicatorGeneration/types";
 import { ClinicalSignData } from "./clinicalSignData";
 
 export interface ClinicalSignReference {

@@ -1,5 +1,8 @@
 import { ICondition } from "../src/IndicatorGeneration/types";
 
+
+
+
 export interface BiochemicalRange {
    condition: ICondition;
    range: {

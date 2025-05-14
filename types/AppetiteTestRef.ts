@@ -1,7 +1,4 @@
-import {
-  APPETITE_TEST_PRODUCT_TYPE,
-  APPETITE_TEST_SACHET_FRACTION_PARTITION,
-} from "../constants";
+import { APPETITE_TEST_PRODUCT_TYPE, APPETITE_TEST_SACHET_FRACTION_PARTITION } from "../constants";
 
 export interface AppetiteTestRef {
   name: string;

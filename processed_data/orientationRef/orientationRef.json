@@ -10,7 +10,7 @@
         ]
       }
     ],
-    "admissionType": []
+    "admissionTypes": []
   },
   {
     "name": "CRENAM: Centre de prise en charge de la malnutrition aiguë modérée",
@@ -32,7 +32,7 @@
         ]
       }
     ],
-    "admissionType": [
+    "admissionTypes": [
       {
         "name": "Nouvelle Admission",
         "code": "ADMISSION_TYPE_NEW",
@@ -70,7 +70,7 @@
         ]
       }
     ],
-    "admissionType": [
+    "admissionTypes": [
       {
         "name": "Nouvelle Admission",
         "code": "ADMISSION_TYPE_NEW",
@@ -130,7 +130,7 @@
         ]
       }
     ],
-    "admissionType": [
+    "admissionTypes": [
       {
         "name": "Admission Directe",
         "code": "ADMISSION_TYPE_DIRECT",

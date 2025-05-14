@@ -1,5 +1,7 @@
 import { ClinicalDataType } from "../constants";
 
+
+
 export interface ClinicalSignData {
   name: string;
   code: string;

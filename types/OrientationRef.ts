@@ -1,8 +1,10 @@
-import { ICondition } from "../src";
+import { ICondition } from "../src/IndicatorGeneration/types";
+
+
 
 export interface OrientationRef {
   name: string;
   code: string;
   admissionCriteria: ICondition[];
-  admissionType: { name: string; code: string; condition: ICondition }[];
+  admissionTypes: { name: string; code: string; condition: ICondition }[];
 }

@@ -1,4 +1,6 @@
-import { ICondition } from "../src";
+
+
+import { ICondition } from "../src/IndicatorGeneration/types";
 import { RecommendedTest } from "./RecommendedTest";
 
 export interface NutritionalRiskFactor {

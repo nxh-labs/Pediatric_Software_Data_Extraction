@@ -1,6 +1,6 @@
 export * from "./ChartData";
 export * from "./TableData";
-export * from "./GrowthStandard";
+export * from "./Indicator";
 export * from "./GrowthRefChart";
 export * from "./GrowthRefTable";
 export * from "./BiochemicalRange";
@@ -16,3 +16,4 @@ export * from "./AppetiteTestRef";
 export * from "./Medicine";
 export * from "./Milk";
 export * from "./Unit";
+export * from "./Complication";

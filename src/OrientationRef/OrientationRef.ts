@@ -23,7 +23,7 @@ export const orientationRefs: OrientationRef[] = [
         variables: [AnthroSystemCodes.MUAC],
       },
     ],
-    admissionType: [],
+    admissionTypes: [],
   },
   {
     name: "CRENAM: Centre de prise en charge de la malnutrition aiguë modérée",
@@ -47,7 +47,7 @@ export const orientationRefs: OrientationRef[] = [
         variables: [TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_TREATMENT],
       },
     ],
-    admissionType: [
+    admissionTypes: [
       {
         name: "Nouvelle Admission",
         code: ORIENTATION_REF_CODES.NEW_ADMISSION_CODE,
@@ -91,7 +91,7 @@ export const orientationRefs: OrientationRef[] = [
         ],
       },
     ],
-    admissionType: [
+    admissionTypes: [
       {
         name: "Nouvelle Admission",
         code: ORIENTATION_REF_CODES.NEW_ADMISSION_CODE,
@@ -179,7 +179,7 @@ export const orientationRefs: OrientationRef[] = [
         ],
       },
     ],
-    admissionType: [
+    admissionTypes: [
       {
         name: "Admission Directe",
         code: ORIENTATION_REF_CODES.DIRECT_ADMISSION_CODE,

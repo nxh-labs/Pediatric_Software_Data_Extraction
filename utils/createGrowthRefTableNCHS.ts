@@ -1,4 +1,5 @@
-import { TableData, GrowthReferenceTableProps, GrowthStandard } from "../types";
+import { GrowthStandard } from "../constants";
+import { TableData, GrowthReferenceTableProps } from "../types";
 
 export function  createGrowthRefTableNCHS(
   tableName: string,
