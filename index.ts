@@ -11,6 +11,7 @@ import {
   saveMilks,
   saveUnits,
   saveComplications,
+  saveNutritionalRiskFactors,
 } from "./src";
 
 saveAnthropometricMeasures();
@@ -18,6 +19,7 @@ generateAndSaveGrowthRef();
 saveAllIndicators();
 saveBiochemicalRef();
 saveClinicalRefs();
+saveNutritionalRiskFactors()
 saveDiagnosticRules();
 saveAppetiteTestRefs();
 saveOrientationRefs();
