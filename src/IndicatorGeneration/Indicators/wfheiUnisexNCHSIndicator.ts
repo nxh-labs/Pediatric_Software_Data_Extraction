@@ -70,6 +70,6 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       },
     },
   ],
-  zScoreComputingStrategy: ZScoreComputingStrategyType.LENHEIBASED,
+  zScoreComputingStrategy: ZScoreComputingStrategyType.TABLEBASED,
   standardShape: StandardShape.TABLE,
 };

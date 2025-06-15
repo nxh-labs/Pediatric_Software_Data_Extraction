@@ -68,6 +68,6 @@
       }
     }
   ],
-  "zScoreComputingStrategy": "lenhei_based",
+  "zScoreComputingStrategy": "table_based",
   "standardShape": "growth_table"
 }
