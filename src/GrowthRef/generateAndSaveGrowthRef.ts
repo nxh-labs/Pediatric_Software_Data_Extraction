@@ -166,14 +166,14 @@ const tricepsSkinfoldGirlsChart = extractAgeInDayBasedChartFromFile(
 // Poids pour la taille 45-110 cm
 const weightForLengthBoysChart = extractWeightForLengthChartFromFile(
   "./assets/oms/charts/wflh/boys/wfl-boys-zscore-expanded-table.xlsx",
-  "Courbe de référence poids pour la taille (garçons 45-110 cm)",
+  "Courbe de référence poids pour la taille couchée (garçons 45-110 cm)",
   GrowthRefChartAndTableCodes.WFL_BOYS_45_110_CHART,
   "M"
 );
 
 const weightForLengthGirlsChart = extractWeightForLengthChartFromFile(
   "./assets/oms/charts/wflh/girls/wfl-girls-zscore-expanded-table.xlsx",
-  "Courbe de référence poids pour la taille (filles 45-110 cm)",
+  "Courbe de référence poids pour la taille couchée (filles 45-110 cm)",
   GrowthRefChartAndTableCodes.WFL_GIRLS_45_110_CHART,
   "F"
 );
@@ -181,14 +181,14 @@ const weightForLengthGirlsChart = extractWeightForLengthChartFromFile(
 // Poids pour la stature 65-120 cm
 const weightForHeightBoysChart = extractWeightForHeightChartFromFile(
   "./assets/oms/charts/wflh/boys/wfh-boys-zscore-expanded-tables.xlsx",
-  "Courbe de référence poids pour la stature (garçons 65-120 cm)",
+  "Courbe de référence poids pour la taille debout (garçons 65-120 cm)",
   GrowthRefChartAndTableCodes.WFH_BOYS_65_120_CHART,
   "M"
 );
 
 const weightForHeightGirlsChart = extractWeightForHeightChartFromFile(
   "./assets/oms/charts/wflh/girls/wfh-girls-zscore-expanded-tables.xlsx",
-  "Courbe de référence poids pour la stature (filles 65-120 cm)",
+  "Courbe de référence poids pour la taille debout (filles 65-120 cm)",
   GrowthRefChartAndTableCodes.WFH_GIRLS_65_120_CHART,
   "F"
 );

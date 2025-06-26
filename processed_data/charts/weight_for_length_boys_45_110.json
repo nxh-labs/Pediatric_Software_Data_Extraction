@@ -1,5 +1,5 @@
 {
-  "name": "Courbe de référence poids pour la taille (garçons 45-110 cm)",
+  "name": "Courbe de référence poids pour la taille couchée (garçons 45-110 cm)",
   "code": "growth_ref_chart_wfl_boys_45_110",
   "sex": "M",
   "standard": "oms",

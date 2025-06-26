@@ -1,5 +1,5 @@
 {
-  "name": "Courbe de référence poids pour la stature (filles 65-120 cm)",
+  "name": "Courbe de référence poids pour la taille debout (filles 65-120 cm)",
   "code": "growth_ref_chart_wfh_girls_65_120",
   "sex": "F",
   "standard": "oms",

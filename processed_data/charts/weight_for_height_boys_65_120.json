@@ -1,5 +1,5 @@
 {
-  "name": "Courbe de référence poids pour la stature (garçons 65-120 cm)",
+  "name": "Courbe de référence poids pour la taille debout (garçons 65-120 cm)",
   "code": "growth_ref_chart_wfh_boys_65_120",
   "sex": "M",
   "standard": "oms",
