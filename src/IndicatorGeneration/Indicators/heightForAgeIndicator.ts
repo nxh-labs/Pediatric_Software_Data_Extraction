@@ -23,7 +23,7 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
     AnthroSystemCodes.AGE_IN_MONTH,
   ],
   axeX: {
-    value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} > ${MAX_AGE_MONTH_TO_USE_AGE_IN_DAY} ? ${AnthroSystemCodes.AGE_IN_MONTH}: ${AnthroSystemCodes.AGE_IN_DAY}`,
+    value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} > ${MAX_AGE_MONTH_TO_USE_AGE_IN_DAY}) ? (${AnthroSystemCodes.AGE_IN_MONTH}): (${AnthroSystemCodes.AGE_IN_DAY})`,
     variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.AGE_IN_DAY],
   },
   axeY: {
@@ -34,28 +34,28 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
     {
       chartCode: GrowthRefChartAndTableCodes.HFA_BOYS_0_5_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.MALE} && ${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.MALE}) && (${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
     {
       chartCode: GrowthRefChartAndTableCodes.HFA_GIRLS_0_5_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.FEMALE} && ${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.FEMALE}) && (${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
     {
       chartCode: GrowthRefChartAndTableCodes.HFA_BOYS_5_19_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.MALE} && ${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.MALE}) && (${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
     {
       chartCode: GrowthRefChartAndTableCodes.HFA_GIRLS_5_19_CHART,
       condition: {
-        value:fExp `${AnthroSystemCodes.SEX} == ${Sex.FEMALE} && ${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value:fExp `(${AnthroSystemCodes.SEX} == ${Sex.FEMALE}) && (${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -80,7 +80,7 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
-        value: fExp`${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos3}`,
+        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos3})`,
         variables: [ZScoreVarName],
       },
     },
@@ -90,7 +90,7 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
       code: "stunted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },

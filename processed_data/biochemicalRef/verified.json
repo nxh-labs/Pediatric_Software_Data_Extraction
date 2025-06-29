@@ -33,7 +33,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month < 12",
+          "value": "(age_in_month >= 1) && (age_in_month < 12)",
           "variables": [
             "age_in_month"
           ]
@@ -116,7 +116,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month < 12",
+          "value": "(age_in_month >= 1) && (age_in_month < 12)",
           "variables": [
             "age_in_month"
           ]
@@ -140,7 +140,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 12 && age_in_month <= 228",
+          "value": "(age_in_month >= 12) && (age_in_month <= 228)",
           "variables": [
             "age_in_month"
           ]
@@ -199,7 +199,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 12 && age_in_month <= 228",
+          "value": "(age_in_month >= 12) && (age_in_month <= 228)",
           "variables": [
             "age_in_month"
           ]
@@ -258,7 +258,7 @@
       },
       {
         "condition": {
-          "value": "age_in_day >= 7 && age_in_day < 21",
+          "value": "(age_in_day >= 7) && (age_in_day < 21)",
           "variables": [
             "age_in_day"
           ]
@@ -282,7 +282,7 @@
       },
       {
         "condition": {
-          "value": "age_in_day >= 21 && age_in_month <= 228",
+          "value": "(age_in_day >= 21) && (age_in_month <= 228)",
           "variables": [
             "age_in_day",
             "age_in_month"
@@ -318,7 +318,7 @@
     "ranges": [
       {
         "condition": {
-          "value": "age_in_day >= 7 && age_in_month < 3",
+          "value": "(age_in_day >= 7) && (age_in_month < 3)",
           "variables": [
             "age_in_day",
             "age_in_month"
@@ -343,7 +343,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 3 && age_in_month <= 228",
+          "value": "(age_in_month >= 3) && (age_in_month <= 228)",
           "variables": [
             "age_in_month"
           ]
@@ -402,7 +402,7 @@
       },
       {
         "condition": {
-          "value": "age_in_day >= 4 && age_in_month < 1",
+          "value": "(age_in_day >= 4) && (age_in_month < 1)",
           "variables": [
             "age_in_day",
             "age_in_month"
@@ -427,7 +427,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month < 72",
+          "value": "(age_in_month >= 1) && (age_in_month < 72)",
           "variables": [
             "age_in_month"
           ]
@@ -451,7 +451,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 72 && age_in_month <= 228",
+          "value": "(age_in_month >= 72) && (age_in_month <= 228)",
           "variables": [
             "age_in_month"
           ]
@@ -510,7 +510,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month < 12",
+          "value": "(age_in_month >= 1) && (age_in_month < 12)",
           "variables": [
             "age_in_month"
           ]
@@ -534,7 +534,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 12 && age_in_month < 72",
+          "value": "(age_in_month) >= 12 && (age_in_month < 72)",
           "variables": [
             "age_in_month"
           ]
@@ -593,7 +593,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month < 228",
+          "value": "(age_in_month >= 1) && (age_in_month < 228)",
           "variables": [
             "age_in_month"
           ]
@@ -652,7 +652,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month <= 228",
+          "value": "(age_in_month >= 1) && (age_in_month <= 228)",
           "variables": [
             "age_in_month"
           ]
@@ -711,7 +711,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 1 && age_in_month < 2",
+          "value": "(age_in_month >= 1) && (age_in_month < 2)",
           "variables": [
             "age_in_month"
           ]
@@ -735,7 +735,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 2 && age_in_month < 4",
+          "value": "(age_in_month >= 2) && (age_in_month < 4)",
           "variables": [
             "age_in_month"
           ]
@@ -759,7 +759,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 4 && age_in_month < 7",
+          "value": "(age_in_month >= 4) && (age_in_month < 7)",
           "variables": [
             "age_in_month"
           ]
@@ -783,7 +783,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 7 && age_in_month <= 228",
+          "value": "(age_in_month >= 7) && (age_in_month <= 228)",
           "variables": [
             "age_in_month"
           ]
@@ -842,7 +842,7 @@
       },
       {
         "condition": {
-          "value": "(age_in_day * 24) >= 12 && (age_in_day * 24) < 24",
+          "value": "((age_in_day * 24) >= 12) && ((age_in_day * 24) < 24)",
           "variables": [
             "age_in_day"
           ]
@@ -866,7 +866,7 @@
       },
       {
         "condition": {
-          "value": "(age_in_day * 24)>= 24 && (age_in_day * 24) <= 48",
+          "value": "((age_in_day * 24)>= 24) && ((age_in_day * 24) <= 48)",
           "variables": [
             "age_in_day"
           ]
@@ -890,7 +890,7 @@
       },
       {
         "condition": {
-          "value": "age_in_day >= 3 && age_in_day < 5",
+          "value": "(age_in_day >= 3) && (age_in_day < 5)",
           "variables": [
             "age_in_day"
           ]
@@ -973,7 +973,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month <= 48 && age_in_month >= 12",
+          "value": "(age_in_month <= 48) && (age_in_month >= 12)",
           "variables": [
             "age_in_month"
           ]
@@ -997,7 +997,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 60 && age_in_month <= 108",
+          "value": "(age_in_month >= 60) && (age_in_month <= 108)",
           "variables": [
             "age_in_month"
           ]
@@ -1021,7 +1021,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 120 && age_in_month <=168  && sex == 'F'",
+          "value": "(age_in_month >= 120) &&( age_in_month <=168)  && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1046,7 +1046,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 120 && age_in_month <=168  && sex == 'M'",
+          "value": "(age_in_month >= 120) && (age_in_month <=168)  && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1071,7 +1071,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 180 && age_in_month < 228 && sex == 'F'",
+          "value": "(age_in_month >= 180) && (age_in_month < 228) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1096,7 +1096,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 180 && age_in_month < 228 && sex == 'M'",
+          "value": "(age_in_month >= 180) && (age_in_month < 228) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1132,7 +1132,7 @@
     "ranges": [
       {
         "condition": {
-          "value": "age_in_month < 24 && sex == 'F'",
+          "value": "(age_in_month < 24) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1157,7 +1157,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month < 24 && sex == 'M'",
+          "value": "(age_in_month < 24) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1182,7 +1182,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 24 && age_in_month <= 48 && sex == 'F'",
+          "value": "(age_in_month >= 24) && (age_in_month <= 48) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1207,7 +1207,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 24 && age_in_month <= 48 && sex == 'M'",
+          "value": "(age_in_month >= 24) && (age_in_month <= 48) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1232,7 +1232,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 60 && age_in_month <= 108 && sex == 'F'",
+          "value": "(age_in_month >= 60) && (age_in_month <= 108) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1257,7 +1257,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 60 && age_in_month <= 108 && sex == 'M'",
+          "value": "(age_in_month >= 60) && (age_in_month <= 108) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1282,7 +1282,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 120 && age_in_month <= 168 && sex == 'F'",
+          "value": "(age_in_month >= 120) && (age_in_month <= 168) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1307,7 +1307,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 180 && age_in_month <= 228 && sex == 'F'",
+          "value": "(age_in_month >= 180) && (age_in_month <= 228) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1332,7 +1332,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 120 && age_in_month <= 228 && sex == 'M'",
+          "value": "(age_in_month >= 120) && (age_in_month <= 228) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1368,7 +1368,7 @@
     "ranges": [
       {
         "condition": {
-          "value": "age_in_month < 48 && sex == 'F'",
+          "value": "(age_in_month < 48) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1393,7 +1393,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month < 48 && sex == 'M'",
+          "value": "(age_in_month < 48) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1418,7 +1418,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 48 && age_in_month <= 108 && sex == 'F'",
+          "value": "(age_in_month >= 48) && (age_in_month <= 108) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1443,7 +1443,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 48 && age_in_month <= 108 && sex == 'M'",
+          "value": "(age_in_month >= 48) && (age_in_month <= 108) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1468,7 +1468,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 120 && age_in_month < 168 && sex == 'F'",
+          "value": "(age_in_month >= 120) && (age_in_month < 168) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1493,7 +1493,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 120 && age_in_month < 168 && sex == 'M'",
+          "value": "(age_in_month >= 120) && (age_in_month < 168) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1518,7 +1518,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 168 && age_in_month <= 228 && sex == 'F'",
+          "value": "(age_in_month >= 168) && (age_in_month <= 228) && (sex == 'F')",
           "variables": [
             "age_in_month",
             "sex"
@@ -1543,7 +1543,7 @@
       },
       {
         "condition": {
-          "value": "age_in_month >= 168 && age_in_month <= 228 && sex == 'M'",
+          "value": "(age_in_month >= 168) && (age_in_month <= 228) && (sex == 'M')",
           "variables": [
             "age_in_month",
             "sex"

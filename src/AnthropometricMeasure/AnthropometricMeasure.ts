@@ -13,7 +13,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
       {
         condition: ALWAYS_TRUE_CONDITION,
         // Adjusted for premature babies up to older children
-        rule: fExp`(${AnthroSystemCodes.WEIGHT} >= 0.35 )&& (${AnthroSystemCodes.WEIGHT} < 120)`,
+        rule: fExp`(${AnthroSystemCodes.WEIGHT} >= 0.35)&& (${AnthroSystemCodes.WEIGHT} < 120)`,
         variables: [AnthroSystemCodes.WEIGHT],
       },
     ],
@@ -28,7 +28,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
     validationRules: [
       {
         condition: ALWAYS_TRUE_CONDITION,
-        rule: fExp`${AnthroSystemCodes.LENGTH} >= 30 && (${AnthroSystemCodes.LENGTH}<=120)`,
+        rule: fExp`(${AnthroSystemCodes.LENGTH} >= 30) && (${AnthroSystemCodes.LENGTH}<=120)`,
         variables: [AnthroSystemCodes.LENGTH],
       },
     ],
@@ -43,7 +43,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
     validationRules: [
       {
         condition: ALWAYS_TRUE_CONDITION,
-        rule: fExp`${AnthroSystemCodes.HEIGHT} >= 30 && (${AnthroSystemCodes.HEIGHT}<=200)`,
+        rule: fExp`(${AnthroSystemCodes.HEIGHT} >= 30) && (${AnthroSystemCodes.HEIGHT}<=200)`,
         variables: [AnthroSystemCodes.HEIGHT],
       },
     ],
@@ -58,7 +58,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
       {
         condition: ALWAYS_TRUE_CONDITION,
         // Adjusted for premature babies through adolescence
-        rule: fExp`${AnthroSystemCodes.HEAD_CIRCUMFERENCE} >= 20 && ${AnthroSystemCodes.HEAD_CIRCUMFERENCE} < 65`,
+        rule: fExp`(${AnthroSystemCodes.HEAD_CIRCUMFERENCE} >= 20) && (${AnthroSystemCodes.HEAD_CIRCUMFERENCE} < 65)`,
         variables: [AnthroSystemCodes.HEAD_CIRCUMFERENCE],
       },
     ],
@@ -72,7 +72,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
     validationRules: [
       {
         condition: ALWAYS_TRUE_CONDITION,
-        rule: fExp`${AnthroSystemCodes.MUAC} >= 65 && ${AnthroSystemCodes.MUAC} < 350`,
+        rule: fExp`(${AnthroSystemCodes.MUAC} >= 65) && (${AnthroSystemCodes.MUAC} < 350)`,
         variables: [AnthroSystemCodes.MUAC],
       },
     ],
@@ -86,7 +86,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
     validationRules: [
       {
         condition: ALWAYS_TRUE_CONDITION,
-        rule: fExp`${AnthroSystemCodes.TSF} >= 2 && ${AnthroSystemCodes.TSF} < 50`,
+        rule: fExp`(${AnthroSystemCodes.TSF} >= 2) && (${AnthroSystemCodes.TSF} < 50)`,
         variables: [AnthroSystemCodes.TSF],
       },
     ],
@@ -100,7 +100,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
     validationRules: [
       {
         condition: ALWAYS_TRUE_CONDITION,
-        rule: fExp`${AnthroSystemCodes.SSF} >= 2 && ${AnthroSystemCodes.SSF} < 50`,
+        rule: fExp`(${AnthroSystemCodes.SSF} >= 2) && (${AnthroSystemCodes.SSF} < 50)`,
         variables: [AnthroSystemCodes.SSF],
       },
     ],

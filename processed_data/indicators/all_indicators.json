@@ -26,7 +26,7 @@
       {
         "chartCode": "growth_ref_chart_bfa_boys_0_5",
         "condition": {
-          "value": "sex == 'M' && age_in_day <= 1856",
+          "value": "(sex == 'M') && (age_in_day <= 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -36,7 +36,7 @@
       {
         "chartCode": "growth_ref_chart_bfa_girls_0_5",
         "condition": {
-          "value": "sex == 'F' && age_in_day <= 1856",
+          "value": "(sex == 'F') && (age_in_day <= 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -46,7 +46,7 @@
       {
         "chartCode": "growth_ref_chart_bfa_boys_5_19",
         "condition": {
-          "value": "sex == 'M' && age_in_day > 1856",
+          "value": "(sex == 'M') && (age_in_day > 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -56,7 +56,7 @@
       {
         "chartCode": "growth_ref_chart_bfa_girls_5_19",
         "condition": {
-          "value": "sex == 'F' && age_in_day > 1856",
+          "value": "(sex == 'F') && (age_in_day > 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -66,7 +66,7 @@
     ],
     "availableRefTables": [],
     "usageConditions": {
-      "value": "age_in_day >= 0 && age_in_month <= 228",
+      "value": "(age_in_day >= 0) && (age_in_month <= 228)",
       "variables": [
         "age_in_month"
       ]
@@ -77,7 +77,7 @@
         "code": "severe_obesity_5_19",
         "range": "above +3",
         "condition": {
-          "value": "age_in_day > 1856 && zscore > 3",
+          "value": "(age_in_day > 1856) && (zscore > 3)",
           "variables": [
             "zscore",
             "age_in_day"
@@ -89,7 +89,7 @@
         "code": "obesity_0_5",
         "range": "above +3",
         "condition": {
-          "value": "age_in_day <= 1856 && zscore > 3",
+          "value": "(age_in_day <= 1856) && (zscore > 3)",
           "variables": [
             "zscore",
             "age_in_day"
@@ -101,7 +101,7 @@
         "code": "overweight_0_5",
         "range": "above +2",
         "condition": {
-          "value": "age_in_day <= 1856 && zscore > 2 && zscore <= 3",
+          "value": "(age_in_day <= 1856) && (zscore > 2) && (zscore <= 3)",
           "variables": [
             "zscore",
             "age_in_day"
@@ -113,7 +113,7 @@
         "code": "obesity_5_19",
         "range": "above +2",
         "condition": {
-          "value": "age_in_day > 1856 && zscore > 2 && zscore <= 3",
+          "value": "(age_in_day > 1856) && (zscore > 2) && (zscore <= 3)",
           "variables": [
             "zscore",
             "age_in_day"
@@ -125,7 +125,7 @@
         "code": "overweight_5_19",
         "range": "above +1",
         "condition": {
-          "value": "age_in_day > 1856 && zscore > 1 && zscore <= 2",
+          "value": "(age_in_day > 1856) && (zscore > 1) && (zscore <= 2)",
           "variables": [
             "zscore",
             "age_in_day"
@@ -137,7 +137,7 @@
         "code": "overweight_risk",
         "range": "above +1",
         "condition": {
-          "value": "age_in_day <= 1856 && zscore > 1 && zscore <= 2",
+          "value": "(age_in_day <= 1856) && (zscore > 1) && (zscore <= 2)",
           "variables": [
             "zscore",
             "age_in_day"
@@ -149,7 +149,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 1",
+          "value": "(zscore >= (-2)) && (zscore <= 1)",
           "variables": [
             "zscore"
           ]
@@ -160,7 +160,7 @@
         "code": "wasted",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -244,7 +244,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 2",
+          "value": "(zscore >= (-2)) && (zscore <= 2)",
           "variables": [
             "zscore"
           ]
@@ -274,7 +274,7 @@
       "age_in_month"
     ],
     "axeX": {
-      "value": "age_in_month > 60.97741273100616 ? age_in_month: age_in_day",
+      "value": "(age_in_month > 60.97741273100616) ? (age_in_month): (age_in_day)",
       "variables": [
         "age_in_month",
         "age_in_day"
@@ -290,7 +290,7 @@
       {
         "chartCode": "growth_ref_chart_lhfa_boys_0_5",
         "condition": {
-          "value": "sex == 'M' && age_in_day <= 1856",
+          "value": "(sex == 'M') && (age_in_day <= 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -300,7 +300,7 @@
       {
         "chartCode": "growth_ref_chart_lhfa_girls_0_5",
         "condition": {
-          "value": "sex == 'F' && age_in_day <= 1856",
+          "value": "(sex == 'F') && (age_in_day <= 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -310,7 +310,7 @@
       {
         "chartCode": "growth_ref_chart_hfa_boys_5_19",
         "condition": {
-          "value": "sex == 'M' && age_in_day > 1856",
+          "value": "(sex == 'M') && (age_in_day > 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -320,7 +320,7 @@
       {
         "chartCode": "growth_ref_chart_hfa_girls_5_19",
         "condition": {
-          "value": "sex == 'F' && age_in_day > 1856",
+          "value": "(sex == 'F') && (age_in_day > 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -352,7 +352,7 @@
         "code": "normal",
         "range": "above +2",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 3",
+          "value": "(zscore >= (-2)) && (zscore <= 3)",
           "variables": [
             "zscore"
           ]
@@ -363,7 +363,7 @@
         "code": "stunted",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -425,7 +425,7 @@
     ],
     "availableRefTables": [],
     "usageConditions": {
-      "value": "age_in_day >= 91 && age_in_day <= 1856",
+      "value": "(age_in_day >= 91) && (age_in_day <= 1856)",
       "variables": [
         "age_in_day"
       ]
@@ -447,7 +447,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore < 1",
+          "value": "(zscore >= (-2)) && (zscore < 1)",
           "variables": [
             "zscore"
           ]
@@ -458,7 +458,7 @@
         "code": "moderate_acute_malnutrition",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -520,7 +520,7 @@
     ],
     "availableRefTables": [],
     "usageConditions": {
-      "value": "age_in_day >= 91 && age_in_day <= 1856",
+      "value": "(age_in_day >= 91) && (age_in_day <= 1856)",
       "variables": [
         "age_in_day"
       ]
@@ -542,7 +542,7 @@
         "code": "above_average_trunk_fat",
         "range": "above +1",
         "condition": {
-          "value": "zscore > 1 && zscore <= 2",
+          "value": "(zscore > 1) && (zscore <= 2)",
           "variables": [
             "zscore"
           ]
@@ -553,7 +553,7 @@
         "code": "normal_trunk_fat",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 1",
+          "value": "(zscore >= (-2)) && (zscore <= 1)",
           "variables": [
             "zscore"
           ]
@@ -564,7 +564,7 @@
         "code": "below_average_trunk_fat",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -626,7 +626,7 @@
     ],
     "availableRefTables": [],
     "usageConditions": {
-      "value": "age_in_day >= 91 && age_in_day <= 1856",
+      "value": "(age_in_day >= 91) && (age_in_day <= 1856)",
       "variables": [
         "age_in_day"
       ]
@@ -648,7 +648,7 @@
         "code": "above_average_fat_stores",
         "range": "above +1",
         "condition": {
-          "value": "zscore > 1 && zscore <= 2",
+          "value": "(zscore > 1) && (zscore <= 2)",
           "variables": [
             "zscore"
           ]
@@ -659,7 +659,7 @@
         "code": "normal_fat_stores",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 1",
+          "value": "(zscore >= (-2)) && (zscore <= 1)",
           "variables": [
             "zscore"
           ]
@@ -670,7 +670,7 @@
         "code": "below_average_fat_stores",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -700,7 +700,7 @@
       "age_in_month"
     ],
     "axeX": {
-      "value": "age_in_month > 60.97741273100616 ? age_in_month: age_in_day",
+      "value": "(age_in_month > 60.97741273100616) ? (age_in_month): (age_in_day)",
       "variables": [
         "age_in_month",
         "age_in_day"
@@ -716,7 +716,7 @@
       {
         "chartCode": "growth_ref_chart_wfa_boys_0_5",
         "condition": {
-          "value": "sex == 'M' && age_in_day <= 1856",
+          "value": "(sex == 'M') && (age_in_day <= 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -726,7 +726,7 @@
       {
         "chartCode": "growth_ref_chart_wfa_girls_0_5",
         "condition": {
-          "value": "sex == 'F' && age_in_day <= 1856",
+          "value": "(sex == 'F') && (age_in_day <= 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -736,7 +736,7 @@
       {
         "chartCode": "growth_ref_chart_wfa_boys_5_10",
         "condition": {
-          "value": "sex == 'M' && age_in_day > 1856",
+          "value": "(sex == 'M') && (age_in_day > 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -746,7 +746,7 @@
       {
         "chartCode": "growth_ref_chart_wfa_girls_5_10",
         "condition": {
-          "value": "sex == 'F' && age_in_day > 1856",
+          "value": "(sex == 'F') && (age_in_day > 1856)",
           "variables": [
             "sex",
             "age_in_day"
@@ -778,7 +778,7 @@
         "code": "possible_growth_problem",
         "range": "above +2",
         "condition": {
-          "value": "zscore > 2 && zscore <= 3",
+          "value": "(zscore > 2) && (zscore <= 3)",
           "variables": [
             "zscore"
           ]
@@ -789,7 +789,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 2",
+          "value": "(zscore >= (-2)) && (zscore <= 2)",
           "variables": [
             "zscore"
           ]
@@ -800,7 +800,7 @@
         "code": "underweight",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -829,7 +829,7 @@
       "lenhei"
     ],
     "axeX": {
-      "value": "(lenhei - (lenhei % 1)) + ((lenhei % 1)<=0.2 ? 0:((lenhei %1)>=0.8?1:0.5))",
+      "value": "(lenhei - (lenhei % 1)) + (((lenhei % 1)<=0.2) ? 0:(((lenhei %1)>=0.8)?1:0.5))",
       "variables": [
         "lenhei"
       ]
@@ -851,7 +851,7 @@
       }
     ],
     "usageConditions": {
-      "value": "lenhei > 120 && lenhei <= 171",
+      "value": "(lenhei > 120) &&( lenhei <= 171)",
       "variables": [
         "lenhei"
       ]
@@ -862,7 +862,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 1",
+          "value": "(zscore >= (-2)) && (zscore <= 1)",
           "variables": [
             "zscore"
           ]
@@ -873,7 +873,7 @@
         "code": "wasted",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -917,7 +917,7 @@
       {
         "chartCode": "growth_ref_chart_wfl_boys_45_110",
         "condition": {
-          "value": "sex == 'M' && age_in_day <= 731",
+          "value": "(sex == 'M') && (age_in_day <= 731)",
           "variables": [
             "sex",
             "age_in_day"
@@ -927,7 +927,7 @@
       {
         "chartCode": "growth_ref_chart_wfl_girls_45_110",
         "condition": {
-          "value": "sex == 'F' && age_in_day <= 731",
+          "value": "(sex == 'F') && (age_in_day <= 731)",
           "variables": [
             "sex",
             "age_in_day"
@@ -937,7 +937,7 @@
       {
         "chartCode": "growth_ref_chart_wfh_boys_65_120",
         "condition": {
-          "value": "sex == 'M' && age_in_day > 731",
+          "value": "(sex == 'M') && (age_in_day > 731)",
           "variables": [
             "sex",
             "age_in_day"
@@ -947,7 +947,7 @@
       {
         "chartCode": "growth_ref_chart_wfh_girls_65_120",
         "condition": {
-          "value": "sex == 'F' && age_in_day > 731",
+          "value": "(sex == 'F') && (age_in_day > 731)",
           "variables": [
             "sex",
             "age_in_day"
@@ -957,7 +957,7 @@
     ],
     "availableRefTables": [],
     "usageConditions": {
-      "value": "lenhei >= 45 && lenhei <= 120",
+      "value": "(lenhei >= 45) &&( lenhei <= 120)",
       "variables": [
         "lenhei"
       ]
@@ -979,7 +979,7 @@
         "code": "overweight",
         "range": "above +2",
         "condition": {
-          "value": "zscore > 2 && zscore <= 3",
+          "value": "(zscore > 2) && (zscore <= 3)",
           "variables": [
             "zscore"
           ]
@@ -990,7 +990,7 @@
         "code": "risk_of_overweight",
         "range": "above +1",
         "condition": {
-          "value": "zscore > 1 && zscore <= 2",
+          "value": "(zscore > 1) && (zscore <= 2)",
           "variables": [
             "zscore"
           ]
@@ -1001,7 +1001,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 1",
+          "value": "(zscore >= (-2)) && (zscore <= 1)",
           "variables": [
             "zscore"
           ]
@@ -1012,7 +1012,7 @@
         "code": "wasted",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]
@@ -1041,7 +1041,7 @@
       "lenhei"
     ],
     "axeX": {
-      "value": "(lenhei - (lenhei % 1)) + ((lenhei % 1)<=0.2 ? 0:((lenhei %1)>=0.8?1:0.5))",
+      "value": "(lenhei - (lenhei % 1)) + (((lenhei % 1)<=0.2) ? 0:(((lenhei %1)>=0.8)?1:0.5))",
       "variables": [
         "lenhei"
       ]
@@ -1063,7 +1063,7 @@
       }
     ],
     "usageConditions": {
-      "value": "lenhei >= 45 && lenhei <= 120",
+      "value": "(lenhei >= 45) && (lenhei <= 120)",
       "variables": [
         "lenhei"
       ]
@@ -1074,7 +1074,7 @@
         "code": "normal",
         "range": "0",
         "condition": {
-          "value": "zscore >= (-2) && zscore <= 1",
+          "value": "(zscore >= (-2)) && (zscore <= 1)",
           "variables": [
             "zscore"
           ]
@@ -1085,7 +1085,7 @@
         "code": "wasted",
         "range": "below -2",
         "condition": {
-          "value": "zscore < (-2) && zscore >= (-3)",
+          "value": "(zscore < (-2)) && (zscore >= (-3))",
           "variables": [
             "zscore"
           ]

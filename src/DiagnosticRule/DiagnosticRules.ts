@@ -37,12 +37,12 @@ export const diagnosticRules: DiagnosticRule[] = [
     conditions: [
       // Condition 1: -3 ≤ Z-score P/T < -2
       {
-        value: fExp`${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg3} && ${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg2}`,
+        value: fExp`(${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg3}) && (${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg2})`,
         variables: [AnthroSystemCodes.WFLH_UNISEX],
       },
       // Condition 2: 115mm ≤ MUAC < 125mm
       {
-        value: fExp`${AnthroSystemCodes.MUAC} >= 115 && ${AnthroSystemCodes.MUAC} < 125`,
+        value: fExp`(${AnthroSystemCodes.MUAC} >= 115) && (${AnthroSystemCodes.MUAC} < 125)`,
         variables: [AnthroSystemCodes.MUAC],
       },
     ],
@@ -64,7 +64,7 @@ export const diagnosticRules: DiagnosticRule[] = [
     conditions: [
       // -3 ≤ Z-score T/A < -2
       {
-        value: fExp`${AnthroSystemCodes.HFA} >= ${ZScorePossibleValueLimit.neg3} && ${AnthroSystemCodes.HFA} < ${ZScorePossibleValueLimit.neg2}`,
+        value: fExp`(${AnthroSystemCodes.HFA} >= ${ZScorePossibleValueLimit.neg3}) && (${AnthroSystemCodes.HFA} < ${ZScorePossibleValueLimit.neg2})`,
         variables: [AnthroSystemCodes.HFA],
       },
     ],
@@ -86,7 +86,7 @@ export const diagnosticRules: DiagnosticRule[] = [
     conditions: [
       // -3 ≤ Z-score P/A < -2
       {
-        value: fExp`${AnthroSystemCodes.WFA} >= ${ZScorePossibleValueLimit.neg3} && ${AnthroSystemCodes.WFA} < ${ZScorePossibleValueLimit.neg2}`,
+        value: fExp`(${AnthroSystemCodes.WFA} >= ${ZScorePossibleValueLimit.neg3}) && (${AnthroSystemCodes.WFA} < ${ZScorePossibleValueLimit.neg2})`,
         variables: [AnthroSystemCodes.WFA],
       },
     ],
@@ -106,7 +106,7 @@ export const diagnosticRules: DiagnosticRule[] = [
     code: DIAGNOSTIC_CODES.OVERWEIGHT,
     conditions: [
       {
-        value: fExp`${AnthroSystemCodes.BMI_FOR_AGE} > ${ZScorePossibleValueLimit.pos2} && ${AnthroSystemCodes.BMI_FOR_AGE} <= ${ZScorePossibleValueLimit.pos3}`,
+        value: fExp`(${AnthroSystemCodes.BMI_FOR_AGE} > ${ZScorePossibleValueLimit.pos2}) && (${AnthroSystemCodes.BMI_FOR_AGE} <= ${ZScorePossibleValueLimit.pos3})`,
         variables: [AnthroSystemCodes.BMI_FOR_AGE],
       },
     ],

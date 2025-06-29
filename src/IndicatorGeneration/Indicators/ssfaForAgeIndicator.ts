@@ -43,7 +43,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
   ],
   availableRefTables: [],
   usageConditions: {
-    value: fExp`${AnthroSystemCodes.AGE_IN_DAY} >= ${MIN_AGE_IN_DAY_TO_USE_MUCA_TSF_SSF} && ${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+    value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= ${MIN_AGE_IN_DAY_TO_USE_MUCA_TSF_SSF}) && (${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
     variables: [AnthroSystemCodes.AGE_IN_DAY],
   },
   interpretations: [
@@ -61,7 +61,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       code: "above_average_trunk_fat",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
-        value: fExp`${ZScoreVarName} > ${ZScorePossibleValueLimit.pos1} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2}`,
+        value: fExp`(${ZScoreVarName} > ${ZScorePossibleValueLimit.pos1}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2})`,
         variables: [ZScoreVarName],
       },
     },
@@ -70,7 +70,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       code: "normal_trunk_fat",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1}`,
+        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
         variables: [ZScoreVarName],
       },
     },
@@ -79,7 +79,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       code: "below_average_trunk_fat",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },

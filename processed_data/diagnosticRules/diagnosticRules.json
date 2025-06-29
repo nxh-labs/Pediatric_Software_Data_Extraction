@@ -28,13 +28,13 @@
     "code": "MODERATE_ACUTE_MALNUTRITION",
     "conditions": [
       {
-        "value": "wflh_unisex >= (-3) && wflh_unisex < (-2)",
+        "value": "(wflh_unisex >= (-3)) && (wflh_unisex < (-2))",
         "variables": [
           "wflh_unisex"
         ]
       },
       {
-        "value": "muac >= 115 && muac < 125",
+        "value": "(muac >= 115) && (muac < 125)",
         "variables": [
           "muac"
         ]
@@ -58,7 +58,7 @@
     "code": "MODERATE_CHRONIC_MALNUTRITION",
     "conditions": [
       {
-        "value": "hfa >= (-3) && hfa < (-2)",
+        "value": "(hfa >= (-3)) && (hfa < (-2))",
         "variables": [
           "hfa"
         ]
@@ -82,7 +82,7 @@
     "code": "MODERATE_UNDERWEIGHT",
     "conditions": [
       {
-        "value": "wfa >= (-3) && wfa < (-2)",
+        "value": "(wfa >= (-3)) && (wfa < (-2))",
         "variables": [
           "wfa"
         ]
@@ -106,7 +106,7 @@
     "code": "OVERWEIGHT",
     "conditions": [
       {
-        "value": "bmi_for_age > 2 && bmi_for_age <= 3",
+        "value": "(bmi_for_age > 2) && (bmi_for_age <= 3)",
         "variables": [
           "bmi_for_age"
         ]

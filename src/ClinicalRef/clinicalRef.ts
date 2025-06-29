@@ -11,7 +11,7 @@ import {
   ClinicalDataType,
 } from "../../constants";
 import { ClinicalSignReference } from "../../types";
-import { f } from "../../utils";
+import { f, fExp } from "../../utils";
 import { diagnosticClinicalRefs } from "./diagnosticClinicalRef";
 
 export const clinicalSignRefs: ClinicalSignReference[] = [
@@ -21,7 +21,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Une hyperthermie est définie par une température corporelle supérieure ou égale à 38.5°C",
     evaluationRule: {
-      value: f(`${VITAL_SIGNS.TEMPERATURE} >= 38.5`),
+      value: fExp`${VITAL_SIGNS.TEMPERATURE} >= 38.5`,
       variables: [VITAL_SIGNS.TEMPERATURE],
     },
     data: [
@@ -41,7 +41,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Une hypothermie est définie par une température corporelle inférieure à 35°C",
     evaluationRule: {
-      value: f(`${VITAL_SIGNS.TEMPERATURE} < 35`),
+      value: fExp`${VITAL_SIGNS.TEMPERATURE} < 35`,
       variables: [VITAL_SIGNS.TEMPERATURE],
     },
     data: [
@@ -61,9 +61,9 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Une hypoglycémie est suspectée lorsque le patient présente : des paupières ouvertes pendant le sommeil, une température corporelle inférieure à 36.5°C et/ou une altération du niveau de conscience",
     evaluationRule: {
-      value: f(
-        `(${QUESTIONS.EYELIDS_DURING_SLEEP} == ${ConditionResult.True}) || (${VITAL_SIGNS.TEMPERATURE} < 36.5 && ${QUESTIONS.CONSCIOUSNESS_LEVEL} == ${ConditionResult.True})`
-      ),
+      value: fExp
+        `(${QUESTIONS.EYELIDS_DURING_SLEEP} == ${ConditionResult.True}) || ((${VITAL_SIGNS.TEMPERATURE} < 36.5) && (${QUESTIONS.CONSCIOUSNESS_LEVEL} == ${ConditionResult.True}))`
+      ,
       variables: [
         QUESTIONS.EYELIDS_DURING_SLEEP,
         VITAL_SIGNS.TEMPERATURE,
@@ -123,7 +123,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Un vomissement est défini par un nombre de vomissements supérieur ou égal à 1 par jour",
     evaluationRule: {
-      value: f(`${DATA_POINTS.VOMITING_COUNT} >= 1`),
+      value: fExp`${DATA_POINTS.VOMITING_COUNT} >= 1`,
       variables: [DATA_POINTS.VOMITING_COUNT],
     },
     data: [
@@ -143,9 +143,9 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Un patient est sévèrement malade lorsque le patient a une condition générale altérée, ou une hypothermie, ou une hyperthermie",
     evaluationRule: {
-      value: f(
+      value: fExp
         `(${DATA_POINTS.GENERAL_CONDITION} =='${GENERAL_CONDITION_VALUES.ALTERED}') || (${VITAL_SIGNS.TEMPERATURE} >= 38.5) || (${VITAL_SIGNS.TEMPERATURE} < 35)`
-      ),
+      ,
       variables: [DATA_POINTS.GENERAL_CONDITION, VITAL_SIGNS.TEMPERATURE],
     },
     data: [
@@ -177,21 +177,21 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Le patient présente une détresse respiratoire lorsque la fréquence respiratoire par minute est supérieure à l'intervalle normal pour l'âge ou présente un tirage sous-costal.",
     evaluationRule: {
-      value: f(`(${OBSERVATIONS.SUBCOSTAL_RETRACTION} == ${
+      value: fExp`(${OBSERVATIONS.SUBCOSTAL_RETRACTION} == ${
         ConditionResult.True
       }) ||
-        (${AnthroSystemCodes.AGE_IN_MONTH} < 2 && ${
+        ((${AnthroSystemCodes.AGE_IN_MONTH} < 2) && (${
         VITAL_SIGNS.RESPIRATORY_RATE
-      } > 60) ||
-        (${AnthroSystemCodes.AGE_IN_MONTH} >= 2 && ${
+      } > 60)) ||
+        ((${AnthroSystemCodes.AGE_IN_MONTH} >= 2) && (${
         AnthroSystemCodes.AGE_IN_MONTH
-      } < ${MONTH_IN_YEARS} && ${VITAL_SIGNS.RESPIRATORY_RATE} > 50) ||
-        (${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS} && ${
+      } < ${MONTH_IN_YEARS}) && (${VITAL_SIGNS.RESPIRATORY_RATE} > 50)) ||
+        ((${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS}) && (${
         AnthroSystemCodes.AGE_IN_MONTH
-      } < ${MONTH_IN_YEARS * 5} && ${VITAL_SIGNS.RESPIRATORY_RATE} > 40) ||
-        (${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 5} && ${
+      } < ${MONTH_IN_YEARS * 5}) && (${VITAL_SIGNS.RESPIRATORY_RATE} > 40)) ||
+        ((${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 5}) && (${
         VITAL_SIGNS.RESPIRATORY_RATE
-      } > 30)`),
+      } > 30))`,
       variables: [
         VITAL_SIGNS.RESPIRATORY_RATE,
         OBSERVATIONS.SUBCOSTAL_RETRACTION,

@@ -44,7 +44,7 @@
     "code": "clinical_hypoglycemia",
     "description": "Une hypoglycémie est suspectée lorsque le patient présente : des paupières ouvertes pendant le sommeil, une température corporelle inférieure à 36.5°C et/ou une altération du niveau de conscience",
     "evaluationRule": {
-      "value": "(question_eyelids_during_sleep == 1) || (vital_sign_temperature < 36.5 && question_consciousness_level == 1)",
+      "value": "(question_eyelids_during_sleep == 1) || ((vital_sign_temperature < 36.5) && (question_consciousness_level == 1))",
       "variables": [
         "question_eyelids_during_sleep",
         "vital_sign_temperature",
@@ -152,7 +152,7 @@
     "code": "clinical_respiratory_distress",
     "description": "Le patient présente une détresse respiratoire lorsque la fréquence respiratoire par minute est supérieure à l'intervalle normal pour l'âge ou présente un tirage sous-costal.",
     "evaluationRule": {
-      "value": "(observation_subcostal_retraction == 1) ||\n        (age_in_month < 2 && vital_sign_respiratory_rate > 60) ||\n        (age_in_month >= 2 && age_in_month < 12 && vital_sign_respiratory_rate > 50) ||\n        (age_in_month >= 12 && age_in_month < 60 && vital_sign_respiratory_rate > 40) ||\n        (age_in_month >= 60 && vital_sign_respiratory_rate > 30)",
+      "value": "(observation_subcostal_retraction == 1) ||\n        ((age_in_month < 2) && (vital_sign_respiratory_rate > 60)) ||\n        ((age_in_month >= 2) && (age_in_month < 12) && (vital_sign_respiratory_rate > 50)) ||\n        ((age_in_month >= 12) && (age_in_month < 60) && (vital_sign_respiratory_rate > 40)) ||\n        ((age_in_month >= 60) && (vital_sign_respiratory_rate > 30))",
       "variables": [
         "vital_sign_respiratory_rate",
         "observation_subcostal_retraction",

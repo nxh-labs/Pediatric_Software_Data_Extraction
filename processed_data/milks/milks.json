@@ -3,7 +3,7 @@
     "type": "f75",
     "name": "Lait F75",
     "condition": {
-      "value": "((age_in_month < 6 || weight < 3) && clinical_edema == 1) || ((appetite_test_result == 'Negative') && (complications_number > 0))",
+      "value": "(((age_in_month < 6) || (weight < 3)) && (clinical_edema == 1)) || ((appetite_test_result == 'Negative') && (complications_number > 0))",
       "variables": [
         "age_in_month",
         "weight",
@@ -295,7 +295,7 @@
     "type": "f100",
     "name": "Lait F100",
     "condition": {
-      "value": "(weight>=3 && age_in_month >=6 )&& (appetite_test_result == 'Positive' && complications_number == 0)",
+      "value": "((weight>=3) && (age_in_month >=6) )&& ((appetite_test_result == 'Positive') && (complications_number == 0))",
       "variables": [
         "weight",
         "age_in_month",
@@ -520,7 +520,7 @@
     "type": "f100_diluted",
     "name": "Lait F100 - dilué",
     "condition": {
-      "value": "((weight < 3) || (age_in_month < 6)) && clinical_edema == 0",
+      "value": "((weight < 3) || (age_in_month < 6)) && (clinical_edema == 0)",
       "variables": [
         "age_in_month",
         "weight",

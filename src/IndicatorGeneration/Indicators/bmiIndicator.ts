@@ -35,35 +35,35 @@ export const bmiIndicator: CreateIndicatorProps = {
     {
       chartCode: GrowthRefChartAndTableCodes.BMIAGE_BOYS_0_5_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.MALE} && ${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.MALE}) && (${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
     {
       chartCode: GrowthRefChartAndTableCodes.BMIAGE_GIRLS_0_5_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.FEMALE} && ${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.FEMALE}) && (${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
     {
       chartCode: GrowthRefChartAndTableCodes.BMIAGE_BOYS_5_19_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.MALE} && ${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.MALE}) && (${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
     {
       chartCode: GrowthRefChartAndTableCodes.BMIAGE_GIRLS_5_19_CHART,
       condition: {
-        value: fExp`${AnthroSystemCodes.SEX} == ${Sex.FEMALE} && ${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.FEMALE}) && (${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
   ],
   availableRefTables: [],
   usageConditions: {
-    value: fExp`${AnthroSystemCodes.AGE_IN_DAY} >= 0 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`,
+    value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= 0) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
     variables: [AnthroSystemCodes.AGE_IN_MONTH],
   },
   interpretations: [
@@ -72,7 +72,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "severe_obesity_5_19",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
-        value: fExp`${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY} && ${ZScoreVarName} > ${ZScorePossibleValueLimit.pos3}`,
+        value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.pos3})`,
         variables: [ZScoreVarName, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -81,7 +81,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "obesity_0_5",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
-        value: fExp`${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY} && ${ZScoreVarName} > ${ZScorePossibleValueLimit.pos3}`,
+        value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.pos3})`,
         variables: [ZScoreVarName, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -90,7 +90,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "overweight_0_5",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
-        value: fExp`${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY} && ${ZScoreVarName} > ${ZScorePossibleValueLimit.pos2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos3}`,
+        value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.pos2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos3})`,
         variables: [ZScoreVarName, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -99,7 +99,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "obesity_5_19",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
-        value: fExp`${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY} && ${ZScoreVarName} > ${ZScorePossibleValueLimit.pos2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos3}`,
+        value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.pos2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos3})`,
         variables: [ZScoreVarName, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -108,7 +108,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "overweight_5_19",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
-        value: fExp`${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY} && ${ZScoreVarName} > ${ZScorePossibleValueLimit.pos1} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2}`,
+        value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.pos1}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2})`,
         variables: [ZScoreVarName, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -117,7 +117,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "overweight_risk",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
-        value: fExp`${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY} && ${ZScoreVarName} > ${ZScorePossibleValueLimit.pos1} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2}`,
+        value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.pos1}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2})`,
         variables: [ZScoreVarName, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -126,7 +126,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1}`,
+        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
         variables: [ZScoreVarName],
       },
     },
@@ -135,7 +135,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },
@@ -144,7 +144,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {
-        value: f(`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg3}`),
+        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg3}`,
         variables: [ZScoreVarName],
       },
     },

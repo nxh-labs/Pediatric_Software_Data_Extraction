@@ -90,7 +90,7 @@
             "cnt_orientation_number",
             "previous_cna_treatment_month"
           ],
-          "value": "cnt_orientation_number > 0 || ((cna_orientation_number > 0 ) && (previous_cna_treatment_month > 2))"
+          "value": "(cnt_orientation_number > 0) || ((cna_orientation_number > 0 ) && (previous_cna_treatment_month > 2))"
         }
       }
     ]
@@ -100,7 +100,7 @@
     "code": "ORIENTATION_CNT",
     "admissionCriteria": [
       {
-        "value": "(age_in_month >= 6 && age_in_month < 96) && ((wflh_unisex < (-3)) || (clinical_edema == 1) || (muac < 115) || (complications_number > 0) || (appetite_test_result == 'Negative'))",
+        "value": "((age_in_month >= 6) && (age_in_month < 96)) && ((wflh_unisex < (-3)) || (clinical_edema == 1) || (muac < 115) || (complications_number > 0) || (appetite_test_result == 'Negative'))",
         "variables": [
           "age_in_month",
           "wflh_unisex",
@@ -109,7 +109,7 @@
         ]
       },
       {
-        "value": "(age_in_month >= 96 && age_in_month < 228) && ((wfh_unisex_nchs < (-3)) || (clinical_edema == 1)|| (complications_number > 0) || (appetite_test_result == 'Negative'))",
+        "value": "((age_in_month >= 96) && (age_in_month < 228)) && ((wfh_unisex_nchs < (-3)) || (clinical_edema == 1)|| (complications_number > 0) || (appetite_test_result == 'Negative'))",
         "variables": [
           "age_in_month",
           "wfh_unisex_nchs",
@@ -119,7 +119,7 @@
         ]
       },
       {
-        "value": "(age_in_month < 6 && ((wfa < (-3)) || (clinical_edema == 1)|| (complications_number > 0))) || ((age_in_month>=6 && weight < 3) && (wflh_unisex < (-3) || (clinical_edema == 1)|| (complications_number > 0)))",
+        "value": "((age_in_month < 6) && ((wfa < (-3)) || (clinical_edema == 1)|| (complications_number > 0))) || (((age_in_month>=6) && (weight < 3)) && ((wflh_unisex < (-3)) || (clinical_edema == 1)|| (complications_number > 0)))",
         "variables": [
           "age_in_month",
           "weight",
@@ -149,7 +149,7 @@
             "cna_orientation_number",
             "age_in_month"
           ],
-          "value": "cna_orientation_number == 0 || age_in_month < 6"
+          "value": "(cna_orientation_number == 0) || (age_in_month < 6)"
         }
       },
       {

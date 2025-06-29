@@ -39,7 +39,7 @@
   ],
   "availableRefTables": [],
   "usageConditions": {
-    "value": "age_in_day >= 91 && age_in_day <= 1856",
+    "value": "(age_in_day >= 91) && (age_in_day <= 1856)",
     "variables": [
       "age_in_day"
     ]
@@ -61,7 +61,7 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "zscore >= (-2) && zscore < 1",
+        "value": "(zscore >= (-2)) && (zscore < 1)",
         "variables": [
           "zscore"
         ]
@@ -72,7 +72,7 @@
       "code": "moderate_acute_malnutrition",
       "range": "below -2",
       "condition": {
-        "value": "zscore < (-2) && zscore >= (-3)",
+        "value": "(zscore < (-2)) && (zscore >= (-3))",
         "variables": [
           "zscore"
         ]

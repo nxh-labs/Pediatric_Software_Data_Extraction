@@ -64,7 +64,7 @@ export const headCircumferenceForAgeIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2}`,
+        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos2})`,
         variables: [ZScoreVarName],
       },
     },

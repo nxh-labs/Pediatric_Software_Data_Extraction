@@ -11,7 +11,7 @@ import {
   ZScorePossibleValueLimit,
 } from "../../constants";
 import { OrientationRef } from "../../types";
-import { f } from "../../utils";
+import { f, fExp } from "../../utils";
 
 export const orientationRefs: OrientationRef[] = [
   {
@@ -19,7 +19,7 @@ export const orientationRefs: OrientationRef[] = [
     code: ORIENTATION_REF_CODES.ORIENTED_TO_HOME,
     admissionCriteria: [
       {
-        value: f(`${AnthroSystemCodes.MUAC} >= 125`),
+        value: fExp`${AnthroSystemCodes.MUAC} >= 125`,
         variables: [AnthroSystemCodes.MUAC],
       },
     ],
@@ -30,9 +30,7 @@ export const orientationRefs: OrientationRef[] = [
     code: ORIENTATION_REF_CODES.ORIENTED_TO_CRENAM,
     admissionCriteria: [
       {
-        value: f(
-          `(${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (((${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg3}) && (${AnthroSystemCodes.WFLH_UNISEX}<${ZScorePossibleValueLimit.neg2}))||((${AnthroSystemCodes.MUAC}>=115) && (${AnthroSystemCodes.MUAC}<125))) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False})`
-        ),
+        value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (((${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg3}) && (${AnthroSystemCodes.WFLH_UNISEX}<${ZScorePossibleValueLimit.neg2}))||((${AnthroSystemCodes.MUAC}>=115) && (${AnthroSystemCodes.MUAC}<125))) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False})`,
         variables: [
           AnthroSystemCodes.AGE_IN_MONTH,
           AnthroSystemCodes.WFLH_UNISEX,
@@ -41,9 +39,7 @@ export const orientationRefs: OrientationRef[] = [
         ],
       },
       {
-        value: f(
-          `${TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_TREATMENT} == '${ORIENTATION_REF_CODES.ORIENTED_TO_CNT}'`
-        ),
+        value: fExp`${TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_TREATMENT} == '${ORIENTATION_REF_CODES.ORIENTED_TO_CNT}'`,
         variables: [TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_TREATMENT],
       },
     ],
@@ -55,9 +51,7 @@ export const orientationRefs: OrientationRef[] = [
           variables: [
             TREATMENT_HISTORY_VARIABLES_CODES.CRENAM_ORIENTATION_NUMBER,
           ],
-          value: f(
-            `${TREATMENT_HISTORY_VARIABLES_CODES.CRENAM_ORIENTATION_NUMBER} == 0`
-          ),
+          value: fExp`${TREATMENT_HISTORY_VARIABLES_CODES.CRENAM_ORIENTATION_NUMBER} == 0`,
         },
       },
       {
@@ -67,9 +61,7 @@ export const orientationRefs: OrientationRef[] = [
           variables: [
             TREATMENT_HISTORY_VARIABLES_CODES.CRENAM_ORIENTATION_NUMBER,
           ],
-          value: f(
-            `${TREATMENT_HISTORY_VARIABLES_CODES.CRENAM_ORIENTATION_NUMBER} > 0`
-          ),
+          value: fExp`${TREATMENT_HISTORY_VARIABLES_CODES.CRENAM_ORIENTATION_NUMBER} > 0`,
         },
       },
     ],
@@ -79,9 +71,7 @@ export const orientationRefs: OrientationRef[] = [
     code: ORIENTATION_REF_CODES.ORIENTED_TO_CNA,
     admissionCriteria: [
       {
-        value: f(
-          `(${AnthroSystemCodes.WFLH_UNISEX}<${ZScorePossibleValueLimit.neg3}) &&((${AnthroSystemCodes.MUAC}>=115) && (${AnthroSystemCodes.MUAC}<125)) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}) && (${APPETITE_TEST_CODES.CODE} == '${APPETITE_TEST_CODES.POSITIVE}') && (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} == 0)`
-        ),
+        value: fExp`(${AnthroSystemCodes.WFLH_UNISEX}<${ZScorePossibleValueLimit.neg3}) &&((${AnthroSystemCodes.MUAC}>=115) && (${AnthroSystemCodes.MUAC}<125)) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}) && (${APPETITE_TEST_CODES.CODE} == '${APPETITE_TEST_CODES.POSITIVE}') && (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} == 0)`,
         variables: [
           CLINICAL_SIGNS.EDEMA,
           AnthroSystemCodes.WFLH_UNISEX,
@@ -97,9 +87,7 @@ export const orientationRefs: OrientationRef[] = [
         code: ORIENTATION_REF_CODES.NEW_ADMISSION_CODE,
         condition: {
           variables: [TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER],
-          value: f(
-            `${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} == 0`
-          ),
+          value: fExp`${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} == 0`,
         },
       },
       {
@@ -111,9 +99,7 @@ export const orientationRefs: OrientationRef[] = [
             TREATMENT_HISTORY_VARIABLES_CODES.CNT_ORIENTATION_NUMBER,
             TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_CNA_TREATMENT_MONTH,
           ],
-          value: f(
-            `${TREATMENT_HISTORY_VARIABLES_CODES.CNT_ORIENTATION_NUMBER} > 0 || ((${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} > 0 ) && (${TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_CNA_TREATMENT_MONTH} > 2))`
-          ),
+          value: fExp`(${TREATMENT_HISTORY_VARIABLES_CODES.CNT_ORIENTATION_NUMBER} > 0) || ((${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} > 0 ) && (${TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_CNA_TREATMENT_MONTH} > 2))`,
         },
       },
     ],
@@ -123,17 +109,15 @@ export const orientationRefs: OrientationRef[] = [
     code: ORIENTATION_REF_CODES.ORIENTED_TO_CNT,
     admissionCriteria: [
       {
-        value: f(
-          `(${AnthroSystemCodes.AGE_IN_MONTH} >= 6 && ${
-            AnthroSystemCodes.AGE_IN_MONTH
-          } < ${MONTH_IN_YEARS * 8}) && ((${AnthroSystemCodes.WFLH_UNISEX} < ${
-            ZScorePossibleValueLimit.neg3
-          }) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}) || (${
-            AnthroSystemCodes.MUAC
-          } < 115) || (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${
-            APPETITE_TEST_CODES.CODE
-          } == '${APPETITE_TEST_CODES.NEGATIVE}'))`
-        ),
+        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${
+          AnthroSystemCodes.AGE_IN_MONTH
+        } < ${MONTH_IN_YEARS * 8})) && ((${AnthroSystemCodes.WFLH_UNISEX} < ${
+          ZScorePossibleValueLimit.neg3
+        }) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}) || (${
+          AnthroSystemCodes.MUAC
+        } < 115) || (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${
+          APPETITE_TEST_CODES.CODE
+        } == '${APPETITE_TEST_CODES.NEGATIVE}'))`,
         variables: [
           AnthroSystemCodes.AGE_IN_MONTH,
           AnthroSystemCodes.WFLH_UNISEX,
@@ -143,19 +127,17 @@ export const orientationRefs: OrientationRef[] = [
       },
 
       {
-        value: f(
-          `(${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 8} && ${
-            AnthroSystemCodes.AGE_IN_MONTH
-          } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && ((${
-            AnthroSystemCodes.WFH_UNISEX_NCHS
-          } < ${ZScorePossibleValueLimit.neg3}) || (${
-            CLINICAL_SIGNS.EDEMA
-          } == ${ConditionResult.True})|| (${
-            COMPLICATION_CODES.COMPLICATIONS_NUMBER
-          } > 0) || (${APPETITE_TEST_CODES.CODE} == '${
-            APPETITE_TEST_CODES.NEGATIVE
-          }'))`
-        ),
+        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+          MONTH_IN_YEARS * 8
+        }) && (${
+          AnthroSystemCodes.AGE_IN_MONTH
+        } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})) && ((${
+          AnthroSystemCodes.WFH_UNISEX_NCHS
+        } < ${ZScorePossibleValueLimit.neg3}) || (${CLINICAL_SIGNS.EDEMA} == ${
+          ConditionResult.True
+        })|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${
+          APPETITE_TEST_CODES.CODE
+        } == '${APPETITE_TEST_CODES.NEGATIVE}'))`,
         variables: [
           AnthroSystemCodes.AGE_IN_MONTH,
           AnthroSystemCodes.WFH_UNISEX_NCHS,
@@ -165,9 +147,7 @@ export const orientationRefs: OrientationRef[] = [
         ],
       },
       {
-        value: f(
-          `(${AnthroSystemCodes.AGE_IN_MONTH} < 6 && ((${AnthroSystemCodes.WFA} < ${ZScorePossibleValueLimit.neg3}) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True})|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0))) || ((${AnthroSystemCodes.AGE_IN_MONTH}>=6 && ${AnthroSystemCodes.WEIGHT} < 3) && (${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg3} || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True})|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0)))`
-        ),
+        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} < 6) && ((${AnthroSystemCodes.WFA} < ${ZScorePossibleValueLimit.neg3}) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True})|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0))) || (((${AnthroSystemCodes.AGE_IN_MONTH}>=6) && (${AnthroSystemCodes.WEIGHT} < 3)) && ((${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg3}) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True})|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0)))`,
         variables: [
           AnthroSystemCodes.AGE_IN_MONTH,
           AnthroSystemCodes.WEIGHT,
@@ -198,9 +178,7 @@ export const orientationRefs: OrientationRef[] = [
             TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER,
             AnthroSystemCodes.AGE_IN_MONTH,
           ],
-          value: f(
-            `${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} == 0 || ${AnthroSystemCodes.AGE_IN_MONTH} < 6`
-          ),
+          value: fExp`(${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} == 0) || (${AnthroSystemCodes.AGE_IN_MONTH} < 6)`,
         },
       },
       {
@@ -208,9 +186,7 @@ export const orientationRefs: OrientationRef[] = [
         code: ORIENTATION_REF_CODES.INTERNAL_TRANSFER_ADMISSION_CODE,
         condition: {
           variables: [TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER],
-          value: f(
-            `${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} > 0`
-          ),
+          value: fExp`${TREATMENT_HISTORY_VARIABLES_CODES.CNA_ORIENTATION_NUMBER} > 0`,
         },
       },
     ],

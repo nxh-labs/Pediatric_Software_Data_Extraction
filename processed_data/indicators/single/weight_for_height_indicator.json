@@ -21,7 +21,7 @@
     {
       "chartCode": "growth_ref_chart_wfl_boys_45_110",
       "condition": {
-        "value": "sex == 'M' && age_in_day <= 731",
+        "value": "(sex == 'M') && (age_in_day <= 731)",
         "variables": [
           "sex",
           "age_in_day"
@@ -31,7 +31,7 @@
     {
       "chartCode": "growth_ref_chart_wfl_girls_45_110",
       "condition": {
-        "value": "sex == 'F' && age_in_day <= 731",
+        "value": "(sex == 'F') && (age_in_day <= 731)",
         "variables": [
           "sex",
           "age_in_day"
@@ -41,7 +41,7 @@
     {
       "chartCode": "growth_ref_chart_wfh_boys_65_120",
       "condition": {
-        "value": "sex == 'M' && age_in_day > 731",
+        "value": "(sex == 'M') && (age_in_day > 731)",
         "variables": [
           "sex",
           "age_in_day"
@@ -51,7 +51,7 @@
     {
       "chartCode": "growth_ref_chart_wfh_girls_65_120",
       "condition": {
-        "value": "sex == 'F' && age_in_day > 731",
+        "value": "(sex == 'F') && (age_in_day > 731)",
         "variables": [
           "sex",
           "age_in_day"
@@ -61,7 +61,7 @@
   ],
   "availableRefTables": [],
   "usageConditions": {
-    "value": "lenhei >= 45 && lenhei <= 120",
+    "value": "(lenhei >= 45) &&( lenhei <= 120)",
     "variables": [
       "lenhei"
     ]
@@ -83,7 +83,7 @@
       "code": "overweight",
       "range": "above +2",
       "condition": {
-        "value": "zscore > 2 && zscore <= 3",
+        "value": "(zscore > 2) && (zscore <= 3)",
         "variables": [
           "zscore"
         ]
@@ -94,7 +94,7 @@
       "code": "risk_of_overweight",
       "range": "above +1",
       "condition": {
-        "value": "zscore > 1 && zscore <= 2",
+        "value": "(zscore > 1) && (zscore <= 2)",
         "variables": [
           "zscore"
         ]
@@ -105,7 +105,7 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "zscore >= (-2) && zscore <= 1",
+        "value": "(zscore >= (-2)) && (zscore <= 1)",
         "variables": [
           "zscore"
         ]
@@ -116,7 +116,7 @@
       "code": "wasted",
       "range": "below -2",
       "condition": {
-        "value": "zscore < (-2) && zscore >= (-3)",
+        "value": "(zscore < (-2)) && (zscore >= (-3))",
         "variables": [
           "zscore"
         ]

@@ -13,7 +13,7 @@ export const milkRefs: Milk[] = [
     type: MilkType.F75,
     name: "Lait F75",
     condition: {
-      value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} < 6 || ${AnthroSystemCodes.WEIGHT} < 3) && ${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}) || ((${APPETITE_TEST_CODES.CODE} == '${APPETITE_TEST_CODES.NEGATIVE}') && (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0))`,
+      value: fExp`(((${AnthroSystemCodes.AGE_IN_MONTH} < 6) || (${AnthroSystemCodes.WEIGHT} < 3)) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True})) || ((${APPETITE_TEST_CODES.CODE} == '${APPETITE_TEST_CODES.NEGATIVE}') && (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0))`,
       variables: [
         AnthroSystemCodes.AGE_IN_MONTH,
         AnthroSystemCodes.WEIGHT,
@@ -303,7 +303,7 @@ export const milkRefs: Milk[] = [
     type: MilkType.F100,
     name: "Lait F100",
     condition: {
-      value: fExp`(${AnthroSystemCodes.WEIGHT}>=3 && ${AnthroSystemCodes.AGE_IN_MONTH} >=6 )&& (${APPETITE_TEST_CODES.CODE} == '${APPETITE_TEST_CODES.POSITIVE}' && ${COMPLICATION_CODES.COMPLICATIONS_NUMBER} == 0)`,
+      value: fExp`((${AnthroSystemCodes.WEIGHT}>=3) && (${AnthroSystemCodes.AGE_IN_MONTH} >=6) )&& ((${APPETITE_TEST_CODES.CODE} == '${APPETITE_TEST_CODES.POSITIVE}') && (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} == 0))`,
       variables: [
         AnthroSystemCodes.WEIGHT,
         AnthroSystemCodes.AGE_IN_MONTH,
@@ -526,7 +526,7 @@ export const milkRefs: Milk[] = [
     type: MilkType.F100Diluted,
     name: "Lait F100 - dilué",
     condition: {
-      value: fExp`((${AnthroSystemCodes.WEIGHT} < 3) || (${AnthroSystemCodes.AGE_IN_MONTH} < 6)) && ${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}`,
+      value: fExp`((${AnthroSystemCodes.WEIGHT} < 3) || (${AnthroSystemCodes.AGE_IN_MONTH} < 6)) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False})`,
       variables: [
         AnthroSystemCodes.AGE_IN_MONTH,
         AnthroSystemCodes.WEIGHT,

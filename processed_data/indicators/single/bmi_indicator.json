@@ -25,7 +25,7 @@
     {
       "chartCode": "growth_ref_chart_bfa_boys_0_5",
       "condition": {
-        "value": "sex == 'M' && age_in_day <= 1856",
+        "value": "(sex == 'M') && (age_in_day <= 1856)",
         "variables": [
           "sex",
           "age_in_day"
@@ -35,7 +35,7 @@
     {
       "chartCode": "growth_ref_chart_bfa_girls_0_5",
       "condition": {
-        "value": "sex == 'F' && age_in_day <= 1856",
+        "value": "(sex == 'F') && (age_in_day <= 1856)",
         "variables": [
           "sex",
           "age_in_day"
@@ -45,7 +45,7 @@
     {
       "chartCode": "growth_ref_chart_bfa_boys_5_19",
       "condition": {
-        "value": "sex == 'M' && age_in_day > 1856",
+        "value": "(sex == 'M') && (age_in_day > 1856)",
         "variables": [
           "sex",
           "age_in_day"
@@ -55,7 +55,7 @@
     {
       "chartCode": "growth_ref_chart_bfa_girls_5_19",
       "condition": {
-        "value": "sex == 'F' && age_in_day > 1856",
+        "value": "(sex == 'F') && (age_in_day > 1856)",
         "variables": [
           "sex",
           "age_in_day"
@@ -65,7 +65,7 @@
   ],
   "availableRefTables": [],
   "usageConditions": {
-    "value": "age_in_day >= 0 && age_in_month <= 228",
+    "value": "(age_in_day >= 0) && (age_in_month <= 228)",
     "variables": [
       "age_in_month"
     ]
@@ -76,7 +76,7 @@
       "code": "severe_obesity_5_19",
       "range": "above +3",
       "condition": {
-        "value": "age_in_day > 1856 && zscore > 3",
+        "value": "(age_in_day > 1856) && (zscore > 3)",
         "variables": [
           "zscore",
           "age_in_day"
@@ -88,7 +88,7 @@
       "code": "obesity_0_5",
       "range": "above +3",
       "condition": {
-        "value": "age_in_day <= 1856 && zscore > 3",
+        "value": "(age_in_day <= 1856) && (zscore > 3)",
         "variables": [
           "zscore",
           "age_in_day"
@@ -100,7 +100,7 @@
       "code": "overweight_0_5",
       "range": "above +2",
       "condition": {
-        "value": "age_in_day <= 1856 && zscore > 2 && zscore <= 3",
+        "value": "(age_in_day <= 1856) && (zscore > 2) && (zscore <= 3)",
         "variables": [
           "zscore",
           "age_in_day"
@@ -112,7 +112,7 @@
       "code": "obesity_5_19",
       "range": "above +2",
       "condition": {
-        "value": "age_in_day > 1856 && zscore > 2 && zscore <= 3",
+        "value": "(age_in_day > 1856) && (zscore > 2) && (zscore <= 3)",
         "variables": [
           "zscore",
           "age_in_day"
@@ -124,7 +124,7 @@
       "code": "overweight_5_19",
       "range": "above +1",
       "condition": {
-        "value": "age_in_day > 1856 && zscore > 1 && zscore <= 2",
+        "value": "(age_in_day > 1856) && (zscore > 1) && (zscore <= 2)",
         "variables": [
           "zscore",
           "age_in_day"
@@ -136,7 +136,7 @@
       "code": "overweight_risk",
       "range": "above +1",
       "condition": {
-        "value": "age_in_day <= 1856 && zscore > 1 && zscore <= 2",
+        "value": "(age_in_day <= 1856) && (zscore > 1) && (zscore <= 2)",
         "variables": [
           "zscore",
           "age_in_day"
@@ -148,7 +148,7 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "zscore >= (-2) && zscore <= 1",
+        "value": "(zscore >= (-2)) && (zscore <= 1)",
         "variables": [
           "zscore"
         ]
@@ -159,7 +159,7 @@
       "code": "wasted",
       "range": "below -2",
       "condition": {
-        "value": "zscore < (-2) && zscore >= (-3)",
+        "value": "(zscore < (-2)) && (zscore >= (-3))",
         "variables": [
           "zscore"
         ]

@@ -39,7 +39,7 @@
   ],
   "availableRefTables": [],
   "usageConditions": {
-    "value": "age_in_day >= 91 && age_in_day <= 1856",
+    "value": "(age_in_day >= 91) && (age_in_day <= 1856)",
     "variables": [
       "age_in_day"
     ]
@@ -61,7 +61,7 @@
       "code": "above_average_trunk_fat",
       "range": "above +1",
       "condition": {
-        "value": "zscore > 1 && zscore <= 2",
+        "value": "(zscore > 1) && (zscore <= 2)",
         "variables": [
           "zscore"
         ]
@@ -72,7 +72,7 @@
       "code": "normal_trunk_fat",
       "range": "0",
       "condition": {
-        "value": "zscore >= (-2) && zscore <= 1",
+        "value": "(zscore >= (-2)) && (zscore <= 1)",
         "variables": [
           "zscore"
         ]
@@ -83,7 +83,7 @@
       "code": "below_average_trunk_fat",
       "range": "below -2",
       "condition": {
-        "value": "zscore < (-2) && zscore >= (-3)",
+        "value": "(zscore < (-2)) && (zscore >= (-3))",
         "variables": [
           "zscore"
         ]

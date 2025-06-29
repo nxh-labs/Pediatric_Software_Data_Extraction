@@ -11,7 +11,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "(weight >= 0.35 )&& (weight < 120)",
+        "rule": "(weight >= 0.35)&& (weight < 120)",
         "variables": [
           "weight"
         ]
@@ -30,7 +30,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "length >= 30 && (length<=120)",
+        "rule": "(length >= 30) && (length<=120)",
         "variables": [
           "length"
         ]
@@ -49,7 +49,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "height >= 30 && (height<=200)",
+        "rule": "(height >= 30) && (height<=200)",
         "variables": [
           "height"
         ]
@@ -67,7 +67,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "head_circumference >= 20 && head_circumference < 65",
+        "rule": "(head_circumference >= 20) && (head_circumference < 65)",
         "variables": [
           "head_circumference"
         ]
@@ -86,7 +86,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "muac >= 65 && muac < 350",
+        "rule": "(muac >= 65) && (muac < 350)",
         "variables": [
           "muac"
         ]
@@ -104,7 +104,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "tsf >= 2 && tsf < 50",
+        "rule": "(tsf >= 2) && (tsf < 50)",
         "variables": [
           "tsf"
         ]
@@ -122,7 +122,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "ssf >= 2 && ssf < 50",
+        "rule": "(ssf >= 2) && (ssf < 50)",
         "variables": [
           "ssf"
         ]

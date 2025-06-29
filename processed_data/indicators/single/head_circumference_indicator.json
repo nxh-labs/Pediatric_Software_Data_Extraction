@@ -61,7 +61,7 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "zscore >= (-2) && zscore <= 2",
+        "value": "(zscore >= (-2)) && (zscore <= 2)",
         "variables": [
           "zscore"
         ]

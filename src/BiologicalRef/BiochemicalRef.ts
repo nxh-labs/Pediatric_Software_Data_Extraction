@@ -7,7 +7,7 @@ import {
   Sex,
 } from "../../constants";
 import { BiochemicalReference } from "../../types/BiochemicalReference";
-import { f } from "../../utils";
+import { f, fExp } from "../../utils";
 
 export const biochemicalReferences: BiochemicalReference[] = [
   // Ionogramme sanguin
@@ -19,7 +19,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 1`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 1`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [130, true], max: [146, true] },
@@ -28,9 +28,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${AnthroSystemCodes.AGE_IN_MONTH} < 12`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${AnthroSystemCodes.AGE_IN_MONTH} < 12)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [133, true], max: [146, true] },
@@ -39,7 +37,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} >= 12`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} >= 12`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [136, true], max: [146, true] },
@@ -57,7 +55,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 1`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 1`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [3.6, true], max: [6.1, true] },
@@ -66,9 +64,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${AnthroSystemCodes.AGE_IN_MONTH} < 12`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${AnthroSystemCodes.AGE_IN_MONTH} < 12)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [3.7, true], max: [5.8, true] },
@@ -77,9 +73,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 12 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 12) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [3.2, true], max: [5.1, true] },
@@ -97,7 +91,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 12`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 12`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [96, true], max: [110, true] },
@@ -106,9 +100,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 12 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 12) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [98, true], max: [106, true] },
@@ -126,7 +118,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_DAY} < 7`), // < 7 jours
+          value: fExp`${AnthroSystemCodes.AGE_IN_DAY} < 7`, // < 7 jours
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [1.8, true], max: [2.75, true] },
@@ -135,9 +127,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_DAY} >= 7 && ${AnthroSystemCodes.AGE_IN_DAY} < 21`
-          ), // 7j à 3 semaines
+          value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= 7) && (${AnthroSystemCodes.AGE_IN_DAY} < 21)`, // 7j à 3 semaines
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [2.0, true], max: [2.75, true] },
@@ -146,9 +136,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_DAY} >= 21 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ), // nourrisson-enfant
+          value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= 21) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`, // nourrisson-enfant
           variables: [
             AnthroSystemCodes.AGE_IN_DAY,
             AnthroSystemCodes.AGE_IN_MONTH,
@@ -169,9 +157,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_DAY} >= 7 && ${AnthroSystemCodes.AGE_IN_MONTH} < 3`
-          ), // 7j à 3 mois
+          value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= 7) && (${AnthroSystemCodes.AGE_IN_MONTH} < 3)`, // 7j à 3 mois
           variables: [
             AnthroSystemCodes.AGE_IN_DAY,
             AnthroSystemCodes.AGE_IN_MONTH,
@@ -183,9 +169,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 3 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 3) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [0.75, true], max: [0.96, true] },
@@ -205,7 +189,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_DAY} < 4`), // < 4 jours
+          value: fExp`${AnthroSystemCodes.AGE_IN_DAY} < 4`, // < 4 jours
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [1.5, true], max: [8.0, true] },
@@ -214,9 +198,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_DAY} >= 4 && ${AnthroSystemCodes.AGE_IN_MONTH} < 1`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= 4) && (${AnthroSystemCodes.AGE_IN_MONTH} < 1)`,
           variables: [
             AnthroSystemCodes.AGE_IN_DAY,
             AnthroSystemCodes.AGE_IN_MONTH,
@@ -228,11 +210,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } < ${6 * MONTH_IN_YEARS}`
-          ), // 1 mois à 6 ans
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } < ${6 * MONTH_IN_YEARS})`, // 1 mois à 6 ans
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [1.6, true], max: [6.5, true] },
@@ -241,11 +221,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${6 * MONTH_IN_YEARS} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            6 * MONTH_IN_YEARS
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [2.5, true], max: [7.5, true] },
@@ -263,7 +243,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 1`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 1`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [0.15, true], max: [0.45, true] },
@@ -272,9 +252,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [0.5, true], max: [1.5, true] },
@@ -283,11 +261,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 12 && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } < ${6 * MONTH_IN_YEARS}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH}) >= 12 && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } < ${6 * MONTH_IN_YEARS})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [1.5, true], max: [3.5, true] },
@@ -307,7 +283,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 1`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 1`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [2.8, true], max: [4.4, true] },
@@ -316,9 +292,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${AnthroSystemCodes.AGE_IN_MONTH} < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${AnthroSystemCodes.AGE_IN_MONTH} < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [3.3, true], max: [5.5, true] },
@@ -338,7 +312,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 1`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 1`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [3, true], max: [27, true] },
@@ -347,9 +321,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [7, true], max: [40, true] },
@@ -368,7 +340,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < 1`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < 1`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [10, true], max: [270, true] },
@@ -377,9 +349,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 1 && ${AnthroSystemCodes.AGE_IN_MONTH} < 2`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 1) && (${AnthroSystemCodes.AGE_IN_MONTH} < 2)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [10, true], max: [160, true] },
@@ -388,9 +358,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 2 && ${AnthroSystemCodes.AGE_IN_MONTH} < 4`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 2) && (${AnthroSystemCodes.AGE_IN_MONTH} < 4)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [7, true], max: [100, true] },
@@ -399,9 +367,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 4 && ${AnthroSystemCodes.AGE_IN_MONTH} < 7`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 4) && (${AnthroSystemCodes.AGE_IN_MONTH} < 7)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [5, true], max: [45, true] },
@@ -410,9 +376,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= 7 && ${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}`
-          ),
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 7) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [5, true], max: [25, true] },
@@ -424,17 +388,15 @@ export const biochemicalReferences: BiochemicalReference[] = [
   },
   {
     name: "Bilirubine totale",
-    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_ENZY_BILIRUBIN_TOTAL ,
+    code: BIOCHEMICAL_REF_CODES.BIOCHEMICAL_ENZY_BILIRUBIN_TOTAL,
     unit: "µmol/l",
     availableUnits: ["µmol/l"],
     ranges: [
       {
         condition: {
-          value: f(
-            `(${AnthroSystemCodes.AGE_IN_DAY} * ${HOURS_IN_DAY})< ${
-              HOURS_IN_DAY / 2
-            }`
-          ), // 12h
+          value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} * ${HOURS_IN_DAY})< ${
+            HOURS_IN_DAY / 2
+          }`, // 12h
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [0, true], max: [102, true] },
@@ -443,13 +405,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `(${AnthroSystemCodes.AGE_IN_DAY} * ${HOURS_IN_DAY}) >= ${
-              HOURS_IN_DAY / 2
-            } && (${
-              AnthroSystemCodes.AGE_IN_DAY
-            } * ${HOURS_IN_DAY}) < ${HOURS_IN_DAY}`
-          ), // 24h
+          value: fExp`((${AnthroSystemCodes.AGE_IN_DAY} * ${HOURS_IN_DAY}) >= ${
+            HOURS_IN_DAY / 2
+          }) && ((${
+            AnthroSystemCodes.AGE_IN_DAY
+          } * ${HOURS_IN_DAY}) < ${HOURS_IN_DAY})`, // 24h
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [0, true], max: [145, true] },
@@ -458,13 +418,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `(${
-              AnthroSystemCodes.AGE_IN_DAY
-            } * ${HOURS_IN_DAY})>= ${HOURS_IN_DAY} && (${
-              AnthroSystemCodes.AGE_IN_DAY
-            } * ${HOURS_IN_DAY}) <= ${HOURS_IN_DAY * 2}`
-          ), // 48h
+          value: fExp`((${
+            AnthroSystemCodes.AGE_IN_DAY
+          } * ${HOURS_IN_DAY})>= ${HOURS_IN_DAY}) && ((${
+            AnthroSystemCodes.AGE_IN_DAY
+          } * ${HOURS_IN_DAY}) <= ${HOURS_IN_DAY * 2})`, // 48h
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [0, true], max: [196, true] },
@@ -473,9 +431,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_DAY} >= 3 && ${AnthroSystemCodes.AGE_IN_DAY} < 5`
-          ), // 3-5j
+          value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= 3) && (${AnthroSystemCodes.AGE_IN_DAY} < 5)`, // 3-5j
           variables: [AnthroSystemCodes.AGE_IN_DAY],
         },
         range: { min: [0, true], max: [256, true] },
@@ -484,7 +440,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_DAY} >= 5`),
+          value: fExp`${AnthroSystemCodes.AGE_IN_DAY} >= 5`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [0, true], max: [17, true] },
@@ -504,7 +460,7 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(`${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS}`), // 0 - 1 ans
+          value: fExp`${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS}`, // 0 - 1 ans
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [1.8, true], max: [4.55, true] },
@@ -513,11 +469,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} <= ${MONTH_IN_YEARS * 4} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } >= ${MONTH_IN_YEARS}`
-          ), // 1-4 ans
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS})`, // 1-4 ans
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [1.8, true], max: [4.55, true] },
@@ -526,11 +480,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${5 * MONTH_IN_YEARS} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${9 * MONTH_IN_YEARS}`
-          ), // 5-9 ans
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            5 * MONTH_IN_YEARS
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${9 * MONTH_IN_YEARS})`, // 5-9 ans
           variables: [AnthroSystemCodes.AGE_IN_MONTH],
         },
         range: { min: [3.1, true], max: [5.2, true] },
@@ -539,13 +491,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${10 * MONTH_IN_YEARS} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <=${MONTH_IN_YEARS * 14}  && ${AnthroSystemCodes.SEX} == ${
-              Sex.FEMALE
-            }`
-          ), // 10-14 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            10 * MONTH_IN_YEARS
+          }) &&( ${AnthroSystemCodes.AGE_IN_MONTH} <=${
+            MONTH_IN_YEARS * 14
+          })  && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 10-14 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [3.2, true], max: [5.2, true] },
@@ -554,13 +504,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${10 * MONTH_IN_YEARS} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <=${MONTH_IN_YEARS * 14}  && ${AnthroSystemCodes.SEX} == ${
-              Sex.MALE
-            }`
-          ), // 10-14 ans Homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            10 * MONTH_IN_YEARS
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <=${
+            MONTH_IN_YEARS * 14
+          })  && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // 10-14 ans Homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [3.1, true], max: [5.25, true] },
@@ -569,13 +517,13 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${15 * MONTH_IN_YEARS} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.FEMALE}`
-          ), // 15-19 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            15 * MONTH_IN_YEARS
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && (${
+            AnthroSystemCodes.SEX
+          } == ${Sex.FEMALE})`, // 15-19 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [3.1, true], max: [5.2, true] },
@@ -584,13 +532,13 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${15 * MONTH_IN_YEARS} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.MALE}`
-          ), // 15-19 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            15 * MONTH_IN_YEARS
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && (${
+            AnthroSystemCodes.SEX
+          } == ${Sex.MALE})`, // 15-19 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [2.9, true], max: [5.1, true] },
@@ -608,11 +556,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS * 2} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.FEMALE}`
-          ), // <2 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} < ${
+            MONTH_IN_YEARS * 2
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // <2 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.41, true], max: [1.29, true] },
@@ -621,11 +567,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS * 2} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.MALE}`
-          ), // <2 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} < ${
+            MONTH_IN_YEARS * 2
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // <2 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.31, true], max: [0.96, true] },
@@ -634,13 +578,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 2} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 4} && ${AnthroSystemCodes.SEX} == ${
-              Sex.FEMALE
-            }`
-          ), // 2-4 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 2
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 2-4 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.85, true], max: [1.29, true] },
@@ -649,13 +591,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 2} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 4} && ${AnthroSystemCodes.SEX} == ${
-              Sex.MALE
-            }`
-          ), // 2-4 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 2
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // 2-4 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.65, true], max: [0.96, true] },
@@ -664,13 +604,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 5} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 9} && ${AnthroSystemCodes.SEX} == ${
-              Sex.FEMALE
-            }`
-          ), // 5-9 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 5
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 9
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 5-9 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [1.06, true], max: [1.58, true] },
@@ -679,13 +617,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 5} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 9} && ${AnthroSystemCodes.SEX} == ${
-              Sex.MALE
-            }`
-          ), // 5-9 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 5
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 9
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // 5-9 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.8, true], max: [1.19, true] },
@@ -694,13 +630,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 10} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 14} && ${AnthroSystemCodes.SEX} == ${
-              Sex.FEMALE
-            }`
-          ), // 10-14 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 10
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 14
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 10-14 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [1.11, true], max: [1.63, true] },
@@ -709,13 +643,13 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 15} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.FEMALE}`
-          ), // 15-19 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 15
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && (${
+            AnthroSystemCodes.SEX
+          } == ${Sex.FEMALE})`, // 15-19 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [1.11, true], max: [1.71, true] },
@@ -724,13 +658,13 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 10} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.MALE}`
-          ), // 10-19 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 10
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && (${
+            AnthroSystemCodes.SEX
+          } == ${Sex.MALE})`, // 10-19 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.8, true], max: [1.22, true] },
@@ -748,11 +682,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
     ranges: [
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS * 4} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.FEMALE}`
-          ), // 0-4 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} < ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 0-4 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.35, true], max: [1.2, true] },
@@ -761,11 +693,9 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS * 4} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.MALE}`
-          ), // 0-4 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} < ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // 0-4 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.35, true], max: [1.1, true] },
@@ -774,13 +704,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 4} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 9} && ${AnthroSystemCodes.SEX} == ${
-              Sex.FEMALE
-            }`
-          ), // 4 - 9 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 9
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 4 - 9 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.4, true], max: [1.25, true] },
@@ -789,13 +717,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 4} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MONTH_IN_YEARS * 9} && ${AnthroSystemCodes.SEX} == ${
-              Sex.MALE
-            }`
-          ), // 4 - 9 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 4
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} <= ${
+            MONTH_IN_YEARS * 9
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // 4 - 9 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.35, true], max: [1.2, true] },
@@ -804,13 +730,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 10} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } < ${MONTH_IN_YEARS * 14} && ${AnthroSystemCodes.SEX} == ${
-              Sex.FEMALE
-            }`
-          ), // 10 - 14 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 10
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} < ${
+            MONTH_IN_YEARS * 14
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.FEMALE})`, // 10 - 14 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.4, true], max: [1.55, true] },
@@ -819,13 +743,11 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 10} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } < ${MONTH_IN_YEARS * 14} && ${AnthroSystemCodes.SEX} == ${
-              Sex.MALE
-            }`
-          ), // 10 - 14 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 10
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH} < ${
+            MONTH_IN_YEARS * 14
+          }) && (${AnthroSystemCodes.SEX} == ${Sex.MALE})`, // 10 - 14 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.35, true], max: [1.5, true] },
@@ -834,13 +756,13 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 14} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.FEMALE}`
-          ), // 14 - 19 ans femme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 14
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && (${
+            AnthroSystemCodes.SEX
+          } == ${Sex.FEMALE})`, // 14 - 19 ans femme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.45, true], max: [1.45, true] },
@@ -849,13 +771,13 @@ export const biochemicalReferences: BiochemicalReference[] = [
       },
       {
         condition: {
-          value: f(
-            `${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 14} && ${
-              AnthroSystemCodes.AGE_IN_MONTH
-            } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC} && ${
-              AnthroSystemCodes.SEX
-            } == ${Sex.MALE}`
-          ), // 14 - 19 ans homme
+          value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= ${
+            MONTH_IN_YEARS * 14
+          }) && (${
+            AnthroSystemCodes.AGE_IN_MONTH
+          } <= ${MAX_AGE_IN_MONTH_IN_PEDIATRIC}) && (${
+            AnthroSystemCodes.SEX
+          } == ${Sex.MALE})`, // 14 - 19 ans homme
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.SEX],
         },
         range: { min: [0.4, true], max: [1.5, true] },

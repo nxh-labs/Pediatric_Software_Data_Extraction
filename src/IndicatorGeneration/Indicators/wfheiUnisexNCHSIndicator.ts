@@ -20,7 +20,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
     AnthroSystemCodes.LENHEI,
   ],
   axeX: {
-    value: fExp`(${AnthroSystemCodes.LENHEI} - (${AnthroSystemCodes.LENHEI} % 1)) + ((${AnthroSystemCodes.LENHEI} % 1)<=0.2 ? 0:((${AnthroSystemCodes.LENHEI} %1)>=0.8?1:0.5))`,
+    value: fExp`(${AnthroSystemCodes.LENHEI} - (${AnthroSystemCodes.LENHEI} % 1)) + (((${AnthroSystemCodes.LENHEI} % 1)<=0.2) ? 0:(((${AnthroSystemCodes.LENHEI} %1)>=0.8)?1:0.5))`,
     variables: [AnthroSystemCodes.LENHEI],
   },
   axeY: {
@@ -38,7 +38,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
     },
   ],
   usageConditions: {
-    value: fExp`${AnthroSystemCodes.LENHEI} > 120 && ${AnthroSystemCodes.LENHEI} <= 171`,
+    value: fExp`(${AnthroSystemCodes.LENHEI} > 120) &&( ${AnthroSystemCodes.LENHEI} <= 171)`,
     variables: [AnthroSystemCodes.LENHEI],
   },
   interpretations: [
@@ -47,7 +47,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1}`,
+        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
         variables: [ZScoreVarName],
       },
     },
@@ -56,7 +56,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       code: "wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },

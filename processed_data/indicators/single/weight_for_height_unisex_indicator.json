@@ -6,7 +6,7 @@
     "lenhei"
   ],
   "axeX": {
-    "value": "(lenhei - (lenhei % 1)) + ((lenhei % 1)<=0.2 ? 0:((lenhei %1)>=0.8?1:0.5))",
+    "value": "(lenhei - (lenhei % 1)) + (((lenhei % 1)<=0.2) ? 0:(((lenhei %1)>=0.8)?1:0.5))",
     "variables": [
       "lenhei"
     ]
@@ -28,7 +28,7 @@
     }
   ],
   "usageConditions": {
-    "value": "lenhei >= 45 && lenhei <= 120",
+    "value": "(lenhei >= 45) && (lenhei <= 120)",
     "variables": [
       "lenhei"
     ]
@@ -39,7 +39,7 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "zscore >= (-2) && zscore <= 1",
+        "value": "(zscore >= (-2)) && (zscore <= 1)",
         "variables": [
           "zscore"
         ]
@@ -50,7 +50,7 @@
       "code": "wasted",
       "range": "below -2",
       "condition": {
-        "value": "zscore < (-2) && zscore >= (-3)",
+        "value": "(zscore < (-2)) && (zscore >= (-3))",
         "variables": [
           "zscore"
         ]

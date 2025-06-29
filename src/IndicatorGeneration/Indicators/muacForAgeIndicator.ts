@@ -47,7 +47,7 @@ export const muacForAgeIndicator: CreateIndicatorProps = {
   ],
   availableRefTables: [],
   usageConditions: {
-    value: fExp`${AnthroSystemCodes.AGE_IN_DAY} >= ${MIN_AGE_IN_DAY_TO_USE_MUCA_TSF_SSF} && ${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY}`,
+    value: fExp`(${AnthroSystemCodes.AGE_IN_DAY} >= ${MIN_AGE_IN_DAY_TO_USE_MUCA_TSF_SSF}) && (${AnthroSystemCodes.AGE_IN_DAY} <= ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
     variables: [AnthroSystemCodes.AGE_IN_DAY],
   },
   interpretations: [
@@ -65,7 +65,7 @@ export const muacForAgeIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} < ${ZScorePossibleValueLimit.pos1}`,
+        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} < ${ZScorePossibleValueLimit.pos1})`,
         variables: [ZScoreVarName],
       },
     },
@@ -74,7 +74,7 @@ export const muacForAgeIndicator: CreateIndicatorProps = {
       code: "moderate_acute_malnutrition",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2} && ${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },
