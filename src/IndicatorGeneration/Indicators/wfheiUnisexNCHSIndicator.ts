@@ -47,7 +47,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
+        value: fExp`(${ZScoreVarName} > ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
         variables: [ZScoreVarName],
       },
     },
@@ -56,7 +56,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       code: "wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
+        value: fExp`(${ZScoreVarName} <= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },
@@ -65,7 +65,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`${ZScoreVarName} <= ${ZScorePossibleValueLimit.neg3}`,
         variables: [ZScoreVarName],
       },
     },

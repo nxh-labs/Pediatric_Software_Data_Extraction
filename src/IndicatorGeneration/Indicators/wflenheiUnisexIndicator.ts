@@ -43,16 +43,16 @@ export const weightForHeightUnisexIndicator: CreateIndicatorProps = {
       code: "normal",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
-        value: fExp`(${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
+        value: fExp`(${ZScoreVarName} > ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} <= ${ZScorePossibleValueLimit.pos1})`,
         variables: [ZScoreVarName],
       },
     },
-    {
-      name: "Wasted",
-      code: "wasted",
+      {
+      name: "Modetate Wasted",
+      code: "moderate_wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
-        value: fExp`(${ZScoreVarName} < ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} >= ${ZScorePossibleValueLimit.neg3})`,
+        value: fExp`(${ZScoreVarName} <= ${ZScorePossibleValueLimit.neg2}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.neg3})`,
         variables: [ZScoreVarName],
       },
     },
@@ -61,7 +61,15 @@ export const weightForHeightUnisexIndicator: CreateIndicatorProps = {
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {
-        value: fExp`${ZScoreVarName} < ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${ZScoreVarName} <= ${ZScorePossibleValueLimit.neg3}) && (${ZScoreVarName} > ${ZScorePossibleValueLimit.neg4})`,
+        variables: [ZScoreVarName],
+      },
+    }, {
+      name: "Hight Severely wasted",
+      code: "hight_severely_wasted",
+      range: GrowthIndicatorRange.BELOW_M4,
+      condition: {
+        value: fExp`${ZScoreVarName} <= ${ZScorePossibleValueLimit.neg4}`,
         variables: [ZScoreVarName],
       },
     },

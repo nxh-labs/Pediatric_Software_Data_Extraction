@@ -39,18 +39,18 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "(zscore >= (-2)) && (zscore <= 1)",
+        "value": "(zscore > (-2)) && (zscore <= 1)",
         "variables": [
           "zscore"
         ]
       }
     },
     {
-      "name": "Wasted",
-      "code": "wasted",
+      "name": "Modetate Wasted",
+      "code": "moderate_wasted",
       "range": "below -2",
       "condition": {
-        "value": "(zscore < (-2)) && (zscore >= (-3))",
+        "value": "(zscore <= (-2)) && (zscore > (-3))",
         "variables": [
           "zscore"
         ]
@@ -61,7 +61,18 @@
       "code": "severely_wasted",
       "range": "below -3",
       "condition": {
-        "value": "zscore < (-3)",
+        "value": "(zscore <= (-3)) && (zscore > (-4))",
+        "variables": [
+          "zscore"
+        ]
+      }
+    },
+    {
+      "name": "Hight Severely wasted",
+      "code": "hight_severely_wasted",
+      "range": "below -4",
+      "condition": {
+        "value": "zscore <= (-4)",
         "variables": [
           "zscore"
         ]
