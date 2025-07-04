@@ -11,7 +11,8 @@
     "build": "ts-node index.ts",
     "create-data-zip": "ts-node utils/createProcessedDataZip.ts" 
     , 
-    "build:zip": "yarn build && yarn create-data-zip"
+    "move": "ts-node utils/moveNeededAssetOnBuildDir.ts",
+    "build:zip:move": "yarn build && yarn create-data-zip && yarn move"
   },
   "devDependencies": {
     "@types/adm-zip": "^0.5.7",

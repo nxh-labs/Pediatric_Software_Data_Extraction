@@ -299,7 +299,8 @@
       "variables": [
         "weight",
         "age_in_month",
-        "appetite_test_result"
+        "appetite_test_result",
+        "complications_number"
       ]
     },
     "doseFormula": {

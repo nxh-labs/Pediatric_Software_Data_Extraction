@@ -308,6 +308,7 @@ export const milkRefs: Milk[] = [
         AnthroSystemCodes.WEIGHT,
         AnthroSystemCodes.AGE_IN_MONTH,
         APPETITE_TEST_CODES.CODE,
+        COMPLICATION_CODES.COMPLICATIONS_NUMBER
       ],
     },
     doseFormula: {
