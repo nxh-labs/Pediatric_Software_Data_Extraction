@@ -1,6 +1,5 @@
 import {
   AnthroSystemCodes,
-  MAX_AGE_MONTH_TO_USE_AGE_IN_DAY,
   GrowthRefChartAndTableCodes,
   Sex,
   MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY,
@@ -11,19 +10,19 @@ import {
   StandardShape,
   ZScorePossibleValueLimit,
 } from "../../../constants";
-import { f, fExp } from "../../../utils";
+import { fExp } from "../../../utils";
 import { CreateIndicatorProps } from "../types";
 
 export const bmiIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.BMI_FOR_AGE,
-  name: "Body Mass Index For Age",
+  name: "Indice de Masse Corporelle pour l'Âge",
   neededMeasureCodes: [
     AnthroSystemCodes.WEIGHT,
     AnthroSystemCodes.HEIGHT,
     AnthroSystemCodes.AGE_IN_DAY,
   ],
   axeX: {
-     value: fExp`${AnthroSystemCodes.AGE_IN_DAY}`,
+    value: fExp`${AnthroSystemCodes.AGE_IN_DAY}`,
     variables: [AnthroSystemCodes.AGE_IN_DAY],
   },
   axeY: {
@@ -67,7 +66,7 @@ export const bmiIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "Severe obesity",
+      name: "Obésité sévère",
       code: "severe_obesity_5_19",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
@@ -76,7 +75,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Obesity",
+      name: "Obésité",
       code: "obesity_0_5",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
@@ -85,7 +84,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Overweight",
+      name: "Surpoids",
       code: "overweight_0_5",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
@@ -94,7 +93,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Obesity",
+      name: "Obésité",
       code: "obesity_5_19",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
@@ -103,7 +102,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Overweight",
+      name: "Surpoids",
       code: "overweight_5_19",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
@@ -112,7 +111,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Overweight Risk",
+      name: "Risque de surpoids",
       code: "overweight_risk",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
@@ -130,7 +129,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Wasted",
+      name: "Émaciation",
       code: "wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -139,7 +138,7 @@ export const bmiIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severely wasted",
+      name: "Émaciation sévère",
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

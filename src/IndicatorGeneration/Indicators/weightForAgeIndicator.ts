@@ -1,6 +1,5 @@
 import {
   AnthroSystemCodes,
-  MAX_AGE_MONTH_TO_USE_AGE_IN_DAY,
   GrowthRefChartAndTableCodes,
   Sex,
   MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY,
@@ -16,7 +15,8 @@ import { CreateIndicatorProps } from "../types";
 
 export const weightForAgeIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.WFA,
-  name: "Weight For Age",
+  name: "Poids pour l'Âge",
+  // name: "Weight For Age", // IGNORE
   neededMeasureCodes: [
     AnthroSystemCodes.WEIGHT,
     AnthroSystemCodes.AGE_IN_DAY,
@@ -67,7 +67,7 @@ export const weightForAgeIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "High weight for age",
+      name: "Poids très élevé",
       code: "high_weight",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
@@ -94,7 +94,7 @@ export const weightForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Underweight",
+      name: "Insuffisance pondérale",
       code: "underweight",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -103,7 +103,7 @@ export const weightForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severely underweight",
+      name: "Insuffisance pondérale sévère",
       code: "severely_underweight",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

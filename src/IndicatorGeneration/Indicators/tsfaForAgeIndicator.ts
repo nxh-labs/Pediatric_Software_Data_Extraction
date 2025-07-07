@@ -15,7 +15,8 @@ import { CreateIndicatorProps } from "../types";
 
 export const tricepsSkinfoldForAgeIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.TSF_FOR_AGE,
-  name: "Triceps Skinfold For Age",
+  name: "Pli cutané tricipital pour l'Âge",
+  // name: "Triceps Skinfold For Age", // IGNORE
   neededMeasureCodes: [AnthroSystemCodes.TSF, AnthroSystemCodes.AGE_IN_DAY],
   axeX: {
     value: fExp` ${AnthroSystemCodes.AGE_IN_DAY}`,
@@ -48,7 +49,7 @@ export const tricepsSkinfoldForAgeIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "High fat stores",
+      name: "Réserves de graisse élevées",
       code: "high_fat_stores",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
@@ -57,7 +58,7 @@ export const tricepsSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Above average fat stores",
+      name: "Réserves de graisse au-dessus de la moyenne",
       code: "above_average_fat_stores",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
@@ -66,7 +67,7 @@ export const tricepsSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Normal fat stores",
+      name: "Réserves de graisse normales",
       code: "normal_fat_stores",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
@@ -75,7 +76,7 @@ export const tricepsSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Below average fat stores",
+      name: "Réserves de graisse en dessous de la moyenne",
       code: "below_average_fat_stores",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -84,7 +85,7 @@ export const tricepsSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Low fat stores",
+      name: "Faibles réserves de graisse",
       code: "low_fat_stores",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

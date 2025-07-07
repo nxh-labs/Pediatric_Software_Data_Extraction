@@ -16,7 +16,7 @@ import { CreateIndicatorProps } from "../types";
 
 export const muacForAgeIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.MUAC_FOR_AGE,
-  name: "Mid-Upper Arm Circumference For Age",
+  name: "Périmetre brachial pour l'Âge",
   neededMeasureCodes: [
     AnthroSystemCodes.MUAC,
     AnthroSystemCodes.AGE_IN_DAY,
@@ -52,7 +52,7 @@ export const muacForAgeIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "Well nourished",
+      name: "Bien nourri",
       code: "well_nourished",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
@@ -70,7 +70,7 @@ export const muacForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Moderate acute malnutrition",
+      name: "Malnutrition aiguée modérée",
       code: "moderate_acute_malnutrition",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -79,7 +79,7 @@ export const muacForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severe acute malnutrition",
+      name: "Malnutrition aiguée sévère",
       code: "severe_acute_malnutrition",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

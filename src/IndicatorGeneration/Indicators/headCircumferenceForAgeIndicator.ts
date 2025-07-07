@@ -1,6 +1,5 @@
 import {
   AnthroSystemCodes,
-  MAX_AGE_MONTH_TO_USE_AGE_IN_DAY,
   GrowthRefChartAndTableCodes,
   Sex,
   MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY,
@@ -15,7 +14,7 @@ import { CreateIndicatorProps } from "../types";
 
 export const headCircumferenceForAgeIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.HC_FOR_AGE,
-  name: "Head Circumference For Age",
+  name: "Circonférence Crânienne pour l'Âge",
   neededMeasureCodes: [
     AnthroSystemCodes.HEAD_CIRCUMFERENCE,
     AnthroSystemCodes.AGE_IN_DAY,
@@ -51,7 +50,7 @@ export const headCircumferenceForAgeIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "Macrocephaly",
+      name: "Macrocéphalie",
       code: "macrocephaly",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
@@ -69,7 +68,7 @@ export const headCircumferenceForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Microcephaly",
+      name: "Microcéphalie",
       code: "microcephaly",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {

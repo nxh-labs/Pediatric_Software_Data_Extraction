@@ -1,6 +1,6 @@
 {
   "code": "wfa",
-  "name": "Weight For Age",
+  "name": "Poids pour l'Âge",
   "neededMeasureCodes": [
     "weight",
     "age_in_day"
@@ -68,7 +68,7 @@
   },
   "interpretations": [
     {
-      "name": "High weight for age",
+      "name": "Poids très élevé",
       "code": "high_weight",
       "range": "above +3",
       "condition": {
@@ -101,7 +101,7 @@
       }
     },
     {
-      "name": "Underweight",
+      "name": "Insuffisance pondérale",
       "code": "underweight",
       "range": "below -2",
       "condition": {
@@ -112,7 +112,7 @@
       }
     },
     {
-      "name": "Severely underweight",
+      "name": "Insuffisance pondérale sévère",
       "code": "severely_underweight",
       "range": "below -3",
       "condition": {

@@ -1,6 +1,6 @@
 {
   "code": "wfh_unisex_nchs",
-  "name": "Weight For Length/Height (NCHS)",
+  "name": "Poids pour taille (NCHS)",
   "neededMeasureCodes": [
     "weight",
     "lenhei"
@@ -46,7 +46,7 @@
       }
     },
     {
-      "name": "Wasted",
+      "name": "Malnutrition aigüe modérée",
       "code": "wasted",
       "range": "below -2",
       "condition": {
@@ -57,7 +57,7 @@
       }
     },
     {
-      "name": "Severely wasted",
+      "name": "Malnutrition aigüe sévère",
       "code": "severely_wasted",
       "range": "below -3",
       "condition": {

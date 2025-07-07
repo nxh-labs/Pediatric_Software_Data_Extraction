@@ -1,6 +1,6 @@
 {
   "code": "bmi_for_age",
-  "name": "Body Mass Index For Age",
+  "name": "Indice de Masse Corporelle pour l'Âge",
   "neededMeasureCodes": [
     "weight",
     "height",
@@ -70,7 +70,7 @@
   },
   "interpretations": [
     {
-      "name": "Severe obesity",
+      "name": "Obésité sévère",
       "code": "severe_obesity_5_19",
       "range": "above +3",
       "condition": {
@@ -82,7 +82,7 @@
       }
     },
     {
-      "name": "Obesity",
+      "name": "Obésité",
       "code": "obesity_0_5",
       "range": "above +3",
       "condition": {
@@ -94,7 +94,7 @@
       }
     },
     {
-      "name": "Overweight",
+      "name": "Surpoids",
       "code": "overweight_0_5",
       "range": "above +2",
       "condition": {
@@ -106,7 +106,7 @@
       }
     },
     {
-      "name": "Obesity",
+      "name": "Obésité",
       "code": "obesity_5_19",
       "range": "above +2",
       "condition": {
@@ -118,7 +118,7 @@
       }
     },
     {
-      "name": "Overweight",
+      "name": "Surpoids",
       "code": "overweight_5_19",
       "range": "above +1",
       "condition": {
@@ -130,7 +130,7 @@
       }
     },
     {
-      "name": "Overweight Risk",
+      "name": "Risque de surpoids",
       "code": "overweight_risk",
       "range": "above +1",
       "condition": {
@@ -153,7 +153,7 @@
       }
     },
     {
-      "name": "Wasted",
+      "name": "Émaciation",
       "code": "wasted",
       "range": "below -2",
       "condition": {
@@ -164,7 +164,7 @@
       }
     },
     {
-      "name": "Severely wasted",
+      "name": "Émaciation sévère",
       "code": "severely_wasted",
       "range": "below -3",
       "condition": {

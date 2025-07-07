@@ -1,6 +1,6 @@
 {
   "code": "wflh",
-  "name": "Weight For Length/Height",
+  "name": "Poids pour la Taille debout/couchée",
   "neededMeasureCodes": [
     "weight",
     "lenhei"
@@ -68,7 +68,7 @@
   },
   "interpretations": [
     {
-      "name": "Obese",
+      "name": "Obésité",
       "code": "obese",
       "range": "above +3",
       "condition": {
@@ -79,7 +79,7 @@
       }
     },
     {
-      "name": "Overweight",
+      "name": "Surpoids",
       "code": "overweight",
       "range": "above +2",
       "condition": {
@@ -90,7 +90,7 @@
       }
     },
     {
-      "name": "Risk of overweight",
+      "name": "Risque de surpoids",
       "code": "risk_of_overweight",
       "range": "above +1",
       "condition": {
@@ -112,7 +112,7 @@
       }
     },
     {
-      "name": "Wasted",
+      "name": "Émaciation",
       "code": "wasted",
       "range": "below -2",
       "condition": {
@@ -123,7 +123,7 @@
       }
     },
     {
-      "name": "Severely wasted",
+      "name": "Émaciation sévère",
       "code": "severely_wasted",
       "range": "below -3",
       "condition": {

@@ -1,7 +1,7 @@
 {
   "bmi": {
     "code": "bmi_for_age",
-    "name": "Body Mass Index For Age",
+    "name": "Indice de Masse Corporelle pour l'Âge",
     "neededMeasureCodes": [
       "weight",
       "height",
@@ -71,7 +71,7 @@
     },
     "interpretations": [
       {
-        "name": "Severe obesity",
+        "name": "Obésité sévère",
         "code": "severe_obesity_5_19",
         "range": "above +3",
         "condition": {
@@ -83,7 +83,7 @@
         }
       },
       {
-        "name": "Obesity",
+        "name": "Obésité",
         "code": "obesity_0_5",
         "range": "above +3",
         "condition": {
@@ -95,7 +95,7 @@
         }
       },
       {
-        "name": "Overweight",
+        "name": "Surpoids",
         "code": "overweight_0_5",
         "range": "above +2",
         "condition": {
@@ -107,7 +107,7 @@
         }
       },
       {
-        "name": "Obesity",
+        "name": "Obésité",
         "code": "obesity_5_19",
         "range": "above +2",
         "condition": {
@@ -119,7 +119,7 @@
         }
       },
       {
-        "name": "Overweight",
+        "name": "Surpoids",
         "code": "overweight_5_19",
         "range": "above +1",
         "condition": {
@@ -131,7 +131,7 @@
         }
       },
       {
-        "name": "Overweight Risk",
+        "name": "Risque de surpoids",
         "code": "overweight_risk",
         "range": "above +1",
         "condition": {
@@ -154,7 +154,7 @@
         }
       },
       {
-        "name": "Wasted",
+        "name": "Émaciation",
         "code": "wasted",
         "range": "below -2",
         "condition": {
@@ -165,7 +165,7 @@
         }
       },
       {
-        "name": "Severely wasted",
+        "name": "Émaciation sévère",
         "code": "severely_wasted",
         "range": "below -3",
         "condition": {
@@ -181,7 +181,7 @@
   },
   "headCircumference": {
     "code": "hc_for_age",
-    "name": "Head Circumference For Age",
+    "name": "Circonférence Crânienne pour l'Âge",
     "neededMeasureCodes": [
       "head_circumference",
       "age_in_day"
@@ -227,7 +227,7 @@
     },
     "interpretations": [
       {
-        "name": "Macrocephaly",
+        "name": "Macrocéphalie",
         "code": "macrocephaly",
         "range": "above +2",
         "condition": {
@@ -249,7 +249,7 @@
         }
       },
       {
-        "name": "Microcephaly",
+        "name": "Microcéphalie",
         "code": "microcephaly",
         "range": "below -2",
         "condition": {
@@ -265,7 +265,7 @@
   },
   "heightForAge": {
     "code": "hfa",
-    "name": "Height/Length For Age",
+    "name": "Taille debout/couchée pour l'Âge",
     "neededMeasureCodes": [
       "lenhei",
       "age_in_day",
@@ -334,8 +334,8 @@
     },
     "interpretations": [
       {
-        "name": "Tall",
-        "code": "Tall",
+        "name": "Gigantisme",
+        "code": "tall",
         "range": "above +3",
         "condition": {
           "value": "zscore > 3",
@@ -356,7 +356,7 @@
         }
       },
       {
-        "name": "Stunted",
+        "name": "Retard de croissance",
         "code": "stunted",
         "range": "below -2",
         "condition": {
@@ -367,7 +367,7 @@
         }
       },
       {
-        "name": "Severely stunted",
+        "name": "Retard de croissance sévère",
         "code": "severely_stunted",
         "range": "below -3",
         "condition": {
@@ -383,7 +383,7 @@
   },
   "muacForAge": {
     "code": "muac_for_age",
-    "name": "Mid-Upper Arm Circumference For Age",
+    "name": "Périmetre brachial pour l'Âge",
     "neededMeasureCodes": [
       "muac",
       "age_in_day"
@@ -429,7 +429,7 @@
     },
     "interpretations": [
       {
-        "name": "Well nourished",
+        "name": "Bien nourri",
         "code": "well_nourished",
         "range": "above +1",
         "condition": {
@@ -451,7 +451,7 @@
         }
       },
       {
-        "name": "Moderate acute malnutrition",
+        "name": "Malnutrition aiguée modérée",
         "code": "moderate_acute_malnutrition",
         "range": "below -2",
         "condition": {
@@ -462,7 +462,7 @@
         }
       },
       {
-        "name": "Severe acute malnutrition",
+        "name": "Malnutrition aiguée sévère",
         "code": "severe_acute_malnutrition",
         "range": "below -3",
         "condition": {
@@ -478,7 +478,7 @@
   },
   "subscapularSkinfold": {
     "code": "ssf_for_age",
-    "name": "Subscapular Skinfold For Age",
+    "name": "Pli cutané sous-scapulaire pour l'Âge",
     "neededMeasureCodes": [
       "ssf",
       "age_in_day"
@@ -524,7 +524,7 @@
     },
     "interpretations": [
       {
-        "name": "High trunk fat",
+        "name": "Graisse tronculaire élevée",
         "code": "high_trunk_fat",
         "range": "above +2",
         "condition": {
@@ -535,7 +535,7 @@
         }
       },
       {
-        "name": "Above average trunk fat",
+        "name": "Graisse tronculaire au-dessus de la moyenne",
         "code": "above_average_trunk_fat",
         "range": "above +1",
         "condition": {
@@ -546,7 +546,7 @@
         }
       },
       {
-        "name": "Normal trunk fat",
+        "name": "Graisse tronculaire normale",
         "code": "normal_trunk_fat",
         "range": "0",
         "condition": {
@@ -557,7 +557,7 @@
         }
       },
       {
-        "name": "Below average trunk fat",
+        "name": "Graisse tronculaire en dessous de la moyenne",
         "code": "below_average_trunk_fat",
         "range": "below -2",
         "condition": {
@@ -568,7 +568,7 @@
         }
       },
       {
-        "name": "Low trunk fat",
+        "name": "Faible graisse tronculaire",
         "code": "low_trunk_fat",
         "range": "below -3",
         "condition": {
@@ -584,7 +584,7 @@
   },
   "tricepsSkinfold": {
     "code": "tsf_for_age",
-    "name": "Triceps Skinfold For Age",
+    "name": "Pli cutané tricipital pour l'Âge",
     "neededMeasureCodes": [
       "tsf",
       "age_in_day"
@@ -630,7 +630,7 @@
     },
     "interpretations": [
       {
-        "name": "High fat stores",
+        "name": "Réserves de graisse élevées",
         "code": "high_fat_stores",
         "range": "above +2",
         "condition": {
@@ -641,7 +641,7 @@
         }
       },
       {
-        "name": "Above average fat stores",
+        "name": "Réserves de graisse au-dessus de la moyenne",
         "code": "above_average_fat_stores",
         "range": "above +1",
         "condition": {
@@ -652,7 +652,7 @@
         }
       },
       {
-        "name": "Normal fat stores",
+        "name": "Réserves de graisse normales",
         "code": "normal_fat_stores",
         "range": "0",
         "condition": {
@@ -663,7 +663,7 @@
         }
       },
       {
-        "name": "Below average fat stores",
+        "name": "Réserves de graisse en dessous de la moyenne",
         "code": "below_average_fat_stores",
         "range": "below -2",
         "condition": {
@@ -674,7 +674,7 @@
         }
       },
       {
-        "name": "Low fat stores",
+        "name": "Faibles réserves de graisse",
         "code": "low_fat_stores",
         "range": "below -3",
         "condition": {
@@ -690,7 +690,7 @@
   },
   "weightForAge": {
     "code": "wfa",
-    "name": "Weight For Age",
+    "name": "Poids pour l'Âge",
     "neededMeasureCodes": [
       "weight",
       "age_in_day"
@@ -758,7 +758,7 @@
     },
     "interpretations": [
       {
-        "name": "High weight for age",
+        "name": "Poids très élevé",
         "code": "high_weight",
         "range": "above +3",
         "condition": {
@@ -791,7 +791,7 @@
         }
       },
       {
-        "name": "Underweight",
+        "name": "Insuffisance pondérale",
         "code": "underweight",
         "range": "below -2",
         "condition": {
@@ -802,7 +802,7 @@
         }
       },
       {
-        "name": "Severely underweight",
+        "name": "Insuffisance pondérale sévère",
         "code": "severely_underweight",
         "range": "below -3",
         "condition": {
@@ -818,7 +818,7 @@
   },
   "weightForHeightNCHS": {
     "code": "wfh_unisex_nchs",
-    "name": "Weight For Length/Height (NCHS)",
+    "name": "Poids pour taille (NCHS)",
     "neededMeasureCodes": [
       "weight",
       "lenhei"
@@ -864,7 +864,7 @@
         }
       },
       {
-        "name": "Wasted",
+        "name": "Malnutrition aigüe modérée",
         "code": "wasted",
         "range": "below -2",
         "condition": {
@@ -875,7 +875,7 @@
         }
       },
       {
-        "name": "Severely wasted",
+        "name": "Malnutrition aigüe sévère",
         "code": "severely_wasted",
         "range": "below -3",
         "condition": {
@@ -891,7 +891,7 @@
   },
   "weightForHeight": {
     "code": "wflh",
-    "name": "Weight For Length/Height",
+    "name": "Poids pour la Taille debout/couchée",
     "neededMeasureCodes": [
       "weight",
       "lenhei"
@@ -959,7 +959,7 @@
     },
     "interpretations": [
       {
-        "name": "Obese",
+        "name": "Obésité",
         "code": "obese",
         "range": "above +3",
         "condition": {
@@ -970,7 +970,7 @@
         }
       },
       {
-        "name": "Overweight",
+        "name": "Surpoids",
         "code": "overweight",
         "range": "above +2",
         "condition": {
@@ -981,7 +981,7 @@
         }
       },
       {
-        "name": "Risk of overweight",
+        "name": "Risque de surpoids",
         "code": "risk_of_overweight",
         "range": "above +1",
         "condition": {
@@ -1003,7 +1003,7 @@
         }
       },
       {
-        "name": "Wasted",
+        "name": "Émaciation",
         "code": "wasted",
         "range": "below -2",
         "condition": {
@@ -1014,7 +1014,7 @@
         }
       },
       {
-        "name": "Severely wasted",
+        "name": "Émaciation sévère",
         "code": "severely_wasted",
         "range": "below -3",
         "condition": {
@@ -1030,7 +1030,7 @@
   },
   "weightForHeightUnisex": {
     "code": "wflh_unisex",
-    "name": "Weight For Length/Height (OMS 2006, UNISEX)",
+    "name": "Poids pour la Taille debout/couchée (Unisexe)",
     "neededMeasureCodes": [
       "weight",
       "lenhei"
@@ -1076,7 +1076,7 @@
         }
       },
       {
-        "name": "Modetate Wasted",
+        "name": "Malnutrition aigüe modérée",
         "code": "moderate_wasted",
         "range": "below -2",
         "condition": {
@@ -1087,7 +1087,7 @@
         }
       },
       {
-        "name": "Severely wasted",
+        "name": "Malnutrition aigüe sévère",
         "code": "severely_wasted",
         "range": "below -3",
         "condition": {
@@ -1098,7 +1098,7 @@
         }
       },
       {
-        "name": "Hight Severely wasted",
+        "name": "Malnutrition aigüe très sévère",
         "code": "hight_severely_wasted",
         "range": "below -4",
         "condition": {

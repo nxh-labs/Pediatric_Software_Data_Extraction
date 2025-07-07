@@ -1,6 +1,6 @@
 {
   "code": "ssf_for_age",
-  "name": "Subscapular Skinfold For Age",
+  "name": "Pli cutané sous-scapulaire pour l'Âge",
   "neededMeasureCodes": [
     "ssf",
     "age_in_day"
@@ -46,7 +46,7 @@
   },
   "interpretations": [
     {
-      "name": "High trunk fat",
+      "name": "Graisse tronculaire élevée",
       "code": "high_trunk_fat",
       "range": "above +2",
       "condition": {
@@ -57,7 +57,7 @@
       }
     },
     {
-      "name": "Above average trunk fat",
+      "name": "Graisse tronculaire au-dessus de la moyenne",
       "code": "above_average_trunk_fat",
       "range": "above +1",
       "condition": {
@@ -68,7 +68,7 @@
       }
     },
     {
-      "name": "Normal trunk fat",
+      "name": "Graisse tronculaire normale",
       "code": "normal_trunk_fat",
       "range": "0",
       "condition": {
@@ -79,7 +79,7 @@
       }
     },
     {
-      "name": "Below average trunk fat",
+      "name": "Graisse tronculaire en dessous de la moyenne",
       "code": "below_average_trunk_fat",
       "range": "below -2",
       "condition": {
@@ -90,7 +90,7 @@
       }
     },
     {
-      "name": "Low trunk fat",
+      "name": "Faible graisse tronculaire",
       "code": "low_trunk_fat",
       "range": "below -3",
       "condition": {

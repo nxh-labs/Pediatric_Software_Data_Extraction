@@ -14,7 +14,7 @@ import { CreateIndicatorProps } from "../types";
 
 export const weightForHeightIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.WFLH,
-  name: "Weight For Length/Height",
+  name: "Poids pour la Taille debout/couchée",
   neededMeasureCodes: [
     AnthroSystemCodes.WEIGHT,
     // AnthroSystemCodes.HEIGHT,
@@ -65,7 +65,7 @@ export const weightForHeightIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "Obese",
+      name: "Obésité",
       code: "obese",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
@@ -74,7 +74,7 @@ export const weightForHeightIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Overweight",
+      name: "Surpoids",
       code: "overweight",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
@@ -83,7 +83,7 @@ export const weightForHeightIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Risk of overweight",
+      name: "Risque de surpoids",
       code: "risk_of_overweight",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
@@ -101,7 +101,7 @@ export const weightForHeightIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Wasted",
+      name: "Émaciation",
       code: "wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -110,7 +110,7 @@ export const weightForHeightIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severely wasted",
+      name: "Émaciation sévère",
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

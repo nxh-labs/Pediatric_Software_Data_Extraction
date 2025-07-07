@@ -13,7 +13,8 @@ import { CreateIndicatorProps } from "../types";
 
 export const weightForHeightUnisexIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.WFLH_UNISEX,
-  name: "Weight For Length/Height (OMS 2006, UNISEX)",
+  name: "Poids pour la Taille debout/couchée (Unisexe)",
+  // name: "Weight For Length/Height (Unisex)", // IGNORE
   neededMeasureCodes: [AnthroSystemCodes.WEIGHT, AnthroSystemCodes.LENHEI],
   axeX: {
     value: fExp`(${AnthroSystemCodes.LENHEI} - (${AnthroSystemCodes.LENHEI} % 1)) + (((${AnthroSystemCodes.LENHEI} % 1)<=0.2) ? 0:(((${AnthroSystemCodes.LENHEI} %1)>=0.8)?1:0.5))`,
@@ -48,7 +49,7 @@ export const weightForHeightUnisexIndicator: CreateIndicatorProps = {
       },
     },
       {
-      name: "Modetate Wasted",
+      name: "Malnutrition aigüe modérée",
       code: "moderate_wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -57,7 +58,7 @@ export const weightForHeightUnisexIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severely wasted",
+      name: "Malnutrition aigüe sévère",
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {
@@ -65,7 +66,7 @@ export const weightForHeightUnisexIndicator: CreateIndicatorProps = {
         variables: [ZScoreVarName],
       },
     }, {
-      name: "Hight Severely wasted",
+      name: "Malnutrition aigüe très sévère",
       code: "hight_severely_wasted",
       range: GrowthIndicatorRange.BELOW_M4,
       condition: {

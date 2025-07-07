@@ -1,6 +1,6 @@
 {
   "code": "tsf_for_age",
-  "name": "Triceps Skinfold For Age",
+  "name": "Pli cutané tricipital pour l'Âge",
   "neededMeasureCodes": [
     "tsf",
     "age_in_day"
@@ -46,7 +46,7 @@
   },
   "interpretations": [
     {
-      "name": "High fat stores",
+      "name": "Réserves de graisse élevées",
       "code": "high_fat_stores",
       "range": "above +2",
       "condition": {
@@ -57,7 +57,7 @@
       }
     },
     {
-      "name": "Above average fat stores",
+      "name": "Réserves de graisse au-dessus de la moyenne",
       "code": "above_average_fat_stores",
       "range": "above +1",
       "condition": {
@@ -68,7 +68,7 @@
       }
     },
     {
-      "name": "Normal fat stores",
+      "name": "Réserves de graisse normales",
       "code": "normal_fat_stores",
       "range": "0",
       "condition": {
@@ -79,7 +79,7 @@
       }
     },
     {
-      "name": "Below average fat stores",
+      "name": "Réserves de graisse en dessous de la moyenne",
       "code": "below_average_fat_stores",
       "range": "below -2",
       "condition": {
@@ -90,7 +90,7 @@
       }
     },
     {
-      "name": "Low fat stores",
+      "name": "Faibles réserves de graisse",
       "code": "low_fat_stores",
       "range": "below -3",
       "condition": {

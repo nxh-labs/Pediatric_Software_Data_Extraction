@@ -1,6 +1,6 @@
 {
   "code": "hfa",
-  "name": "Height/Length For Age",
+  "name": "Taille debout/couchée pour l'Âge",
   "neededMeasureCodes": [
     "lenhei",
     "age_in_day",
@@ -69,8 +69,8 @@
   },
   "interpretations": [
     {
-      "name": "Tall",
-      "code": "Tall",
+      "name": "Gigantisme",
+      "code": "tall",
       "range": "above +3",
       "condition": {
         "value": "zscore > 3",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "name": "Stunted",
+      "name": "Retard de croissance",
       "code": "stunted",
       "range": "below -2",
       "condition": {
@@ -102,7 +102,7 @@
       }
     },
     {
-      "name": "Severely stunted",
+      "name": "Retard de croissance sévère",
       "code": "severely_stunted",
       "range": "below -3",
       "condition": {

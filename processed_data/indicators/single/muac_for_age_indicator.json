@@ -1,6 +1,6 @@
 {
   "code": "muac_for_age",
-  "name": "Mid-Upper Arm Circumference For Age",
+  "name": "Périmetre brachial pour l'Âge",
   "neededMeasureCodes": [
     "muac",
     "age_in_day"
@@ -46,7 +46,7 @@
   },
   "interpretations": [
     {
-      "name": "Well nourished",
+      "name": "Bien nourri",
       "code": "well_nourished",
       "range": "above +1",
       "condition": {
@@ -68,7 +68,7 @@
       }
     },
     {
-      "name": "Moderate acute malnutrition",
+      "name": "Malnutrition aiguée modérée",
       "code": "moderate_acute_malnutrition",
       "range": "below -2",
       "condition": {
@@ -79,7 +79,7 @@
       }
     },
     {
-      "name": "Severe acute malnutrition",
+      "name": "Malnutrition aiguée sévère",
       "code": "severe_acute_malnutrition",
       "range": "below -3",
       "condition": {

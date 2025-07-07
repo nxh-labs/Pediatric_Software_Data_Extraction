@@ -13,7 +13,7 @@ import { CreateIndicatorProps } from "../types";
 
 export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.WFH_UNISEX_NCHS,
-  name: "Weight For Length/Height (NCHS)",
+  name: "Poids pour taille (NCHS)",
   neededMeasureCodes: [
     AnthroSystemCodes.WEIGHT,
     // AnthroSystemCodes.HEIGHT,
@@ -52,7 +52,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Wasted",
+      name: "Malnutrition aigüe modérée",
       code: "wasted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -61,7 +61,7 @@ export const weightForHeightUnisexNCHSIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severely wasted",
+      name: "Malnutrition aigüe sévère",
       code: "severely_wasted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

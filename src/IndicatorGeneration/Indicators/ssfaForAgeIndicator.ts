@@ -15,7 +15,7 @@ import { CreateIndicatorProps } from "../types";
 
 export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.SSF_FOR_AGE,
-  name: "Subscapular Skinfold For Age",
+  name: "Pli cutané sous-scapulaire pour l'Âge",
   neededMeasureCodes: [AnthroSystemCodes.SSF, AnthroSystemCodes.AGE_IN_DAY],
   axeX: {
     value: fExp`${AnthroSystemCodes.AGE_IN_DAY}`,
@@ -48,7 +48,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "High trunk fat",
+      name: "Graisse tronculaire élevée",
       code: "high_trunk_fat",
       range: GrowthIndicatorRange.ABOVE_2,
       condition: {
@@ -57,7 +57,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Above average trunk fat",
+      name: "Graisse tronculaire au-dessus de la moyenne",
       code: "above_average_trunk_fat",
       range: GrowthIndicatorRange.ABOVE_1,
       condition: {
@@ -66,7 +66,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Normal trunk fat",
+      name: "Graisse tronculaire normale",
       code: "normal_trunk_fat",
       range: GrowthIndicatorRange.MEDIAN,
       condition: {
@@ -75,7 +75,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Below average trunk fat",
+      name: "Graisse tronculaire en dessous de la moyenne",
       code: "below_average_trunk_fat",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -84,7 +84,7 @@ export const subscapularSkinfoldForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Low trunk fat",
+      name: "Faible graisse tronculaire",
       code: "low_trunk_fat",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {

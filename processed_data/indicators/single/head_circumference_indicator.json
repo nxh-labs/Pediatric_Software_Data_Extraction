@@ -1,6 +1,6 @@
 {
   "code": "hc_for_age",
-  "name": "Head Circumference For Age",
+  "name": "Circonférence Crânienne pour l'Âge",
   "neededMeasureCodes": [
     "head_circumference",
     "age_in_day"
@@ -46,7 +46,7 @@
   },
   "interpretations": [
     {
-      "name": "Macrocephaly",
+      "name": "Macrocéphalie",
       "code": "macrocephaly",
       "range": "above +2",
       "condition": {
@@ -68,7 +68,7 @@
       }
     },
     {
-      "name": "Microcephaly",
+      "name": "Microcéphalie",
       "code": "microcephaly",
       "range": "below -2",
       "condition": {

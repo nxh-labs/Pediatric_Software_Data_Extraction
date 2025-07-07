@@ -1,6 +1,5 @@
 import {
   AnthroSystemCodes,
-  MAX_AGE_MONTH_TO_USE_AGE_IN_DAY,
   GrowthRefChartAndTableCodes,
   Sex,
   MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY,
@@ -16,14 +15,14 @@ import { CreateIndicatorProps } from "../types";
 
 export const heightForAgeIndicator: CreateIndicatorProps = {
   code: AnthroSystemCodes.HFA,
-  name: "Height/Length For Age",
+  name: "Taille debout/couchée pour l'Âge",
   neededMeasureCodes: [
     AnthroSystemCodes.LENHEI,
     AnthroSystemCodes.AGE_IN_DAY,
     AnthroSystemCodes.AGE_IN_MONTH,
   ],
   axeX: {
-     value: fExp`${AnthroSystemCodes.AGE_IN_DAY}`,
+    value: fExp`${AnthroSystemCodes.AGE_IN_DAY}`,
     variables: [AnthroSystemCodes.AGE_IN_DAY],
   },
   axeY: {
@@ -55,7 +54,7 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
     {
       chartCode: GrowthRefChartAndTableCodes.HFA_GIRLS_5_19_CHART,
       condition: {
-        value:fExp `(${AnthroSystemCodes.SEX} == ${Sex.FEMALE}) && (${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
+        value: fExp`(${AnthroSystemCodes.SEX} == ${Sex.FEMALE}) && (${AnthroSystemCodes.AGE_IN_DAY} > ${MAX_AGE_IN_DAY_TO_USE_AGE_IN_DAY})`,
         variables: [AnthroSystemCodes.SEX, AnthroSystemCodes.AGE_IN_DAY],
       },
     },
@@ -67,8 +66,8 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
   },
   interpretations: [
     {
-      name: "Tall",
-      code: "Tall",
+      name: "Gigantisme",
+      code: "tall",
       range: GrowthIndicatorRange.ABOVE_3,
       condition: {
         value: fExp`${ZScoreVarName} > ${ZScorePossibleValueLimit.pos3}`,
@@ -86,7 +85,7 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
     },
 
     {
-      name: "Stunted",
+      name: "Retard de croissance",
       code: "stunted",
       range: GrowthIndicatorRange.BELOW_M2,
       condition: {
@@ -95,7 +94,7 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
       },
     },
     {
-      name: "Severely stunted",
+      name: "Retard de croissance sévère",
       code: "severely_stunted",
       range: GrowthIndicatorRange.BELOW_M3,
       condition: {
