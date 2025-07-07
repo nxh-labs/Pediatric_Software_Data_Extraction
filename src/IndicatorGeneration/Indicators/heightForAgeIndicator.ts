@@ -23,8 +23,8 @@ export const heightForAgeIndicator: CreateIndicatorProps = {
     AnthroSystemCodes.AGE_IN_MONTH,
   ],
   axeX: {
-    value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} > ${MAX_AGE_MONTH_TO_USE_AGE_IN_DAY}) ? (${AnthroSystemCodes.AGE_IN_MONTH}): (${AnthroSystemCodes.AGE_IN_DAY})`,
-    variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.AGE_IN_DAY],
+     value: fExp`${AnthroSystemCodes.AGE_IN_DAY}`,
+    variables: [AnthroSystemCodes.AGE_IN_DAY],
   },
   axeY: {
     value: fExp`${AnthroSystemCodes.LENHEI}`,

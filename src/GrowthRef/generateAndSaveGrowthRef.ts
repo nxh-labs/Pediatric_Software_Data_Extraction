@@ -151,14 +151,14 @@ const subscapularSkinfoldGirlsChart = extractAgeInDayBasedChartFromFile(
 // Pli cutané tricipital pour l'âge 0-5 ans
 const tricepsSkinfoldBoysChart = extractAgeInDayBasedChartFromFile(
   "./assets/oms/charts/tsfa/boys/tsfa-boys-zscore-expanded-tables.xlsx",
-  "Courbe de référence pli cutané tricipital pour l'âge (garçons 0-5 ans)",
+  "Courbe de référence pli cutané tricipital pour l'âge (garçons 3 mois-5 ans)",
   GrowthRefChartAndTableCodes.TSF_BOYS_3M_5Y_CHART,
   "M"
 );
 
 const tricepsSkinfoldGirlsChart = extractAgeInDayBasedChartFromFile(
   "./assets/oms/charts/tsfa/girls/tsfa-girls-zscore-expanded-tables.xlsx",
-  "Courbe de référence pli cutané tricipital pour l'âge (filles 0-5 ans)",
+  "Courbe de référence pli cutané tricipital pour l'âge (filles 3 mois-5 ans)",
   GrowthRefChartAndTableCodes.TSF_GIRLS_3M_5Y_CHART,
   "F"
 );
