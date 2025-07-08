@@ -72,7 +72,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
     validationRules: [
       {
         condition: ALWAYS_TRUE_CONDITION,
-        rule: fExp`(${AnthroSystemCodes.MUAC} >= 65) && (${AnthroSystemCodes.MUAC} < 350)`,
+        rule: fExp`(${AnthroSystemCodes.MUAC} >= 6.5) && (${AnthroSystemCodes.MUAC} < 35)`,
         variables: [AnthroSystemCodes.MUAC],
       },
     ],
