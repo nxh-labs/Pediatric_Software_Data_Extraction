@@ -86,7 +86,7 @@
     "validationRules": [
       {
         "condition": "0==0",
-        "rule": "(muac >= 65) && (muac < 350)",
+        "rule": "(muac >= 6.5) && (muac < 35)",
         "variables": [
           "muac"
         ]
