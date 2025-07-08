@@ -77,7 +77,7 @@
   {
     "name": "Mid-Upper Arm Circumference (MUAC)",
     "code": "muac",
-    "unit": "mm",
+    "unit": "cm",
     "availableUnit": [
       "cm",
       "mm"

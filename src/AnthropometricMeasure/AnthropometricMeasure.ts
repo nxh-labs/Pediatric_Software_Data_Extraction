@@ -66,7 +66,7 @@ export const anthropometricMeasures: AnthropometricMeasure[] = [
   {
     name: "Mid-Upper Arm Circumference (MUAC)",
     code: AnthroSystemCodes.MUAC,
-    unit: "mm",
+    unit: "cm",
     availableUnit: ["cm", "mm"],
     description: "Circumference of the upper arm measured at the mid-point",
     validationRules: [
