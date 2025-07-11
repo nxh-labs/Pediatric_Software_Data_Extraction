@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Protocole nationale de prise en charge de la malnutrition aiguë au Bénin",
+    "url": "https://raw.githubusercontent.com/nxh-labs/Pediatric_Software_Data_Extraction/master/dist/protocole_prise_en_charge_ma_benin.pdf",
+    "version": "latest",
+    "edition": "2015"
+  },
+  {
+    "name": "Protocole de prise en charge de la malnutrition aiguë au Rwanda",
+    "url": "https://raw.githubusercontent.com/nxh-labs/Pediatric_Software_Data_Extraction/master/dist/protocole_prise_en_charge_ma_rwanda.pdf",
+    "version": "latest",
+    "edition": "Février 2018"
+  },
+  {
+    "name": "FORMATION EN NUTRITION MODULE 2: DIAGNOSTIC DE LA MALNUTRITION, Cote d'ivoire",
+    "url": "https://raw.githubusercontent.com/nxh-labs/Pediatric_Software_Data_Extraction/master/dist/module_2_formation_en_nutrition.pdf",
+    "version": "latest",
+    "edition": "2017"
+  }
+]
