@@ -19,20 +19,23 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
       {
         name: "Présence d'œdèmes bilatéraux",
         code: OBSERVATIONS.EDEMA_PRESENCE,
-        question: "L'enfant présente-t-il des œdèmes bilatéraux prenant le godet ?",
+        question:
+          "L'enfant présente-t-il des œdèmes bilatéraux prenant le godet ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
       },
       {
         name: "Degré de sévérité des œdèmes",
         code: OBSERVATIONS.EDEMA_GODET_COUNT,
-        question: "Quel est le degré de sévérité des œdèmes ? (0=Absent, 1=Léger/pieds, 2=Modéré/jambes et mains, 3=Sévère/généralisé)",
+        question:
+          "Quel est le degré de sévérité des œdèmes ? (0=Absent, 1=Léger/pieds, 2=Modéré/jambes et mains, 3=Sévère/généralisé)",
         dataType: ClinicalDataType.RANGE,
         dataRange: [0, 3],
-        required: true,
+        required: false,
       },
     ],
-    description: "Accumulation bilatérale de liquide dans les tissus mous, prenant le godet à la pression. Indicateur de déficit protéique.",
+    description:
+      "Accumulation bilatérale de liquide dans les tissus mous, prenant le godet à la pression. Indicateur de déficit protéique.",
   },
   {
     name: "Signes cutanés",
@@ -45,12 +48,14 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
       {
         name: "État de la peau",
         code: OBSERVATIONS.SKIN_CHANGES,
-        question: "Observez-vous des altérations cutanées (peau sèche, crevasses) ?",
+        question:
+          "Observez-vous des altérations cutanées (peau sèche, crevasses) ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Altérations cutanées pouvant indiquer des carences en vitamine A, zinc ou acides gras essentiels",
+    description:
+      "Altérations cutanées pouvant indiquer des carences en vitamine A, zinc ou acides gras essentiels",
   },
   {
     name: "Signes capillaires",
@@ -63,12 +68,14 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
       {
         name: "État des cheveux",
         code: OBSERVATIONS.HAIR_CHANGES,
-        question: "Les cheveux sont-ils secs, cassants, ternes ou anormalement fins ?",
+        question:
+          "Les cheveux sont-ils secs, cassants, ternes ou anormalement fins ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Altérations capillaires pouvant indiquer des carences en protéines ou zinc",
+    description:
+      "Altérations capillaires pouvant indiquer des carences en protéines ou zinc",
   },
   {
     name: "État des ongles",
@@ -81,18 +88,20 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
       {
         name: "Altérations des ongles",
         code: OBSERVATIONS.NAIL_CHANGES,
-        question: "Les ongles présentent-ils des striations ou des déformations ?",
+        question:
+          "Les ongles présentent-ils des striations ou des déformations ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Modifications des ongles pouvant indiquer des carences en protéines ou zinc",
+    description:
+      "Modifications des ongles pouvant indiquer des carences en protéines ou zinc",
   },
   {
     name: "Signes de la cornée",
     code: CLINICAL_SIGNS.CORNEA,
     evaluationRule: {
-      value:fExp `${OBSERVATIONS.CORNEA_CHANGES} == ${ConditionResult.True}`,
+      value: fExp`${OBSERVATIONS.CORNEA_CHANGES} == ${ConditionResult.True}`,
       variables: [OBSERVATIONS.CORNEA_CHANGES],
     },
     data: [
@@ -102,9 +111,10 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
         question: "Observez-vous une sclérose ou une opacité de la cornée ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Altérations de la cornée pouvant indiquer une carence en vitamine A",
+    description:
+      "Altérations de la cornée pouvant indiquer une carence en vitamine A",
   },
   {
     name: "Signes buccaux",
@@ -117,12 +127,14 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
       {
         name: "État de la langue et la bouche",
         code: OBSERVATIONS.MOUTH_CHANGES,
-        question: "Y a-t-il présence d'une langue dépapillée ou d'une stomatite excoriante ?",
+        question:
+          "Y a-t-il présence d'une langue dépapillée ou d'une stomatite excoriante ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Altérations buccales pouvant indiquer des carences en vitamine B12, folates, riboflavine, fer, ou niacine",
+    description:
+      "Altérations buccales pouvant indiquer des carences en vitamine B12, folates, riboflavine, fer, ou niacine",
   },
   {
     name: "Signes hémorragiques",
@@ -138,9 +150,10 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
         question: "Observez-vous des pétéchies ou des ecchymoses ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Signes hémorragiques pouvant indiquer des carences en vitamines K ou C",
+    description:
+      "Signes hémorragiques pouvant indiquer des carences en vitamines K ou C",
   },
   {
     name: "État musculaire",
@@ -156,9 +169,10 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
         question: "Observez-vous une perte de la masse musculaire ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Perte de masse musculaire pouvant indiquer des carences en protéines ou sélénium",
+    description:
+      "Perte de masse musculaire pouvant indiquer des carences en protéines ou sélénium",
   },
   {
     name: "Signes neurologiques",
@@ -174,9 +188,10 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
         question: "L'enfant présente-t-il des paresthésies ou une ataxie ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
-    description: "Signes neurologiques pouvant indiquer des carences en thiamine ou vitamine B12",
+    description:
+      "Signes neurologiques pouvant indiquer des carences en thiamine ou vitamine B12",
   },
   {
     name: "État du foie",
@@ -192,8 +207,8 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
         question: "Constatez-vous une hépatomégalie ?",
         dataType: ClinicalDataType.BOOL,
         required: true,
-      }
+      },
     ],
     description: "Hépatomégalie pouvant indiquer des carences en protéines",
-  }
+  },
 ];

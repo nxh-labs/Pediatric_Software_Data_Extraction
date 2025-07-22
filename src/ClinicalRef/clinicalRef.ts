@@ -61,9 +61,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Une hypoglycémie est suspectée lorsque le patient présente : des paupières ouvertes pendant le sommeil, une température corporelle inférieure à 36.5°C et/ou une altération du niveau de conscience",
     evaluationRule: {
-      value: fExp
-        `(${QUESTIONS.EYELIDS_DURING_SLEEP} == ${ConditionResult.True}) || ((${VITAL_SIGNS.TEMPERATURE} < 36.5) && (${QUESTIONS.CONSCIOUSNESS_LEVEL} == ${ConditionResult.True}))`
-      ,
+      value: fExp`(${QUESTIONS.EYELIDS_DURING_SLEEP} == ${ConditionResult.True}) || ((${VITAL_SIGNS.TEMPERATURE} < 36.5) && (${QUESTIONS.CONSCIOUSNESS_LEVEL} == ${ConditionResult.True}))`,
       variables: [
         QUESTIONS.EYELIDS_DURING_SLEEP,
         VITAL_SIGNS.TEMPERATURE,
@@ -143,9 +141,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     description:
       "Un patient est sévèrement malade lorsque le patient a une condition générale altérée, ou une hypothermie, ou une hyperthermie",
     evaluationRule: {
-      value: fExp
-        `(${DATA_POINTS.GENERAL_CONDITION} =='${GENERAL_CONDITION_VALUES.ALTERED}') || (${VITAL_SIGNS.TEMPERATURE} >= 38.5) || (${VITAL_SIGNS.TEMPERATURE} < 35)`
-      ,
+      value: fExp`(${DATA_POINTS.GENERAL_CONDITION} =='${GENERAL_CONDITION_VALUES.ALTERED}') || (${VITAL_SIGNS.TEMPERATURE} >= 38.5) || (${VITAL_SIGNS.TEMPERATURE} < 35)`,
       variables: [DATA_POINTS.GENERAL_CONDITION, VITAL_SIGNS.TEMPERATURE],
     },
     data: [
@@ -157,8 +153,8 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
         dataType: ClinicalDataType.ENUM,
         required: true,
         enumValue: [
-          GENERAL_CONDITION_VALUES.ALTERED,
-          GENERAL_CONDITION_VALUES.NORMAL,
+          { value: GENERAL_CONDITION_VALUES.ALTERED, label: "Altéré" },
+          { value: GENERAL_CONDITION_VALUES.NORMAL, label: "Normal" },
         ],
       },
       {

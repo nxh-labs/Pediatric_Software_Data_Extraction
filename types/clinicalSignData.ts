@@ -1,7 +1,5 @@
 import { ClinicalDataType } from "../constants";
 
-
-
 export interface ClinicalSignData {
   name: string;
   code: string;
@@ -9,5 +7,6 @@ export interface ClinicalSignData {
   dataType: ClinicalDataType;
   required: boolean;
   dataRange?: [number, number];
-  enumValue?: string[]
+  enumValue?: { label: string; value: string }[];
+  units?: { default: string; available: string[] };
 }

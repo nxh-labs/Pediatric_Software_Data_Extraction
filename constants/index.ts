@@ -162,7 +162,7 @@ export enum ZScorePossibleValueLimit {
   neg1 = "(-1)",
   neg2 = "(-2)",
   neg3 = "(-3)",
-  neg4 = "(-4)"
+  neg4 = "(-4)",
 }
 
 export const ALWAYS_TRUE_CONDITION = "0==0";
@@ -272,6 +272,7 @@ export enum ClinicalDataType {
   STR = "string",
   RANGE = "range",
   ENUM = "enum",
+  QUANTITY = "quantity",
 }
 export const COMPLICATION_CODES = {
   COMPLICATIONS_NUMBER: "complications_number",

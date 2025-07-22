@@ -134,8 +134,14 @@
         "dataType": "enum",
         "required": true,
         "enumValue": [
-          "altered",
-          "normal"
+          {
+            "value": "altered",
+            "label": "Altéré"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          }
         ]
       },
       {
@@ -202,7 +208,7 @@
           0,
           3
         ],
-        "required": true
+        "required": false
       }
     ],
     "description": "Accumulation bilatérale de liquide dans les tissus mous, prenant le godet à la pression. Indicateur de déficit protéique."
