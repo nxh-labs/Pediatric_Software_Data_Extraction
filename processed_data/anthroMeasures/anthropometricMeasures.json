@@ -1,13 +1,13 @@
 [
   {
-    "name": "Weight (Body weight)",
+    "name": "Poids",
     "code": "weight",
     "unit": "kg",
     "availableUnit": [
       "kg",
       "g"
     ],
-    "description": "Child's total body weight",
+    "description": "Poids corporel total de l’enfant",
     "validationRules": [
       {
         "condition": "0==0",
@@ -19,14 +19,14 @@
     ]
   },
   {
-    "name": "Length",
+    "name": "Longueur",
     "code": "length",
     "unit": "cm",
     "availableUnit": [
       "cm",
       "m"
     ],
-    "description": "Recumbent length measurement (typically used for children under 2 years)",
+    "description": "Mesure de la longueur en décubitus dorsal (généralement utilisée chez les enfants de moins de 2 ans)",
     "validationRules": [
       {
         "condition": "0==0",
@@ -38,14 +38,14 @@
     ]
   },
   {
-    "name": "Height",
+    "name": "Taille",
     "code": "height",
     "unit": "cm",
     "availableUnit": [
       "cm",
       "m"
     ],
-    "description": "Standing height measurement (typically used for children 2 years and older)",
+    "description": "Mesure de la taille debout (généralement utilisée chez les enfants de 2 ans et plus)",
     "validationRules": [
       {
         "condition": "0==0",
@@ -57,13 +57,13 @@
     ]
   },
   {
-    "name": "Head Circumference (HC)",
+    "name": "Périmètre crânien",
     "code": "head_circumference",
     "unit": "cm",
     "availableUnit": [
       "cm"
     ],
-    "description": "Measurement around the largest part of the head",
+    "description": "Mesure du tour de tête au niveau de la plus grande circonférence",
     "validationRules": [
       {
         "condition": "0==0",
@@ -75,14 +75,14 @@
     ]
   },
   {
-    "name": "Mid-Upper Arm Circumference (MUAC)",
+    "name": "Périmètre brachial",
     "code": "muac",
     "unit": "cm",
     "availableUnit": [
       "cm",
       "mm"
     ],
-    "description": "Circumference of the upper arm measured at the mid-point",
+    "description": "Circonférence du bras mesurée au point médian entre l’acromion et l’olécrane",
     "validationRules": [
       {
         "condition": "0==0",
@@ -94,13 +94,13 @@
     ]
   },
   {
-    "name": "Triceps Skinfold Thickness (TSF)",
+    "name": "Pli cutané tricipital (TST)",
     "code": "tsf",
     "unit": "mm",
     "availableUnit": [
       "mm"
     ],
-    "description": "Thickness of skinfold on the back of the upper arm",
+    "description": "Épaisseur du pli cutané à la face postérieure du bras (triceps)",
     "validationRules": [
       {
         "condition": "0==0",
@@ -112,13 +112,13 @@
     ]
   },
   {
-    "name": "Subscapular Skinfold Thickness (SSF)",
+    "name": "Pli cutané sous-scapulaire (SSF)",
     "code": "ssf",
     "unit": "mm",
     "availableUnit": [
       "mm"
     ],
-    "description": "Thickness of skinfold below the shoulder blade",
+    "description": "Épaisseur du pli cutané sous l’omoplate (sous-scapulaire)",
     "validationRules": [
       {
         "condition": "0==0",
