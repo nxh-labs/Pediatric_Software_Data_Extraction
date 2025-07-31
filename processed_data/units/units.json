@@ -14,6 +14,13 @@
     "type": "LENGTH"
   },
   {
+    "name": "millimètre",
+    "code": "mm",
+    "conversionFactor": 0.1,
+    "baseUnitCode": "cm",
+    "type": "LENGTH"
+  },
+  {
     "name": "gramme",
     "code": "g",
     "conversionFactor": 0.001,

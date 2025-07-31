@@ -17,6 +17,13 @@ export const units: UnitProps[] = [
     baseUnitCode: "cm",
     type: UnitType.LENGTH,
   },
+  {
+    name: "millimètre",
+    code: "mm",
+    conversionFactor: 0.1,
+    baseUnitCode: "cm",
+    type: UnitType.LENGTH,
+  },
 
   // Unités de poids/masse
   {
