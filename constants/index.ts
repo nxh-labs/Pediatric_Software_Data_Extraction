@@ -274,6 +274,11 @@ export enum ClinicalDataType {
   ENUM = "enum",
   QUANTITY = "quantity",
 }
+export enum DATA_TYPE_COUNTER {
+  ANTHROPOMETRIC = 'anthropometric_counter',
+  CLINICAL = 'clinical_sign_counter',
+  BIOLOGICAL = 'biological_test_counter'
+}
 export const COMPLICATION_CODES = {
   COMPLICATIONS_NUMBER: "complications_number",
   DEHYDRATION: "DEHYD",
@@ -322,6 +327,7 @@ export enum DIAGNOSTIC_CODES {
   MODERATE_UNDERWEIGHT = "MODERATE_UNDERWEIGHT",
   OBESITY = "OBESITY",
   OVERWEIGHT = "OVERWEIGHT",
+  NORMAL_NUTRITIONAL_STATUS = 'NORMAL_NUTRITIONAL_STATUS'
 }
 export enum UnitType {
   LENGTH = "LENGTH",

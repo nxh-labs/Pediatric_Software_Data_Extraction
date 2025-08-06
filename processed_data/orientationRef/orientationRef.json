@@ -4,9 +4,10 @@
     "code": "ORIENTATION_HOME",
     "admissionCriteria": [
       {
-        "value": "muac >= 125",
+        "value": "(((muac >= 125) &&( age_in_month < 60)) || (wflh_unisex > (-2)))",
         "variables": [
-          "muac"
+          "muac",
+          "wflh_unisex"
         ]
       }
     ],

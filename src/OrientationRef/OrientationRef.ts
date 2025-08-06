@@ -19,8 +19,8 @@ export const orientationRefs: OrientationRef[] = [
     code: ORIENTATION_REF_CODES.ORIENTED_TO_HOME,
     admissionCriteria: [
       {
-        value: fExp`${AnthroSystemCodes.MUAC} >= 125`,
-        variables: [AnthroSystemCodes.MUAC],
+        value: fExp`(((${AnthroSystemCodes.MUAC} >= 125) &&( ${AnthroSystemCodes.AGE_IN_MONTH} < ${MONTH_IN_YEARS * 5})) || (${AnthroSystemCodes.WFLH_UNISEX} > ${ZScorePossibleValueLimit.neg2}))`,
+        variables: [AnthroSystemCodes.MUAC, AnthroSystemCodes.WFLH_UNISEX],
       },
     ],
     admissionTypes: [],
@@ -109,15 +109,11 @@ export const orientationRefs: OrientationRef[] = [
     code: ORIENTATION_REF_CODES.ORIENTED_TO_CNT,
     admissionCriteria: [
       {
-        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${
-          AnthroSystemCodes.AGE_IN_MONTH
-        } < ${MONTH_IN_YEARS * 8})) && ((${AnthroSystemCodes.WFLH_UNISEX} < ${
-          ZScorePossibleValueLimit.neg3
-        }) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}) || (${
-          AnthroSystemCodes.MUAC
-        } < 115) || (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${
-          APPETITE_TEST_CODES.CODE
-        } == '${APPETITE_TEST_CODES.NEGATIVE}'))`,
+        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.AGE_IN_MONTH
+          } < ${MONTH_IN_YEARS * 8})) && ((${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg3
+          }) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}) || (${AnthroSystemCodes.MUAC
+          } < 115) || (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${APPETITE_TEST_CODES.CODE
+          } == '${APPETITE_TEST_CODES.NEGATIVE}'))`,
         variables: [
           AnthroSystemCodes.AGE_IN_MONTH,
           AnthroSystemCodes.WFLH_UNISEX,
@@ -127,17 +123,12 @@ export const orientationRefs: OrientationRef[] = [
       },
 
       {
-        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= ${
-          MONTH_IN_YEARS * 8
-        }) && (${
-          AnthroSystemCodes.AGE_IN_MONTH
-        } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})) && ((${
-          AnthroSystemCodes.WFH_UNISEX_NCHS
-        } < ${ZScorePossibleValueLimit.neg3}) || (${CLINICAL_SIGNS.EDEMA} == ${
-          ConditionResult.True
-        })|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${
-          APPETITE_TEST_CODES.CODE
-        } == '${APPETITE_TEST_CODES.NEGATIVE}'))`,
+        value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= ${MONTH_IN_YEARS * 8
+          }) && (${AnthroSystemCodes.AGE_IN_MONTH
+          } < ${MAX_AGE_IN_MONTH_IN_PEDIATRIC})) && ((${AnthroSystemCodes.WFH_UNISEX_NCHS
+          } < ${ZScorePossibleValueLimit.neg3}) || (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True
+          })|| (${COMPLICATION_CODES.COMPLICATIONS_NUMBER} > 0) || (${APPETITE_TEST_CODES.CODE
+          } == '${APPETITE_TEST_CODES.NEGATIVE}'))`,
         variables: [
           AnthroSystemCodes.AGE_IN_MONTH,
           AnthroSystemCodes.WFH_UNISEX_NCHS,

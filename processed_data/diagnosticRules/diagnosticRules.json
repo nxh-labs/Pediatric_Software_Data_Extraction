@@ -112,5 +112,22 @@
         ]
       }
     ]
+  },
+  {
+    "name": "État nutritionnel normal",
+    "code": "NORMAL_NUTRITIONAL_STATUS",
+    "conditions": [
+      {
+        "value": "\n          (wflh_unisex >= (-2)) && \n          (wflh_unisex <= 2) &&\n          (muac >= 125) &&\n          (clinical_edema == 0) &&\n          (hfa >= (-2)) &&\n          (hfa <= 2) &&\n          (wfa >= (-2)) &&\n          (wfa <= 2) &&\n          (bmi_for_age >= (-2)) &&\n          (bmi_for_age <= 2)\n        ",
+        "variables": [
+          "wflh_unisex",
+          "muac",
+          "clinical_edema",
+          "hfa",
+          "wfa",
+          "bmi_for_age"
+        ]
+      }
+    ]
   }
 ]

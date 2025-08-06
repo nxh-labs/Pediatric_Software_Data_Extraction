@@ -111,4 +111,32 @@ export const diagnosticRules: DiagnosticRule[] = [
       },
     ],
   },
+  {
+    name: "État nutritionnel normal",
+    code: DIAGNOSTIC_CODES.NORMAL_NUTRITIONAL_STATUS,
+    conditions: [
+      {
+        value: fExp`
+          (${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg2}) && 
+          (${AnthroSystemCodes.WFLH_UNISEX} <= ${ZScorePossibleValueLimit.pos2}) &&
+          (${AnthroSystemCodes.MUAC} >= 125) &&
+          (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}) &&
+          (${AnthroSystemCodes.HFA} >= ${ZScorePossibleValueLimit.neg2}) &&
+          (${AnthroSystemCodes.HFA} <= ${ZScorePossibleValueLimit.pos2}) &&
+          (${AnthroSystemCodes.WFA} >= ${ZScorePossibleValueLimit.neg2}) &&
+          (${AnthroSystemCodes.WFA} <= ${ZScorePossibleValueLimit.pos2}) &&
+          (${AnthroSystemCodes.BMI_FOR_AGE} >= ${ZScorePossibleValueLimit.neg2}) &&
+          (${AnthroSystemCodes.BMI_FOR_AGE} <= ${ZScorePossibleValueLimit.pos2})
+        `,
+        variables: [
+          AnthroSystemCodes.WFLH_UNISEX,
+          AnthroSystemCodes.MUAC,
+          CLINICAL_SIGNS.EDEMA,
+          AnthroSystemCodes.HFA,
+          AnthroSystemCodes.WFA,
+          AnthroSystemCodes.BMI_FOR_AGE,
+        ],
+      },
+    ],
+  },
 ];
