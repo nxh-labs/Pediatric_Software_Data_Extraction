@@ -94,7 +94,7 @@
       "code": "risk_of_overweight",
       "range": "above +1",
       "condition": {
-        "value": "(zscore > 1) && (zscore <= 2)",
+        "value": "((zscore > 1) && (zscore <= 2))",
         "variables": [
           "zscore"
         ]
@@ -105,7 +105,7 @@
       "code": "normal",
       "range": "0",
       "condition": {
-        "value": "(zscore >= (-2)) && (zscore <= 1)",
+        "value": "((zscore >= (-2)) && (zscore <= 1))",
         "variables": [
           "zscore"
         ]
@@ -116,7 +116,7 @@
       "code": "wasted",
       "range": "below -2",
       "condition": {
-        "value": "(zscore < (-2)) && (zscore >= (-3))",
+        "value": "((zscore < (-2)) && (zscore >= (-3)))",
         "variables": [
           "zscore"
         ]

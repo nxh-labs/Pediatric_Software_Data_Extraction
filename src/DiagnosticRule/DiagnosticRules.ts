@@ -16,7 +16,7 @@ export const diagnosticRules: DiagnosticRule[] = [
     conditions: [
       // Condition 1: Z-score P/T < -3
       {
-        value: fExp`${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg3}`,
+        value: fExp`(${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg3}) || (${AnthroSystemCodes.WFLH} < ${ZScorePossibleValueLimit.neg3})`,
         variables: [AnthroSystemCodes.WFLH_UNISEX],
       },
       // Condition 2: MUAC < 115mm
@@ -37,7 +37,7 @@ export const diagnosticRules: DiagnosticRule[] = [
     conditions: [
       // Condition 1: -3 ≤ Z-score P/T < -2
       {
-        value: fExp`(${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg3}) && (${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg2})`,
+        value: fExp`((${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg3}) || (${AnthroSystemCodes.WFLH} >= ${ZScorePossibleValueLimit.neg3})) && ((${AnthroSystemCodes.WFLH_UNISEX} < ${ZScorePossibleValueLimit.neg2}) || (${AnthroSystemCodes.WFLH} < ${ZScorePossibleValueLimit.neg2}))`,
         variables: [AnthroSystemCodes.WFLH_UNISEX],
       },
       // Condition 2: 115mm ≤ MUAC < 125mm

@@ -4,7 +4,7 @@
     "code": "SEVERE_ACUTE_MALNUTRITION",
     "conditions": [
       {
-        "value": "wflh_unisex < (-3)",
+        "value": "(wflh_unisex < (-3)) || (wflh < (-3))",
         "variables": [
           "wflh_unisex"
         ]
@@ -28,7 +28,7 @@
     "code": "MODERATE_ACUTE_MALNUTRITION",
     "conditions": [
       {
-        "value": "(wflh_unisex >= (-3)) && (wflh_unisex < (-2))",
+        "value": "((wflh_unisex >= (-3)) || (wflh >= (-3))) && ((wflh_unisex < (-2)) || (wflh < (-2)))",
         "variables": [
           "wflh_unisex"
         ]
