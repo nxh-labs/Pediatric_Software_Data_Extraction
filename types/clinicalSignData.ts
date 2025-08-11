@@ -1,12 +1,6 @@
-import { ClinicalDataType } from "../constants";
+import { DATA_FIELD_CODE_TYPE } from "../constants";
 
 export interface ClinicalSignData {
-  name: string;
-  code: string;
-  question: string;
-  dataType: ClinicalDataType;
+  code: DATA_FIELD_CODE_TYPE;
   required: boolean;
-  dataRange?: [number, number];
-  enumValue?: { label: string; value: string }[];
-  units?: { default: string; available: string[] };
 }

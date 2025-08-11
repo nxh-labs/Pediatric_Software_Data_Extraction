@@ -8,7 +8,6 @@ import {
   AnthroSystemCodes,
   MONTH_IN_YEARS,
   ConditionResult,
-  ClinicalDataType,
 } from "../../constants";
 import { ClinicalSignReference } from "../../types";
 import { f, fExp } from "../../utils";
@@ -26,11 +25,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Température corporelle",
         code: VITAL_SIGNS.TEMPERATURE,
-        question:
-          "Quelle est la température axillaire du patient (en degrés Celsius) ?", // Plus précis
-        dataType: ClinicalDataType.INT,
         required: true,
       },
     ],
@@ -46,11 +41,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Température corporelle",
         code: VITAL_SIGNS.TEMPERATURE,
-        question:
-          "Quelle est la température corporelle du patient (température axillaire) ?",
-        dataType: ClinicalDataType.INT,
         required: true,
       },
     ],
@@ -70,27 +61,15 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Aspect des paupières pendant le sommeil",
         code: QUESTIONS.EYELIDS_DURING_SLEEP,
-        question:
-          "L'enfant garde-t-il les yeux partiellement ouverts pendant son sommeil ?", // Plus descriptif
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
       {
-        name: "Température corporelle",
         code: VITAL_SIGNS.TEMPERATURE,
-        question:
-          "Quelle est la température corporelle du patient (température axillaire) ?",
-        dataType: ClinicalDataType.INT,
         required: true,
       },
       {
-        name: "Clarté et conscience",
         code: QUESTIONS.CONSCIOUSNESS_LEVEL,
-        question:
-          "L'enfant présente-t-il une diminution de sa réactivité ou de son niveau de conscience ?", // Plus précis
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -106,11 +85,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Nombre de selles liquides par jour",
         code: DATA_POINTS.LIQUID_STOOL_COUNT,
-        question:
-          "Combien de selles liquides l'enfant a-t-il eu durant les dernières 24 heures ?", // Plus précis sur la période
-        dataType: ClinicalDataType.INT,
         required: true,
       },
     ],
@@ -126,11 +101,7 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Nombre de vomissements par jour",
         code: DATA_POINTS.VOMITING_COUNT,
-        question:
-          "Quel est le nombre de vomissements au cours des dernières 24h ?",
-        dataType: ClinicalDataType.INT,
         required: true,
       },
     ],
@@ -146,23 +117,11 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "État Général",
         code: DATA_POINTS.GENERAL_CONDITION,
-        question:
-          "Comment évaluez-vous l'état général du patient ? (normal ou altéré)", // Plus clair sur les options
-        dataType: ClinicalDataType.ENUM,
         required: true,
-        enumValue: [
-          { value: GENERAL_CONDITION_VALUES.ALTERED, label: "Altéré" },
-          { value: GENERAL_CONDITION_VALUES.NORMAL, label: "Normal" },
-        ],
       },
       {
-        name: "Température Corporelle",
         code: VITAL_SIGNS.TEMPERATURE,
-        question:
-          "Quelle est la température corporelle du patient (température axillaire) ?",
-        dataType: ClinicalDataType.INT,
         required: true,
       },
     ],
@@ -196,19 +155,11 @@ export const clinicalSignRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Fréquence respiratoire",
         code: VITAL_SIGNS.RESPIRATORY_RATE,
-        question:
-          "Combien de respirations par minute l'enfant effectue-t-il (sur une minute complète) ?", // Plus précis sur la méthode
-        dataType: ClinicalDataType.INT,
         required: true,
       },
       {
-        name: "Tirage sous-costal",
         code: OBSERVATIONS.SUBCOSTAL_RETRACTION,
-        question:
-          "Observez-vous un creusement sous les côtes lors de la respiration de l'enfant ?", // Plus descriptif
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],

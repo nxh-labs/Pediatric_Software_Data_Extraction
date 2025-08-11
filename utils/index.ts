@@ -6,3 +6,4 @@ export * from "./createGrowthRefChartOMS";
 export * from "./createGrowthRefTableOMS";
 export * from "./createGrowthRefTableNCHS";
 export * from "./formulaExpressionValidation"
+export * from "./type"

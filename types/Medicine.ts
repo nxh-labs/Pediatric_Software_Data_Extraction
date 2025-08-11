@@ -1,3 +1,5 @@
+import { MEDICINE_CODES } from "../constants";
+
 export enum MedicineCategory {
   ANTIBACTERIALS = "antibacterials",
   ANTIFUNGALS = "antifungals",
@@ -54,7 +56,7 @@ export interface DosageRange {
 }
 
 export interface Medicine {
-  code: string;
+  code: MEDICINE_CODES;
   name: string;
   category: MedicineCategory;
   administrationRoutes: AdministrationRoute[];

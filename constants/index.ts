@@ -1,3 +1,5 @@
+import { ValueOf } from "../utils";
+
 export enum ZScoreComputingStrategyType {
   AGEBASED = "age_based",
   LENHEIBASED = "lenhei_based",
@@ -266,7 +268,7 @@ export enum GENERAL_CONDITION_VALUES {
   ALTERED = "altered",
   NORMAL = "normal",
 }
-export enum ClinicalDataType {
+export enum FieldDataType {
   INT = "number",
   BOOL = "boolean",
   STR = "string",
@@ -275,9 +277,9 @@ export enum ClinicalDataType {
   QUANTITY = "quantity",
 }
 export enum DATA_TYPE_COUNTER {
-  ANTHROPOMETRIC = 'anthropometric_counter',
-  CLINICAL = 'clinical_sign_counter',
-  BIOLOGICAL = 'biological_test_counter'
+  ANTHROPOMETRIC = "anthropometric_counter",
+  CLINICAL = "clinical_sign_counter",
+  BIOLOGICAL = "biological_test_counter",
 }
 export const COMPLICATION_CODES = {
   COMPLICATIONS_NUMBER: "complications_number",
@@ -327,7 +329,7 @@ export enum DIAGNOSTIC_CODES {
   MODERATE_UNDERWEIGHT = "MODERATE_UNDERWEIGHT",
   OBESITY = "OBESITY",
   OVERWEIGHT = "OVERWEIGHT",
-  NORMAL_NUTRITIONAL_STATUS = 'NORMAL_NUTRITIONAL_STATUS'
+  NORMAL_NUTRITIONAL_STATUS = "NORMAL_NUTRITIONAL_STATUS",
 }
 export enum UnitType {
   LENGTH = "LENGTH",
@@ -374,3 +376,35 @@ export enum BiochemicalRangeStatus {
   NORMAL = "normal",
   OVER = "over",
 }
+
+// New Constants
+
+export enum MEDICINE_CODES {
+  AMOX = "AMOX",
+  AMP = "AMP",
+  GENT = "GENT",
+  CEFO = "CEFO",
+  CIPRO = "CIPRO",
+  CLOXA = "CLOXA",
+  METRO = "METRO",
+  NYST = "NYST",
+  FLUC = "FLUC",
+  FURO = "FURO",
+  CEFT = "CEFT",
+  AMOXI_ACIDE_CLAVULANIQUE = "AMOXI_ACIDE_CLAVULANIQUE",
+}
+export type DATA_FIELD_CODE_TYPE =
+  | ValueOf<typeof OBSERVATIONS>
+  | ValueOf<typeof VITAL_SIGNS>
+  | ValueOf<typeof DATA_POINTS>
+  | ValueOf<typeof QUESTIONS>;
+
+export const CARE_SESSION = {
+  DAYS_IN_PHASE: 'days_in_phase',
+} as const
+export const CALCULATED_MONITORING_ELEMENT = {
+  WEIGHT_GAIN_RATE_KG_DAY: 'weight_gain_rate_kg_day',
+  WEIGHT_CHANGE_RATE_DURING_DIARRHEA: 'weight_change_rate_during_diarrhea',
+  NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY: 'nutritional_milk_consumption_rate_percent_per_day' // 
+} as const
+export const initialValueCode = (code: string) => 'initial_' + code 

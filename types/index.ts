@@ -17,3 +17,5 @@ export * from "./Medicine";
 export * from "./Milk";
 export * from "./Unit";
 export * from "./Complication";
+export * from "./CarePhaseReference";
+export * from "./DataFieldReference";

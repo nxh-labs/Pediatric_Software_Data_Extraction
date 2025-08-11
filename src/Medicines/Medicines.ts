@@ -1,9 +1,14 @@
-import { Medicine, MedicineCategory, AdministrationRoute, DosageUnit } from "../../types";
-
+import { MEDICINE_CODES } from "../../constants";
+import {
+  Medicine,
+  MedicineCategory,
+  AdministrationRoute,
+  DosageUnit,
+} from "../../types";
 
 const antibacterials: Medicine[] = [
   {
-    code: "AMOX",
+    code: MEDICINE_CODES.AMOX,
     name: "Amoxicilline",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL],
@@ -91,7 +96,7 @@ const antibacterials: Medicine[] = [
     ],
   },
   {
-    code: "AMP",
+    code: MEDICINE_CODES.AMP,
     name: "Ampicilline",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IV, AdministrationRoute.IM],
@@ -165,7 +170,7 @@ const antibacterials: Medicine[] = [
     ],
   },
   {
-    code: "GENT",
+    code: MEDICINE_CODES.GENT,
     name: "Gentamycine",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IM, AdministrationRoute.IV],
@@ -256,7 +261,7 @@ const antibacterials: Medicine[] = [
     ],
   },
   {
-    code: "CEFO",
+    code: MEDICINE_CODES.CEFO,
     name: "Céfotaxime",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IM, AdministrationRoute.IV],
@@ -330,7 +335,7 @@ const antibacterials: Medicine[] = [
   },
 
   {
-    code: "CIPRO",
+    code: MEDICINE_CODES.CIPRO,
     name: "Ciprofloxacine",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
@@ -404,7 +409,7 @@ const antibacterials: Medicine[] = [
     ],
   },
   {
-    code: "CLOXA",
+    code: MEDICINE_CODES.CLOXA,
     name: "Cloxacilline",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV_IM],
@@ -478,7 +483,7 @@ const antibacterials: Medicine[] = [
   },
 
   {
-    code: "METRO",
+    code: MEDICINE_CODES.METRO,
     name: "Métronidazole",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
@@ -554,7 +559,7 @@ const antibacterials: Medicine[] = [
 
 const antifungals: Medicine[] = [
   {
-    code: "NYST",
+    code: MEDICINE_CODES.NYST,
     name: "Nystatine",
     category: MedicineCategory.ANTIFUNGALS,
     administrationRoutes: [AdministrationRoute.ORAL],
@@ -588,7 +593,7 @@ const antifungals: Medicine[] = [
     ],
   },
   {
-    code: "FLUC",
+    code: MEDICINE_CODES.FLUC,
     name: "Fluconazole",
     category: MedicineCategory.ANTIFUNGALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
@@ -667,7 +672,7 @@ const antifungals: Medicine[] = [
 // ATTENTION: Il y avait dans la frusémide une dose de 0.5 à 2 par dose (2, 3 fois par jour ) donc je l'ai traduit en multipliant la dose par la fréquence que j'ai pris
 const cardiacfailure: Medicine[] = [
   {
-    code: "FURO",
+    code: MEDICINE_CODES.FURO,
     name: "Furosémide/ Frusémide",
     category: MedicineCategory.CARDIAC_FAILURE,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV_IM],
@@ -696,7 +701,7 @@ const cardiacfailure: Medicine[] = [
 ];
 const alternatives: Medicine[] = [
   {
-    code: "CEFT",
+    code: MEDICINE_CODES.CEFT,
     name: "Céftriaxone",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IM, AdministrationRoute.IV],
@@ -771,7 +776,7 @@ const alternatives: Medicine[] = [
     ],
   },
   {
-    code: "AMOXI_ACIDE_CLAVULANIQUE",
+    code: MEDICINE_CODES.AMOXI_ACIDE_CLAVULANIQUE,
     name: "Amoxicilline + Acide Clavulanique",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
