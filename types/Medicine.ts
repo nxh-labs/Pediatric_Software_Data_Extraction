@@ -1,4 +1,5 @@
 import { MEDICINE_CODES } from "../constants";
+import { ICondition } from "./Indicator";
 
 export enum MedicineCategory {
   ANTIBACTERIALS = "antibacterials",
@@ -60,10 +61,14 @@ export interface Medicine {
   name: string;
   category: MedicineCategory;
   administrationRoutes: AdministrationRoute[];
-  baseDosage: BaseDosage;
-  dosageRanges: DosageRange[];
+  dosageCases: DosageCase[]
   warnings?: string[];
   contraindications?: string[];
   interactions?: string[];
   notes?: string[];
+}
+export interface DosageCase {
+  dosageCondition: { condition: ICondition, description: string, variableExplaination: Record<string, string> }
+  baseDosage: BaseDosage;
+  dosageRanges: DosageRange[];
 }

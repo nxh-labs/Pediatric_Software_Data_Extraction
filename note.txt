@@ -361,3 +361,58 @@ class TreatmentManagementService:
           treatment.status = 'COMPLETED'
 
 Avec cette architecture en trois parties (le plan dans le JSON, l'exécution dans l'agrégat, et la logique dans le service), vous avez un système extrêmement puissant et flexible qui peut gérer des scénarios de traitement complexes, exactement comme vous l'avez décrit
+
+
+
+
+failureCriteria: [
+  {
+    condition: { 
+      value: `(days_in_phase >= 4) && (appetite_test_result == 'NEGATIVE')`, 
+      variables: ["days_in_phase", "appetite_test_result"] 
+    },
+    description: "Absence de retour de l'appétit au 4ème jour.",
+    variablesExplanation: {
+      "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle (Phase 1).",
+      "appetite_test_result": "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE')."
+    },
+  },
+  {
+    condition: {
+      value: `(days_in_phase >= 4) && (current_edema >= initial_edema)`,
+      variables: ["days_in_phase", "current_edema", "initial_edema"]
+    },
+    description: "Absence de perte d'œdèmes au 4ème jour.",
+    variablesExplanation: {
+      "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle.",
+      "current_edema": "Le niveau d'œdème actuel du patient (0, 1, 2, ou 3).",
+      "initial_edema": "Le niveau d'œdème que le patient avait au début de cette phase."
+    },
+  },
+  {
+    condition: {
+      value: `(days_in_phase >= 10) && (has_edema == true)`,
+      variables: ["days_in_phase", "has_edema"]
+    },
+    description: "Présence d'œdèmes persistants au 10ème jour.",
+    variablesExplanation: {
+        "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle.",
+        "has_edema": "Un booléen (vrai/faux) indiquant si le patient a des œdèmes."
+    }
+  }
+],
+transitionCriteria (Critères de Transition) avec Explications
+transitionCriteria: [
+  {
+    condition: {
+      value: `(appetite_test_result == 'POSITIVE') && (complications_number == 0) && (current_edema <= 1)`,
+      variables: ["appetite_test_result", "complications_number", "current_edema"]
+    },
+    description: "Retour de l'appétit, stabilité clinique et début de fonte des œdèmes.",
+    variablesExplanation: {
+        "appetite_test_result": "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE').",
+        "complications_number": "Le nombre total de complications médicales graves et actives.",
+        "current_edema": "Le niveau d'œdème actuel du patient. Le protocole demande un 'début de fonte', ce qui peut être interprété comme un niveau de + (1) ou 0."
+    }
+  }
+],

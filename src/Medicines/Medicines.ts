@@ -1,10 +1,11 @@
-import { MEDICINE_CODES } from "../../constants";
+import { AnthroSystemCodes, MEDICINE_CODES } from "../../constants";
 import {
   Medicine,
   MedicineCategory,
   AdministrationRoute,
   DosageUnit,
 } from "../../types";
+import { fExp } from "../../utils";
 
 const antibacterials: Medicine[] = [
   {
@@ -12,76 +13,122 @@ const antibacterials: Medicine[] = [
     name: "Amoxicilline",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL],
-    baseDosage: {
-      label: "50-100 mg/kg/jour",
-      frequency: 2,
-      min: 50,
-      max: 100,
-      unit: DosageUnit.MG,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          label: "50-100 mg/kg/jour",
+          frequency: 2,
+          min: 50,
+          max: 100,
+          unit: DosageUnit.MG,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: {
+              value: 125,
+              unit: DosageUnit.MG,
+            },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: {
+              value: 250,
+              unit: DosageUnit.MG,
+            },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: {
+              value: 500,
+              unit: DosageUnit.MG,
+            },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: {
+              value: 750,
+              unit: DosageUnit.MG,
+            },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: ">35 kg",
+            },
+            amount: {
+              value: 1000,
+              unit: DosageUnit.MG,
+            },
+            frequency: 2,
+          },
+        ],
+      }, {
+        baseDosage: {
+          frequency: 2,
+          max: 30,
+          min: 30,
+          label: '30 mg/kg/jour',
+          unit: DosageUnit.MG
         },
-        amount: {
-          value: 125,
-          unit: DosageUnit.MG,
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} <3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: '',
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: ''
+          }
         },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: {
-          value: 250,
-          unit: DosageUnit.MG,
-        },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: {
-          value: 500,
-          unit: DosageUnit.MG,
-        },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: {
-          value: 750,
-          unit: DosageUnit.MG,
-        },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: ">35 kg",
-        },
-        amount: {
-          value: 1000,
-          unit: DosageUnit.MG,
-        },
-        frequency: 2,
-      },
+        dosageRanges: [{
+          weightRange: {
+            min: 0,
+            max: 3,
+            description: "0 - 3 kg",
+          },
+          amount: {
+            value: 90,
+            unit: DosageUnit.MG,
+          },
+          frequency: 2,
+        }]
+      }
     ],
+
+
     warnings: [
       "Contient du sel à base de sodium – attention aux patients sensibles au sodium",
       "La résistance à l'amoxicilline est fréquente",
@@ -100,61 +147,77 @@ const antibacterials: Medicine[] = [
     name: "Ampicilline",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IV, AdministrationRoute.IM],
-    baseDosage: {
-      label: "100-200 mg/kg/jour",
-      min: 100,
-      max: 200,
-      unit: DosageUnit.MG,
-      frequency: 4,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          label: "100-200 mg/kg/jour",
+          min: 100,
+          max: 200,
+          unit: DosageUnit.MG,
+          frequency: 4,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
-        },
-        amount: { value: 250, unit: DosageUnit.MG },
-        frequency: 4,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { value: 500, unit: DosageUnit.MG },
-        frequency: 4,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: { value: 1, unit: DosageUnit.G },
-        frequency: 4,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { value: 2, unit: DosageUnit.G },
-        frequency: 4,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { value: 3, unit: DosageUnit.G },
-        frequency: 4,
-      },
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { value: 250, unit: DosageUnit.MG },
+            frequency: 4,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { value: 500, unit: DosageUnit.MG },
+            frequency: 4,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { value: 1, unit: DosageUnit.G },
+            frequency: 4,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { value: 2, unit: DosageUnit.G },
+            frequency: 4,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { value: 3, unit: DosageUnit.G },
+            frequency: 4,
+          },
+        ],
+
+      }
     ],
+
     warnings: [
       "Les injections IV sont préférables aux IM qui sont plus douloureuses",
       "Donner en perfusion pendant au moins 30 minutes si déficiences rénales",
@@ -174,79 +237,126 @@ const antibacterials: Medicine[] = [
     name: "Gentamycine",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IM, AdministrationRoute.IV],
-    baseDosage: {
-      label: "5 mg/kg/jour",
-      min: 5,
-      max: 5,
-      unit: DosageUnit.MG,
-      frequency: 1,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          label: "5 mg/kg/jour",
+          min: 5,
+          max: 5,
+          unit: DosageUnit.MG,
+          frequency: 1,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 0,
-          max: 3,
-          description: "<=3 kg",
-        },
-        amount: { value: 10, unit: DosageUnit.MG },
-        frequency: 1,
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 0,
+              max: 3,
+              description: "<=3 kg",
+            },
+            amount: { value: 10, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 3.1,
+              max: 5.0,
+              description: "3.1-5.0 kg",
+            },
+            amount: { value: 20, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 5.1,
+              max: 10.0,
+              description: "5.1-10 kg",
+            },
+            amount: { value: 40, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 10.1,
+              max: 15.0,
+              description: "10.1-15 kg",
+            },
+            amount: { value: 60, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 15.1,
+              max: 20,
+              description: "15.1-20 kg",
+            },
+            amount: { value: 80, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20-35 kg",
+            },
+            amount: { value: 140, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: ">35 kg",
+            },
+            amount: { value: 200, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+        ],
       },
       {
-        weightRange: {
-          min: 3.1,
-          max: 5.0,
-          description: "3.1-5.0 kg",
+        baseDosage: {
+          frequency: 1,
+          max: 5,
+          min: 3,
+          label: '3 - 5 mg/kg/jour',
+          unit: DosageUnit.MG
         },
-        amount: { value: 20, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 5.1,
-          max: 10.0,
-          description: "5.1-10 kg",
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} <3) || (${AnthroSystemCodes.AGE_IN_MONTH} < 6)`,
+            variables: [AnthroSystemCodes.WEIGHT, AnthroSystemCodes.AGE_IN_MONTH]
+          },
+          description: '',
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: ''
+          }
         },
-        amount: { value: 40, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 10.1,
-          max: 15.0,
-          description: "10.1-15 kg",
-        },
-        amount: { value: 60, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 15.1,
-          max: 20,
-          description: "15.1-20 kg",
-        },
-        amount: { value: 80, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20-35 kg",
-        },
-        amount: { value: 140, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: ">35 kg",
-        },
-        amount: { value: 200, unit: DosageUnit.MG },
-        frequency: 1,
-      },
+        dosageRanges: [{
+          weightRange: {
+            min: 0,
+            max: 3,
+            description: "0 - 3 kg",
+          },
+          amount: {
+            minValue: 9,
+            maxValue: 15,
+            unit: DosageUnit.MG,
+          },
+          frequency: 1,
+        }]
+      }
     ],
+
     warnings: [
       "Danger de néphrotoxicité et d'ototoxicité",
       "Chez les enfants œdémateux, donner la dose selon le poids sans œdèmes",
@@ -265,61 +375,76 @@ const antibacterials: Medicine[] = [
     name: "Céfotaxime",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IM, AdministrationRoute.IV],
-    baseDosage: {
-      frequency: 2,
-      label: "50-100 mg/kg/jour",
-      min: 50,
-      max: 100,
-      unit: DosageUnit.MG,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          frequency: 2,
+          label: "50-100 mg/kg/jour",
+          min: 50,
+          max: 100,
+          unit: DosageUnit.MG,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
-        },
-        amount: { value: 100, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { value: 200, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: { value: 400, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { value: 800, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { value: 1000, unit: DosageUnit.MG },
-        frequency: 2,
-      },
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { value: 100, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { value: 200, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { value: 400, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { value: 800, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { value: 1000, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+        ],
+      }
     ],
+
     warnings: [
       "L'injection IM très douloureuse",
       "Peut épuiser les réserves de vitamine K dans le foie",
@@ -339,61 +464,76 @@ const antibacterials: Medicine[] = [
     name: "Ciprofloxacine",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
-    baseDosage: {
-      frequency: 3,
-      label: "30-45 mg/kg/jour",
-      min: 30,
-      max: 45,
-      unit: DosageUnit.MG,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          frequency: 3,
+          label: "30-45 mg/kg/jour",
+          min: 30,
+          max: 45,
+          unit: DosageUnit.MG,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
-        },
-        amount: { value: 50, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { value: 100, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: { value: 200, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { value: 400, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { value: 800, unit: DosageUnit.MG },
-        frequency: 3,
-      },
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { value: 50, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { value: 100, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { value: 200, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { value: 400, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { value: 800, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+        ],
+      }
     ],
+
     warnings: [
       "Donner par voie orale ou SNG lorsque l'estomac est vide",
       "Absorption réduite par les produits laitiers, antiacides, calcium, fer et sels de zinc",
@@ -413,61 +553,76 @@ const antibacterials: Medicine[] = [
     name: "Cloxacilline",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV_IM],
-    baseDosage: {
-      frequency: 3,
-      label: "100-200 mg/kg/jour",
-      min: 100,
-      max: 200,
-      unit: DosageUnit.MG,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          frequency: 3,
+          label: "100-200 mg/kg/jour",
+          min: 100,
+          max: 200,
+          unit: DosageUnit.MG,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
-        },
-        amount: { minValue: 62.5, maxValue: 250, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { minValue: 100, maxValue: 300, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: { minValue: 250, maxValue: 750, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { minValue: 1, maxValue: 1.5, unit: DosageUnit.G },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { minValue: 2, maxValue: 6, unit: DosageUnit.G },
-        frequency: 3,
-      },
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { minValue: 62.5, maxValue: 250, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { minValue: 100, maxValue: 300, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { minValue: 250, maxValue: 750, unit: DosageUnit.MG },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { minValue: 1, maxValue: 1.5, unit: DosageUnit.G },
+            frequency: 3,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { minValue: 2, maxValue: 6, unit: DosageUnit.G },
+            frequency: 3,
+          },
+        ],
+      }
     ],
+
     warnings: [
       "Thérapie parentérale préférée lors d'infections sévères",
       "Préparation à base de sels de sodium",
@@ -487,61 +642,77 @@ const antibacterials: Medicine[] = [
     name: "Métronidazole",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
-    baseDosage: {
-      frequency: 1,
-      label: "10-12 mg/kg/jour",
-      min: 10,
-      max: 12,
-      unit: DosageUnit.MG,
-    },
-
-    dosageRanges: [
+    dosageCases: [
       {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
         },
-        amount: { minValue: 30, maxValue: 60, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { minValue: 60, maxValue: 100, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
+        baseDosage: {
+          frequency: 1,
+          label: "10-12 mg/kg/jour",
           min: 10,
-          max: 20,
-          description: "10 - 20 kg",
+          max: 12,
+          unit: DosageUnit.MG,
         },
-        amount: { minValue: 120, maxValue: 200, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { minValue: 250, maxValue: 350, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { minValue: 400, maxValue: 500, unit: DosageUnit.MG },
-        frequency: 1,
-      },
+
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { minValue: 30, maxValue: 60, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { minValue: 60, maxValue: 100, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { minValue: 120, maxValue: 200, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { minValue: 250, maxValue: 350, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { minValue: 400, maxValue: 500, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+        ],
+      }
     ],
+
+
     warnings: [
       "Ne pas donner pour plus de 7 jours",
       "Réduire la dose à 1/3 s'il y a des problèmes hépatiques",
@@ -563,25 +734,40 @@ const antifungals: Medicine[] = [
     name: "Nystatine",
     category: MedicineCategory.ANTIFUNGALS,
     administrationRoutes: [AdministrationRoute.ORAL],
-    baseDosage: {
-      label: "400.000 UI/jour",
-      min: 400000,
-      max: 400000,
-      unit: DosageUnit.UI,
-      frequency: 4,
-    },
-
-    dosageRanges: [
+    dosageCases: [
       {
-        weightRange: {
-          min: 3,
-          max: 60,
-          description: "3 - 60 kg",
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
         },
-        amount: { value: 100000, unit: DosageUnit.UI },
-        frequency: 4,
-      },
+        baseDosage: {
+          label: "400.000 UI/jour",
+          min: 400000,
+          max: 400000,
+          unit: DosageUnit.UI,
+          frequency: 4,
+        },
+
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 60,
+              description: "3 - 60 kg",
+            },
+            amount: { value: 100000, unit: DosageUnit.UI },
+            frequency: 4,
+          },
+        ],
+      }
     ],
+
     warnings: [
       "Risque de toxicité hépatique aigüe 6 fois plus élevé qu'avec l'amoxicilline seule",
     ],
@@ -597,61 +783,76 @@ const antifungals: Medicine[] = [
     name: "Fluconazole",
     category: MedicineCategory.ANTIFUNGALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
-    baseDosage: {
-      label: "3-6 mg/kg/jour",
-      min: 3,
-      max: 6,
-      unit: DosageUnit.MG,
-      frequency: 1,
-    },
-
-    dosageRanges: [
+    dosageCases: [
       {
-        weightRange: {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          label: "3-6 mg/kg/jour",
           min: 3,
-          max: 5,
-          description: "3 - 5 kg",
+          max: 6,
+          unit: DosageUnit.MG,
+          frequency: 1,
         },
-        amount: { value: 15, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { value: 30, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: { value: 60, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { value: 120, unit: DosageUnit.MG },
-        frequency: 1,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { value: 200, unit: DosageUnit.MG },
-        frequency: 1,
-      },
+
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { value: 15, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { value: 30, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { value: 60, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { value: 120, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { value: 200, unit: DosageUnit.MG },
+            frequency: 1,
+          },
+        ],
+      }
     ],
+
     warnings: [
       "La préparation orale contient du benzoate de sodium",
       "A utiliser prudemment chez le kwashiorkor et dans les défaillances cardiaques car elle contient du sodium",
@@ -676,14 +877,30 @@ const cardiacfailure: Medicine[] = [
     name: "Furosémide/ Frusémide",
     category: MedicineCategory.CARDIAC_FAILURE,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV_IM],
-    baseDosage: {
-      label: "0.5-2 mg/kg/dose (2-3 fois / jour)",
-      min: 0.5 * 2,
-      max: 2 * 2,
-      unit: DosageUnit.MG,
-      frequency: 2,
-    },
-    dosageRanges: [],
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          label: "0.5-2 mg/kg/dose (2-3 fois / jour)",
+          min: 0.5 * 2,
+          max: 2 * 2,
+          unit: DosageUnit.MG,
+          frequency: 2,
+        },
+        dosageRanges: [],
+      }
+    ],
+
+
     warnings: [
       "Uniquement utilisé pour les DEFAILLANCES CARDIAQUES",
       "NE jamais donner pour la mobilisation des œdèmes",
@@ -705,61 +922,76 @@ const alternatives: Medicine[] = [
     name: "Céftriaxone",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.IM, AdministrationRoute.IV],
-    baseDosage: {
-      frequency: 2,
-      label: "50-100 mg/kg/jour",
-      min: 50,
-      max: 100,
-      unit: DosageUnit.MG,
-    },
+    dosageCases: [
+      {
+        dosageCondition: {
+          condition: {
+            value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+            variables: [AnthroSystemCodes.WEIGHT]
+          },
+          description: "Le poids doit être suppérieur à 3 kg ",
+          variableExplaination: {
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+          }
+        },
+        baseDosage: {
+          frequency: 2,
+          label: "50-100 mg/kg/jour",
+          min: 50,
+          max: 100,
+          unit: DosageUnit.MG,
+        },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
-        },
-        amount: { value: 100, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
-        },
-        amount: { value: 200, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
-        },
-        amount: { value: 400, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
-        },
-        amount: { value: 800, unit: DosageUnit.MG },
-        frequency: 2,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
-        },
-        amount: { value: 1000, unit: DosageUnit.MG },
-        frequency: 2,
-      },
+        dosageRanges: [
+          {
+            weightRange: {
+              min: 3,
+              max: 5,
+              description: "3 - 5 kg",
+            },
+            amount: { value: 100, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 5,
+              max: 10,
+              description: "5 - 10 kg",
+            },
+            amount: { value: 200, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 10,
+              max: 20,
+              description: "10 - 20 kg",
+            },
+            amount: { value: 400, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 20,
+              max: 35,
+              description: "20 - 35 kg",
+            },
+            amount: { value: 800, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+          {
+            weightRange: {
+              min: 35,
+              max: Infinity,
+              description: "> 35 kg",
+            },
+            amount: { value: 1000, unit: DosageUnit.MG },
+            frequency: 2,
+          },
+        ],
+      }
     ],
+
     warnings: [
       "Très douloureux si donné en IM",
       "Incompatible avec le Ringer Lactate et produits à base de calcium",
@@ -780,61 +1012,74 @@ const alternatives: Medicine[] = [
     name: "Amoxicilline + Acide Clavulanique",
     category: MedicineCategory.ANTIBACTERIALS,
     administrationRoutes: [AdministrationRoute.ORAL, AdministrationRoute.IV],
-    baseDosage: {
-      frequency: 3,
-      label: "25-50 mg/kg/jour",
-      min: 25,
-      max: 50,
-      unit: DosageUnit.MG,
-    },
+    dosageCases: [{
+      dosageCondition: {
+        condition: {
+          value: fExp`(${AnthroSystemCodes.WEIGHT} >= 3)`,
+          variables: [AnthroSystemCodes.WEIGHT]
+        },
+        description: "Le poids doit être suppérieur à 3 kg ",
+        variableExplaination: {
+          [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
+        }
+      },
+      baseDosage: {
+        frequency: 3,
+        label: "25-50 mg/kg/jour",
+        min: 25,
+        max: 50,
+        unit: DosageUnit.MG,
+      },
 
-    dosageRanges: [
-      {
-        weightRange: {
-          min: 3,
-          max: 5,
-          description: "3 - 5 kg",
+      dosageRanges: [
+        {
+          weightRange: {
+            min: 3,
+            max: 5,
+            description: "3 - 5 kg",
+          },
+          amount: { value: 62.5, unit: DosageUnit.MG },
+          frequency: 3,
         },
-        amount: { value: 62.5, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 5,
-          max: 10,
-          description: "5 - 10 kg",
+        {
+          weightRange: {
+            min: 5,
+            max: 10,
+            description: "5 - 10 kg",
+          },
+          amount: { value: 125, unit: DosageUnit.MG },
+          frequency: 3,
         },
-        amount: { value: 125, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 10,
-          max: 20,
-          description: "10 - 20 kg",
+        {
+          weightRange: {
+            min: 10,
+            max: 20,
+            description: "10 - 20 kg",
+          },
+          amount: { value: 250, unit: DosageUnit.MG },
+          frequency: 3,
         },
-        amount: { value: 250, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 20,
-          max: 35,
-          description: "20 - 35 kg",
+        {
+          weightRange: {
+            min: 20,
+            max: 35,
+            description: "20 - 35 kg",
+          },
+          amount: { value: 500, unit: DosageUnit.MG },
+          frequency: 3,
         },
-        amount: { value: 500, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-      {
-        weightRange: {
-          min: 35,
-          max: Infinity,
-          description: "> 35 kg",
+        {
+          weightRange: {
+            min: 35,
+            max: Infinity,
+            description: "> 35 kg",
+          },
+          amount: { value: 750, unit: DosageUnit.MG },
+          frequency: 3,
         },
-        amount: { value: 750, unit: DosageUnit.MG },
-        frequency: 3,
-      },
-    ],
+      ],
+    }],
+
     warnings: [
       "Risque de toxicité hépatique aigüe 6 fois plus élevé qu'avec l'amoxicilline seule",
     ],

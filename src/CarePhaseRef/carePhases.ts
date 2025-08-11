@@ -13,8 +13,8 @@ export const CARE_PHASES: CarePhaseReference[] = [
         condition: { value: fExp`(${CARE_SESSION.DAYS_IN_PHASE} >= 4) && (${APPETITE_TEST_CODES.CODE} == ${APPETITE_TEST_CODES.NEGATIVE})`, variables: [CARE_SESSION.DAYS_IN_PHASE, APPETITE_TEST_CODES.CODE] },
         description: "Absence de retour de l'appétit au 4ème jour.",
         variablesExplanation: {
-          [CARE_SESSION.DAYS_IN_PHASE]: '',
-          [APPETITE_TEST_CODES.CODE]: ''
+          [CARE_SESSION.DAYS_IN_PHASE]: "Nombre de jours que le patient a passés dans la phase actuelle (Phase 1).",
+          [APPETITE_TEST_CODES.CODE]: "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE')."
         },
       }, {
         condition: {
@@ -23,9 +23,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
         },
         description: "Absence de perte d'œdèmes au 4ème jour.",
         variablesExplanation: {
-          [CARE_SESSION.DAYS_IN_PHASE]: '',
-          [initialValueCode(OBSERVATIONS.EDEMA_GODET_COUNT)]: '',
-          [OBSERVATIONS.EDEMA_GODET_COUNT]: ''
+          [CARE_SESSION.DAYS_IN_PHASE]: "Nombre de jours que le patient a passés dans la phase actuelle.",
+          [initialValueCode(OBSERVATIONS.EDEMA_GODET_COUNT)]: "Le niveau d'œdème actuel du patient (0, 1, 2, ou 3).",
+          [OBSERVATIONS.EDEMA_GODET_COUNT]: "Le niveau d'œdème que le patient avait au début de cette phase."
         },
 
       }
@@ -35,7 +35,10 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [CARE_SESSION.DAYS_IN_PHASE, CLINICAL_SIGNS.EDEMA]
         },
         description: "Présence d'œdèmes persistants au 10ème jour.",
-        variablesExplanation: {}
+        variablesExplanation: {
+          [CARE_SESSION.DAYS_IN_PHASE]: "Nombre de jours que le patient a passés dans la phase actuelle.",
+          [CLINICAL_SIGNS.EDEMA]: "Un booléen (vrai/faux) indiquant si le patient a des œdèmes."
+        }
       }
     ],
     transitionCriteria: [
@@ -45,7 +48,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [APPETITE_TEST_CODES.CODE, COMPLICATION_CODES.COMPLICATIONS_NUMBER, OBSERVATIONS.EDEMA_GODET_COUNT]
         },
         description: "Retour de l'appétit, stabilité clinique et début de fonte des œdèmes.",
-        variablesExplanation: {}
+        variablesExplanation: {
+          [APPETITE_TEST_CODES.CODE]: "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE').",
+          [COMPLICATION_CODES.COMPLICATIONS_NUMBER]: "Le nombre total de complications médicales graves et actives.",
+          [OBSERVATIONS.EDEMA_GODET_COUNT]: "Le niveau d'œdème actuel du patient. Le protocole demande un 'début de fonte', ce qui peut être interprété comme un niveau de + (1) ou 0."
+        }
       }
     ],
     recommendedTreatments: [
@@ -183,11 +190,16 @@ export const CARE_PHASES: CarePhaseReference[] = [
       {
         // ici on a besoin de capturer la consommation du milk (le pourcentage) et pourcela j'ai inserre une variable donc cela doit etre ajouter au field afin qu'il puisse fournir les donnee necessiare pour caculer cela . 
         condition: {
-           value: fExp``,
-           variables:[]
+          value: fExp`(${APPETITE_TEST_CODES.CODE} == ${APPETITE_TEST_CODES.POSITIVE}) && (${CALCULATED_MONITORING_ELEMENT.NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY} >= 90) && (${OBSERVATIONS.EDEMA_GODET_COUNT} == 0)`,
+          variables: [APPETITE_TEST_CODES.CODE, CALCULATED_MONITORING_ELEMENT.NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY, OBSERVATIONS.EDEMA_GODET_COUNT]
         },
-        description: '',
-        variablesExplanation: {}
+        description: 'Un bon appétit soit une consommation de 90% d\'ATPE et une fonte totale des œdèmes.',
+        variablesExplanation: {
+          [APPETITE_TEST_CODES.CODE]: "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE').",
+          [CALCULATED_MONITORING_ELEMENT.NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY]: '',
+          [OBSERVATIONS.EDEMA_GODET_COUNT]: "Le niveau d'œdème actuel du patient. Le protocole demande un 'début de fonte', ce qui peut être interprété comme un niveau de + (1) ou 0."
+
+        }
       }
     ],
     recommendedTreatments: [
