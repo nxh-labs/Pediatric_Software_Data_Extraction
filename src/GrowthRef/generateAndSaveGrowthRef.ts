@@ -214,7 +214,7 @@ async function saveChartToJson(chart: any, filename: string) {
 
     const filePath = join(chartsDir, `${filename}.json`);
     await writeFile(filePath, JSON.stringify(chart, null, 2));
-    console.log(`Courbe sauvegardée dans ${filePath}`);
+   // console.log(`Courbe sauvegardée dans ${filePath}`);
   } catch (error) {
     console.error(
       `Erreur lors de la sauvegarde de la courbe ${filename}:`,
@@ -231,7 +231,7 @@ async function saveTableToJson(table: any, filename: string) {
 
     const filePath = join(tablesDir, `${filename}.json`);
     await writeFile(filePath, JSON.stringify(table, null, 2));
-    console.log(`Table sauvegardée dans ${filePath}`);
+   // console.log(`Table sauvegardée dans ${filePath}`);
   } catch (error) {
     console.error(
       `Erreur lors de la sauvegarde de la table ${filename}:`,

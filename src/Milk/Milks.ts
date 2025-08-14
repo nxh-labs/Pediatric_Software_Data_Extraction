@@ -28,7 +28,7 @@ export const milkRefs: Milk[] = [
     },
     recommendedMilkPerDay: [
       RecommendedMilkPerDay.FIVE,
-      RecommendedMilkPerDay.HEIGHT,
+      RecommendedMilkPerDay.EIGHT,
       RecommendedMilkPerDay.SIX,
     ],
     recommendationPerRanges: [
@@ -38,7 +38,7 @@ export const milkRefs: Milk[] = [
           max: 2.1,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 40,
+          [RecommendedMilkPerDay.EIGHT]: 40,
           [RecommendedMilkPerDay.SIX]: 50,
           [RecommendedMilkPerDay.FIVE]: 65,
         },
@@ -49,7 +49,7 @@ export const milkRefs: Milk[] = [
           max: 2.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 45,
+          [RecommendedMilkPerDay.EIGHT]: 45,
           [RecommendedMilkPerDay.SIX]: 60,
           [RecommendedMilkPerDay.FIVE]: 70,
         },
@@ -60,7 +60,7 @@ export const milkRefs: Milk[] = [
           max: 2.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 50,
+          [RecommendedMilkPerDay.EIGHT]: 50,
           [RecommendedMilkPerDay.SIX]: 65,
           [RecommendedMilkPerDay.FIVE]: 75,
         },
@@ -71,7 +71,7 @@ export const milkRefs: Milk[] = [
           max: 2.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 55,
+          [RecommendedMilkPerDay.EIGHT]: 55,
           [RecommendedMilkPerDay.SIX]: 70,
           [RecommendedMilkPerDay.FIVE]: 80,
         },
@@ -82,7 +82,7 @@ export const milkRefs: Milk[] = [
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 60,
+          [RecommendedMilkPerDay.EIGHT]: 60,
           [RecommendedMilkPerDay.SIX]: 75,
           [RecommendedMilkPerDay.FIVE]: 85,
         },
@@ -93,7 +93,7 @@ export const milkRefs: Milk[] = [
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 65,
+          [RecommendedMilkPerDay.EIGHT]: 65,
           [RecommendedMilkPerDay.SIX]: 80,
           [RecommendedMilkPerDay.FIVE]: 95,
         },
@@ -104,7 +104,7 @@ export const milkRefs: Milk[] = [
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 70,
+          [RecommendedMilkPerDay.EIGHT]: 70,
           [RecommendedMilkPerDay.SIX]: 85,
           [RecommendedMilkPerDay.FIVE]: 110,
         },
@@ -115,7 +115,7 @@ export const milkRefs: Milk[] = [
           max: 4.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 80,
+          [RecommendedMilkPerDay.EIGHT]: 80,
           [RecommendedMilkPerDay.SIX]: 95,
           [RecommendedMilkPerDay.FIVE]: 120,
         },
@@ -126,7 +126,7 @@ export const milkRefs: Milk[] = [
           max: 5.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 90,
+          [RecommendedMilkPerDay.EIGHT]: 90,
           [RecommendedMilkPerDay.SIX]: 110,
           [RecommendedMilkPerDay.FIVE]: 130,
         },
@@ -137,7 +137,7 @@ export const milkRefs: Milk[] = [
           max: 5.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 100,
+          [RecommendedMilkPerDay.EIGHT]: 100,
           [RecommendedMilkPerDay.SIX]: 120,
           [RecommendedMilkPerDay.FIVE]: 150,
         },
@@ -148,7 +148,7 @@ export const milkRefs: Milk[] = [
           max: 6.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 110,
+          [RecommendedMilkPerDay.EIGHT]: 110,
           [RecommendedMilkPerDay.SIX]: 140,
           [RecommendedMilkPerDay.FIVE]: 175,
         },
@@ -159,7 +159,7 @@ export const milkRefs: Milk[] = [
           max: 7.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 125,
+          [RecommendedMilkPerDay.EIGHT]: 125,
           [RecommendedMilkPerDay.SIX]: 160,
           [RecommendedMilkPerDay.FIVE]: 200,
         },
@@ -170,7 +170,7 @@ export const milkRefs: Milk[] = [
           max: 8.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 140,
+          [RecommendedMilkPerDay.EIGHT]: 140,
           [RecommendedMilkPerDay.SIX]: 180,
           [RecommendedMilkPerDay.FIVE]: 225,
         },
@@ -181,7 +181,7 @@ export const milkRefs: Milk[] = [
           max: 9.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 155,
+          [RecommendedMilkPerDay.EIGHT]: 155,
           [RecommendedMilkPerDay.SIX]: 190,
           [RecommendedMilkPerDay.FIVE]: 250,
         },
@@ -192,7 +192,7 @@ export const milkRefs: Milk[] = [
           max: 10.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 170,
+          [RecommendedMilkPerDay.EIGHT]: 170,
           [RecommendedMilkPerDay.SIX]: 200,
           [RecommendedMilkPerDay.FIVE]: 275,
         },
@@ -203,7 +203,7 @@ export const milkRefs: Milk[] = [
           max: 11.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 190,
+          [RecommendedMilkPerDay.EIGHT]: 190,
           [RecommendedMilkPerDay.SIX]: 230,
           [RecommendedMilkPerDay.FIVE]: 275,
         },
@@ -214,7 +214,7 @@ export const milkRefs: Milk[] = [
           max: 12.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 205,
+          [RecommendedMilkPerDay.EIGHT]: 205,
           [RecommendedMilkPerDay.SIX]: 250,
           [RecommendedMilkPerDay.FIVE]: 300,
         },
@@ -225,7 +225,7 @@ export const milkRefs: Milk[] = [
           max: 13.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 230,
+          [RecommendedMilkPerDay.EIGHT]: 230,
           [RecommendedMilkPerDay.SIX]: 275,
           [RecommendedMilkPerDay.FIVE]: 350,
         },
@@ -236,7 +236,7 @@ export const milkRefs: Milk[] = [
           max: 14.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 250,
+          [RecommendedMilkPerDay.EIGHT]: 250,
           [RecommendedMilkPerDay.SIX]: 290,
           [RecommendedMilkPerDay.FIVE]: 375,
         },
@@ -247,7 +247,7 @@ export const milkRefs: Milk[] = [
           max: 19.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 260,
+          [RecommendedMilkPerDay.EIGHT]: 260,
           [RecommendedMilkPerDay.SIX]: 300,
           [RecommendedMilkPerDay.FIVE]: 400,
         },
@@ -258,7 +258,7 @@ export const milkRefs: Milk[] = [
           max: 24.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 290,
+          [RecommendedMilkPerDay.EIGHT]: 290,
           [RecommendedMilkPerDay.SIX]: 320,
           [RecommendedMilkPerDay.FIVE]: 450,
         },
@@ -269,7 +269,7 @@ export const milkRefs: Milk[] = [
           max: 29.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 300,
+          [RecommendedMilkPerDay.EIGHT]: 300,
           [RecommendedMilkPerDay.SIX]: 350,
           [RecommendedMilkPerDay.FIVE]: 450,
         },
@@ -280,7 +280,7 @@ export const milkRefs: Milk[] = [
           max: 39.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 320,
+          [RecommendedMilkPerDay.EIGHT]: 320,
           [RecommendedMilkPerDay.SIX]: 370,
           [RecommendedMilkPerDay.FIVE]: 500,
         },
@@ -291,7 +291,7 @@ export const milkRefs: Milk[] = [
           max: 60.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 350,
+          [RecommendedMilkPerDay.EIGHT]: 350,
           [RecommendedMilkPerDay.SIX]: 400,
           [RecommendedMilkPerDay.FIVE]: 500,
         },
@@ -538,7 +538,7 @@ export const milkRefs: Milk[] = [
       value: fExp`130 * ${AnthroSystemCodes.WEIGHT}`,
       variables: [AnthroSystemCodes.WEIGHT],
     },
-    recommendedMilkPerDay: [RecommendedMilkPerDay.HEIGHT],
+    recommendedMilkPerDay: [RecommendedMilkPerDay.EIGHT],
     recommendationPerRanges: [
       {
         weightRange: {
@@ -546,7 +546,7 @@ export const milkRefs: Milk[] = [
           max: 1.2,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 25,
+          [RecommendedMilkPerDay.EIGHT]: 25,
         },
       },
       {
@@ -555,7 +555,7 @@ export const milkRefs: Milk[] = [
           max: 1.5,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 30,
+          [RecommendedMilkPerDay.EIGHT]: 30,
         },
       },
       {
@@ -564,7 +564,7 @@ export const milkRefs: Milk[] = [
           max: 1.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 35,
+          [RecommendedMilkPerDay.EIGHT]: 35,
         },
       },
       {
@@ -573,7 +573,7 @@ export const milkRefs: Milk[] = [
           max: 2.1,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 40,
+          [RecommendedMilkPerDay.EIGHT]: 40,
         },
       },
       {
@@ -582,7 +582,7 @@ export const milkRefs: Milk[] = [
           max: 2.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 45,
+          [RecommendedMilkPerDay.EIGHT]: 45,
         },
       },
       {
@@ -591,7 +591,7 @@ export const milkRefs: Milk[] = [
           max: 2.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 50,
+          [RecommendedMilkPerDay.EIGHT]: 50,
         },
       },
       {
@@ -600,7 +600,7 @@ export const milkRefs: Milk[] = [
           max: 2.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 55,
+          [RecommendedMilkPerDay.EIGHT]: 55,
         },
       },
       {
@@ -609,7 +609,7 @@ export const milkRefs: Milk[] = [
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 60,
+          [RecommendedMilkPerDay.EIGHT]: 60,
         },
       },
       {
@@ -618,7 +618,7 @@ export const milkRefs: Milk[] = [
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 65,
+          [RecommendedMilkPerDay.EIGHT]: 65,
         },
       },
       {
@@ -627,7 +627,7 @@ export const milkRefs: Milk[] = [
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.HEIGHT]: 70,
+          [RecommendedMilkPerDay.EIGHT]: 70,
         },
       },
     ],

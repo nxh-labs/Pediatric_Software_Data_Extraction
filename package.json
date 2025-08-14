@@ -8,7 +8,7 @@
     "xlsx": "^0.18.5"
   },
   "scripts": {
-    "build": "ts-node index.ts",
+    "build": "ts-node extract_all.ts",
     "create-data-zip": "ts-node utils/createProcessedDataZip.ts",
     "move": "ts-node utils/moveNeededAssetOnBuildDir.ts",
     "build:zip:move": "yarn build && yarn create-data-zip && yarn move"

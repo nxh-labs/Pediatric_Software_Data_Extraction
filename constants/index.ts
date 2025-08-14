@@ -400,11 +400,13 @@ export type DATA_FIELD_CODE_TYPE =
   | ValueOf<typeof QUESTIONS>;
 
 export const CARE_SESSION = {
-  DAYS_IN_PHASE: 'days_in_phase',
-} as const
+  DAYS_IN_PHASE: "days_in_phase",
+  CURRENT_CARE_PHASE: "current_care_phase",
+} as const;
 export const CALCULATED_MONITORING_ELEMENT = {
-  WEIGHT_GAIN_RATE_KG_DAY: 'weight_gain_rate_kg_day',
-  WEIGHT_CHANGE_RATE_DURING_DIARRHEA: 'weight_change_rate_during_diarrhea',
-  NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY: 'nutritional_milk_consumption_rate_percent_per_day' // 
-} as const
-export const initialValueCode = (code: string) => 'initial_' + code 
+  WEIGHT_GAIN_RATE_KG_DAY: "weight_gain_rate_kg_day",
+  WEIGHT_CHANGE_RATE_DURING_DIARRHEA: "weight_change_rate_during_diarrhea",
+  NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY:
+    "nutritional_milk_consumption_rate_percent_per_day", //
+} as const;
+export const initialValueCode = (code: string) => "initial_" + code;

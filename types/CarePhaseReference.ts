@@ -20,9 +20,10 @@ export interface CarePhaseReference {
 }
 
 export enum CARE_PHASE_CODES {
-  CNT_PHASE1 = "phase_1_cnt",
-  CNT_TRANS_PHASE = "transition_phase_cnt",
-  CNT_PHASE2 = "phase_2_cnt",
+  CNT_PHASE1 = "cnt_phase_aiguë",
+  CNT_TRANS_PHASE = "cnt_phase_transition",
+  CNT_PHASE2 = "cnt_phase_rehabilitation",
+  CNT_INFANT_LT6m_LT3kg = "cnt_infant_lt6m_lt3kg",
 }
 
 export interface PhaseCriterion {
@@ -82,9 +83,10 @@ export interface MonitoringElement {
   category: MONITORING_ELEMENT_CATEGORY;
   source: MONITORING_VALUE_SOURCE;
   code:
-  | AnthroSystemCodes
-  | ValueOf<typeof BIOCHEMICAL_REF_CODES>
-  | DATA_FIELD_CODE_TYPE | ValueOf<typeof CLINICAL_SIGNS>
+    | AnthroSystemCodes
+    | ValueOf<typeof BIOCHEMICAL_REF_CODES>
+    | DATA_FIELD_CODE_TYPE
+    | ValueOf<typeof CLINICAL_SIGNS>;
   frequency: MonitoringFrequency;
 }
 export interface MonitoringFrequency {

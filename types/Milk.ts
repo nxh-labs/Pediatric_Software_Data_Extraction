@@ -1,14 +1,12 @@
 import { ICondition } from "../src/IndicatorGeneration/types";
 
-
-
 export enum MilkType {
   F100 = "f100",
   F75 = "f75",
   F100Diluted = "f100_diluted",
 }
 export enum RecommendedMilkPerDay {
-  HEIGHT = "8",
+  EIGHT = "8",
   FIVE = "5",
   SIX = "6",
 }
@@ -29,4 +27,27 @@ export interface Milk {
   recommendedMilkPerDay: RecommendedMilkPerDay[];
   notes: string[];
   recommendationPerRanges: RecommendedMilkPerWeightRanges[];
+}
+export interface MilkEntity {
+  code: MilkType;
+  name: string;
+  notes: string[];
+}
+export interface NutitionalProduct {
+  code: MilkType;
+  dosageTables: DosageScenario[];
+}
+
+export interface DosageScenario {
+  applicability: {
+    condition: ICondition;
+    descritption: string;
+    variableExplaination: { [variable: string]: string };
+  };
+  dosages: DosageByWeight[];
+}
+
+export interface DosageByWeight {
+  weight_kg: [number, number];
+  dosePerMeal: Partial<Record<RecommendedMilkPerDay, number>>;
 }

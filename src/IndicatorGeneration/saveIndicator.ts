@@ -73,7 +73,7 @@ const createDirectoryIfNotExists = (dirPath: string): void => {
 
 const saveIndicatorToFile = (data: any, filePath: string): void => {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  console.log(`Saved to: ${filePath}`);
+ // console.log(`Saved to: ${filePath}`);
 };
 
 export const saveAllIndicators = (): void => {

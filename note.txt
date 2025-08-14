@@ -416,3 +416,15 @@ transitionCriteria: [
     }
   }
 ],
+
+Par exemple pour le f100 - dilué
+ - condition : enfant inférieur à 6 mois ou enfant < 3kg de poids . 
+             - allaité : - on a une autre type de dosage pour cela 
+             - non allaité : - on a une autre type de dosage aussi 
+                - Phase aiguë - on a le dosage 
+                - Phase de transition - on a le dosage 
+                - Phase de rehabilitatio - on a le dosage 
+Pour le f75 :  
+- condition : enfant inférieur à 6 moins ou enfant < 3 kg de poids & presentant d'œdème 
+            - allaité ou non : 
+            
