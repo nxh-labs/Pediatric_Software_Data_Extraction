@@ -162,6 +162,7 @@ export enum ZScorePossibleValueLimit {
   pos1 = "1",
   median = "0",
   neg1 = "(-1)",
+  negOutTarget = "(-1.5)",
   neg2 = "(-2)",
   neg3 = "(-3)",
   neg4 = "(-4)",
@@ -173,7 +174,8 @@ export const APPETITE_TEST_CODES = {
   CODE: "appetite_test_result",
   POSITIVE: "Positive",
   NEGATIVE: "Negative",
-};
+} as const;
+
 export enum APPETITE_TEST_PRODUCT_TYPE {
   IN_SACHET = "in_sachet",
   IN_POT = "in_pot",
@@ -262,6 +264,8 @@ export const DATA_POINTS = {
   LIQUID_STOOL_COUNT: "data_liquid_stool_count_per_day",
   VOMITING_COUNT: "data_vomiting_count",
   GENERAL_CONDITION: "data_general_condition",
+  NUTRITIONAL_MILK_CONSUMPTION_G_PER_DAY:
+    "question_nutritional_milk_consumption_in_g_per_day",
 } as const;
 
 export enum GENERAL_CONDITION_VALUES {
@@ -405,8 +409,26 @@ export const CARE_SESSION = {
 } as const;
 export const CALCULATED_MONITORING_ELEMENT = {
   WEIGHT_GAIN_RATE_KG_DAY: "weight_gain_rate_kg_day",
+  WEIGHT_GAIN_RATE_DURING_PHASE: "weight_gain_rating_during_phase",
+  WEIGHT_LOSS_PERCENT_BETWEEN_TWO_CONSECUTIVE_MEASUREMENTS:
+    "weigth_loss_percent_between_two_consecutive_measurements",
+  WEIGHT_LOSS_PERCENT_BETWEEN_THREE_CONSECUTIVE_MEASUREMENTS:
+    "weigth_loss_percent_between_three_consecutive_measurements",
   WEIGHT_CHANGE_RATE_DURING_DIARRHEA: "weight_change_rate_during_diarrhea",
   NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY:
-    "nutritional_milk_consumption_rate_percent_per_day", //
+    "nutritional_milk_consumption_rate_percent_per_day",
 } as const;
 export const initialValueCode = (code: string) => "initial_" + code;
+export const clinicalSignChangeDay = (code: ValueOf<typeof CLINICAL_SIGNS>) =>
+  "change_day_" + code;
+
+export const TREATMENT_PLAN_IDS = {
+  CNT_PHASE1_F75: "CNT_PHASE1::nutritional::F75",
+  CNT_PHASE1_F100_DILUTED: 'CNT_PHASE1::nutritional::F100::diluted',
+  CNT_PHASE1_AMOXICILLIN: "CNT_PHASE1::systematic::AMOXICILLIN",
+  CNT_TRANS_PHASE_F100: "CNT_TRANS_PHASE::nutritional::F100",
+  CNT_TRANS_PHASE_F100_DILUTED: "CNT_TRANS_PHASE::nutritional::F100::diluted",
+  CNT_TRANS_PHASE_AMOXICILLIN: "CNT_TRANS_PHASE::systematic::AMOXICILLIN",
+  CNT_PHASE2_F100: "CNT_PHASE2::nutritional::F100",
+  CNT_PHASE2_F100_DILUTED: "CNT_PHASE2::nutritional::F100::diluted",
+} as const;

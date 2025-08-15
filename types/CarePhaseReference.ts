@@ -10,6 +10,11 @@ import { ValueOf } from "../utils";
 import { MilkType } from "./Milk";
 
 export interface CarePhaseReference {
+  applicabilyConditions: {
+    condition: ICondition;
+    description: string;
+    varaibleExplaination: {};
+  }[];
   code: CARE_PHASE_CODES;
   name: string;
   description: string;
@@ -17,6 +22,10 @@ export interface CarePhaseReference {
   transitionCriteria: PhaseCriterion[];
   recommendedTreatments: RecommendedTreatment[];
   monitoringPlan: MonitoringElement[];
+  followUpPlan: [];
+  nextPhase?: CARE_PHASE_CODES;
+  prevPhase?: CARE_PHASE_CODES;
+  duration: CarePhaseDuration;
 }
 
 export enum CARE_PHASE_CODES {
@@ -31,7 +40,17 @@ export interface PhaseCriterion {
   condition: ICondition;
   variablesExplanation: Record<string, string>;
 }
+export interface CarePhaseDuration {
+  type: "days" | "hours" | "while_phase";
+  value?: number;
+}
 export interface RecommendedTreatment {
+  identifier: string;
+  applicabilityCondition: {
+    condition: ICondition;
+    descritpion: string;
+    varialbleExplaination: { [variable: string]: string };
+  };
   type: RECOMMENDED_TREATMENT_TYPE;
   code: MilkType | MEDICINE_CODES;
   /** La durée pendant laquelle le traitement doit être actif. */
@@ -42,6 +61,7 @@ export interface RecommendedTreatment {
     onStart?: TreatmentTrigger[];
     onEnd?: TreatmentTrigger[];
   };
+  adjustmentPercentage?: number;
 }
 
 export enum RECOMMENDED_TREATMENT_TYPE {
@@ -99,4 +119,12 @@ export enum MONITORING_ELEMENT_CATEGORY {
   BIOCHEMICAL = "biochemical_monitoring_element",
   CLINICAL_SIGNS = "clinical_signs_monitoring_element",
   DATA_FIELD = "data_field_monitoring_element",
+}
+export interface FollowUpAction {
+  applicabilities: {
+    description: string;
+    condition: ICondition;
+    variableExplaination: {};
+  }[];
+  treatmentToApply: RecommendedTreatment[];
 }
