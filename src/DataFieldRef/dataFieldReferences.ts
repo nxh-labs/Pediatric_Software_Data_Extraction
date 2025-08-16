@@ -177,4 +177,25 @@ export const dataFieldRefs: DataFieldReference[] = [
     type: FieldDataType.BOOL,
     defaultValue: false,
   },
+  {
+    label: "Allaitement actuel",
+    category: DataFieldCategory.DATA_POINTS,
+    code: DATA_POINTS.IS_BREASTFED,
+    question: "L’enfant est-il actuellement allaité (lait maternel) ?",
+    type: FieldDataType.BOOL,
+    defaultValue: false,
+  },
+  {
+    label: "Quantité quotidienne de lait thérapeutique",
+    category: DataFieldCategory.DATA_POINTS,
+    code: DATA_POINTS.NUTRITIONAL_MILK_CONSUMPTION_G_PER_DAY,
+    question:
+      "Quelle est la quantité totale de lait thérapeutique consommée par l’enfant au cours des dernières 24 heures ?",
+    type: FieldDataType.QUANTITY,
+    defaultValue: 0,
+    units: {
+      available: ["g", "ml"],
+      default: "g",
+    },
+  },
 ];

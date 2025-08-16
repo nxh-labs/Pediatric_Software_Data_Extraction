@@ -23,7 +23,7 @@ export const saveAppetiteTestRefs = async () => {
       JSON.stringify(appetiteTestRef, null, 2)
     );
 
-    console.log("Appetite Test references saved successfully!");
+   // console.log("Appetite Test references saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving appetite Test ref references:", error);

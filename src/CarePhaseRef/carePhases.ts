@@ -39,8 +39,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
           value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.WEIGHT} >= 3)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.WEIGHT],
         },
-        description: "",
-        varaibleExplaination: {},
+        description: "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
+        varaibleExplaination: {
+          [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois (≥ 6 mois).",
+          [AnthroSystemCodes.WEIGHT]: "Poids actuel de l'enfant en kilogrammes (≥ 3 kg).",
+        },
       },
     ],
     failureCriteria: [
@@ -118,8 +121,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
             value: fExp`((${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.WEIGHT} >=3)) || ((${AnthroSystemCodes.AGE_IN_MONTH} < 6) && (${AnthroSystemCodes.WEIGHT} < 3) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True}))`,
             variables: [AnthroSystemCodes.AGE_IN_MONTH, CLINICAL_SIGNS.EDEMA],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "F-75 indiqué en phase de stabilisation: ≥6 mois et ≥3 kg, ou <6 mois/<3 kg avec œdèmes.",
+          variableExplanation: {
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois pour distinguer <6m vs ≥6m.",
+            [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes (True/False).",
+          },
         },
         code: MilkType.F75,
         type: RECOMMENDED_TREATMENT_TYPE.NUTRITIONAL,
@@ -134,8 +140,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
             value: fExp` (((${AnthroSystemCodes.AGE_IN_MONTH} < 6) || (${AnthroSystemCodes.WEIGHT} < 3)) && (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}))`,
             variables: [AnthroSystemCodes.AGE_IN_MONTH, CLINICAL_SIGNS.EDEMA],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "F-100 dilué en phase 1 pour les <6 mois ou <3 kg sans œdèmes.",
+          variableExplanation: {
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
+            [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes (True/False).",
+          },
         },
         code: MilkType.F100Diluted,
         type: RECOMMENDED_TREATMENT_TYPE.NUTRITIONAL,
@@ -149,8 +158,8 @@ export const CARE_PHASES: CarePhaseReference[] = [
             value: ALWAYS_TRUE_CONDITION,
             variables: [],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "Antibiothérapie systématique (Amoxicilline) pendant la phase 1.",
+          variableExplanation: {},
         },
         identifier: TREATMENT_PLAN_IDS.CNT_PHASE1_AMOXICILLIN,
         code: MEDICINE_CODES.AMOX,
@@ -258,8 +267,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
           value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.WEIGHT} >= 3)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.WEIGHT],
         },
-        description: "",
-        varaibleExplaination: {},
+        description: "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
+        varaibleExplaination: {
+          [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
+          [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
+        },
       },
     ],
     failureCriteria: [
@@ -323,7 +335,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           [APPETITE_TEST_CODES.CODE]:
             "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE').",
           [CALCULATED_MONITORING_ELEMENT.NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY]:
-            "",
+            "Pourcentage de la ration nutritionnelle journalière effectivement consommée par l'enfant (ATPE/laits).",
           [OBSERVATIONS.EDEMA_GODET_COUNT]:
             "Le niveau d'œdème actuel du patient. Le protocole demande un 'début de fonte', ce qui peut être interprété comme un niveau de + (1) ou 0.",
         },
@@ -336,8 +348,8 @@ export const CARE_PHASES: CarePhaseReference[] = [
             value: fExp`${ALWAYS_TRUE_CONDITION}`,
             variables: [],
           },
-          varialbleExplaination: {},
-          descritpion: "",
+          variableExplanation: {},
+          descritpion: "Amoxicilline pendant 5 jours au début de la phase de transition.",
         },
         identifier: TREATMENT_PLAN_IDS.CNT_TRANS_PHASE_AMOXICILLIN,
         code: MEDICINE_CODES.AMOX,
@@ -356,8 +368,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
               AnthroSystemCodes.WEIGHT,
             ],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "F-100 pour les enfants ≥ 6 mois et ≥ 3 kg durant la phase de transition.",
+          variableExplanation: {
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
+          },
         },
         identifier: TREATMENT_PLAN_IDS.CNT_TRANS_PHASE_F100,
         code: MilkType.F100,
@@ -375,8 +390,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
               AnthroSystemCodes.WEIGHT,
             ],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "F-100 dilué pour les <6 mois ou <3 kg durant la phase de transition.",
+          variableExplanation: {
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
+          },
         },
         identifier: TREATMENT_PLAN_IDS.CNT_TRANS_PHASE_F100_DILUTED,
         code: MilkType.F100Diluted,
@@ -487,8 +505,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
           value: fExp`(${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.WEIGHT} >=3)`,
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.WEIGHT],
         },
-        description: "",
-        varaibleExplaination: {},
+        description: "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
+        varaibleExplaination: {
+          [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
+          [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
+        },
       },
     ],
     failureCriteria: [
@@ -498,7 +519,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [COMPLICATION_CODES.COMPLICATIONS_NUMBER],
         },
         description:
-          "Si le patient dévelloppe une complication, c'est un échec du traitement",
+          "Critère d'échec de la phase 2: apparition de toute complication active (COMPLICATIONS_NUMBER > 0).",
         variablesExplanation: {},
       },
       {
@@ -507,7 +528,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [APPETITE_TEST_CODES.CODE],
         },
         description:
-          "L'échec du test d'appetit est un critère d'echec de la phase de réhabilitation",
+          "Critère d'échec de la phase 2: test d'appétit négatif.",
         variablesExplanation: {},
       },
       {
@@ -516,7 +537,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [CLINICAL_SIGNS.EDEMA],
         },
         description:
-          "L'apparition d'œdème bilatéraux aucour de la phase de réhabiliation est un critère d'echec de la phase de réhabiliation",
+          "Critère d'échec de la phase 2: apparition d'œdèmes bilatéraux.",
         variablesExplanation: {},
       },
       {
@@ -528,7 +549,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           ],
         },
         description:
-          "L'apparition d'une diarrhée de renutrition avec perte pondérale est un critère d'échec de la phase de réhabilitation.",
+          "Critère d'échec de la phase 2: diarrhée de renutrition associée à une perte de poids.",
         variablesExplanation: {
           [CLINICAL_SIGNS.DIARRHEA]: "Présence de diarrhée",
           [CALCULATED_MONITORING_ELEMENT.WEIGHT_CHANGE_RATE_DURING_DIARRHEA]:
@@ -541,7 +562,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [],
         },
         description:
-          "Une perte de poids de 5% à n'importe quel moment ou une stagnation du poids pendant trois prise consecutive est un critère d'echec de la phase réhabilitation.",
+          "Critère d'échec de la phase 2: perte de poids ≥ 5% à n'importe quel moment OU stagnation sur 3 mesures consécutives.",
         variablesExplanation: {},
       },
       {
@@ -550,7 +571,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [],
         },
         description:
-          "Lorsque le poids du patient est stable depuis le debut de la phase de réhabilitation jusqu'au jours 21 du traitement , cela est un critère d'echec de la phase.",
+          "Critère d'échec de la phase 2: stagnation pondérale (gain nul) jusqu'au 21e jour.",
         variablesExplanation: {},
       },
       {
@@ -559,7 +580,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [],
         },
         description:
-          "Une perte de poids depuis le debut du traitement jusqu'au 14 jours, est un critère d'echec de la phase de réhabiliation.",
+          "Critère d'échec de la phase 2: perte de poids (gain négatif) maintenue pendant au moins 14 jours.",
         variablesExplanation: {},
       },
     ],
@@ -599,8 +620,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
               AnthroSystemCodes.WEIGHT,
             ],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "F-100 en phase 2 pour les ≥ 6 mois et ≥ 3 kg jusqu'à la fin de la phase.",
+          variableExplanation: {
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
+          },
         },
         identifier: TREATMENT_PLAN_IDS.CNT_PHASE2_F100,
         code: MilkType.F100,
@@ -616,8 +640,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
               AnthroSystemCodes.WEIGHT,
             ],
           },
-          descritpion: "",
-          varialbleExplaination: {},
+          descritpion: "F-100 dilué en phase 2 pour les <6 mois ou <3 kg jusqu'à la fin de la phase.",
+          variableExplanation: {
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
+          },
         },
         identifier: TREATMENT_PLAN_IDS.CNT_PHASE2_F100_DILUTED,
         code: MilkType.F100Diluted,
@@ -671,41 +698,4 @@ export const CARE_PHASES: CarePhaseReference[] = [
       type: "while_phase",
     },
   },
-  // {
-  //   applicabilyConditions: [
-  //     {
-  //       condition: {
-  //         value: ALWAYS_TRUE_CONDITION,
-  //         variables: [],
-  //       },
-  //       description: "",
-  //       varaibleExplaination: {},
-  //     },
-  //   ],
-  //   code: CARE_PHASE_CODES.CNT_INFANT_LT6m_LT3kg,
-  //   name: "Phase de prise en charge de MAS chez les moins de 6 mois ou moins de 3 kg allaité",
-  //   description: "",
-  //   duration: {
-  //     type: 'while_phase'
-  //   },
-  //   failureCriteria: [],
-  //   followUpPlan: [
-
-  //   ],
-  //   monitoringPlan: [
-  //     {
-  //       category: MONITORING_ELEMENT_CATEGORY.ANTHROPOMETRIC,
-  //       code: AnthroSystemCodes.WEIGHT,
-  //       frequency: {
-  //         intervalUnit: 'day',
-  //         intervalValue:1,
-  //         countInUnit: 1
-  //       },
-  //       source: MONITORING_VALUE_SOURCE.NOT_CALCULATED
-  //     }
-  //   ], 
-
-  //   recommendedTreatments: [],
-  //   transitionCriteria: []
-  // },
 ];

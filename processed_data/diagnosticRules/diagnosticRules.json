@@ -4,14 +4,22 @@
     "code": "SEVERE_ACUTE_MALNUTRITION",
     "conditions": [
       {
-        "value": "(wflh_unisex < (-3)) || (wflh < (-3))",
+        "value": "(wflh_unisex<(-3)) || (wflh<(-3))",
         "variables": [
           "wflh_unisex"
         ]
       },
       {
-        "value": "muac < 115",
+        "value": "((age_in_month >= 6) && (age_in_month< 96)) && ((wflh_unisex<(-3)) || (wflh<(-3)))",
         "variables": [
+          "age_in_month",
+          "wflh_unisex"
+        ]
+      },
+      {
+        "value": "((age_in_month >= 6) && (age_in_month<96)) && (muac<115)",
+        "variables": [
+          "age_in_month",
           "muac"
         ]
       },
@@ -19,6 +27,40 @@
         "value": "clinical_edema == 1",
         "variables": [
           "clinical_edema"
+        ]
+      },
+      {
+        "value": "(age_in_month<6) && ((wflh_unisex<(-3)) || (wflh<(-3)))",
+        "variables": [
+          "age_in_month",
+          "wflh_unisex"
+        ]
+      },
+      {
+        "value": "(age_in_month<6) && (wfa<(-3))",
+        "variables": [
+          "age_in_month",
+          "wfa"
+        ]
+      },
+      {
+        "value": "((age_in_month >= 60) && (age_in_month <= 216)) && (bmi_for_age<(-3))",
+        "variables": [
+          "age_in_month",
+          "bmi_for_age"
+        ]
+      },
+      {
+        "value": "((age_in_month >= 96) && (age_in_month <=  216)) && (wfh_unisex_nchs<(-3))",
+        "variables": [
+          "age_in_month",
+          "wfh_unisex_nchs"
+        ]
+      },
+      {
+        "value": "observation_muscle_loss == 1",
+        "variables": [
+          "observation_muscle_loss"
         ]
       }
     ]

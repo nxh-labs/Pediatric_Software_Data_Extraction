@@ -7,7 +7,7 @@ import {
 } from "../constants";
 import { ICondition } from "../src/IndicatorGeneration/types";
 import { ValueOf } from "../utils";
-import { MilkType } from "./Milk";
+import { MilkType } from "./Milk.next";
 
 export interface CarePhaseReference {
   applicabilyConditions: {
@@ -49,7 +49,7 @@ export interface RecommendedTreatment {
   applicabilityCondition: {
     condition: ICondition;
     descritpion: string;
-    varialbleExplaination: { [variable: string]: string };
+    variableExplanation: { [variable: string]: string };
   };
   type: RECOMMENDED_TREATMENT_TYPE;
   code: MilkType | MEDICINE_CODES;
@@ -124,7 +124,7 @@ export interface FollowUpAction {
   applicabilities: {
     description: string;
     condition: ICondition;
-    variableExplaination: {};
+    variableExplanation: {};
   }[];
   treatmentToApply: RecommendedTreatment[];
 }

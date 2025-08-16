@@ -15,7 +15,7 @@ export const saveNutritionalProducts = async () => {
     const nutritionalProductPath = path.join(nutritionalProductsDir, "products.json");
     fs.writeFileSync(nutritionalProductPath, JSON.stringify(nutritionalProducts, null, 2));
 
-    console.log("NutritionalProducts saved successfully!");
+    //console.log("NutritionalProducts saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving NutritionalProducts :", error);

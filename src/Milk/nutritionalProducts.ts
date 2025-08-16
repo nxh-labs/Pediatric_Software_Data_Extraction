@@ -27,7 +27,10 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F75 est administré lorsque le patient est en phase de stabilisation",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase de soin actuelle du patient (doit être CNT_PHASE1).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois pour ce tableau de doses).",
+          },
         },
         dosages: [
           {
@@ -245,7 +248,12 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F75 se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui presente d'œdème bilateraux.",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE1 (stabilisation).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
+            [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes bilatéraux (True).",
+          },
         },
         dosages: [
           {
@@ -312,7 +320,10 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F75 est donnée aux enfants de moins de 3kg ou moins de 6 mois allèté et presentant d'œdème",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_INFANT_LT6m_LT3kg.",
+            [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes (True).",
+          },
         },
         dosages: [
           {
@@ -390,7 +401,10 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué est donnée aux enfants de moins de 3kg ou moins de 6 mois allèté et ne presentant d'œdème",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_INFANT_LT6m_LT3kg.",
+            [CLINICAL_SIGNS.EDEMA]: "Absence d'œdèmes (False).",
+          },
         },
         dosages: [
           {
@@ -468,7 +482,12 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui ne presentent pas d'œdème bilateraux.",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE1 (stabilisation).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
+            [CLINICAL_SIGNS.EDEMA]: "Absence d'œdèmes (False).",
+          },
         },
         dosages: [
           {
@@ -540,7 +559,12 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui sont en phase de transition",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_TRANS_PHASE (transition).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
+            [CLINICAL_SIGNS.EDEMA]: "Absence d'œdèmes (False).",
+          },
         },
         dosages: [
           {
@@ -612,7 +636,12 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui sont en phase de réhabilitation",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE2 (réhabilitation).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
+            [CLINICAL_SIGNS.EDEMA]: "Absence d'œdèmes (False).",
+          },
         },
         dosages: [
           {
@@ -688,7 +717,11 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100 est donné en phase de transition aux enfants de plus de 6 mois et plus de 3 kg de poids corporelle",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_TRANS_PHASE (transition).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
+          },
         },
         dosages: [
           {
@@ -845,7 +878,11 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100 est donné en phase de réhabilitation aux enfants de plus de 6 mois et plus de 3 kg de poids corporelle",
-          variableExplaination: {},
+          variableExplanation: {
+            [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE2 (réhabilitation).",
+            [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
+            [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
+          },
         },
         dosages: [
           {

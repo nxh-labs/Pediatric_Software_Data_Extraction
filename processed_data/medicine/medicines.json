@@ -6,124 +6,73 @@
     "administrationRoutes": [
       "oral"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "label": "50-100 mg/kg/jour",
+      "frequency": 2,
+      "min": 50,
+      "max": 100,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "label": "50-100 mg/kg/jour",
-          "frequency": 2,
-          "min": 50,
-          "max": 100,
+        "amount": {
+          "value": 125,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 125,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 250,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 500,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 750,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": ">35 kg"
-            },
-            "amount": {
-              "value": 1000,
-              "unit": "mg"
-            },
-            "frequency": 2
-          }
-        ]
+        "frequency": 2
       },
       {
-        "baseDosage": {
-          "frequency": 2,
-          "max": 30,
-          "min": 30,
-          "label": "30 mg/kg/jour",
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 250,
           "unit": "mg"
         },
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight <3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "",
-          "variableExplaination": {
-            "weight": ""
-          }
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 0,
-              "max": 3,
-              "description": "0 - 3 kg"
-            },
-            "amount": {
-              "value": 90,
-              "unit": "mg"
-            },
-            "frequency": 2
-          }
-        ]
+        "amount": {
+          "value": 500,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 750,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": ">35 kg"
+        },
+        "amount": {
+          "value": 1000,
+          "unit": "mg"
+        },
+        "frequency": 2
       }
     ],
     "warnings": [
@@ -147,89 +96,73 @@
       "iv",
       "im"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "label": "100-200 mg/kg/jour",
+      "min": 100,
+      "max": 200,
+      "unit": "mg",
+      "frequency": 4
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "label": "100-200 mg/kg/jour",
-          "min": 100,
-          "max": 200,
-          "unit": "mg",
-          "frequency": 4
+        "amount": {
+          "value": 250,
+          "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 250,
-              "unit": "mg"
-            },
-            "frequency": 4
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 500,
-              "unit": "mg"
-            },
-            "frequency": 4
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 1,
-              "unit": "g"
-            },
-            "frequency": 4
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 2,
-              "unit": "g"
-            },
-            "frequency": 4
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "value": 3,
-              "unit": "g"
-            },
-            "frequency": 4
-          }
-        ]
+        "frequency": 4
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 500,
+          "unit": "mg"
+        },
+        "frequency": 4
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "value": 1,
+          "unit": "g"
+        },
+        "frequency": 4
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 2,
+          "unit": "g"
+        },
+        "frequency": 4
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "value": 3,
+          "unit": "g"
+        },
+        "frequency": 4
       }
     ],
     "warnings": [
@@ -254,150 +187,97 @@
       "im",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "label": "5 mg/kg/jour",
+      "min": 5,
+      "max": 5,
+      "unit": "mg",
+      "frequency": 1
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 0,
+          "max": 3,
+          "description": "<=3 kg"
         },
-        "baseDosage": {
-          "label": "5 mg/kg/jour",
-          "min": 5,
-          "max": 5,
-          "unit": "mg",
-          "frequency": 1
-        },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 0,
-              "max": 3,
-              "description": "<=3 kg"
-            },
-            "amount": {
-              "value": 10,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 3.1,
-              "max": 5,
-              "description": "3.1-5.0 kg"
-            },
-            "amount": {
-              "value": 20,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 5.1,
-              "max": 10,
-              "description": "5.1-10 kg"
-            },
-            "amount": {
-              "value": 40,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 10.1,
-              "max": 15,
-              "description": "10.1-15 kg"
-            },
-            "amount": {
-              "value": 60,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 15.1,
-              "max": 20,
-              "description": "15.1-20 kg"
-            },
-            "amount": {
-              "value": 80,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20-35 kg"
-            },
-            "amount": {
-              "value": 140,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": ">35 kg"
-            },
-            "amount": {
-              "value": 200,
-              "unit": "mg"
-            },
-            "frequency": 1
-          }
-        ]
-      },
-      {
-        "baseDosage": {
-          "frequency": 1,
-          "max": 5,
-          "min": 3,
-          "label": "3 - 5 mg/kg/jour",
+        "amount": {
+          "value": 10,
           "unit": "mg"
         },
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight <3) || (age_in_month < 6)",
-            "variables": [
-              "weight",
-              "age_in_month"
-            ]
-          },
-          "description": "",
-          "variableExplaination": {
-            "weight": ""
-          }
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 3.1,
+          "max": 5,
+          "description": "3.1-5.0 kg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 0,
-              "max": 3,
-              "description": "0 - 3 kg"
-            },
-            "amount": {
-              "minValue": 9,
-              "maxValue": 15,
-              "unit": "mg"
-            },
-            "frequency": 1
-          }
-        ]
+        "amount": {
+          "value": 20,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 5.1,
+          "max": 10,
+          "description": "5.1-10 kg"
+        },
+        "amount": {
+          "value": 40,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 10.1,
+          "max": 15,
+          "description": "10.1-15 kg"
+        },
+        "amount": {
+          "value": 60,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 15.1,
+          "max": 20,
+          "description": "15.1-20 kg"
+        },
+        "amount": {
+          "value": 80,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20-35 kg"
+        },
+        "amount": {
+          "value": 140,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": ">35 kg"
+        },
+        "amount": {
+          "value": 200,
+          "unit": "mg"
+        },
+        "frequency": 1
       }
     ],
     "warnings": [
@@ -421,89 +301,73 @@
       "im",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "frequency": 2,
+      "label": "50-100 mg/kg/jour",
+      "min": 50,
+      "max": 100,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "frequency": 2,
-          "label": "50-100 mg/kg/jour",
-          "min": 50,
-          "max": 100,
+        "amount": {
+          "value": 100,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 100,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 200,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 400,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 800,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "value": 1000,
-              "unit": "mg"
-            },
-            "frequency": 2
-          }
-        ]
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 200,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "value": 400,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 800,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "value": 1000,
+          "unit": "mg"
+        },
+        "frequency": 2
       }
     ],
     "warnings": [
@@ -527,89 +391,73 @@
       "oral",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "frequency": 3,
+      "label": "30-45 mg/kg/jour",
+      "min": 30,
+      "max": 45,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "frequency": 3,
-          "label": "30-45 mg/kg/jour",
-          "min": 30,
-          "max": 45,
+        "amount": {
+          "value": 50,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 50,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 100,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 200,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 400,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "value": 800,
-              "unit": "mg"
-            },
-            "frequency": 3
-          }
-        ]
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 100,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "value": 200,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 400,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "value": 800,
+          "unit": "mg"
+        },
+        "frequency": 3
       }
     ],
     "warnings": [
@@ -634,94 +482,78 @@
       "oral",
       "iv/im"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "frequency": 3,
+      "label": "100-200 mg/kg/jour",
+      "min": 100,
+      "max": 200,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "frequency": 3,
-          "label": "100-200 mg/kg/jour",
-          "min": 100,
-          "max": 200,
+        "amount": {
+          "minValue": 62.5,
+          "maxValue": 250,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "minValue": 62.5,
-              "maxValue": 250,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "minValue": 100,
-              "maxValue": 300,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "minValue": 250,
-              "maxValue": 750,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "minValue": 1,
-              "maxValue": 1.5,
-              "unit": "g"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "minValue": 2,
-              "maxValue": 6,
-              "unit": "g"
-            },
-            "frequency": 3
-          }
-        ]
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "minValue": 100,
+          "maxValue": 300,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "minValue": 250,
+          "maxValue": 750,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "minValue": 1,
+          "maxValue": 1.5,
+          "unit": "g"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "minValue": 2,
+          "maxValue": 6,
+          "unit": "g"
+        },
+        "frequency": 3
       }
     ],
     "warnings": [
@@ -745,94 +577,78 @@
       "oral",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "frequency": 1,
+      "label": "10-12 mg/kg/jour",
+      "min": 10,
+      "max": 12,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "frequency": 1,
-          "label": "10-12 mg/kg/jour",
-          "min": 10,
-          "max": 12,
+        "amount": {
+          "minValue": 30,
+          "maxValue": 60,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "minValue": 30,
-              "maxValue": 60,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "minValue": 60,
-              "maxValue": 100,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "minValue": 120,
-              "maxValue": 200,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "minValue": 250,
-              "maxValue": 350,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "minValue": 400,
-              "maxValue": 500,
-              "unit": "mg"
-            },
-            "frequency": 1
-          }
-        ]
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "minValue": 60,
+          "maxValue": 100,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "minValue": 120,
+          "maxValue": 200,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "minValue": 250,
+          "maxValue": 350,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "minValue": 400,
+          "maxValue": 500,
+          "unit": "mg"
+        },
+        "frequency": 1
       }
     ],
     "warnings": [
@@ -855,41 +671,25 @@
     "administrationRoutes": [
       "oral"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "label": "400.000 UI/jour",
+      "min": 400000,
+      "max": 400000,
+      "unit": "UI",
+      "frequency": 4
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 60,
+          "description": "3 - 60 kg"
         },
-        "baseDosage": {
-          "label": "400.000 UI/jour",
-          "min": 400000,
-          "max": 400000,
-          "unit": "UI",
-          "frequency": 4
+        "amount": {
+          "value": 100000,
+          "unit": "UI"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 60,
-              "description": "3 - 60 kg"
-            },
-            "amount": {
-              "value": 100000,
-              "unit": "UI"
-            },
-            "frequency": 4
-          }
-        ]
+        "frequency": 4
       }
     ],
     "warnings": [
@@ -910,89 +710,73 @@
       "oral",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "label": "3-6 mg/kg/jour",
+      "min": 3,
+      "max": 6,
+      "unit": "mg",
+      "frequency": 1
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
-        },
-        "baseDosage": {
-          "label": "3-6 mg/kg/jour",
+        "weightRange": {
           "min": 3,
-          "max": 6,
-          "unit": "mg",
-          "frequency": 1
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 15,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 30,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 60,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 120,
-              "unit": "mg"
-            },
-            "frequency": 1
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "value": 200,
-              "unit": "mg"
-            },
-            "frequency": 1
-          }
-        ]
+        "amount": {
+          "value": 15,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 30,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "value": 60,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 120,
+          "unit": "mg"
+        },
+        "frequency": 1
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "value": 200,
+          "unit": "mg"
+        },
+        "frequency": 1
       }
     ],
     "warnings": [
@@ -1018,30 +802,14 @@
       "oral",
       "iv/im"
     ],
-    "dosageCases": [
-      {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
-        },
-        "baseDosage": {
-          "label": "0.5-2 mg/kg/dose (2-3 fois / jour)",
-          "min": 1,
-          "max": 4,
-          "unit": "mg",
-          "frequency": 2
-        },
-        "dosageRanges": []
-      }
-    ],
+    "baseDosage": {
+      "label": "0.5-2 mg/kg/dose (2-3 fois / jour)",
+      "min": 1,
+      "max": 4,
+      "unit": "mg",
+      "frequency": 2
+    },
+    "dosageRanges": [],
     "warnings": [
       "Uniquement utilisé pour les DEFAILLANCES CARDIAQUES",
       "NE jamais donner pour la mobilisation des œdèmes"
@@ -1064,89 +832,73 @@
       "im",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "frequency": 2,
+      "label": "50-100 mg/kg/jour",
+      "min": 50,
+      "max": 100,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "frequency": 2,
-          "label": "50-100 mg/kg/jour",
-          "min": 50,
-          "max": 100,
+        "amount": {
+          "value": 100,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 100,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 200,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 400,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 800,
-              "unit": "mg"
-            },
-            "frequency": 2
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "value": 1000,
-              "unit": "mg"
-            },
-            "frequency": 2
-          }
-        ]
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 200,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "value": 400,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 800,
+          "unit": "mg"
+        },
+        "frequency": 2
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "value": 1000,
+          "unit": "mg"
+        },
+        "frequency": 2
       }
     ],
     "warnings": [
@@ -1172,89 +924,73 @@
       "oral",
       "iv"
     ],
-    "dosageCases": [
+    "baseDosage": {
+      "frequency": 3,
+      "label": "25-50 mg/kg/jour",
+      "min": 25,
+      "max": 50,
+      "unit": "mg"
+    },
+    "dosageRanges": [
       {
-        "dosageCondition": {
-          "condition": {
-            "value": "(weight >= 3)",
-            "variables": [
-              "weight"
-            ]
-          },
-          "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplaination": {
-            "weight": "Le poids du patient."
-          }
+        "weightRange": {
+          "min": 3,
+          "max": 5,
+          "description": "3 - 5 kg"
         },
-        "baseDosage": {
-          "frequency": 3,
-          "label": "25-50 mg/kg/jour",
-          "min": 25,
-          "max": 50,
+        "amount": {
+          "value": 62.5,
           "unit": "mg"
         },
-        "dosageRanges": [
-          {
-            "weightRange": {
-              "min": 3,
-              "max": 5,
-              "description": "3 - 5 kg"
-            },
-            "amount": {
-              "value": 62.5,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 5,
-              "max": 10,
-              "description": "5 - 10 kg"
-            },
-            "amount": {
-              "value": 125,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 10,
-              "max": 20,
-              "description": "10 - 20 kg"
-            },
-            "amount": {
-              "value": 250,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 20,
-              "max": 35,
-              "description": "20 - 35 kg"
-            },
-            "amount": {
-              "value": 500,
-              "unit": "mg"
-            },
-            "frequency": 3
-          },
-          {
-            "weightRange": {
-              "min": 35,
-              "max": null,
-              "description": "> 35 kg"
-            },
-            "amount": {
-              "value": 750,
-              "unit": "mg"
-            },
-            "frequency": 3
-          }
-        ]
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 5,
+          "max": 10,
+          "description": "5 - 10 kg"
+        },
+        "amount": {
+          "value": 125,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 10,
+          "max": 20,
+          "description": "10 - 20 kg"
+        },
+        "amount": {
+          "value": 250,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 20,
+          "max": 35,
+          "description": "20 - 35 kg"
+        },
+        "amount": {
+          "value": 500,
+          "unit": "mg"
+        },
+        "frequency": 3
+      },
+      {
+        "weightRange": {
+          "min": 35,
+          "max": null,
+          "description": "> 35 kg"
+        },
+        "amount": {
+          "value": 750,
+          "unit": "mg"
+        },
+        "frequency": 3
       }
     ],
     "warnings": [

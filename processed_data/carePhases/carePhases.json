@@ -1,0 +1,660 @@
+[
+  {
+    "code": "cnt_phase_aiguë",
+    "name": "Phase 1 (Aiguë) du traitement au CNT",
+    "description": "Stabilisation métabolique du patient sans chercher la prise de poids.",
+    "applicabilyConditions": [
+      {
+        "condition": {
+          "value": "(age_in_month >= 6) && (weight >= 3)",
+          "variables": [
+            "age_in_month",
+            "weight"
+          ]
+        },
+        "description": "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
+        "varaibleExplaination": {
+          "age_in_month": "Âge de l'enfant en mois (≥ 6 mois).",
+          "weight": "Poids actuel de l'enfant en kilogrammes (≥ 3 kg)."
+        }
+      }
+    ],
+    "failureCriteria": [
+      {
+        "condition": {
+          "value": "(days_in_phase >= 4) && (appetite_test_result == 'Negative')",
+          "variables": [
+            "days_in_phase",
+            "appetite_test_result"
+          ]
+        },
+        "description": "Absence de retour de l'appétit au 4ème jour.",
+        "variablesExplanation": {
+          "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle (Phase 1).",
+          "appetite_test_result": "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE')."
+        }
+      },
+      {
+        "condition": {
+          "value": "(days_in_phase >=4) && (observation_edema_godet_count >= initial_observation_edema_godet_count)",
+          "variables": []
+        },
+        "description": "Absence de perte d'œdèmes au 4ème jour.",
+        "variablesExplanation": {
+          "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle.",
+          "initial_observation_edema_godet_count": "Le niveau d'œdème actuel du patient (0, 1, 2, ou 3).",
+          "observation_edema_godet_count": "Le niveau d'œdème que le patient avait au début de cette phase."
+        }
+      },
+      {
+        "condition": {
+          "value": "(days_in_phase>=10) && (clinical_edema == 1)",
+          "variables": [
+            "days_in_phase",
+            "clinical_edema"
+          ]
+        },
+        "description": "Présence d'œdèmes persistants au 10ème jour.",
+        "variablesExplanation": {
+          "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle.",
+          "clinical_edema": "Un booléen (vrai/faux) indiquant si le patient a des œdèmes."
+        }
+      }
+    ],
+    "transitionCriteria": [
+      {
+        "condition": {
+          "value": "(appetite_test_result == 'Positive') && (complications_number == 0) && (observation_edema_godet_count <= 1)",
+          "variables": [
+            "appetite_test_result",
+            "complications_number",
+            "observation_edema_godet_count"
+          ]
+        },
+        "description": "Retour de l'appétit, stabilité clinique et début de fonte des œdèmes.",
+        "variablesExplanation": {
+          "appetite_test_result": "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE').",
+          "complications_number": "Le nombre total de complications médicales graves et actives.",
+          "observation_edema_godet_count": "Le niveau d'œdème actuel du patient. Le protocole demande un 'début de fonte', ce qui peut être interprété comme un niveau de + (1) ou 0."
+        }
+      }
+    ],
+    "recommendedTreatments": [
+      {
+        "identifier": "CNT_PHASE1::nutritional::F75",
+        "applicabilityCondition": {
+          "condition": {
+            "value": "((age_in_month >= 6) && (weight >=3)) || ((age_in_month < 6) && (weight < 3) && (clinical_edema == 1))",
+            "variables": [
+              "age_in_month",
+              "clinical_edema"
+            ]
+          },
+          "descritpion": "F-75 indiqué en phase de stabilisation: ≥6 mois et ≥3 kg, ou <6 mois/<3 kg avec œdèmes.",
+          "variableExplanation": {
+            "age_in_month": "Âge en mois pour distinguer <6m vs ≥6m.",
+            "clinical_edema": "Présence d'œdèmes (True/False)."
+          }
+        },
+        "code": "f75",
+        "type": "nutritional",
+        "duration": {
+          "type": "while_in_phase"
+        }
+      },
+      {
+        "identifier": "CNT_PHASE1::nutritional::F100::diluted",
+        "applicabilityCondition": {
+          "condition": {
+            "value": " (((age_in_month < 6) || (weight < 3)) && (clinical_edema == 0))",
+            "variables": [
+              "age_in_month",
+              "clinical_edema"
+            ]
+          },
+          "descritpion": "F-100 dilué en phase 1 pour les <6 mois ou <3 kg sans œdèmes.",
+          "variableExplanation": {
+            "age_in_month": "Âge en mois.",
+            "clinical_edema": "Présence d'œdèmes (True/False)."
+          }
+        },
+        "code": "f100_diluted",
+        "type": "nutritional",
+        "duration": {
+          "type": "while_in_phase"
+        }
+      },
+      {
+        "applicabilityCondition": {
+          "condition": {
+            "value": "0==0",
+            "variables": []
+          },
+          "descritpion": "Antibiothérapie systématique (Amoxicilline) pendant la phase 1.",
+          "variableExplanation": {}
+        },
+        "identifier": "CNT_PHASE1::systematic::AMOXICILLIN",
+        "code": "AMOX",
+        "type": "systematic",
+        "duration": {
+          "type": "while_in_phase"
+        }
+      }
+    ],
+    "monitoringPlan": [
+      {
+        "category": "anthropometric_monitoring_element",
+        "code": "weight",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "data_field_monitoring_element",
+        "code": "observation_edema_godet_count",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "data_field_monitoring_element",
+        "code": "vital_sign_temperature",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 2
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_diarrhea",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_vomiting",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_respiratory_distress",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_liver_signs",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "anthropometric_monitoring_element",
+        "code": "muac",
+        "frequency": {
+          "intervalUnit": "week",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      }
+    ],
+    "followUpPlan": [],
+    "duration": {
+      "type": "while_phase"
+    },
+    "nextPhase": "cnt_phase_transition",
+    "prevPhase": "cnt_phase_aiguë"
+  },
+  {
+    "code": "cnt_phase_transition",
+    "name": "Phase de Transition du traitement au CNT",
+    "description": "Préparation à la phase de réhabilitation nutritionnelle avec introduction de l'ATPE ou du F-100.",
+    "applicabilyConditions": [
+      {
+        "condition": {
+          "value": "(age_in_month >= 6) && (weight >= 3)",
+          "variables": [
+            "age_in_month",
+            "weight"
+          ]
+        },
+        "description": "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
+        "varaibleExplaination": {
+          "age_in_month": "Âge en mois (≥ 6 mois).",
+          "weight": "Poids en kg (≥ 3 kg)."
+        }
+      }
+    ],
+    "failureCriteria": [
+      {
+        "condition": {
+          "value": "((clinical_liver_signs == 1) || (weight_gain_rate_kg_day > 0.01) || (clinical_respiratory_distress == 1))",
+          "variables": [
+            "clinical_liver_signs",
+            "weight_gain_rate_kg_day",
+            "clinical_respiratory_distress"
+          ]
+        },
+        "description": "Signes de surcharge ou gain de poids trop rapide (>10g/kg/j), indiquant un risque. Le patient doit retourner en Phase 1.",
+        "variablesExplanation": {
+          "weight_gain_rate_kg_day": "Gain de poids en g/kg/jour",
+          "clinical_liver_signs": "Augmentation du volume du foie",
+          "clinical_respiratory_distress": "Augmentation de la fréquence respiratoire"
+        }
+      },
+      {
+        "condition": {
+          "value": "(clinical_diarrhea == 1) && (weight_change_rate_during_diarrhea < 0 )",
+          "variables": [
+            "clinical_diarrhea",
+            "weight_change_rate_during_diarrhea"
+          ]
+        },
+        "description": "Développement d'une diarrhée de renutrition entraînant une perte de poids.",
+        "variablesExplanation": {
+          "clinical_diarrhea": "Présence de diarrhée",
+          "weight_change_rate_during_diarrhea": "Le patient perds du poids durant la diarrhée."
+        }
+      }
+    ],
+    "transitionCriteria": [
+      {
+        "condition": {
+          "value": "(appetite_test_result == 'Positive') && (nutritional_milk_consumption_rate_percent_per_day >= 90) && (observation_edema_godet_count == 0)",
+          "variables": [
+            "appetite_test_result",
+            "nutritional_milk_consumption_rate_percent_per_day",
+            "observation_edema_godet_count"
+          ]
+        },
+        "description": "Un bon appétit soit une consommation de 90% d'ATPE et une fonte totale des œdèmes.",
+        "variablesExplanation": {
+          "appetite_test_result": "Le résultat du dernier test d'appétit ('POSITIVE' ou 'NEGATIVE').",
+          "nutritional_milk_consumption_rate_percent_per_day": "Pourcentage de la ration nutritionnelle journalière effectivement consommée par l'enfant (ATPE/laits).",
+          "observation_edema_godet_count": "Le niveau d'œdème actuel du patient. Le protocole demande un 'début de fonte', ce qui peut être interprété comme un niveau de + (1) ou 0."
+        }
+      }
+    ],
+    "recommendedTreatments": [
+      {
+        "applicabilityCondition": {
+          "condition": {
+            "value": "0==0",
+            "variables": []
+          },
+          "variableExplanation": {},
+          "descritpion": "Amoxicilline pendant 5 jours au début de la phase de transition."
+        },
+        "identifier": "CNT_TRANS_PHASE::systematic::AMOXICILLIN",
+        "code": "AMOX",
+        "duration": {
+          "type": "days",
+          "value": 5
+        },
+        "type": "systematic"
+      },
+      {
+        "applicabilityCondition": {
+          "condition": {
+            "value": "(age_in_month >= 6) && (weight >= 3)",
+            "variables": [
+              "age_in_month",
+              "weight"
+            ]
+          },
+          "descritpion": "F-100 pour les enfants ≥ 6 mois et ≥ 3 kg durant la phase de transition.",
+          "variableExplanation": {
+            "age_in_month": "Âge en mois.",
+            "weight": "Poids en kg."
+          }
+        },
+        "identifier": "CNT_TRANS_PHASE::nutritional::F100",
+        "code": "f100",
+        "duration": {
+          "type": "while_in_phase"
+        },
+        "type": "nutritional"
+      },
+      {
+        "applicabilityCondition": {
+          "condition": {
+            "value": "(age_in_month < 6) || (weight < 3)",
+            "variables": [
+              "age_in_month",
+              "weight"
+            ]
+          },
+          "descritpion": "F-100 dilué pour les <6 mois ou <3 kg durant la phase de transition.",
+          "variableExplanation": {
+            "age_in_month": "Âge en mois.",
+            "weight": "Poids en kg."
+          }
+        },
+        "identifier": "CNT_TRANS_PHASE::nutritional::F100::diluted",
+        "code": "f100_diluted",
+        "duration": {
+          "type": "while_in_phase"
+        },
+        "type": "nutritional"
+      }
+    ],
+    "monitoringPlan": [
+      {
+        "category": "anthropometric_monitoring_element",
+        "code": "weight",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "data_field_monitoring_element",
+        "code": "observation_edema_godet_count",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "data_field_monitoring_element",
+        "code": "vital_sign_temperature",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 2
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_diarrhea",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_vomiting",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_respiratory_distress",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_liver_signs",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "anthropometric_monitoring_element",
+        "code": "muac",
+        "frequency": {
+          "intervalUnit": "week",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      }
+    ],
+    "followUpPlan": [],
+    "nextPhase": "cnt_phase_rehabilitation",
+    "prevPhase": "cnt_phase_aiguë",
+    "duration": {
+      "type": "days",
+      "value": 6
+    }
+  },
+  {
+    "code": "cnt_phase_rehabilitation",
+    "name": "Phase 2 (Réhabilitation) du traitement au CNT",
+    "description": "Phase de réhabilitation nutritionnelle avec rattrapage pondéral (F-100), en préparation du transfert vers le CNA.",
+    "applicabilyConditions": [
+      {
+        "condition": {
+          "value": "(age_in_month >= 6) && (weight >=3)",
+          "variables": [
+            "age_in_month",
+            "weight"
+          ]
+        },
+        "description": "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
+        "varaibleExplaination": {
+          "age_in_month": "Âge en mois (≥ 6 mois).",
+          "weight": "Poids en kg (≥ 3 kg)."
+        }
+      }
+    ],
+    "failureCriteria": [
+      {
+        "condition": {
+          "value": "(complications_number > 0)",
+          "variables": [
+            "complications_number"
+          ]
+        },
+        "description": "Critère d'échec de la phase 2: apparition de toute complication active (COMPLICATIONS_NUMBER > 0).",
+        "variablesExplanation": {}
+      },
+      {
+        "condition": {
+          "value": "(appetite_test_result == 'Negative')",
+          "variables": [
+            "appetite_test_result"
+          ]
+        },
+        "description": "Critère d'échec de la phase 2: test d'appétit négatif.",
+        "variablesExplanation": {}
+      },
+      {
+        "condition": {
+          "value": "(clinical_edema == 1)",
+          "variables": [
+            "clinical_edema"
+          ]
+        },
+        "description": "Critère d'échec de la phase 2: apparition d'œdèmes bilatéraux.",
+        "variablesExplanation": {}
+      },
+      {
+        "condition": {
+          "value": "(clinical_diarrhea == 1) && (weight_change_rate_during_diarrhea < 0)",
+          "variables": [
+            "clinical_diarrhea",
+            "weight_change_rate_during_diarrhea"
+          ]
+        },
+        "description": "Critère d'échec de la phase 2: diarrhée de renutrition associée à une perte de poids.",
+        "variablesExplanation": {
+          "clinical_diarrhea": "Présence de diarrhée",
+          "weight_change_rate_during_diarrhea": "Variation du poids pendant l'épisode de diarrhée"
+        }
+      },
+      {
+        "condition": {
+          "value": "(weigth_loss_percent_between_two_consecutive_measurements >= 5) || (weigth_loss_percent_between_three_consecutive_measurements == 0)",
+          "variables": []
+        },
+        "description": "Critère d'échec de la phase 2: perte de poids ≥ 5% à n'importe quel moment OU stagnation sur 3 mesures consécutives.",
+        "variablesExplanation": {}
+      },
+      {
+        "condition": {
+          "value": "(weight_gain_rating_during_phase == 0) && (days_in_phase >= 21)",
+          "variables": []
+        },
+        "description": "Critère d'échec de la phase 2: stagnation pondérale (gain nul) jusqu'au 21e jour.",
+        "variablesExplanation": {}
+      },
+      {
+        "condition": {
+          "value": "(weight_gain_rating_during_phase < 0) && (days_in_phase >= 14)",
+          "variables": []
+        },
+        "description": "Critère d'échec de la phase 2: perte de poids (gain négatif) maintenue pendant au moins 14 jours.",
+        "variablesExplanation": {}
+      }
+    ],
+    "transitionCriteria": [
+      {
+        "condition": {
+          "value": "((((wflh_unisex >= (-1.5)) || (wflh >= (-1.5)) || (muac > 125)) && age_in_month < 96) || (((wfh_unisex_nchs >= (-1.5)) || (wflh >= (-1.5))) && (age_in_month >= 96))  && ((clinical_edema == 1) && ((change_day_clinical_edema - days_in_phase) >= 14 )))",
+          "variables": []
+        },
+        "description": "",
+        "variablesExplanation": {}
+      }
+    ],
+    "recommendedTreatments": [
+      {
+        "applicabilityCondition": {
+          "condition": {
+            "value": "(age_in_month >= 6) && (weight >= 3)",
+            "variables": [
+              "age_in_month",
+              "weight"
+            ]
+          },
+          "descritpion": "F-100 en phase 2 pour les ≥ 6 mois et ≥ 3 kg jusqu'à la fin de la phase.",
+          "variableExplanation": {
+            "age_in_month": "Âge en mois.",
+            "weight": "Poids en kg."
+          }
+        },
+        "identifier": "CNT_PHASE2::nutritional::F100",
+        "code": "f100",
+        "type": "nutritional",
+        "duration": {
+          "type": "while_in_phase"
+        }
+      },
+      {
+        "applicabilityCondition": {
+          "condition": {
+            "value": "(age_in_month < 6) || (weight < 3)",
+            "variables": [
+              "age_in_month",
+              "weight"
+            ]
+          },
+          "descritpion": "F-100 dilué en phase 2 pour les <6 mois ou <3 kg jusqu'à la fin de la phase.",
+          "variableExplanation": {
+            "age_in_month": "Âge en mois.",
+            "weight": "Poids en kg."
+          }
+        },
+        "identifier": "CNT_PHASE2::nutritional::F100::diluted",
+        "code": "f100_diluted",
+        "duration": {
+          "type": "while_in_phase"
+        },
+        "type": "nutritional"
+      }
+    ],
+    "monitoringPlan": [
+      {
+        "category": "anthropometric_monitoring_element",
+        "code": "weight",
+        "frequency": {
+          "intervalUnit": "week",
+          "intervalValue": 1,
+          "countInUnit": 3
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "clinical_signs_monitoring_element",
+        "code": "clinical_edema",
+        "frequency": {
+          "intervalUnit": "week",
+          "intervalValue": 1,
+          "countInUnit": 3
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "anthropometric_monitoring_element",
+        "code": "muac",
+        "frequency": {
+          "intervalUnit": "week",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "data_field_monitoring_element",
+        "code": "data_nutritional_milk_consumption_in_g_per_day",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      },
+      {
+        "category": "data_field_monitoring_element",
+        "code": "vital_sign_temperature",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
+        "source": "not_calculated_monitoring_value"
+      }
+    ],
+    "followUpPlan": [],
+    "prevPhase": "cnt_phase_aiguë",
+    "duration": {
+      "type": "while_phase"
+    }
+  }
+]

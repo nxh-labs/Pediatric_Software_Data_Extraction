@@ -1,13 +1,12 @@
 import {
   CLINICAL_SIGNS,
-  FieldDataType as ClinicalDataType,
   ConditionResult,
   OBSERVATIONS,
 } from "../../constants";
-import { ClinicalSignReference } from "../../types";
+import { Next_ClinicalSignReference } from "../../types";
 import { fExp } from "../../utils";
 
-export const diagnosticClinicalRefs: ClinicalSignReference[] = [
+export const next_diagnosticClinicalRefs: Next_ClinicalSignReference[] = [
   {
     name: "Œdèmes bilatéraux",
     code: CLINICAL_SIGNS.EDEMA,
@@ -17,20 +16,11 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Présence d'œdèmes bilatéraux",
         code: OBSERVATIONS.EDEMA_PRESENCE,
-        question:
-          "L'enfant présente-t-il des œdèmes bilatéraux prenant le godet ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
       {
-        name: "Degré de sévérité des œdèmes",
         code: OBSERVATIONS.EDEMA_GODET_COUNT,
-        question:
-          "Quel est le degré de sévérité des œdèmes ? (0=Absent, 1=Léger/pieds, 2=Modéré/jambes et mains, 3=Sévère/généralisé)",
-        dataType: ClinicalDataType.RANGE,
-        dataRange: [0, 3],
         required: false,
       },
     ],
@@ -46,11 +36,8 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "État de la peau",
         code: OBSERVATIONS.SKIN_CHANGES,
-        question:
-          "Observez-vous des altérations cutanées (peau sèche, crevasses) ?",
-        dataType: ClinicalDataType.BOOL,
+
         required: true,
       },
     ],
@@ -66,11 +53,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "État des cheveux",
         code: OBSERVATIONS.HAIR_CHANGES,
-        question:
-          "Les cheveux sont-ils secs, cassants, ternes ou anormalement fins ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -86,11 +69,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Altérations des ongles",
         code: OBSERVATIONS.NAIL_CHANGES,
-        question:
-          "Les ongles présentent-ils des striations ou des déformations ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -106,10 +85,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "État de la cornée",
         code: OBSERVATIONS.CORNEA_CHANGES,
-        question: "Observez-vous une sclérose ou une opacité de la cornée ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -125,11 +101,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "État de la langue et la bouche",
         code: OBSERVATIONS.MOUTH_CHANGES,
-        question:
-          "Y a-t-il présence d'une langue dépapillée ou d'une stomatite excoriante ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -145,10 +117,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Signes hémorragiques",
         code: OBSERVATIONS.HEMORRHAGE_SIGNS,
-        question: "Observez-vous des pétéchies ou des ecchymoses ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -164,10 +133,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Perte musculaire",
         code: OBSERVATIONS.MUSCLE_LOSS,
-        question: "Observez-vous une perte de la masse musculaire ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -183,10 +149,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Signes neurologiques",
         code: OBSERVATIONS.NEURO_SIGNS,
-        question: "L'enfant présente-t-il des paresthésies ou une ataxie ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],
@@ -202,10 +165,7 @@ export const diagnosticClinicalRefs: ClinicalSignReference[] = [
     },
     data: [
       {
-        name: "Hépatomégalie",
         code: OBSERVATIONS.HEPATOMEGALY,
-        question: "Constatez-vous une hépatomégalie ?",
-        dataType: ClinicalDataType.BOOL,
         required: true,
       },
     ],

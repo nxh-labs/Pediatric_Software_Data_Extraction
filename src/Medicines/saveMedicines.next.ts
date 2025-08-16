@@ -1,12 +1,12 @@
 import fs from "fs";
 import path from "path";
 import { processedDataDir } from "../../devConstants";
-import { medicines } from "./Medicines";
+import { next_medicines } from "./Medicines.next";
 
 /**
  * Save medicine to JSON files
  */
-export const saveMedicines = async () => {
+export const saveMedicinesNext = async () => {
   try {
     // Create medicines directory if it doesn't exist
     const medicineDir = path.join(processedDataDir, "medicine");
@@ -14,8 +14,8 @@ export const saveMedicines = async () => {
       fs.mkdirSync(medicineDir, { recursive: true });
     }
 
-    const medicinesPath = path.join(medicineDir, "medicines.json");
-    fs.writeFileSync(medicinesPath, JSON.stringify(medicines, null, 2));
+    const medicinesPath = path.join(medicineDir, "medicines.next.json");
+    fs.writeFileSync(medicinesPath, JSON.stringify(next_medicines, null, 2));
 
     //console.log("Medicines saved successfully!");
     return true;

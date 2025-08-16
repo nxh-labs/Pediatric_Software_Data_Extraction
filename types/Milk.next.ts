@@ -42,7 +42,7 @@ export interface DosageScenario {
   applicability: {
     condition: ICondition;
     descritption: string;
-    variableExplaination: { [variable: string]: string };
+    variableExplanation: { [variable: string]: string };
   };
   dosages: DosageByWeight[];
 }

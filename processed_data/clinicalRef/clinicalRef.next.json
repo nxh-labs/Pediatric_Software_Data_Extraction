@@ -11,10 +11,7 @@
     },
     "data": [
       {
-        "name": "Température corporelle",
         "code": "vital_sign_temperature",
-        "question": "Quelle est la température axillaire du patient (en degrés Celsius) ?",
-        "dataType": "number",
         "required": true
       }
     ]
@@ -31,10 +28,7 @@
     },
     "data": [
       {
-        "name": "Température corporelle",
         "code": "vital_sign_temperature",
-        "question": "Quelle est la température corporelle du patient (température axillaire) ?",
-        "dataType": "number",
         "required": true
       }
     ]
@@ -53,24 +47,15 @@
     },
     "data": [
       {
-        "name": "Aspect des paupières pendant le sommeil",
         "code": "question_eyelids_during_sleep",
-        "question": "L'enfant garde-t-il les yeux partiellement ouverts pendant son sommeil ?",
-        "dataType": "boolean",
         "required": true
       },
       {
-        "name": "Température corporelle",
         "code": "vital_sign_temperature",
-        "question": "Quelle est la température corporelle du patient (température axillaire) ?",
-        "dataType": "number",
         "required": true
       },
       {
-        "name": "Clarté et conscience",
         "code": "question_consciousness_level",
-        "question": "L'enfant présente-t-il une diminution de sa réactivité ou de son niveau de conscience ?",
-        "dataType": "boolean",
         "required": true
       }
     ]
@@ -87,10 +72,7 @@
     },
     "data": [
       {
-        "name": "Nombre de selles liquides par jour",
         "code": "data_liquid_stool_count_per_day",
-        "question": "Combien de selles liquides l'enfant a-t-il eu durant les dernières 24 heures ?",
-        "dataType": "number",
         "required": true
       }
     ]
@@ -107,10 +89,7 @@
     },
     "data": [
       {
-        "name": "Nombre de vomissements par jour",
         "code": "data_vomiting_count",
-        "question": "Quel est le nombre de vomissements au cours des dernières 24h ?",
-        "dataType": "number",
         "required": true
       }
     ]
@@ -128,27 +107,11 @@
     },
     "data": [
       {
-        "name": "État Général",
         "code": "data_general_condition",
-        "question": "Comment évaluez-vous l'état général du patient ? (normal ou altéré)",
-        "dataType": "enum",
-        "required": true,
-        "enumValue": [
-          {
-            "value": "altered",
-            "label": "Altéré"
-          },
-          {
-            "value": "normal",
-            "label": "Normal"
-          }
-        ]
+        "required": true
       },
       {
-        "name": "Température Corporelle",
         "code": "vital_sign_temperature",
-        "question": "Quelle est la température corporelle du patient (température axillaire) ?",
-        "dataType": "number",
         "required": true
       }
     ]
@@ -167,17 +130,11 @@
     },
     "data": [
       {
-        "name": "Fréquence respiratoire",
         "code": "vital_sign_respiratory_rate",
-        "question": "Combien de respirations par minute l'enfant effectue-t-il (sur une minute complète) ?",
-        "dataType": "number",
         "required": true
       },
       {
-        "name": "Tirage sous-costal",
         "code": "observation_subcostal_retraction",
-        "question": "Observez-vous un creusement sous les côtes lors de la respiration de l'enfant ?",
-        "dataType": "boolean",
         "required": true
       }
     ]
@@ -193,21 +150,11 @@
     },
     "data": [
       {
-        "name": "Présence d'œdèmes bilatéraux",
         "code": "observation_edema_presence",
-        "question": "L'enfant présente-t-il des œdèmes bilatéraux prenant le godet ?",
-        "dataType": "boolean",
         "required": true
       },
       {
-        "name": "Degré de sévérité des œdèmes",
         "code": "observation_edema_godet_count",
-        "question": "Quel est le degré de sévérité des œdèmes ? (0=Absent, 1=Léger/pieds, 2=Modéré/jambes et mains, 3=Sévère/généralisé)",
-        "dataType": "range",
-        "dataRange": [
-          0,
-          3
-        ],
         "required": false
       }
     ],
@@ -224,10 +171,7 @@
     },
     "data": [
       {
-        "name": "État de la peau",
         "code": "observation_skin_changes",
-        "question": "Observez-vous des altérations cutanées (peau sèche, crevasses) ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -244,10 +188,7 @@
     },
     "data": [
       {
-        "name": "État des cheveux",
         "code": "observation_hair_changes",
-        "question": "Les cheveux sont-ils secs, cassants, ternes ou anormalement fins ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -264,10 +205,7 @@
     },
     "data": [
       {
-        "name": "Altérations des ongles",
         "code": "observation_nail_changes",
-        "question": "Les ongles présentent-ils des striations ou des déformations ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -284,10 +222,7 @@
     },
     "data": [
       {
-        "name": "État de la cornée",
         "code": "observation_cornea_changes",
-        "question": "Observez-vous une sclérose ou une opacité de la cornée ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -304,10 +239,7 @@
     },
     "data": [
       {
-        "name": "État de la langue et la bouche",
         "code": "observation_mouth_changes",
-        "question": "Y a-t-il présence d'une langue dépapillée ou d'une stomatite excoriante ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -324,10 +256,7 @@
     },
     "data": [
       {
-        "name": "Signes hémorragiques",
         "code": "observation_hemorrhage_signs",
-        "question": "Observez-vous des pétéchies ou des ecchymoses ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -344,10 +273,7 @@
     },
     "data": [
       {
-        "name": "Perte musculaire",
         "code": "observation_muscle_loss",
-        "question": "Observez-vous une perte de la masse musculaire ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -364,10 +290,7 @@
     },
     "data": [
       {
-        "name": "Signes neurologiques",
         "code": "observation_neuro_signs",
-        "question": "L'enfant présente-t-il des paresthésies ou une ataxie ?",
-        "dataType": "boolean",
         "required": true
       }
     ],
@@ -384,10 +307,7 @@
     },
     "data": [
       {
-        "name": "Hépatomégalie",
         "code": "observation_hepatomegaly",
-        "question": "Constatez-vous une hépatomégalie ?",
-        "dataType": "boolean",
         "required": true
       }
     ],

@@ -1,0 +1,159 @@
+[
+  {
+    "name": "HOME: ",
+    "code": "ORIENTATION_HOME",
+    "criteria": [
+      {
+        "condition": {
+          "value": "(((muac >= 125) && (age_in_month < 96) && (age_in_month >= 6)  && (wflh_unisex > (-2)) && (clinical_edema == 0) && (complications_number == 0)))",
+          "variables": [
+            "muac",
+            "wflh_unisex",
+            "age_in_month",
+            "clinical_edema",
+            "complications_number"
+          ]
+        },
+        "description": "Enfant sans MAM/MAS (6-<96 mois) avec MUAC ≥125 ou WFLH > -2, sans œdème et sans complication: orientation domicile.",
+        "variableExplanation": {
+          "muac": "Périmètre brachial en mm; seuil normal ≥ 125 mm.",
+          "wflh_unisex": "Z-score poids-pour-taille OMS; normal si > -2.",
+          "age_in_month": "Âge en mois (entre 6 et <96 mois).",
+          "clinical_edema": "Présence d'œdèmes bilatéraux (False attendu).",
+          "complications_number": "Nombre de complications actives (0 attendu)."
+        }
+      }
+    ]
+  },
+  {
+    "name": "CRENAM: Centre de prise en charge de la malnutrition aiguë modérée",
+    "code": "ORIENTATION_CRENAM",
+    "criteria": [
+      {
+        "condition": {
+          "value": "(age_in_month >= 6) && (((wflh_unisex >= (-3)) && (wflh_unisex<(-2)))||((muac>=115) && (muac<125))) && (clinical_edema == 0)",
+          "variables": [
+            "age_in_month",
+            "wflh_unisex",
+            "muac",
+            "clinical_edema"
+          ]
+        },
+        "description": "",
+        "variableExplanation": {}
+      },
+      {
+        "condition": {
+          "value": "history_previous_treatment == 'ORIENTATION_CNT'",
+          "variables": [
+            "history_previous_treatment"
+          ]
+        },
+        "description": "Patient précédemment orienté au CNT (historique): maintien/retour vers CRENAM si état actuel compatible.",
+        "variableExplanation": {
+          "history_previous_treatment": "Orientation précédente enregistrée dans l'historique (code)."
+        }
+      }
+    ]
+  },
+  {
+    "name": "CNT: Centre de prise en charge de la malnutrtition aigue Severe avec complication",
+    "code": "ORIENTATION_CNT",
+    "criteria": [
+      {
+        "condition": {
+          "value": "(((age_in_month >= 6) && (weight >= 3)) && (age_in_month < 96)) && ((wflh_unisex < (-3)) || (clinical_edema == 1) || (muac < 115) || (complications_number > 0) || (appetite_test_result == 'Negative'))",
+          "variables": [
+            "age_in_month",
+            "wflh_unisex",
+            "clinical_edema",
+            "complications_number",
+            "weight"
+          ]
+        },
+        "description": "Critères de MAS/complication (6-<96 mois, poids ≥3 kg): WFLH < -3 ou œdèmes, ou MUAC <115, ou complication, ou test d'appétit négatif ⇒ CNT.",
+        "variableExplanation": {
+          "age_in_month": "Âge en mois (6 à <96).",
+          "weight": "Poids en kg (≥ 3 kg).",
+          "wflh_unisex": "Z-score OMS poids-pour-taille (< -3 = MAS).",
+          "clinical_edema": "Œdèmes bilatéraux (True = MAS oedémateux).",
+          "complications_number": "Nb de complications actives (>0)."
+        }
+      },
+      {
+        "condition": {
+          "value": "((age_in_month >= 96) && (age_in_month < 228)) && ((wfh_unisex_nchs < (-3)) || (clinical_edema == 1)|| (complications_number > 0) || (appetite_test_result == 'Negative'))",
+          "variables": [
+            "age_in_month",
+            "wfh_unisex_nchs",
+            "clinical_edema",
+            "complications_number",
+            "appetite_test_result"
+          ]
+        },
+        "description": "≥8 ans: WFH (NCHS) < -3, ou œdèmes, ou complication, ou test d'appétit négatif ⇒ CNT.",
+        "variableExplanation": {
+          "age_in_month": "Âge en mois (≥ 96 jusqu'à < 228).",
+          "wfh_unisex_nchs": "Z-score NCHS poids-pour-taille (< -3 = MAS).",
+          "clinical_edema": "Œdèmes bilatéraux (True).",
+          "complications_number": "Complications actives (>0).",
+          "appetite_test_result": "Résultat du test d'appétit (Negative = échec)."
+        }
+      },
+      {
+        "condition": {
+          "value": "(((age_in_month < 6) || (weight < 3)) && ((wfa < (-3)) || (clinical_edema == 1)|| (complications_number > 0))) && (data_is_breastfed == 0)",
+          "variables": [
+            "age_in_month",
+            "weight",
+            "clinical_edema",
+            "wfa",
+            "wflh_unisex",
+            "complications_number",
+            "data_is_breastfed"
+          ]
+        },
+        "description": "<6 mois ou <3 kg non allaité avec MAS/œdèmes/complications ⇒ CNT (unité nourrisson non allaité).",
+        "variableExplanation": {
+          "age_in_month": "Âge en mois (<6).",
+          "weight": "Poids en kg (<3).",
+          "wfa": "Z-score poids-pour-âge (< -3).",
+          "clinical_edema": "Œdèmes bilatéraux (True).",
+          "complications_number": "Complications actives (>0).",
+          "data_is_breastfed": "Statut d'allaitement (False = non allaité)."
+        }
+      }
+    ],
+    "treatmentPhase": "cnt_phase_aiguë"
+  },
+  {
+    "name": "CNT: Centre de nutrition Thérapeutique (Prise en charge des nourissons de moins de 6 mois ou moins de 3kg)",
+    "code": "ORIENTATION_CNT",
+    "criteria": [
+      {
+        "condition": {
+          "value": "(((age_in_month < 6) || (weight < 3)) && ((wfa < (-3)) || (clinical_edema == 1)|| (complications_number > 0))) && (data_is_breastfed == 1)",
+          "variables": [
+            "age_in_month",
+            "weight",
+            "clinical_edema",
+            "wfa",
+            "wflh_unisex",
+            "complications_number",
+            "data_is_breastfed"
+          ]
+        },
+        "description": "<6 mois ou <3 kg allaité avec MAS/œdèmes/complications ⇒ CNT (unité nourrisson allaité).",
+        "variableExplanation": {
+          "age_in_month": "Âge en mois (<6).",
+          "weight": "Poids en kg (<3).",
+          "wfa": "Z-score poids-pour-âge (< -3).",
+          "clinical_edema": "Œdèmes bilatéraux (True).",
+          "complications_number": "Complications actives (>0).",
+          "data_is_breastfed": "Statut d'allaitement (True = allaité)."
+        }
+      }
+    ],
+    "treatmentPhase": "cnt_infant_lt6m_lt3kg"
+  }
+]

@@ -16,7 +16,7 @@ export const saveMilks = async () => {
     const milksPath = path.join(milksDir, "milks.json");
     fs.writeFileSync(milksPath, JSON.stringify(milkRefs, null, 2));
 
-    console.log("Milks Refs saved successfully!");
+    //console.log("Milks Refs saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving milks references:", error);

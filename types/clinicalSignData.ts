@@ -1,6 +1,12 @@
-import { DATA_FIELD_CODE_TYPE } from "../constants";
+import { FieldDataType } from "../constants";
 
 export interface ClinicalSignData {
-  code: DATA_FIELD_CODE_TYPE;
+  name: string;
+  code: string;
+  question: string;
+  dataType: FieldDataType;
   required: boolean;
+  dataRange?: [number, number];
+  enumValue?: { label: string; value: string }[];
+  units?: { default: string; available: string[] };
 }

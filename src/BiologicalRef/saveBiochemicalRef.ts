@@ -29,7 +29,7 @@ export const saveBiochemicalRef = async () => {
       JSON.stringify(notVerifiedBiochemicalRef, null, 2)
     );
 
-    console.log("Biochemical references saved successfully!");
+   // console.log("Biochemical references saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving biochemical references:", error);

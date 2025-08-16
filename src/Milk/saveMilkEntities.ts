@@ -15,7 +15,7 @@ export const saveMilkEntities = async () => {
     const milksPath = path.join(milkEntityDir, "milk_entities.json");
     fs.writeFileSync(milksPath, JSON.stringify(milkEntities, null, 2));
 
-    console.log("Milk Entities saved successfully!");
+   // console.log("Milk Entities saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving Milk Entities :", error);

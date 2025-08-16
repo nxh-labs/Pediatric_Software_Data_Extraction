@@ -25,7 +25,7 @@ export const saveNutritionalRiskFactors = async () => {
       JSON.stringify(nutritionalRiskFactors, null, 2)
     );
 
-    console.log("Nutritional Risk Factors saved successfully!");
+    //console.log("Nutritional Risk Factors saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving Nutritional Risk Factors:", error);

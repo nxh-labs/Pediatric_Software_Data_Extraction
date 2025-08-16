@@ -265,7 +265,8 @@ export const DATA_POINTS = {
   VOMITING_COUNT: "data_vomiting_count",
   GENERAL_CONDITION: "data_general_condition",
   NUTRITIONAL_MILK_CONSUMPTION_G_PER_DAY:
-    "question_nutritional_milk_consumption_in_g_per_day",
+    "data_nutritional_milk_consumption_in_g_per_day",
+  IS_BREASTFED: "data_is_breastfed",
 } as const;
 
 export enum GENERAL_CONDITION_VALUES {
@@ -424,7 +425,7 @@ export const clinicalSignChangeDay = (code: ValueOf<typeof CLINICAL_SIGNS>) =>
 
 export const TREATMENT_PLAN_IDS = {
   CNT_PHASE1_F75: "CNT_PHASE1::nutritional::F75",
-  CNT_PHASE1_F100_DILUTED: 'CNT_PHASE1::nutritional::F100::diluted',
+  CNT_PHASE1_F100_DILUTED: "CNT_PHASE1::nutritional::F100::diluted",
   CNT_PHASE1_AMOXICILLIN: "CNT_PHASE1::systematic::AMOXICILLIN",
   CNT_TRANS_PHASE_F100: "CNT_TRANS_PHASE::nutritional::F100",
   CNT_TRANS_PHASE_F100_DILUTED: "CNT_TRANS_PHASE::nutritional::F100::diluted",

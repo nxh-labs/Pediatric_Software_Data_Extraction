@@ -1,13 +1,12 @@
 
 
 import { ICondition } from "../src/IndicatorGeneration/types";
-import { ClinicalSignData } from "./clinicalSignData";
+import { Next_ClinicalSignData } from "./clinicalSignData.next";
 
-
-export interface ClinicalSignReference {
+export interface Next_ClinicalSignReference {
   name: string;
   code: string;
   description: string;
   evaluationRule: ICondition;
-  data: ClinicalSignData[];
+  data: Next_ClinicalSignData[];
 }

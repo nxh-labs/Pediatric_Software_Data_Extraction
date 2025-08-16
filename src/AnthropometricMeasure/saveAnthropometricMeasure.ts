@@ -24,7 +24,7 @@ export const saveAnthropometricMeasures = async () => {
       JSON.stringify(anthropometricMeasures, null, 2)
     );
 
-    console.log("Anthropometric Measures saved successfully!");
+   // console.log("Anthropometric Measures saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving anthropometric measures:", error);

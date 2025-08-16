@@ -17,6 +17,13 @@ import {
   saveMilks,
   saveMilkEntities,
   saveNutritionalProducts,
+  saveCarePhases,
+  saveMedicinesNext,
+  saveClinicalRefsNext,
+  saveOrientationRefsNext,
+  saveDataFields,
+  
+
   // Indicateurs
   // Exporté par src/IndicatorGeneration
   // (via src/IndicatorGeneration/index.ts)
@@ -59,6 +66,11 @@ async function runExtraction(): Promise<void> {
     { name: "Milks", exec: () => saveMilks() },
     { name: "Milks Entities", exec: () => saveMilkEntities() },
     { name: "Nutritional Products", exec: () => saveNutritionalProducts() },
+    { name: "Clinical Reference (Next)", exec: () => saveClinicalRefsNext() },
+    { name: "Medicines (Next)", exec: () => saveMedicinesNext() },
+    { name: "Orientation References (Next)", exec: () => saveOrientationRefsNext() },
+    { name: "Cares Phases References", exec: () => saveCarePhases() },
+    { name: "DataFields References", exec: () => saveDataFields() },
   ];
 
   let hasError = false;

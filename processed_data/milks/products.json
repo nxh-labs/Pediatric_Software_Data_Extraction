@@ -12,7 +12,10 @@
             ]
           },
           "descritption": "Le F75 est administré lorsque le patient est en phase de stabilisation",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase de soin actuelle du patient (doit être CNT_PHASE1).",
+            "age_in_month": "Âge en mois (≥ 6 mois pour ce tableau de doses)."
+          }
         },
         "dosages": [
           {
@@ -304,7 +307,12 @@
             ]
           },
           "descritption": "Le F75 se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui presente d'œdème bilateraux.",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_PHASE1 (stabilisation).",
+            "age_in_month": "Âge en mois (< 6 mois).",
+            "weight": "Poids en kg (< 3 kg).",
+            "clinical_edema": "Présence d'œdèmes bilatéraux (True)."
+          }
         },
         "dosages": [
           {
@@ -399,7 +407,10 @@
             ]
           },
           "descritption": "Le F75 est donnée aux enfants de moins de 3kg ou moins de 6 mois allèté et presentant d'œdème",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_INFANT_LT6m_LT3kg.",
+            "clinical_edema": "Présence d'œdèmes (True)."
+          }
         },
         "dosages": [
           {
@@ -508,7 +519,10 @@
             ]
           },
           "descritption": "Le F100-dilué est donnée aux enfants de moins de 3kg ou moins de 6 mois allèté et ne presentant d'œdème",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_INFANT_LT6m_LT3kg.",
+            "clinical_edema": "Absence d'œdèmes (False)."
+          }
         },
         "dosages": [
           {
@@ -615,7 +629,12 @@
             ]
           },
           "descritption": "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui ne presentent pas d'œdème bilateraux.",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_PHASE1 (stabilisation).",
+            "age_in_month": "Âge en mois (< 6 mois).",
+            "weight": "Poids en kg (< 3 kg).",
+            "clinical_edema": "Absence d'œdèmes (False)."
+          }
         },
         "dosages": [
           {
@@ -713,7 +732,12 @@
             ]
           },
           "descritption": "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui sont en phase de transition",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_TRANS_PHASE (transition).",
+            "age_in_month": "Âge en mois (< 6 mois).",
+            "weight": "Poids en kg (< 3 kg).",
+            "clinical_edema": "Absence d'œdèmes (False)."
+          }
         },
         "dosages": [
           {
@@ -811,7 +835,12 @@
             ]
           },
           "descritption": "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui sont en phase de réhabilitation",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_PHASE2 (réhabilitation).",
+            "age_in_month": "Âge en mois (< 6 mois).",
+            "weight": "Poids en kg (< 3 kg).",
+            "clinical_edema": "Absence d'œdèmes (False)."
+          }
         },
         "dosages": [
           {
@@ -913,7 +942,11 @@
             ]
           },
           "descritption": "Le F100 est donné en phase de transition aux enfants de plus de 6 mois et plus de 3 kg de poids corporelle",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_TRANS_PHASE (transition).",
+            "age_in_month": "Âge en mois (≥ 6 mois).",
+            "weight": "Poids en kg (≥ 3 kg)."
+          }
         },
         "dosages": [
           {
@@ -1129,7 +1162,11 @@
             ]
           },
           "descritption": "Le F100 est donné en phase de réhabilitation aux enfants de plus de 6 mois et plus de 3 kg de poids corporelle",
-          "variableExplaination": {}
+          "variableExplanation": {
+            "current_care_phase": "Phase CNT_PHASE2 (réhabilitation).",
+            "age_in_month": "Âge en mois (≥ 6 mois).",
+            "weight": "Poids en kg (≥ 3 kg)."
+          }
         },
         "dosages": [
           {

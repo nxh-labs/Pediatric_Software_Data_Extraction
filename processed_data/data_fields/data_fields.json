@@ -1,0 +1,191 @@
+[
+  {
+    "category": "vital_sign_data_field",
+    "code": "vital_sign_temperature",
+    "label": "Température corporelle",
+    "question": "Quelle est la température axillaire du patient (en degrés Celsius) ?",
+    "type": "number",
+    "defaultValue": 37
+  },
+  {
+    "label": "Aspect des paupières pendant le sommeil",
+    "category": "question_data_field",
+    "code": "question_eyelids_during_sleep",
+    "question": "L'enfant garde-t-il les yeux partiellement ouverts pendant son sommeil ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Clarté et conscience",
+    "category": "question_data_field",
+    "code": "question_consciousness_level",
+    "question": "L'enfant présente-t-il une diminution de sa réactivité ou de son niveau de conscience ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Nombre de selles liquides par jour",
+    "category": "data_points_data_field",
+    "code": "data_liquid_stool_count_per_day",
+    "question": "Combien de selles liquides l'enfant a-t-il eu durant les dernières 24 heures ?",
+    "type": "number",
+    "defaultValue": 0
+  },
+  {
+    "label": "Nombre de vomissements par jour",
+    "category": "data_points_data_field",
+    "code": "data_vomiting_count",
+    "question": "Quel est le nombre de vomissements au cours des dernières 24h ?",
+    "type": "number",
+    "defaultValue": 0
+  },
+  {
+    "label": "État Général",
+    "category": "data_points_data_field",
+    "code": "data_general_condition",
+    "question": "Comment évaluez-vous l'état général du patient ? (normal ou altéré)",
+    "type": "enum",
+    "enumValue": [
+      {
+        "value": "altered",
+        "label": "Altéré"
+      },
+      {
+        "value": "normal",
+        "label": "Normal"
+      }
+    ],
+    "defaultValue": "normal"
+  },
+  {
+    "label": "Fréquence respiratoire",
+    "category": "vital_sign_data_field",
+    "code": "vital_sign_respiratory_rate",
+    "question": "Combien de respirations par minute l'enfant effectue-t-il (sur une minute complète) ?",
+    "type": "number",
+    "defaultValue": 0
+  },
+  {
+    "label": "Tirage sous-costal",
+    "category": "observation_data_field",
+    "code": "observation_subcostal_retraction",
+    "question": "Observez-vous un creusement sous les côtes lors de la respiration de l'enfant ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Présence d'œdèmes bilatéraux",
+    "category": "observation_data_field",
+    "code": "observation_edema_presence",
+    "question": "L'enfant présente-t-il des œdèmes bilatéraux prenant le godet ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Degré de sévérité des œdèmes",
+    "category": "observation_data_field",
+    "code": "observation_edema_godet_count",
+    "question": "Quel est le degré de sévérité des œdèmes ? (0=Absent, 1=Léger/pieds, 2=Modéré/jambes et mains, 3=Sévère/généralisé)",
+    "type": "range",
+    "dataRange": [
+      0,
+      3
+    ],
+    "defaultValue": 0
+  },
+  {
+    "label": "État de la peau",
+    "category": "observation_data_field",
+    "code": "observation_skin_changes",
+    "question": "Observez-vous des altérations cutanées (peau sèche, crevasses) ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "État des cheveux",
+    "category": "observation_data_field",
+    "code": "observation_hair_changes",
+    "question": "Les cheveux sont-ils secs, cassants, ternes ou anormalement fins ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Altérations des ongles",
+    "category": "observation_data_field",
+    "code": "observation_nail_changes",
+    "question": "Les ongles présentent-ils des striations ou des déformations ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "État de la cornée",
+    "category": "observation_data_field",
+    "code": "observation_cornea_changes",
+    "question": "Observez-vous une sclérose ou une opacité de la cornée ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "État de la langue et la bouche",
+    "category": "observation_data_field",
+    "code": "observation_mouth_changes",
+    "question": "Y a-t-il présence d'une langue dépapillée ou d'une stomatite excoriante ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Signes hémorragiques",
+    "category": "observation_data_field",
+    "code": "observation_hemorrhage_signs",
+    "question": "Observez-vous des pétéchies ou des ecchymoses ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Perte musculaire",
+    "category": "observation_data_field",
+    "code": "observation_muscle_loss",
+    "question": "Observez-vous une perte de la masse musculaire ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Signes neurologiques",
+    "category": "observation_data_field",
+    "code": "observation_neuro_signs",
+    "question": "L'enfant présente-t-il des paresthésies ou une ataxie ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Hépatoméalie",
+    "category": "observation_data_field",
+    "code": "observation_hepatomegaly",
+    "question": "Constatez-vous une hépatomégalie ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Allaitement actuel",
+    "category": "data_points_data_field",
+    "code": "data_is_breastfed",
+    "question": "L’enfant est-il actuellement allaité (lait maternel) ?",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "label": "Quantité quotidienne de lait thérapeutique",
+    "category": "data_points_data_field",
+    "code": "data_nutritional_milk_consumption_in_g_per_day",
+    "question": "Quelle est la quantité totale de lait thérapeutique consommée par l’enfant au cours des dernières 24 heures ?",
+    "type": "quantity",
+    "defaultValue": 0,
+    "units": {
+      "available": [
+        "g",
+        "ml"
+      ],
+      "default": "g"
+    }
+  }
+]

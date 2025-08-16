@@ -1,12 +1,12 @@
 import fs from "fs";
 import path from "path";
 import { processedDataDir } from "../../devConstants";
-import { orientationRefs } from "./OrientationRef";
+import {next_orientationRefs} from "./OrientationRef.next"
 
 /**
  * Save orientation references to JSON files
  */
-export const saveOrientationRefs = async () => {
+export const saveOrientationRefsNext = async () => {
   try {
     // Create orientation ref directory if it doesn't exist
     const orientationRefDir = path.join(processedDataDir, "orientationRef");
@@ -16,14 +16,14 @@ export const saveOrientationRefs = async () => {
 
     const orientationRefPath = path.join(
       orientationRefDir,
-      "orientationRef.json"
+      "orientationRef.next.json"
     );
     fs.writeFileSync(
       orientationRefPath,
-      JSON.stringify(orientationRefs, null, 2)
+      JSON.stringify(next_orientationRefs, null, 2)
     );
 
-   // console.log("Orientation references saved successfully!");
+    //console.log("Orientation references saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving orientation references:", error);

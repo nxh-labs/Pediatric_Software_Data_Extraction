@@ -23,7 +23,7 @@ export const saveDiagnosticRules = async () => {
       JSON.stringify(diagnosticRules, null, 2)
     );
 
-    console.log("Diagnostic Rules saved successfully!");
+  //  console.log("Diagnostic Rules saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving diagnostic rules:", error);

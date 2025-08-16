@@ -16,7 +16,7 @@ export const saveComplications= async () => {
     const complicationsPath = path.join(complicationsDir, "complications.json");
     fs.writeFileSync(complicationsPath, JSON.stringify(complicationRefs, null, 2));
 
-    console.log("Complications saved successfully!");
+    //console.log("Complications saved successfully!");
     return true;
   } catch (error) {
     console.error("Error saving complications:", error);

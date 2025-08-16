@@ -324,7 +324,7 @@ async function saveAllData() {
   try {
     await saveAllCharts();
     await saveAllTables();
-    console.log("Toutes les données ont été sauvegardées avec succès");
+    //console.log("Toutes les données ont été sauvegardées avec succès");
   } catch (error) {
     console.error("Erreur lors de la sauvegarde des données:", error);
   }
