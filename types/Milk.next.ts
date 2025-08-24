@@ -44,10 +44,30 @@ export interface DosageScenario {
     descritption: string;
     variableExplanation: { [variable: string]: string };
   };
+  conditionalDosageFormulas: ConditionalDosageFormula[];
   dosages: DosageByWeight[];
 }
 
 export interface DosageByWeight {
-  weight_kg: [number, number];
+  weight_kg: number;
   dosePerMeal: Partial<Record<RecommendedMilkPerDay, number>>;
+}
+export enum DosageFormulaUnit {
+  ML = 'ml',
+  G = 'g',
+  PACKET = 'packet'
+}
+export interface ConditionalDosageFormula {
+  applicabilities: Array<{
+    condition: ICondition;
+    description: string;
+    variableExplanation: Record<string, string>;
+  }>;
+  formula: {
+    min: ICondition;
+    max: ICondition | null;
+    unit: DosageFormulaUnit;
+    desciption: string;
+    variableExplanation: Record<string, string>;
+  };
 }

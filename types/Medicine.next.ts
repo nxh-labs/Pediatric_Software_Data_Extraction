@@ -61,14 +61,18 @@ export interface Next_Medicine {
   name: string;
   category: MedicineCategory;
   administrationRoutes: AdministrationRoute[];
-  dosageCases: DosageCase[]
+  dosageCases: DosageCase[];
   warnings?: string[];
   contraindications?: string[];
   interactions?: string[];
   notes?: string[];
 }
 export interface DosageCase {
-  dosageCondition: { condition: ICondition, description: string, variableExplanation: Record<string, string> }
+  dosageCondition: {
+    condition: ICondition;
+    description: string;
+    variableExplanation: Record<string, string>;
+  };
   baseDosage: BaseDosage;
   dosageRanges: DosageRange[];
 }

@@ -17,12 +17,71 @@
             "age_in_month": "Âge en mois (≥ 6 mois pour ce tableau de doses)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "(admission_clinical_edema == 0)",
+                  "variables": [
+                    "admission_clinical_edema"
+                  ]
+                },
+                "description": "Appliqué lorsque le patient ne présente pas d'œdème bilatéral à l'admission.",
+                "variableExplanation": {
+                  "admission_clinical_edema": "Indique la présence d'œdème bilatéral (False = pas d'œdème)."
+                }
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 130)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "Le volume de lait à administrer par jour est calculé en multipliant le poids du patient (en kg) par 130. Cette formule est utilisée pour les patients sans œdème.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          },
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "(admission_clinical_edema == 1)",
+                  "variables": [
+                    "admission_clinical_edema"
+                  ]
+                },
+                "description": "Appliqué lorsque le patient présente un œdème bilatéral à l'admission.",
+                "variableExplanation": {
+                  "admission_clinical_edema": "Indique la présence d'œdème bilatéral (True = œdème présent)."
+                }
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 100)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "Le volume de lait à administrer par jour est calculé en multipliant le poids du patient (en kg) par 100. Cette formule est utilisée pour les patients avec œdème.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              2,
-              2.1
-            ],
+            "weight_kg": 2,
             "dosePerMeal": {
               "5": 65,
               "6": 50,
@@ -30,10 +89,7 @@
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "5": 70,
               "6": 60,
@@ -41,10 +97,7 @@
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "5": 75,
               "6": 65,
@@ -52,10 +105,7 @@
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "5": 80,
               "6": 70,
@@ -63,10 +113,7 @@
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "5": 85,
               "6": 75,
@@ -74,10 +121,7 @@
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "5": 95,
               "6": 80,
@@ -85,10 +129,7 @@
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "5": 110,
               "6": 85,
@@ -96,10 +137,7 @@
             }
           },
           {
-            "weight_kg": [
-              4.5,
-              4.9
-            ],
+            "weight_kg": 4.5,
             "dosePerMeal": {
               "5": 120,
               "6": 95,
@@ -107,10 +145,7 @@
             }
           },
           {
-            "weight_kg": [
-              5,
-              5.4
-            ],
+            "weight_kg": 5,
             "dosePerMeal": {
               "5": 130,
               "6": 110,
@@ -118,10 +153,7 @@
             }
           },
           {
-            "weight_kg": [
-              5.5,
-              5.9
-            ],
+            "weight_kg": 5.5,
             "dosePerMeal": {
               "5": 150,
               "6": 120,
@@ -129,10 +161,7 @@
             }
           },
           {
-            "weight_kg": [
-              6,
-              6.9
-            ],
+            "weight_kg": 6,
             "dosePerMeal": {
               "5": 175,
               "6": 140,
@@ -140,10 +169,7 @@
             }
           },
           {
-            "weight_kg": [
-              7,
-              7.9
-            ],
+            "weight_kg": 7,
             "dosePerMeal": {
               "5": 200,
               "6": 160,
@@ -151,10 +177,7 @@
             }
           },
           {
-            "weight_kg": [
-              8,
-              8.9
-            ],
+            "weight_kg": 8,
             "dosePerMeal": {
               "5": 225,
               "6": 180,
@@ -162,10 +185,7 @@
             }
           },
           {
-            "weight_kg": [
-              9,
-              9.9
-            ],
+            "weight_kg": 9,
             "dosePerMeal": {
               "5": 250,
               "6": 190,
@@ -173,10 +193,7 @@
             }
           },
           {
-            "weight_kg": [
-              10,
-              10.9
-            ],
+            "weight_kg": 10,
             "dosePerMeal": {
               "5": 275,
               "6": 200,
@@ -184,10 +201,7 @@
             }
           },
           {
-            "weight_kg": [
-              11,
-              11.9
-            ],
+            "weight_kg": 11,
             "dosePerMeal": {
               "5": 275,
               "6": 230,
@@ -195,10 +209,7 @@
             }
           },
           {
-            "weight_kg": [
-              12,
-              12.9
-            ],
+            "weight_kg": 12,
             "dosePerMeal": {
               "5": 300,
               "6": 250,
@@ -206,10 +217,7 @@
             }
           },
           {
-            "weight_kg": [
-              13,
-              13.9
-            ],
+            "weight_kg": 13,
             "dosePerMeal": {
               "5": 350,
               "6": 275,
@@ -217,21 +225,7 @@
             }
           },
           {
-            "weight_kg": [
-              13,
-              13.9
-            ],
-            "dosePerMeal": {
-              "5": 350,
-              "6": 275,
-              "8": 230
-            }
-          },
-          {
-            "weight_kg": [
-              14,
-              14.9
-            ],
+            "weight_kg": 14,
             "dosePerMeal": {
               "5": 375,
               "6": 290,
@@ -239,10 +233,7 @@
             }
           },
           {
-            "weight_kg": [
-              15,
-              19.9
-            ],
+            "weight_kg": 15,
             "dosePerMeal": {
               "5": 400,
               "6": 300,
@@ -250,10 +241,7 @@
             }
           },
           {
-            "weight_kg": [
-              20,
-              24.9
-            ],
+            "weight_kg": 20,
             "dosePerMeal": {
               "5": 450,
               "6": 320,
@@ -261,10 +249,7 @@
             }
           },
           {
-            "weight_kg": [
-              25,
-              29.9
-            ],
+            "weight_kg": 25,
             "dosePerMeal": {
               "5": 450,
               "6": 350,
@@ -272,10 +257,7 @@
             }
           },
           {
-            "weight_kg": [
-              30,
-              39.9
-            ],
+            "weight_kg": 30,
             "dosePerMeal": {
               "5": 500,
               "6": 370,
@@ -283,10 +265,7 @@
             }
           },
           {
-            "weight_kg": [
-              40,
-              60
-            ],
+            "weight_kg": 40,
             "dosePerMeal": {
               "5": 500,
               "6": 400,
@@ -314,84 +293,85 @@
             "clinical_edema": "Présence d'œdèmes bilatéraux (True)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 130)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
+              "variableExplanation": {
+                "weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              0,
-              1.5
-            ],
+            "weight_kg": 0,
             "dosePerMeal": {
               "8": 30
             }
           },
           {
-            "weight_kg": [
-              1.6,
-              1.8
-            ],
+            "weight_kg": 1.6,
             "dosePerMeal": {
               "8": 35
             }
           },
           {
-            "weight_kg": [
-              1.9,
-              2.1
-            ],
+            "weight_kg": 1.9,
             "dosePerMeal": {
               "8": 40
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "8": 45
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "8": 50
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "8": 55
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "8": 60
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "8": 65
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "8": 70
             }
@@ -412,93 +392,91 @@
             "clinical_edema": "Présence d'œdèmes (True)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 130)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              0,
-              1.2
-            ],
+            "weight_kg": 0,
             "dosePerMeal": {
               "8": 25
             }
           },
           {
-            "weight_kg": [
-              1.3,
-              1.5
-            ],
+            "weight_kg": 1.3,
             "dosePerMeal": {
               "8": 30
             }
           },
           {
-            "weight_kg": [
-              1.6,
-              1.7
-            ],
+            "weight_kg": 1.6,
             "dosePerMeal": {
               "8": 35
             }
           },
           {
-            "weight_kg": [
-              1.8,
-              2.1
-            ],
+            "weight_kg": 1.8,
             "dosePerMeal": {
               "8": 40
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "8": 45
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "8": 50
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "8": 55
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "8": 60
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "8": 65
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "8": 70
             }
@@ -524,93 +502,91 @@
             "clinical_edema": "Absence d'œdèmes (False)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 130)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              0,
-              1.2
-            ],
+            "weight_kg": 0,
             "dosePerMeal": {
               "8": 25
             }
           },
           {
-            "weight_kg": [
-              1.3,
-              1.5
-            ],
+            "weight_kg": 1.3,
             "dosePerMeal": {
               "8": 30
             }
           },
           {
-            "weight_kg": [
-              1.6,
-              1.7
-            ],
+            "weight_kg": 1.6,
             "dosePerMeal": {
               "8": 35
             }
           },
           {
-            "weight_kg": [
-              1.8,
-              2.1
-            ],
+            "weight_kg": 1.8,
             "dosePerMeal": {
               "8": 40
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "8": 45
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "8": 50
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "8": 55
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "8": 60
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "8": 65
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "8": 70
             }
@@ -636,84 +612,85 @@
             "clinical_edema": "Absence d'œdèmes (False)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 130)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              0,
-              1.5
-            ],
+            "weight_kg": 0,
             "dosePerMeal": {
               "8": 30
             }
           },
           {
-            "weight_kg": [
-              1.6,
-              1.8
-            ],
+            "weight_kg": 1.6,
             "dosePerMeal": {
               "8": 35
             }
           },
           {
-            "weight_kg": [
-              1.9,
-              2.1
-            ],
+            "weight_kg": 1.9,
             "dosePerMeal": {
               "8": 40
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "8": 45
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "8": 50
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "8": 55
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "8": 60
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "8": 65
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "8": 70
             }
@@ -739,84 +716,90 @@
             "clinical_edema": "Absence d'œdèmes (False)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 150)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": {
+                "value": "(admission_weight * 170)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "unit": "ml",
+              "desciption": "Le volume de lait à administrer par jour est compris entre le poids du patient (en kg) multiplié par 150 et 170. Cette formule est utilisée pour les enfants en phase de transition sans œdème.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              0,
-              1.5
-            ],
+            "weight_kg": 0,
             "dosePerMeal": {
               "8": 40
             }
           },
           {
-            "weight_kg": [
-              1.6,
-              1.8
-            ],
+            "weight_kg": 1.6,
             "dosePerMeal": {
               "8": 45
             }
           },
           {
-            "weight_kg": [
-              1.9,
-              2.1
-            ],
+            "weight_kg": 1.9,
             "dosePerMeal": {
               "8": 55
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "8": 60
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "8": 65
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "8": 75
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "8": 80
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "8": 85
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "8": 95
             }
@@ -842,84 +825,85 @@
             "clinical_edema": "Absence d'œdèmes (False)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 200)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 200 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants en phase de réhabilitation sans œdème.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              0,
-              1.5
-            ],
+            "weight_kg": 0,
             "dosePerMeal": {
               "6": 60
             }
           },
           {
-            "weight_kg": [
-              1.6,
-              1.8
-            ],
+            "weight_kg": 1.6,
             "dosePerMeal": {
               "6": 70
             }
           },
           {
-            "weight_kg": [
-              1.9,
-              2.1
-            ],
+            "weight_kg": 1.9,
             "dosePerMeal": {
               "6": 80
             }
           },
           {
-            "weight_kg": [
-              2.2,
-              2.4
-            ],
+            "weight_kg": 2.2,
             "dosePerMeal": {
               "6": 90
             }
           },
           {
-            "weight_kg": [
-              2.5,
-              2.7
-            ],
+            "weight_kg": 2.5,
             "dosePerMeal": {
               "6": 100
             }
           },
           {
-            "weight_kg": [
-              2.8,
-              2.9
-            ],
+            "weight_kg": 2.8,
             "dosePerMeal": {
               "6": 110
             }
           },
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "6": 120
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "6": 130
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "8": 140
             }
@@ -948,202 +932,175 @@
             "weight": "Poids en kg (≥ 3 kg)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(admission_weight * 150)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "max": {
+                "value": "(admission_weight * 220)",
+                "variables": [
+                  "admission_weight"
+                ]
+              },
+              "unit": "ml",
+              "desciption": "Le volume de lait à administrer par jour est compris entre le poids du patient (en kg) multiplié par 150 et 220. Cette formule est utilisée pour les enfants en phase de transition sans œdème.",
+              "variableExplanation": {
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "5": 85,
               "6": 75
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "5": 95,
               "6": 80
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.4
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "5": 110,
               "6": 85
             }
           },
           {
-            "weight_kg": [
-              4.5,
-              4.9
-            ],
+            "weight_kg": 4.5,
             "dosePerMeal": {
               "5": 120,
               "6": 95
             }
           },
           {
-            "weight_kg": [
-              5,
-              5.4
-            ],
+            "weight_kg": 5,
             "dosePerMeal": {
               "5": 130,
               "6": 110
             }
           },
           {
-            "weight_kg": [
-              5.5,
-              5.9
-            ],
+            "weight_kg": 5.5,
             "dosePerMeal": {
               "5": 150,
               "6": 120
             }
           },
           {
-            "weight_kg": [
-              6,
-              6.9
-            ],
+            "weight_kg": 6,
             "dosePerMeal": {
               "5": 175,
               "6": 140
             }
           },
           {
-            "weight_kg": [
-              7,
-              7.9
-            ],
+            "weight_kg": 7,
             "dosePerMeal": {
               "5": 200,
               "6": 160
             }
           },
           {
-            "weight_kg": [
-              8,
-              8.9
-            ],
+            "weight_kg": 8,
             "dosePerMeal": {
               "5": 225,
               "6": 180
             }
           },
           {
-            "weight_kg": [
-              9,
-              9.9
-            ],
+            "weight_kg": 9,
             "dosePerMeal": {
               "5": 250,
               "6": 190
             }
           },
           {
-            "weight_kg": [
-              10,
-              10.9
-            ],
+            "weight_kg": 10,
             "dosePerMeal": {
               "5": 275,
               "6": 200
             }
           },
           {
-            "weight_kg": [
-              11,
-              11.9
-            ],
+            "weight_kg": 11,
             "dosePerMeal": {
               "5": 275,
               "6": 230
             }
           },
           {
-            "weight_kg": [
-              12,
-              12.9
-            ],
+            "weight_kg": 12,
             "dosePerMeal": {
               "5": 300,
               "6": 250
             }
           },
           {
-            "weight_kg": [
-              13,
-              13.9
-            ],
+            "weight_kg": 13,
             "dosePerMeal": {
               "5": 350,
               "6": 275
             }
           },
           {
-            "weight_kg": [
-              14,
-              14.9
-            ],
+            "weight_kg": 14,
             "dosePerMeal": {
               "5": 375,
               "6": 290
             }
           },
           {
-            "weight_kg": [
-              15,
-              19.9
-            ],
+            "weight_kg": 15,
             "dosePerMeal": {
               "5": 400,
               "6": 300
             }
           },
           {
-            "weight_kg": [
-              20,
-              24.9
-            ],
+            "weight_kg": 20,
             "dosePerMeal": {
               "5": 450,
               "6": 320
             }
           },
           {
-            "weight_kg": [
-              25,
-              29.9
-            ],
+            "weight_kg": 25,
             "dosePerMeal": {
               "5": 450,
               "6": 350
             }
           },
           {
-            "weight_kg": [
-              30,
-              39.9
-            ],
+            "weight_kg": 30,
             "dosePerMeal": {
               "5": 500,
               "6": 370
             }
           },
           {
-            "weight_kg": [
-              40,
-              60
-            ],
+            "weight_kg": 40,
             "dosePerMeal": {
               "5": 500,
               "6": 400
@@ -1168,152 +1125,135 @@
             "weight": "Poids en kg (≥ 3 kg)."
           }
         },
+        "conditionalDosageFormulas": [
+          {
+            "applicabilities": [
+              {
+                "condition": {
+                  "value": "0==0",
+                  "variables": []
+                },
+                "description": "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
+                "variableExplanation": {}
+              }
+            ],
+            "formula": {
+              "min": {
+                "value": "(weight * 220)",
+                "variables": [
+                  "weight"
+                ]
+              },
+              "max": null,
+              "unit": "ml",
+              "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 220 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants en phase de réhabilitation.",
+              "variableExplanation": {
+                "weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+              }
+            }
+          }
+        ],
         "dosages": [
           {
-            "weight_kg": [
-              3,
-              3.4
-            ],
+            "weight_kg": 3,
             "dosePerMeal": {
               "5": 130,
               "6": 110
             }
           },
           {
-            "weight_kg": [
-              3.5,
-              3.9
-            ],
+            "weight_kg": 3.5,
             "dosePerMeal": {
               "5": 150,
               "6": 125
             }
           },
           {
-            "weight_kg": [
-              4,
-              4.9
-            ],
+            "weight_kg": 4,
             "dosePerMeal": {
               "5": 160,
               "6": 135
             }
           },
           {
-            "weight_kg": [
-              5,
-              5.9
-            ],
+            "weight_kg": 5,
             "dosePerMeal": {
               "5": 190,
               "6": 160
             }
           },
           {
-            "weight_kg": [
-              6,
-              6.9
-            ],
+            "weight_kg": 6,
             "dosePerMeal": {
               "5": 215,
               "6": 180
             }
           },
           {
-            "weight_kg": [
-              7,
-              7.9
-            ],
+            "weight_kg": 7,
             "dosePerMeal": {
               "5": 240,
               "6": 200
             }
           },
           {
-            "weight_kg": [
-              8,
-              8.9
-            ],
+            "weight_kg": 8,
             "dosePerMeal": {
               "5": 260,
               "6": 215
             }
           },
           {
-            "weight_kg": [
-              9,
-              9.9
-            ],
+            "weight_kg": 9,
             "dosePerMeal": {
               "5": 270,
               "6": 225
             }
           },
           {
-            "weight_kg": [
-              10,
-              11.9
-            ],
+            "weight_kg": 10,
             "dosePerMeal": {
               "5": 280,
               "6": 230
             }
           },
           {
-            "weight_kg": [
-              12,
-              14.9
-            ],
+            "weight_kg": 12,
             "dosePerMeal": {
               "5": 310,
               "6": 260
             }
           },
           {
-            "weight_kg": [
-              15,
-              19.9
-            ],
+            "weight_kg": 15,
             "dosePerMeal": {
               "5": 360,
               "6": 300
             }
           },
           {
-            "weight_kg": [
-              20,
-              24.9
-            ],
+            "weight_kg": 20,
             "dosePerMeal": {
               "5": 440,
               "6": 370
             }
           },
           {
-            "weight_kg": [
-              25,
-              29.9
-            ],
+            "weight_kg": 25,
             "dosePerMeal": {
               "5": 500,
               "6": 420
             }
           },
           {
-            "weight_kg": [
-              30,
-              39.9
-            ],
+            "weight_kg": 30,
             "dosePerMeal": {
               "5": 540,
               "6": 450
             }
           },
           {
-            "weight_kg": [
-              40,
-              60
-            ],
+            "weight_kg": 40,
             "dosePerMeal": {
               "5": 640,
               "6": 530

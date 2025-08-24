@@ -419,10 +419,9 @@ export const CALCULATED_MONITORING_ELEMENT = {
   NUTRITIONAL_MILK_CONSUMPTION_RATE_PERCENT_PER_DAY:
     "nutritional_milk_consumption_rate_percent_per_day",
 } as const;
-export const initialValueCode = (code: string) => "initial_" + code;
-export const clinicalSignChangeDay = (code: ValueOf<typeof CLINICAL_SIGNS>) =>
-  "change_day_" + code;
-
+export const initialValueCode = <T extends string>(code: T): `initial_${T}` => `initial_${code}`;
+export const clinicalSignChangeDay = <T extends string>(code: T): `change_day_${T}` => `change_day_${code}`;
+export const admissionVariable = <T extends string>(code: T): `admission_${T}` => `admission_${code}`;
 export const TREATMENT_PLAN_IDS = {
   CNT_PHASE1_F75: "CNT_PHASE1::nutritional::F75",
   CNT_PHASE1_F100_DILUTED: "CNT_PHASE1::nutritional::F100::diluted",
