@@ -11,7 +11,7 @@ import {
   DosageFormulaUnit,
   MilkType,
   NutitionalProduct,
-  RecommendedMilkPerDay,
+  FeedingFrequenciePerDay,
 } from "../../types";
 import { fExp } from "../../utils";
 
@@ -89,197 +89,198 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           }
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 40,
-              [RecommendedMilkPerDay.SIX]: 50,
-              [RecommendedMilkPerDay.FIVE]: 65,
+              [FeedingFrequenciePerDay.EIGHT]: 40,
+              [FeedingFrequenciePerDay.SIX]: 50,
+              [FeedingFrequenciePerDay.FIVE]: 65,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 45,
-              [RecommendedMilkPerDay.SIX]: 60,
-              [RecommendedMilkPerDay.FIVE]: 70,
+              [FeedingFrequenciePerDay.EIGHT]: 45,
+              [FeedingFrequenciePerDay.SIX]: 60,
+              [FeedingFrequenciePerDay.FIVE]: 70,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 50,
-              [RecommendedMilkPerDay.SIX]: 65,
-              [RecommendedMilkPerDay.FIVE]: 75,
+              [FeedingFrequenciePerDay.EIGHT]: 50,
+              [FeedingFrequenciePerDay.SIX]: 65,
+              [FeedingFrequenciePerDay.FIVE]: 75,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 55,
-              [RecommendedMilkPerDay.SIX]: 70,
-              [RecommendedMilkPerDay.FIVE]: 80,
+              [FeedingFrequenciePerDay.EIGHT]: 55,
+              [FeedingFrequenciePerDay.SIX]: 70,
+              [FeedingFrequenciePerDay.FIVE]: 80,
             },
           },
           {
             weight_kg: 3,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 60,
-              [RecommendedMilkPerDay.SIX]: 75,
-              [RecommendedMilkPerDay.FIVE]: 85,
+              [FeedingFrequenciePerDay.EIGHT]: 60,
+              [FeedingFrequenciePerDay.SIX]: 75,
+              [FeedingFrequenciePerDay.FIVE]: 85,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 65,
-              [RecommendedMilkPerDay.SIX]: 80,
-              [RecommendedMilkPerDay.FIVE]: 95,
+              [FeedingFrequenciePerDay.EIGHT]: 65,
+              [FeedingFrequenciePerDay.SIX]: 80,
+              [FeedingFrequenciePerDay.FIVE]: 95,
             },
           },
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 70,
-              [RecommendedMilkPerDay.SIX]: 85,
-              [RecommendedMilkPerDay.FIVE]: 110,
+              [FeedingFrequenciePerDay.EIGHT]: 70,
+              [FeedingFrequenciePerDay.SIX]: 85,
+              [FeedingFrequenciePerDay.FIVE]: 110,
             },
           },
           {
             weight_kg: 4.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 80,
-              [RecommendedMilkPerDay.SIX]: 95,
-              [RecommendedMilkPerDay.FIVE]: 120,
+              [FeedingFrequenciePerDay.EIGHT]: 80,
+              [FeedingFrequenciePerDay.SIX]: 95,
+              [FeedingFrequenciePerDay.FIVE]: 120,
             },
           },
           {
             weight_kg: 5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 90,
-              [RecommendedMilkPerDay.SIX]: 110,
-              [RecommendedMilkPerDay.FIVE]: 130,
+              [FeedingFrequenciePerDay.EIGHT]: 90,
+              [FeedingFrequenciePerDay.SIX]: 110,
+              [FeedingFrequenciePerDay.FIVE]: 130,
             },
           },
           {
             weight_kg: 5.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 100,
-              [RecommendedMilkPerDay.SIX]: 120,
-              [RecommendedMilkPerDay.FIVE]: 150,
+              [FeedingFrequenciePerDay.EIGHT]: 100,
+              [FeedingFrequenciePerDay.SIX]: 120,
+              [FeedingFrequenciePerDay.FIVE]: 150,
             },
           },
           {
             weight_kg: 6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 110,
-              [RecommendedMilkPerDay.SIX]: 140,
-              [RecommendedMilkPerDay.FIVE]: 175,
+              [FeedingFrequenciePerDay.EIGHT]: 110,
+              [FeedingFrequenciePerDay.SIX]: 140,
+              [FeedingFrequenciePerDay.FIVE]: 175,
             },
           },
           {
             weight_kg: 7,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 125,
-              [RecommendedMilkPerDay.SIX]: 160,
-              [RecommendedMilkPerDay.FIVE]: 200,
+              [FeedingFrequenciePerDay.EIGHT]: 125,
+              [FeedingFrequenciePerDay.SIX]: 160,
+              [FeedingFrequenciePerDay.FIVE]: 200,
             },
           },
           {
             weight_kg: 8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 140,
-              [RecommendedMilkPerDay.SIX]: 180,
-              [RecommendedMilkPerDay.FIVE]: 225,
+              [FeedingFrequenciePerDay.EIGHT]: 140,
+              [FeedingFrequenciePerDay.SIX]: 180,
+              [FeedingFrequenciePerDay.FIVE]: 225,
             },
           },
           {
             weight_kg: 9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 155,
-              [RecommendedMilkPerDay.SIX]: 190,
-              [RecommendedMilkPerDay.FIVE]: 250,
+              [FeedingFrequenciePerDay.EIGHT]: 155,
+              [FeedingFrequenciePerDay.SIX]: 190,
+              [FeedingFrequenciePerDay.FIVE]: 250,
             },
           },
           {
             weight_kg: 10,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 170,
-              [RecommendedMilkPerDay.SIX]: 200,
-              [RecommendedMilkPerDay.FIVE]: 275,
+              [FeedingFrequenciePerDay.EIGHT]: 170,
+              [FeedingFrequenciePerDay.SIX]: 200,
+              [FeedingFrequenciePerDay.FIVE]: 275,
             },
           },
           {
             weight_kg: 11,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 190,
-              [RecommendedMilkPerDay.SIX]: 230,
-              [RecommendedMilkPerDay.FIVE]: 275,
+              [FeedingFrequenciePerDay.EIGHT]: 190,
+              [FeedingFrequenciePerDay.SIX]: 230,
+              [FeedingFrequenciePerDay.FIVE]: 275,
             },
           },
           {
             weight_kg: 12,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 205,
-              [RecommendedMilkPerDay.SIX]: 250,
-              [RecommendedMilkPerDay.FIVE]: 300,
+              [FeedingFrequenciePerDay.EIGHT]: 205,
+              [FeedingFrequenciePerDay.SIX]: 250,
+              [FeedingFrequenciePerDay.FIVE]: 300,
             },
           },
           {
             weight_kg: 13,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 230,
-              [RecommendedMilkPerDay.SIX]: 275,
-              [RecommendedMilkPerDay.FIVE]: 350,
+              [FeedingFrequenciePerDay.EIGHT]: 230,
+              [FeedingFrequenciePerDay.SIX]: 275,
+              [FeedingFrequenciePerDay.FIVE]: 350,
             },
           },
           {
             weight_kg: 14,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 250,
-              [RecommendedMilkPerDay.SIX]: 290,
-              [RecommendedMilkPerDay.FIVE]: 375,
+              [FeedingFrequenciePerDay.EIGHT]: 250,
+              [FeedingFrequenciePerDay.SIX]: 290,
+              [FeedingFrequenciePerDay.FIVE]: 375,
             },
           },
           {
             weight_kg: 15,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 260,
-              [RecommendedMilkPerDay.SIX]: 300,
-              [RecommendedMilkPerDay.FIVE]: 400,
+              [FeedingFrequenciePerDay.EIGHT]: 260,
+              [FeedingFrequenciePerDay.SIX]: 300,
+              [FeedingFrequenciePerDay.FIVE]: 400,
             },
           },
           {
             weight_kg: 20,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 290,
-              [RecommendedMilkPerDay.SIX]: 320,
-              [RecommendedMilkPerDay.FIVE]: 450,
+              [FeedingFrequenciePerDay.EIGHT]: 290,
+              [FeedingFrequenciePerDay.SIX]: 320,
+              [FeedingFrequenciePerDay.FIVE]: 450,
             },
           },
           {
             weight_kg: 25,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 300,
-              [RecommendedMilkPerDay.SIX]: 350,
-              [RecommendedMilkPerDay.FIVE]: 450,
+              [FeedingFrequenciePerDay.EIGHT]: 300,
+              [FeedingFrequenciePerDay.SIX]: 350,
+              [FeedingFrequenciePerDay.FIVE]: 450,
             },
           },
           {
             weight_kg: 30,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 320,
-              [RecommendedMilkPerDay.SIX]: 370,
-              [RecommendedMilkPerDay.FIVE]: 500,
+              [FeedingFrequenciePerDay.EIGHT]: 320,
+              [FeedingFrequenciePerDay.SIX]: 370,
+              [FeedingFrequenciePerDay.FIVE]: 500,
             },
           },
           {
             weight_kg: 40,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 350,
-              [RecommendedMilkPerDay.SIX]: 400,
-              [RecommendedMilkPerDay.FIVE]: 500,
+              [FeedingFrequenciePerDay.EIGHT]: 350,
+              [FeedingFrequenciePerDay.SIX]: 400,
+              [FeedingFrequenciePerDay.FIVE]: 500,
             },
           },
         ],
@@ -327,64 +328,65 @@ export const nutritionalProducts: NutitionalProduct[] = [
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
               variableExplanation: {
-                [AnthroSystemCodes.WEIGHT]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+                [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 30,
+              [FeedingFrequenciePerDay.EIGHT]: 30,
             },
           },
           {
             weight_kg: 1.6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 35,
+              [FeedingFrequenciePerDay.EIGHT]: 35,
             },
           },
           {
             weight_kg: 1.9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 40,
+              [FeedingFrequenciePerDay.EIGHT]: 40,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 45,
+              [FeedingFrequenciePerDay.EIGHT]: 45,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 50,
+              [FeedingFrequenciePerDay.EIGHT]: 50,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 55,
+              [FeedingFrequenciePerDay.EIGHT]: 55,
             },
           },
           {
             weight_kg: 3.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 60,
+              [FeedingFrequenciePerDay.EIGHT]: 60,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 65,
+              [FeedingFrequenciePerDay.EIGHT]: 65,
             },
           },
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 70,
+              [FeedingFrequenciePerDay.EIGHT]: 70,
             },
           },
         ],
@@ -430,65 +432,66 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 25,
+              [FeedingFrequenciePerDay.EIGHT]: 25,
             },
           },
           {
             weight_kg: 1.3,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 30,
+              [FeedingFrequenciePerDay.EIGHT]: 30,
             },
           },
           {
             weight_kg: 1.6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 35,
+              [FeedingFrequenciePerDay.EIGHT]: 35,
             },
           },
           {
             weight_kg: 1.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 40,
+              [FeedingFrequenciePerDay.EIGHT]: 40,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 45,
+              [FeedingFrequenciePerDay.EIGHT]: 45,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 50,
+              [FeedingFrequenciePerDay.EIGHT]: 50,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 55,
+              [FeedingFrequenciePerDay.EIGHT]: 55,
             },
           },
           {
             weight_kg: 3.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 60,
+              [FeedingFrequenciePerDay.EIGHT]: 60,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 65,
+              [FeedingFrequenciePerDay.EIGHT]: 65,
             },
           },
           {
             weight_kg: 4.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 70,
+              [FeedingFrequenciePerDay.EIGHT]: 70,
             },
           },
         ],
@@ -539,65 +542,66 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 25,
+              [FeedingFrequenciePerDay.EIGHT]: 25,
             },
           },
           {
             weight_kg: 1.3,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 30,
+              [FeedingFrequenciePerDay.EIGHT]: 30,
             },
           },
           {
             weight_kg: 1.6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 35,
+              [FeedingFrequenciePerDay.EIGHT]: 35,
             },
           },
           {
             weight_kg: 1.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 40,
+              [FeedingFrequenciePerDay.EIGHT]: 40,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 45,
+              [FeedingFrequenciePerDay.EIGHT]: 45,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 50,
+              [FeedingFrequenciePerDay.EIGHT]: 50,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 55,
+              [FeedingFrequenciePerDay.EIGHT]: 55,
             },
           },
           {
             weight_kg: 3.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 60,
+              [FeedingFrequenciePerDay.EIGHT]: 60,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 65,
+              [FeedingFrequenciePerDay.EIGHT]: 65,
             },
           },
           {
             weight_kg: 4.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 70,
+              [FeedingFrequenciePerDay.EIGHT]: 70,
             },
           },
         ],
@@ -650,59 +654,60 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 30,
+              [FeedingFrequenciePerDay.EIGHT]: 30,
             },
           },
           {
             weight_kg: 1.6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 35,
+              [FeedingFrequenciePerDay.EIGHT]: 35,
             },
           },
           {
             weight_kg: 1.9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 40,
+              [FeedingFrequenciePerDay.EIGHT]: 40,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 45,
+              [FeedingFrequenciePerDay.EIGHT]: 45,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 50,
+              [FeedingFrequenciePerDay.EIGHT]: 50,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 55,
+              [FeedingFrequenciePerDay.EIGHT]: 55,
             },
           },
           {
             weight_kg: 3.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 60,
+              [FeedingFrequenciePerDay.EIGHT]: 60,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 65,
+              [FeedingFrequenciePerDay.EIGHT]: 65,
             },
           },
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 70,
+              [FeedingFrequenciePerDay.EIGHT]: 70,
             },
           },
         ],
@@ -758,59 +763,60 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 40,
+              [FeedingFrequenciePerDay.EIGHT]: 40,
             },
           },
           {
             weight_kg: 1.6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 45,
+              [FeedingFrequenciePerDay.EIGHT]: 45,
             },
           },
           {
             weight_kg: 1.9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 55,
+              [FeedingFrequenciePerDay.EIGHT]: 55,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 60,
+              [FeedingFrequenciePerDay.EIGHT]: 60,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 65,
+              [FeedingFrequenciePerDay.EIGHT]: 65,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 75,
+              [FeedingFrequenciePerDay.EIGHT]: 75,
             },
           },
           {
             weight_kg: 3.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 80,
+              [FeedingFrequenciePerDay.EIGHT]: 80,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 85,
+              [FeedingFrequenciePerDay.EIGHT]: 85,
             },
           },
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 95,
+              [FeedingFrequenciePerDay.EIGHT]: 95,
             },
           },
         ],
@@ -863,59 +869,60 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 60,
+              [FeedingFrequenciePerDay.SIX]: 60,
             },
           },
           {
             weight_kg: 1.6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 70,
+              [FeedingFrequenciePerDay.SIX]: 70,
             },
           },
           {
             weight_kg: 1.9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 80,
+              [FeedingFrequenciePerDay.SIX]: 80,
             },
           },
           {
             weight_kg: 2.2,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 90,
+              [FeedingFrequenciePerDay.SIX]: 90,
             },
           },
           {
             weight_kg: 2.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 100,
+              [FeedingFrequenciePerDay.SIX]: 100,
             },
           },
           {
             weight_kg: 2.8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 110,
+              [FeedingFrequenciePerDay.SIX]: 110,
             },
           },
           {
             weight_kg: 3.0,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 120,
+              [FeedingFrequenciePerDay.SIX]: 120,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 130,
+              [FeedingFrequenciePerDay.SIX]: 130,
             },
           },
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.EIGHT]: 140,
+              [FeedingFrequenciePerDay.EIGHT]: 140,
             },
           },
         ],
@@ -974,145 +981,146 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: true,
         dosages: [
           {
             weight_kg: 3,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 75,
-              [RecommendedMilkPerDay.FIVE]: 85,
+              [FeedingFrequenciePerDay.SIX]: 75,
+              [FeedingFrequenciePerDay.FIVE]: 85,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 80,
-              [RecommendedMilkPerDay.FIVE]: 95,
+              [FeedingFrequenciePerDay.SIX]: 80,
+              [FeedingFrequenciePerDay.FIVE]: 95,
             },
           },
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 85,
-              [RecommendedMilkPerDay.FIVE]: 110,
+              [FeedingFrequenciePerDay.SIX]: 85,
+              [FeedingFrequenciePerDay.FIVE]: 110,
             },
           },
           {
             weight_kg: 4.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 95,
-              [RecommendedMilkPerDay.FIVE]: 120,
+              [FeedingFrequenciePerDay.SIX]: 95,
+              [FeedingFrequenciePerDay.FIVE]: 120,
             },
           },
           {
             weight_kg: 5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 110,
-              [RecommendedMilkPerDay.FIVE]: 130,
+              [FeedingFrequenciePerDay.SIX]: 110,
+              [FeedingFrequenciePerDay.FIVE]: 130,
             },
           },
           {
             weight_kg: 5.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 120,
-              [RecommendedMilkPerDay.FIVE]: 150,
+              [FeedingFrequenciePerDay.SIX]: 120,
+              [FeedingFrequenciePerDay.FIVE]: 150,
             },
           },
           {
             weight_kg: 6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 140,
-              [RecommendedMilkPerDay.FIVE]: 175,
+              [FeedingFrequenciePerDay.SIX]: 140,
+              [FeedingFrequenciePerDay.FIVE]: 175,
             },
           },
           {
             weight_kg: 7,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 160,
-              [RecommendedMilkPerDay.FIVE]: 200,
+              [FeedingFrequenciePerDay.SIX]: 160,
+              [FeedingFrequenciePerDay.FIVE]: 200,
             },
           },
           {
             weight_kg: 8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 180,
-              [RecommendedMilkPerDay.FIVE]: 225,
+              [FeedingFrequenciePerDay.SIX]: 180,
+              [FeedingFrequenciePerDay.FIVE]: 225,
             },
           },
           {
             weight_kg: 9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 190,
-              [RecommendedMilkPerDay.FIVE]: 250,
+              [FeedingFrequenciePerDay.SIX]: 190,
+              [FeedingFrequenciePerDay.FIVE]: 250,
             },
           },
           {
             weight_kg: 10,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 200,
-              [RecommendedMilkPerDay.FIVE]: 275,
+              [FeedingFrequenciePerDay.SIX]: 200,
+              [FeedingFrequenciePerDay.FIVE]: 275,
             },
           },
           {
             weight_kg: 11,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 230,
-              [RecommendedMilkPerDay.FIVE]: 275,
+              [FeedingFrequenciePerDay.SIX]: 230,
+              [FeedingFrequenciePerDay.FIVE]: 275,
             },
           },
           {
             weight_kg: 12,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 250,
-              [RecommendedMilkPerDay.FIVE]: 300,
+              [FeedingFrequenciePerDay.SIX]: 250,
+              [FeedingFrequenciePerDay.FIVE]: 300,
             },
           },
           {
             weight_kg: 13,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 275,
-              [RecommendedMilkPerDay.FIVE]: 350,
+              [FeedingFrequenciePerDay.SIX]: 275,
+              [FeedingFrequenciePerDay.FIVE]: 350,
             },
           },
           {
             weight_kg: 14,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 290,
-              [RecommendedMilkPerDay.FIVE]: 375,
+              [FeedingFrequenciePerDay.SIX]: 290,
+              [FeedingFrequenciePerDay.FIVE]: 375,
             },
           },
           {
             weight_kg: 15,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 300,
-              [RecommendedMilkPerDay.FIVE]: 400,
+              [FeedingFrequenciePerDay.SIX]: 300,
+              [FeedingFrequenciePerDay.FIVE]: 400,
             },
           },
           {
             weight_kg: 20,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 320,
-              [RecommendedMilkPerDay.FIVE]: 450,
+              [FeedingFrequenciePerDay.SIX]: 320,
+              [FeedingFrequenciePerDay.FIVE]: 450,
             },
           },
           {
             weight_kg: 25,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 350,
-              [RecommendedMilkPerDay.FIVE]: 450,
+              [FeedingFrequenciePerDay.SIX]: 350,
+              [FeedingFrequenciePerDay.FIVE]: 450,
             },
           },
           {
             weight_kg: 30,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 370,
-              [RecommendedMilkPerDay.FIVE]: 500,
+              [FeedingFrequenciePerDay.SIX]: 370,
+              [FeedingFrequenciePerDay.FIVE]: 500,
             },
           },
           {
             weight_kg: 40,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 400,
-              [RecommendedMilkPerDay.FIVE]: 500,
+              [FeedingFrequenciePerDay.SIX]: 400,
+              [FeedingFrequenciePerDay.FIVE]: 500,
             },
           },
         ],
@@ -1163,112 +1171,113 @@ export const nutritionalProducts: NutitionalProduct[] = [
             }
           },
         ],
+        isAdmissionWeight: false,
         dosages: [
           {
             weight_kg: 3,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 110,
-              [RecommendedMilkPerDay.FIVE]: 130,
+              [FeedingFrequenciePerDay.SIX]: 110,
+              [FeedingFrequenciePerDay.FIVE]: 130,
             },
           },
           {
             weight_kg: 3.5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 125,
-              [RecommendedMilkPerDay.FIVE]: 150,
+              [FeedingFrequenciePerDay.SIX]: 125,
+              [FeedingFrequenciePerDay.FIVE]: 150,
             },
           },
 
           {
             weight_kg: 4,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 135,
-              [RecommendedMilkPerDay.FIVE]: 160,
+              [FeedingFrequenciePerDay.SIX]: 135,
+              [FeedingFrequenciePerDay.FIVE]: 160,
             },
           },
           {
             weight_kg: 5,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 160,
-              [RecommendedMilkPerDay.FIVE]: 190,
+              [FeedingFrequenciePerDay.SIX]: 160,
+              [FeedingFrequenciePerDay.FIVE]: 190,
             },
           },
 
           {
             weight_kg: 6,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 180,
-              [RecommendedMilkPerDay.FIVE]: 215,
+              [FeedingFrequenciePerDay.SIX]: 180,
+              [FeedingFrequenciePerDay.FIVE]: 215,
             },
           },
           {
             weight_kg: 7,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 200,
-              [RecommendedMilkPerDay.FIVE]: 240,
+              [FeedingFrequenciePerDay.SIX]: 200,
+              [FeedingFrequenciePerDay.FIVE]: 240,
             },
           },
           {
             weight_kg: 8,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 215,
-              [RecommendedMilkPerDay.FIVE]: 260,
+              [FeedingFrequenciePerDay.SIX]: 215,
+              [FeedingFrequenciePerDay.FIVE]: 260,
             },
           },
           {
             weight_kg: 9,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 225,
-              [RecommendedMilkPerDay.FIVE]: 270,
+              [FeedingFrequenciePerDay.SIX]: 225,
+              [FeedingFrequenciePerDay.FIVE]: 270,
             },
           },
           {
             weight_kg: 10,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 230,
-              [RecommendedMilkPerDay.FIVE]: 280,
+              [FeedingFrequenciePerDay.SIX]: 230,
+              [FeedingFrequenciePerDay.FIVE]: 280,
             },
           },
           {
             weight_kg: 12,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 260,
-              [RecommendedMilkPerDay.FIVE]: 310,
+              [FeedingFrequenciePerDay.SIX]: 260,
+              [FeedingFrequenciePerDay.FIVE]: 310,
             },
           },
           {
             weight_kg: 15,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 300,
-              [RecommendedMilkPerDay.FIVE]: 360,
+              [FeedingFrequenciePerDay.SIX]: 300,
+              [FeedingFrequenciePerDay.FIVE]: 360,
             },
           },
           {
             weight_kg: 20,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 370,
-              [RecommendedMilkPerDay.FIVE]: 440,
+              [FeedingFrequenciePerDay.SIX]: 370,
+              [FeedingFrequenciePerDay.FIVE]: 440,
             },
           },
           {
             weight_kg: 25,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 420,
-              [RecommendedMilkPerDay.FIVE]: 500,
+              [FeedingFrequenciePerDay.SIX]: 420,
+              [FeedingFrequenciePerDay.FIVE]: 500,
             },
           },
           {
             weight_kg: 30,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 450,
-              [RecommendedMilkPerDay.FIVE]: 540,
+              [FeedingFrequenciePerDay.SIX]: 450,
+              [FeedingFrequenciePerDay.FIVE]: 540,
             },
           },
           {
             weight_kg: 40,
             dosePerMeal: {
-              [RecommendedMilkPerDay.SIX]: 530,
-              [RecommendedMilkPerDay.FIVE]: 640,
+              [FeedingFrequenciePerDay.SIX]: 530,
+              [FeedingFrequenciePerDay.FIVE]: 640,
             },
           },
         ],

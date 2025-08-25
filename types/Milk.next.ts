@@ -5,7 +5,7 @@ export enum MilkType {
   F75 = "f75",
   F100Diluted = "f100_diluted",
 }
-export enum RecommendedMilkPerDay {
+export enum FeedingFrequenciePerDay {
   EIGHT = "8",
   FIVE = "5",
   SIX = "6",
@@ -16,7 +16,7 @@ export interface RecommendedMilkPerWeightRanges {
     max: number;
   };
   recommendedQuantityPerMilkRecommendationPerDay: Partial<
-    Record<RecommendedMilkPerDay, number>
+    Record<FeedingFrequenciePerDay, number>
   >;
 }
 export interface Milk {
@@ -24,7 +24,7 @@ export interface Milk {
   type: MilkType;
   doseFormula: ICondition;
   condition: ICondition;
-  recommendedMilkPerDay: RecommendedMilkPerDay[];
+  recommendedMilkPerDay: FeedingFrequenciePerDay[];
   notes: string[];
   recommendationPerRanges: RecommendedMilkPerWeightRanges[];
 }
@@ -46,11 +46,12 @@ export interface DosageScenario {
   };
   conditionalDosageFormulas: ConditionalDosageFormula[];
   dosages: DosageByWeight[];
+  isAdmissionWeight: boolean;
 }
 
 export interface DosageByWeight {
   weight_kg: number;
-  dosePerMeal: Partial<Record<RecommendedMilkPerDay, number>>;
+  dosePerMeal: Partial<Record<FeedingFrequenciePerDay, number>>;
 }
 export enum DosageFormulaUnit {
   ML = 'ml',
