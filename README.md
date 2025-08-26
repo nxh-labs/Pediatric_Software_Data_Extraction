@@ -61,7 +61,7 @@ Pour exécuter ce projet, vous devez avoir Node.js et `yarn` (ou `npm`) install�
 
 1.  **Clonez le dépôt** :
     ```bash
-    git clone <URL_DU_DEPOT>
+    git clone https://github.com/nxh-labs/Pediatric_Software_Data_Extraction.git
     cd <NOM_DU_DEPOT>
     ```
 
