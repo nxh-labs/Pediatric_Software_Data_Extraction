@@ -79,6 +79,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 2,
@@ -316,11 +317,12 @@
               "unit": "ml",
               "desciption": "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
               "variableExplanation": {
-                "weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
+                "admission_weight": "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 0,
@@ -420,6 +422,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 0,
@@ -530,6 +533,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 0,
@@ -640,6 +644,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 0,
@@ -749,6 +754,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 0,
@@ -853,6 +859,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 0,
@@ -965,6 +972,7 @@
             }
           }
         ],
+        "isAdmissionWeight": true,
         "dosages": [
           {
             "weight_kg": 3,
@@ -1153,6 +1161,7 @@
             }
           }
         ],
+        "isAdmissionWeight": false,
         "dosages": [
           {
             "weight_kg": 3,
