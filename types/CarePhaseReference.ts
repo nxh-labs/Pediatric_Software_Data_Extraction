@@ -22,7 +22,7 @@ export interface CarePhaseReference {
   transitionCriteria: PhaseCriterion[];
   recommendedTreatments: RecommendedTreatment[];
   monitoringPlan: MonitoringElement[];
-  followUpPlan: [];
+  followUpPlan: FollowUpAction[];
   nextPhase?: CARE_PHASE_CODES;
   prevPhase?: CARE_PHASE_CODES;
   duration: CarePhaseDuration;
@@ -55,6 +55,7 @@ export interface RecommendedTreatment {
   code: MilkType | MEDICINE_CODES;
   /** La durée pendant laquelle le traitement doit être actif. */
   duration: TreatmentDuration;
+  frequency: MonitoringFrequency;
 
   /** (Optionnel) Actions à déclencher au début de ce traitement. */
   triggers?: {
@@ -108,6 +109,7 @@ export interface MonitoringElement {
     | DATA_FIELD_CODE_TYPE
     | ValueOf<typeof CLINICAL_SIGNS>;
   frequency: MonitoringFrequency;
+  duration: TreatmentDuration;
 }
 export interface MonitoringFrequency {
   intervalUnit: "day" | "week" | "hours";

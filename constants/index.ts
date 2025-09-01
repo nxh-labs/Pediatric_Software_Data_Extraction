@@ -407,6 +407,7 @@ export type DATA_FIELD_CODE_TYPE =
 export const CARE_SESSION = {
   DAYS_IN_PHASE: "days_in_phase",
   CURRENT_CARE_PHASE: "current_care_phase",
+  ADMINISTRED_MILK_QUANTITY_G: ""
 } as const;
 export const CALCULATED_MONITORING_ELEMENT = {
   WEIGHT_GAIN_RATE_KG_DAY: "weight_gain_rate_kg_day",
@@ -422,6 +423,8 @@ export const CALCULATED_MONITORING_ELEMENT = {
 export const initialValueCode = <T extends string>(code: T): `initial_${T}` => `initial_${code}`;
 export const clinicalSignChangeDay = <T extends string>(code: T): `change_day_${T}` => `change_day_${code}`;
 export const admissionVariable = <T extends string>(code: T): `admission_${T}` => `admission_${code}`;
+export const consecutiveVariable = <T extends string>(code: T, n: number): `consecutive_${number}_${T}` => `consecutive_${n}_${code}`;
+export const dailyVariable = <T extends string>(code: T, n: number): `daily_${number}_${T}` => `daily_${n}_${code}`;
 export const TREATMENT_PLAN_IDS = {
   CNT_PHASE1_F75: "CNT_PHASE1::nutritional::F75",
   CNT_PHASE1_F100_DILUTED: "CNT_PHASE1::nutritional::F100::diluted",
@@ -432,3 +435,11 @@ export const TREATMENT_PLAN_IDS = {
   CNT_PHASE2_F100: "CNT_PHASE2::nutritional::F100",
   CNT_PHASE2_F100_DILUTED: "CNT_PHASE2::nutritional::F100::diluted",
 } as const;
+
+
+export const WEIGHT_RECORDING_PREV_DAY = dailyVariable(AnthroSystemCodes.WEIGHT, 0);
+export const WEIGHT_RECORDING_BEFORE_PREV_DAY = dailyVariable(AnthroSystemCodes.WEIGHT, 1);
+export const WEIGHT_IN_PHASE_ADMISSION = admissionVariable(AnthroSystemCodes.WEIGHT);
+export const WEIGHT_CONSECUTIVE_RECORDING_1 = consecutiveVariable(AnthroSystemCodes.WEIGHT, 1);
+export const WEIGHT_CONSECUTIVE_RECORDING_2 = consecutiveVariable(AnthroSystemCodes.WEIGHT, 2);
+export const WEIGHT_CONSECUTIVE_RECORDING_0 = consecutiveVariable(AnthroSystemCodes.WEIGHT, 0);

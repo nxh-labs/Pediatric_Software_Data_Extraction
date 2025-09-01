@@ -22,7 +22,7 @@ import {
   saveClinicalRefsNext,
   saveOrientationRefsNext,
   saveDataFields,
-  
+
 
   // Indicateurs
   // Exporté par src/IndicatorGeneration
@@ -33,6 +33,7 @@ import {
 import { saveAllIndicators } from "./src/IndicatorGeneration";
 import { generateAndSaveGrowthRef } from "./src/GrowthRef";
 import { saveBiochemicalRef } from "./src/BiologicalRef";
+import { saveFormulaRefs } from "./src/FormulaFieldRef";
 
 async function runExtraction(): Promise<void> {
   const steps: Array<{ name: string; exec: () => Promise<any> | any }> = [
@@ -71,6 +72,7 @@ async function runExtraction(): Promise<void> {
     { name: "Orientation References (Next)", exec: () => saveOrientationRefsNext() },
     { name: "Cares Phases References", exec: () => saveCarePhases() },
     { name: "DataFields References", exec: () => saveDataFields() },
+    { name: "Formula Fields References", exec: () => saveFormulaRefs() }
   ];
 
   let hasError = false;

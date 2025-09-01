@@ -1,0 +1,87 @@
+[
+  {
+    "code": "weight_gain_rate_kg_day",
+    "formula": {
+      "description": "Calcule le taux de prise de poids quotidien en kg/jour en soustrayant le poids de l'avant-veille du poids de la veille. Un résultat positif indique une prise de poids, négatif indique une perte.",
+      "formula": {
+        "value": "(daily_0_weight - daily_1_weight)",
+        "variables": [
+          "daily_0_weight",
+          "daily_1_weight"
+        ]
+      },
+      "variablesExplanation": {
+        "daily_1_weight": "Poids enregistré il y a deux jours (avant-veille) - utilisé comme référence pour calculer l'évolution pondérale sur 24h",
+        "daily_0_weight": "Poids enregistré hier (veille) - représente le poids le plus récent pour le calcul de la variation quotidienne"
+      }
+    }
+  },
+  {
+    "code": "weight_gain_rating_during_phase",
+    "formula": {
+      "description": "Détermine la prise de poids totale depuis l'admission dans la phase de soins actuelle. Cette mesure permet d'évaluer l'évolution pondérale globale du patient depuis son entrée.",
+      "formula": {
+        "value": "(weight - admission_weight)",
+        "variables": [
+          "weight",
+          "admission_weight"
+        ]
+      },
+      "variablesExplanation": {
+        "weight": "Poids actuel du patient mesuré lors de la dernière pesée - représente l'état pondéral présent",
+        "admission_weight": "Poids du patient enregistré lors de l'admission dans la phase de soins actuelle - sert de baseline pour mesurer l'évolution"
+      }
+    }
+  },
+  {
+    "code": "weigth_loss_percent_between_two_consecutive_measurements",
+    "formula": {
+      "description": "Calcule le pourcentage de perte de poids entre deux mesures consécutives. Formule: ((Poids_initial - Poids_final) * 100) / Poids_initial. Un résultat positif indique une perte, négatif indique un gain.",
+      "formula": {
+        "value": "(((consecutive_1_weight - consecutive_0_weight)* 100)/ consecutive_1_weight) ",
+        "variables": [
+          "consecutive_0_weight",
+          "consecutive_1_weight"
+        ]
+      },
+      "variablesExplanation": {
+        "consecutive_0_weight": "Deuxième mesure de poids consécutive (plus récente) - utilisée comme point final pour calculer la variation relative",
+        "consecutive_1_weight": "Première mesure de poids consécutive (plus ancienne) - sert de référence baseline et dénominateur pour le calcul du pourcentage"
+      }
+    }
+  },
+  {
+    "code": "weigth_loss_percent_between_three_consecutive_measurements",
+    "formula": {
+      "description": "Calcule le pourcentage de perte de poids entre la première et la troisième mesure sur trois prises consécutives. Permet d'évaluer l'évolution sur une période plus longue en excluant la mesure intermédiaire.",
+      "formula": {
+        "value": "(((consecutive_2_weight - consecutive_0_weight)* 100)/ consecutive_2_weight) ",
+        "variables": [
+          "consecutive_0_weight",
+          "consecutive_2_weight"
+        ]
+      },
+      "variablesExplanation": {
+        "consecutive_2_weight": "Première mesure de poids dans la série de trois mesures consécutives - point de départ chronologique utilisé comme baseline de référence",
+        "consecutive_0_weight": "Troisième mesure de poids dans la série (plus récente) - point final pour mesurer l'évolution pondérale sur la période étendue"
+      }
+    }
+  },
+  {
+    "code": "nutritional_milk_consumption_rate_percent_per_day",
+    "formula": {
+      "description": "Calcule la différence entre la quantité de lait administrée lors d'une session de soins et la consommation nutritionnelle quotidienne prescrite. Permet d'évaluer l'écart entre l'apport réel et l'objectif thérapeutique.",
+      "formula": {
+        "value": "( - data_nutritional_milk_consumption_in_g_per_day)",
+        "variables": [
+          "",
+          "data_nutritional_milk_consumption_in_g_per_day"
+        ]
+      },
+      "variablesExplanation": {
+        "": "Quantité de lait effectivement administrée au patient en grammes lors de la session de soins - représente l'apport réel mesuré",
+        "data_nutritional_milk_consumption_in_g_per_day": "Objectif de consommation nutritionnelle quotidienne de lait en grammes - cible thérapeutique prescrite pour répondre aux besoins du patient"
+      }
+    }
+  }
+]

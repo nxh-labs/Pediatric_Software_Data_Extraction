@@ -36,13 +36,13 @@
       },
       {
         "condition": {
-          "value": "(days_in_phase >=4) && (observation_edema_godet_count >= initial_observation_edema_godet_count)",
+          "value": "(days_in_phase >=4) && (observation_edema_godet_count >= admission_observation_edema_godet_count)",
           "variables": []
         },
         "description": "Absence de perte d'œdèmes au 4ème jour.",
         "variablesExplanation": {
           "days_in_phase": "Nombre de jours que le patient a passés dans la phase actuelle.",
-          "initial_observation_edema_godet_count": "Le niveau d'œdème actuel du patient (0, 1, 2, ou 3).",
+          "admission_observation_edema_godet_count": "Le niveau d'œdème actuel du patient (0, 1, 2, ou 3).",
           "observation_edema_godet_count": "Le niveau d'œdème que le patient avait au début de cette phase."
         }
       },
@@ -100,6 +100,11 @@
         "type": "nutritional",
         "duration": {
           "type": "while_in_phase"
+        },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
         }
       },
       {
@@ -122,6 +127,11 @@
         "type": "nutritional",
         "duration": {
           "type": "while_in_phase"
+        },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
         }
       },
       {
@@ -138,6 +148,11 @@
         "type": "systematic",
         "duration": {
           "type": "while_in_phase"
+        },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
         }
       }
     ],
@@ -150,7 +165,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "data_field_monitoring_element",
@@ -160,7 +178,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "data_field_monitoring_element",
@@ -170,7 +191,10 @@
           "intervalValue": 1,
           "countInUnit": 2
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "clinical_signs_monitoring_element",
@@ -180,7 +204,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "clinical_signs_monitoring_element",
@@ -190,7 +217,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "clinical_signs_monitoring_element",
@@ -200,7 +230,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "clinical_signs_monitoring_element",
@@ -210,7 +243,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "anthropometric_monitoring_element",
@@ -220,7 +256,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       }
     ],
     "followUpPlan": [],
@@ -316,6 +355,11 @@
           "type": "days",
           "value": 5
         },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
         "type": "systematic"
       },
       {
@@ -337,6 +381,11 @@
         "code": "f100",
         "duration": {
           "type": "while_in_phase"
+        },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
         },
         "type": "nutritional"
       },
@@ -360,6 +409,11 @@
         "duration": {
           "type": "while_in_phase"
         },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        },
         "type": "nutritional"
       }
     ],
@@ -372,6 +426,9 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
+        "duration": {
+          "type": "while_in_phase"
+        },
         "source": "not_calculated_monitoring_value"
       },
       {
@@ -381,6 +438,9 @@
           "intervalUnit": "day",
           "intervalValue": 1,
           "countInUnit": 1
+        },
+        "duration": {
+          "type": "while_in_phase"
         },
         "source": "not_calculated_monitoring_value"
       },
@@ -392,6 +452,9 @@
           "intervalValue": 1,
           "countInUnit": 2
         },
+        "duration": {
+          "type": "while_in_phase"
+        },
         "source": "not_calculated_monitoring_value"
       },
       {
@@ -401,6 +464,9 @@
           "intervalUnit": "day",
           "intervalValue": 1,
           "countInUnit": 1
+        },
+        "duration": {
+          "type": "while_in_phase"
         },
         "source": "not_calculated_monitoring_value"
       },
@@ -412,6 +478,9 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
+        "duration": {
+          "type": "while_in_phase"
+        },
         "source": "not_calculated_monitoring_value"
       },
       {
@@ -421,6 +490,9 @@
           "intervalUnit": "day",
           "intervalValue": 1,
           "countInUnit": 1
+        },
+        "duration": {
+          "type": "while_in_phase"
         },
         "source": "not_calculated_monitoring_value"
       },
@@ -432,6 +504,9 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
+        "duration": {
+          "type": "while_in_phase"
+        },
         "source": "not_calculated_monitoring_value"
       },
       {
@@ -441,6 +516,9 @@
           "intervalUnit": "week",
           "intervalValue": 1,
           "countInUnit": 1
+        },
+        "duration": {
+          "type": "while_in_phase"
         },
         "source": "not_calculated_monitoring_value"
       }
@@ -574,6 +652,11 @@
         "type": "nutritional",
         "duration": {
           "type": "while_in_phase"
+        },
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
         }
       },
       {
@@ -596,7 +679,12 @@
         "duration": {
           "type": "while_in_phase"
         },
-        "type": "nutritional"
+        "type": "nutritional",
+        "frequency": {
+          "intervalUnit": "day",
+          "intervalValue": 1,
+          "countInUnit": 1
+        }
       }
     ],
     "monitoringPlan": [
@@ -608,7 +696,10 @@
           "intervalValue": 1,
           "countInUnit": 3
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "clinical_signs_monitoring_element",
@@ -618,7 +709,10 @@
           "intervalValue": 1,
           "countInUnit": 3
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "anthropometric_monitoring_element",
@@ -628,7 +722,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       },
       {
         "category": "data_field_monitoring_element",
@@ -637,6 +734,9 @@
           "intervalUnit": "day",
           "intervalValue": 1,
           "countInUnit": 1
+        },
+        "duration": {
+          "type": "while_in_phase"
         },
         "source": "not_calculated_monitoring_value"
       },
@@ -648,7 +748,10 @@
           "intervalValue": 1,
           "countInUnit": 1
         },
-        "source": "not_calculated_monitoring_value"
+        "source": "not_calculated_monitoring_value",
+        "duration": {
+          "type": "while_in_phase"
+        }
       }
     ],
     "followUpPlan": [],

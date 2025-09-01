@@ -4,8 +4,9 @@ import {
   CLINICAL_SIGNS,
   COMPLICATION_CODES,
   ConditionResult,
+
 } from "../../constants";
-import { Milk, MilkType, RecommendedMilkPerDay } from "../../types";
+import { Milk, MilkType, FeedingFrequenciePerDay } from "../../types";
 import { fExp } from "../../utils";
 
 export const milkRefs: Milk[] = [
@@ -27,9 +28,9 @@ export const milkRefs: Milk[] = [
       variables: [AnthroSystemCodes.WEIGHT],
     },
     recommendedMilkPerDay: [
-      RecommendedMilkPerDay.FIVE,
-      RecommendedMilkPerDay.EIGHT,
-      RecommendedMilkPerDay.SIX,
+      FeedingFrequenciePerDay.FIVE,
+      FeedingFrequenciePerDay.EIGHT,
+      FeedingFrequenciePerDay.SIX,
     ],
     recommendationPerRanges: [
       {
@@ -38,9 +39,9 @@ export const milkRefs: Milk[] = [
           max: 2.1,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 40,
-          [RecommendedMilkPerDay.SIX]: 50,
-          [RecommendedMilkPerDay.FIVE]: 65,
+          [FeedingFrequenciePerDay.EIGHT]: 40,
+          [FeedingFrequenciePerDay.SIX]: 50,
+          [FeedingFrequenciePerDay.FIVE]: 65,
         },
       },
       {
@@ -49,9 +50,9 @@ export const milkRefs: Milk[] = [
           max: 2.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 45,
-          [RecommendedMilkPerDay.SIX]: 60,
-          [RecommendedMilkPerDay.FIVE]: 70,
+          [FeedingFrequenciePerDay.EIGHT]: 45,
+          [FeedingFrequenciePerDay.SIX]: 60,
+          [FeedingFrequenciePerDay.FIVE]: 70,
         },
       },
       {
@@ -60,9 +61,9 @@ export const milkRefs: Milk[] = [
           max: 2.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 50,
-          [RecommendedMilkPerDay.SIX]: 65,
-          [RecommendedMilkPerDay.FIVE]: 75,
+          [FeedingFrequenciePerDay.EIGHT]: 50,
+          [FeedingFrequenciePerDay.SIX]: 65,
+          [FeedingFrequenciePerDay.FIVE]: 75,
         },
       },
       {
@@ -71,9 +72,9 @@ export const milkRefs: Milk[] = [
           max: 2.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 55,
-          [RecommendedMilkPerDay.SIX]: 70,
-          [RecommendedMilkPerDay.FIVE]: 80,
+          [FeedingFrequenciePerDay.EIGHT]: 55,
+          [FeedingFrequenciePerDay.SIX]: 70,
+          [FeedingFrequenciePerDay.FIVE]: 80,
         },
       },
       {
@@ -82,9 +83,9 @@ export const milkRefs: Milk[] = [
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 60,
-          [RecommendedMilkPerDay.SIX]: 75,
-          [RecommendedMilkPerDay.FIVE]: 85,
+          [FeedingFrequenciePerDay.EIGHT]: 60,
+          [FeedingFrequenciePerDay.SIX]: 75,
+          [FeedingFrequenciePerDay.FIVE]: 85,
         },
       },
       {
@@ -93,9 +94,9 @@ export const milkRefs: Milk[] = [
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 65,
-          [RecommendedMilkPerDay.SIX]: 80,
-          [RecommendedMilkPerDay.FIVE]: 95,
+          [FeedingFrequenciePerDay.EIGHT]: 65,
+          [FeedingFrequenciePerDay.SIX]: 80,
+          [FeedingFrequenciePerDay.FIVE]: 95,
         },
       },
       {
@@ -104,9 +105,9 @@ export const milkRefs: Milk[] = [
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 70,
-          [RecommendedMilkPerDay.SIX]: 85,
-          [RecommendedMilkPerDay.FIVE]: 110,
+          [FeedingFrequenciePerDay.EIGHT]: 70,
+          [FeedingFrequenciePerDay.SIX]: 85,
+          [FeedingFrequenciePerDay.FIVE]: 110,
         },
       },
       {
@@ -115,9 +116,9 @@ export const milkRefs: Milk[] = [
           max: 4.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 80,
-          [RecommendedMilkPerDay.SIX]: 95,
-          [RecommendedMilkPerDay.FIVE]: 120,
+          [FeedingFrequenciePerDay.EIGHT]: 80,
+          [FeedingFrequenciePerDay.SIX]: 95,
+          [FeedingFrequenciePerDay.FIVE]: 120,
         },
       },
       {
@@ -126,9 +127,9 @@ export const milkRefs: Milk[] = [
           max: 5.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 90,
-          [RecommendedMilkPerDay.SIX]: 110,
-          [RecommendedMilkPerDay.FIVE]: 130,
+          [FeedingFrequenciePerDay.EIGHT]: 90,
+          [FeedingFrequenciePerDay.SIX]: 110,
+          [FeedingFrequenciePerDay.FIVE]: 130,
         },
       },
       {
@@ -137,9 +138,9 @@ export const milkRefs: Milk[] = [
           max: 5.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 100,
-          [RecommendedMilkPerDay.SIX]: 120,
-          [RecommendedMilkPerDay.FIVE]: 150,
+          [FeedingFrequenciePerDay.EIGHT]: 100,
+          [FeedingFrequenciePerDay.SIX]: 120,
+          [FeedingFrequenciePerDay.FIVE]: 150,
         },
       },
       {
@@ -148,9 +149,9 @@ export const milkRefs: Milk[] = [
           max: 6.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 110,
-          [RecommendedMilkPerDay.SIX]: 140,
-          [RecommendedMilkPerDay.FIVE]: 175,
+          [FeedingFrequenciePerDay.EIGHT]: 110,
+          [FeedingFrequenciePerDay.SIX]: 140,
+          [FeedingFrequenciePerDay.FIVE]: 175,
         },
       },
       {
@@ -159,9 +160,9 @@ export const milkRefs: Milk[] = [
           max: 7.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 125,
-          [RecommendedMilkPerDay.SIX]: 160,
-          [RecommendedMilkPerDay.FIVE]: 200,
+          [FeedingFrequenciePerDay.EIGHT]: 125,
+          [FeedingFrequenciePerDay.SIX]: 160,
+          [FeedingFrequenciePerDay.FIVE]: 200,
         },
       },
       {
@@ -170,9 +171,9 @@ export const milkRefs: Milk[] = [
           max: 8.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 140,
-          [RecommendedMilkPerDay.SIX]: 180,
-          [RecommendedMilkPerDay.FIVE]: 225,
+          [FeedingFrequenciePerDay.EIGHT]: 140,
+          [FeedingFrequenciePerDay.SIX]: 180,
+          [FeedingFrequenciePerDay.FIVE]: 225,
         },
       },
       {
@@ -181,9 +182,9 @@ export const milkRefs: Milk[] = [
           max: 9.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 155,
-          [RecommendedMilkPerDay.SIX]: 190,
-          [RecommendedMilkPerDay.FIVE]: 250,
+          [FeedingFrequenciePerDay.EIGHT]: 155,
+          [FeedingFrequenciePerDay.SIX]: 190,
+          [FeedingFrequenciePerDay.FIVE]: 250,
         },
       },
       {
@@ -192,9 +193,9 @@ export const milkRefs: Milk[] = [
           max: 10.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 170,
-          [RecommendedMilkPerDay.SIX]: 200,
-          [RecommendedMilkPerDay.FIVE]: 275,
+          [FeedingFrequenciePerDay.EIGHT]: 170,
+          [FeedingFrequenciePerDay.SIX]: 200,
+          [FeedingFrequenciePerDay.FIVE]: 275,
         },
       },
       {
@@ -203,9 +204,9 @@ export const milkRefs: Milk[] = [
           max: 11.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 190,
-          [RecommendedMilkPerDay.SIX]: 230,
-          [RecommendedMilkPerDay.FIVE]: 275,
+          [FeedingFrequenciePerDay.EIGHT]: 190,
+          [FeedingFrequenciePerDay.SIX]: 230,
+          [FeedingFrequenciePerDay.FIVE]: 275,
         },
       },
       {
@@ -214,9 +215,9 @@ export const milkRefs: Milk[] = [
           max: 12.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 205,
-          [RecommendedMilkPerDay.SIX]: 250,
-          [RecommendedMilkPerDay.FIVE]: 300,
+          [FeedingFrequenciePerDay.EIGHT]: 205,
+          [FeedingFrequenciePerDay.SIX]: 250,
+          [FeedingFrequenciePerDay.FIVE]: 300,
         },
       },
       {
@@ -225,9 +226,9 @@ export const milkRefs: Milk[] = [
           max: 13.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 230,
-          [RecommendedMilkPerDay.SIX]: 275,
-          [RecommendedMilkPerDay.FIVE]: 350,
+          [FeedingFrequenciePerDay.EIGHT]: 230,
+          [FeedingFrequenciePerDay.SIX]: 275,
+          [FeedingFrequenciePerDay.FIVE]: 350,
         },
       },
       {
@@ -236,9 +237,9 @@ export const milkRefs: Milk[] = [
           max: 14.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 250,
-          [RecommendedMilkPerDay.SIX]: 290,
-          [RecommendedMilkPerDay.FIVE]: 375,
+          [FeedingFrequenciePerDay.EIGHT]: 250,
+          [FeedingFrequenciePerDay.SIX]: 290,
+          [FeedingFrequenciePerDay.FIVE]: 375,
         },
       },
       {
@@ -247,9 +248,9 @@ export const milkRefs: Milk[] = [
           max: 19.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 260,
-          [RecommendedMilkPerDay.SIX]: 300,
-          [RecommendedMilkPerDay.FIVE]: 400,
+          [FeedingFrequenciePerDay.EIGHT]: 260,
+          [FeedingFrequenciePerDay.SIX]: 300,
+          [FeedingFrequenciePerDay.FIVE]: 400,
         },
       },
       {
@@ -258,9 +259,9 @@ export const milkRefs: Milk[] = [
           max: 24.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 290,
-          [RecommendedMilkPerDay.SIX]: 320,
-          [RecommendedMilkPerDay.FIVE]: 450,
+          [FeedingFrequenciePerDay.EIGHT]: 290,
+          [FeedingFrequenciePerDay.SIX]: 320,
+          [FeedingFrequenciePerDay.FIVE]: 450,
         },
       },
       {
@@ -269,9 +270,9 @@ export const milkRefs: Milk[] = [
           max: 29.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 300,
-          [RecommendedMilkPerDay.SIX]: 350,
-          [RecommendedMilkPerDay.FIVE]: 450,
+          [FeedingFrequenciePerDay.EIGHT]: 300,
+          [FeedingFrequenciePerDay.SIX]: 350,
+          [FeedingFrequenciePerDay.FIVE]: 450,
         },
       },
       {
@@ -280,9 +281,9 @@ export const milkRefs: Milk[] = [
           max: 39.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 320,
-          [RecommendedMilkPerDay.SIX]: 370,
-          [RecommendedMilkPerDay.FIVE]: 500,
+          [FeedingFrequenciePerDay.EIGHT]: 320,
+          [FeedingFrequenciePerDay.SIX]: 370,
+          [FeedingFrequenciePerDay.FIVE]: 500,
         },
       },
       {
@@ -291,9 +292,9 @@ export const milkRefs: Milk[] = [
           max: 60.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 350,
-          [RecommendedMilkPerDay.SIX]: 400,
-          [RecommendedMilkPerDay.FIVE]: 500,
+          [FeedingFrequenciePerDay.EIGHT]: 350,
+          [FeedingFrequenciePerDay.SIX]: 400,
+          [FeedingFrequenciePerDay.FIVE]: 500,
         },
       },
     ],
@@ -316,8 +317,8 @@ export const milkRefs: Milk[] = [
       variables: [AnthroSystemCodes.WEIGHT],
     },
     recommendedMilkPerDay: [
-      RecommendedMilkPerDay.SIX,
-      RecommendedMilkPerDay.FIVE,
+      FeedingFrequenciePerDay.SIX,
+      FeedingFrequenciePerDay.FIVE,
     ],
     recommendationPerRanges: [
       {
@@ -326,8 +327,8 @@ export const milkRefs: Milk[] = [
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 75,
-          [RecommendedMilkPerDay.FIVE]: 85,
+          [FeedingFrequenciePerDay.SIX]: 75,
+          [FeedingFrequenciePerDay.FIVE]: 85,
         },
       },
       {
@@ -336,8 +337,8 @@ export const milkRefs: Milk[] = [
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 80,
-          [RecommendedMilkPerDay.FIVE]: 95,
+          [FeedingFrequenciePerDay.SIX]: 80,
+          [FeedingFrequenciePerDay.FIVE]: 95,
         },
       },
       {
@@ -346,8 +347,8 @@ export const milkRefs: Milk[] = [
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 85,
-          [RecommendedMilkPerDay.FIVE]: 110,
+          [FeedingFrequenciePerDay.SIX]: 85,
+          [FeedingFrequenciePerDay.FIVE]: 110,
         },
       },
       {
@@ -356,8 +357,8 @@ export const milkRefs: Milk[] = [
           max: 4.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 95,
-          [RecommendedMilkPerDay.FIVE]: 120,
+          [FeedingFrequenciePerDay.SIX]: 95,
+          [FeedingFrequenciePerDay.FIVE]: 120,
         },
       },
       {
@@ -366,8 +367,8 @@ export const milkRefs: Milk[] = [
           max: 5.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 110,
-          [RecommendedMilkPerDay.FIVE]: 130,
+          [FeedingFrequenciePerDay.SIX]: 110,
+          [FeedingFrequenciePerDay.FIVE]: 130,
         },
       },
       {
@@ -376,8 +377,8 @@ export const milkRefs: Milk[] = [
           max: 5.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 120,
-          [RecommendedMilkPerDay.FIVE]: 150,
+          [FeedingFrequenciePerDay.SIX]: 120,
+          [FeedingFrequenciePerDay.FIVE]: 150,
         },
       },
       {
@@ -386,8 +387,8 @@ export const milkRefs: Milk[] = [
           max: 6.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 140,
-          [RecommendedMilkPerDay.FIVE]: 175,
+          [FeedingFrequenciePerDay.SIX]: 140,
+          [FeedingFrequenciePerDay.FIVE]: 175,
         },
       },
       {
@@ -396,8 +397,8 @@ export const milkRefs: Milk[] = [
           max: 7.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 160,
-          [RecommendedMilkPerDay.FIVE]: 200,
+          [FeedingFrequenciePerDay.SIX]: 160,
+          [FeedingFrequenciePerDay.FIVE]: 200,
         },
       },
       {
@@ -406,8 +407,8 @@ export const milkRefs: Milk[] = [
           max: 8.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 180,
-          [RecommendedMilkPerDay.FIVE]: 225,
+          [FeedingFrequenciePerDay.SIX]: 180,
+          [FeedingFrequenciePerDay.FIVE]: 225,
         },
       },
       {
@@ -416,8 +417,8 @@ export const milkRefs: Milk[] = [
           max: 9.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 190,
-          [RecommendedMilkPerDay.FIVE]: 250,
+          [FeedingFrequenciePerDay.SIX]: 190,
+          [FeedingFrequenciePerDay.FIVE]: 250,
         },
       },
       {
@@ -426,8 +427,8 @@ export const milkRefs: Milk[] = [
           max: 10.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 200,
-          [RecommendedMilkPerDay.FIVE]: 275,
+          [FeedingFrequenciePerDay.SIX]: 200,
+          [FeedingFrequenciePerDay.FIVE]: 275,
         },
       },
       {
@@ -436,8 +437,8 @@ export const milkRefs: Milk[] = [
           max: 11.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 230,
-          [RecommendedMilkPerDay.FIVE]: 275,
+          [FeedingFrequenciePerDay.SIX]: 230,
+          [FeedingFrequenciePerDay.FIVE]: 275,
         },
       },
       {
@@ -446,8 +447,8 @@ export const milkRefs: Milk[] = [
           max: 12.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 250,
-          [RecommendedMilkPerDay.FIVE]: 300,
+          [FeedingFrequenciePerDay.SIX]: 250,
+          [FeedingFrequenciePerDay.FIVE]: 300,
         },
       },
       {
@@ -456,8 +457,8 @@ export const milkRefs: Milk[] = [
           max: 13.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 275,
-          [RecommendedMilkPerDay.FIVE]: 350,
+          [FeedingFrequenciePerDay.SIX]: 275,
+          [FeedingFrequenciePerDay.FIVE]: 350,
         },
       },
       {
@@ -466,8 +467,8 @@ export const milkRefs: Milk[] = [
           max: 14.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 290,
-          [RecommendedMilkPerDay.FIVE]: 375,
+          [FeedingFrequenciePerDay.SIX]: 290,
+          [FeedingFrequenciePerDay.FIVE]: 375,
         },
       },
       {
@@ -476,8 +477,8 @@ export const milkRefs: Milk[] = [
           max: 19.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 300,
-          [RecommendedMilkPerDay.FIVE]: 400,
+          [FeedingFrequenciePerDay.SIX]: 300,
+          [FeedingFrequenciePerDay.FIVE]: 400,
         },
       },
       {
@@ -486,8 +487,8 @@ export const milkRefs: Milk[] = [
           max: 24.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 320,
-          [RecommendedMilkPerDay.FIVE]: 450,
+          [FeedingFrequenciePerDay.SIX]: 320,
+          [FeedingFrequenciePerDay.FIVE]: 450,
         },
       },
       {
@@ -496,8 +497,8 @@ export const milkRefs: Milk[] = [
           max: 29.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 350,
-          [RecommendedMilkPerDay.FIVE]: 450,
+          [FeedingFrequenciePerDay.SIX]: 350,
+          [FeedingFrequenciePerDay.FIVE]: 450,
         },
       },
       {
@@ -506,8 +507,8 @@ export const milkRefs: Milk[] = [
           max: 39.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 370,
-          [RecommendedMilkPerDay.FIVE]: 500,
+          [FeedingFrequenciePerDay.SIX]: 370,
+          [FeedingFrequenciePerDay.FIVE]: 500,
         },
       },
       {
@@ -516,8 +517,8 @@ export const milkRefs: Milk[] = [
           max: 60,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.SIX]: 400,
-          [RecommendedMilkPerDay.FIVE]: 500,
+          [FeedingFrequenciePerDay.SIX]: 400,
+          [FeedingFrequenciePerDay.FIVE]: 500,
         },
       },
     ],
@@ -538,7 +539,7 @@ export const milkRefs: Milk[] = [
       value: fExp`130 * ${AnthroSystemCodes.WEIGHT}`,
       variables: [AnthroSystemCodes.WEIGHT],
     },
-    recommendedMilkPerDay: [RecommendedMilkPerDay.EIGHT],
+    recommendedMilkPerDay: [FeedingFrequenciePerDay.EIGHT],
     recommendationPerRanges: [
       {
         weightRange: {
@@ -546,7 +547,7 @@ export const milkRefs: Milk[] = [
           max: 1.2,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 25,
+          [FeedingFrequenciePerDay.EIGHT]: 25,
         },
       },
       {
@@ -555,7 +556,7 @@ export const milkRefs: Milk[] = [
           max: 1.5,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 30,
+          [FeedingFrequenciePerDay.EIGHT]: 30,
         },
       },
       {
@@ -564,7 +565,7 @@ export const milkRefs: Milk[] = [
           max: 1.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 35,
+          [FeedingFrequenciePerDay.EIGHT]: 35,
         },
       },
       {
@@ -573,7 +574,7 @@ export const milkRefs: Milk[] = [
           max: 2.1,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 40,
+          [FeedingFrequenciePerDay.EIGHT]: 40,
         },
       },
       {
@@ -582,7 +583,7 @@ export const milkRefs: Milk[] = [
           max: 2.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 45,
+          [FeedingFrequenciePerDay.EIGHT]: 45,
         },
       },
       {
@@ -591,7 +592,7 @@ export const milkRefs: Milk[] = [
           max: 2.7,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 50,
+          [FeedingFrequenciePerDay.EIGHT]: 50,
         },
       },
       {
@@ -600,7 +601,7 @@ export const milkRefs: Milk[] = [
           max: 2.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 55,
+          [FeedingFrequenciePerDay.EIGHT]: 55,
         },
       },
       {
@@ -609,7 +610,7 @@ export const milkRefs: Milk[] = [
           max: 3.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 60,
+          [FeedingFrequenciePerDay.EIGHT]: 60,
         },
       },
       {
@@ -618,7 +619,7 @@ export const milkRefs: Milk[] = [
           max: 3.9,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 65,
+          [FeedingFrequenciePerDay.EIGHT]: 65,
         },
       },
       {
@@ -627,7 +628,7 @@ export const milkRefs: Milk[] = [
           max: 4.4,
         },
         recommendedQuantityPerMilkRecommendationPerDay: {
-          [RecommendedMilkPerDay.EIGHT]: 70,
+          [FeedingFrequenciePerDay.EIGHT]: 70,
         },
       },
     ],

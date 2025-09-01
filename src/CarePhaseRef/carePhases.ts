@@ -1,4 +1,5 @@
 import {
+  admissionVariable,
   ALWAYS_TRUE_CONDITION,
   AnthroSystemCodes,
   APPETITE_TEST_CODES,
@@ -9,7 +10,6 @@ import {
   COMPLICATION_CODES,
   ConditionResult,
   DATA_POINTS,
-  initialValueCode,
   MEDICINE_CODES,
   MONTH_IN_YEARS,
   OBSERVATIONS,
@@ -62,16 +62,15 @@ export const CARE_PHASES: CarePhaseReference[] = [
       },
       {
         condition: {
-          value: fExp`(${CARE_SESSION.DAYS_IN_PHASE} >=4) && (${
-            OBSERVATIONS.EDEMA_GODET_COUNT
-          } >= ${initialValueCode(OBSERVATIONS.EDEMA_GODET_COUNT)})`,
+          value: fExp`(${CARE_SESSION.DAYS_IN_PHASE} >=4) && (${OBSERVATIONS.EDEMA_GODET_COUNT
+            } >= ${admissionVariable(OBSERVATIONS.EDEMA_GODET_COUNT)})`,
           variables: [],
         },
         description: "Absence de perte d'œdèmes au 4ème jour.",
         variablesExplanation: {
           [CARE_SESSION.DAYS_IN_PHASE]:
             "Nombre de jours que le patient a passés dans la phase actuelle.",
-          [initialValueCode(OBSERVATIONS.EDEMA_GODET_COUNT)]:
+          [admissionVariable(OBSERVATIONS.EDEMA_GODET_COUNT)]:
             "Le niveau d'œdème actuel du patient (0, 1, 2, ou 3).",
           [OBSERVATIONS.EDEMA_GODET_COUNT]:
             "Le niveau d'œdème que le patient avait au début de cette phase.",
@@ -132,6 +131,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
         duration: {
           type: "while_in_phase",
         },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1
+        }
       },
       {
         identifier: TREATMENT_PLAN_IDS.CNT_PHASE1_F100_DILUTED,
@@ -151,6 +155,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
         duration: {
           type: "while_in_phase",
         },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1
+        }
       },
       {
         applicabilityCondition: {
@@ -167,6 +176,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
         duration: {
           type: "while_in_phase",
         },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1
+        }
       },
     ],
     monitoringPlan: [
@@ -179,6 +193,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.DATA_FIELD,
@@ -189,6 +206,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.DATA_FIELD,
@@ -199,6 +219,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 2,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.CLINICAL_SIGNS,
@@ -209,6 +232,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.CLINICAL_SIGNS,
@@ -219,6 +245,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.CLINICAL_SIGNS,
@@ -229,6 +258,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.CLINICAL_SIGNS,
@@ -239,6 +271,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.ANTHROPOMETRIC,
@@ -249,6 +284,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           countInUnit: 1,
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase"
+        }
       },
     ],
     followUpPlan: [],
@@ -277,13 +315,10 @@ export const CARE_PHASES: CarePhaseReference[] = [
     failureCriteria: [
       {
         condition: {
-          value: fExp`((${CLINICAL_SIGNS.LIVER} == ${
-            ConditionResult.True
-          }) || (${CALCULATED_MONITORING_ELEMENT.WEIGHT_GAIN_RATE_KG_DAY} > ${
-            10 / 1000 // Convertion en kg
-          }) || (${CLINICAL_SIGNS.RESPIRATORY_DISTRESS} == ${
-            ConditionResult.True
-          }))`,
+          value: fExp`((${CLINICAL_SIGNS.LIVER} == ${ConditionResult.True
+            }) || (${CALCULATED_MONITORING_ELEMENT.WEIGHT_GAIN_RATE_KG_DAY} > ${10 / 1000 // Convertion en kg
+            }) || (${CLINICAL_SIGNS.RESPIRATORY_DISTRESS} == ${ConditionResult.True
+            }))`,
           variables: [
             CLINICAL_SIGNS.LIVER,
             CALCULATED_MONITORING_ELEMENT.WEIGHT_GAIN_RATE_KG_DAY,
@@ -357,6 +392,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
           type: "days",
           value: 5,
         },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1
+        },
         type: RECOMMENDED_TREATMENT_TYPE.SYSTEMATIC,
       },
       {
@@ -378,6 +418,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
         code: MilkType.F100,
         duration: {
           type: "while_in_phase",
+        },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1
         },
         type: RECOMMENDED_TREATMENT_TYPE.NUTRITIONAL,
       },
@@ -401,6 +446,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
         duration: {
           type: "while_in_phase",
         },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1
+        },
         type: RECOMMENDED_TREATMENT_TYPE.NUTRITIONAL,
       },
     ],
@@ -413,6 +463,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalValue: 1,
           countInUnit: 1,
         },
+        duration: {
+          type: "while_in_phase"
+        },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
       {
@@ -422,6 +475,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalUnit: "day",
           intervalValue: 1,
           countInUnit: 1,
+        },
+        duration: {
+          type: "while_in_phase"
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
@@ -433,6 +489,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalValue: 1,
           countInUnit: 2,
         },
+        duration: {
+          type: "while_in_phase"
+        },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
       {
@@ -442,6 +501,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalUnit: "day",
           intervalValue: 1,
           countInUnit: 1,
+        },
+        duration: {
+          type: "while_in_phase"
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
@@ -453,6 +515,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalValue: 1,
           countInUnit: 1,
         },
+        duration: {
+          type: "while_in_phase"
+        },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
       {
@@ -462,6 +527,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalUnit: "day",
           intervalValue: 1,
           countInUnit: 1,
+        },
+        duration: {
+          type: "while_in_phase"
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
@@ -473,6 +541,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalValue: 1,
           countInUnit: 1,
         },
+        duration: {
+          type: "while_in_phase"
+        },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
       {
@@ -482,6 +553,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalUnit: "week",
           intervalValue: 1,
           countInUnit: 1,
+        },
+        duration: {
+          type: "while_in_phase"
         },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
@@ -587,23 +661,15 @@ export const CARE_PHASES: CarePhaseReference[] = [
     transitionCriteria: [
       {
         condition: {
-          value: fExp`((((${AnthroSystemCodes.WFLH_UNISEX} >= ${
-            ZScorePossibleValueLimit.negOutTarget
-          }) || (${AnthroSystemCodes.WFLH} >= ${
-            ZScorePossibleValueLimit.negOutTarget
-          }) || (${AnthroSystemCodes.MUAC} > 125)) && ${
-            AnthroSystemCodes.AGE_IN_MONTH
-          } < ${MONTH_IN_YEARS * 8}) || (((${
-            AnthroSystemCodes.WFH_UNISEX_NCHS
-          } >= ${ZScorePossibleValueLimit.negOutTarget}) || (${
-            AnthroSystemCodes.WFLH
-          } >= ${ZScorePossibleValueLimit.negOutTarget})) && (${
-            AnthroSystemCodes.AGE_IN_MONTH
-          } >= ${MONTH_IN_YEARS * 8}))  && ((${CLINICAL_SIGNS.EDEMA} == ${
-            ConditionResult.True
-          }) && ((${clinicalSignChangeDay(CLINICAL_SIGNS.EDEMA)} - ${
-            CARE_SESSION.DAYS_IN_PHASE
-          }) >= 14 )))`,
+          value: fExp`((((${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.negOutTarget
+            }) || (${AnthroSystemCodes.WFLH} >= ${ZScorePossibleValueLimit.negOutTarget
+            }) || (${AnthroSystemCodes.MUAC} > 125)) && ${AnthroSystemCodes.AGE_IN_MONTH
+            } < ${MONTH_IN_YEARS * 8}) || (((${AnthroSystemCodes.WFH_UNISEX_NCHS
+            } >= ${ZScorePossibleValueLimit.negOutTarget}) || (${AnthroSystemCodes.WFLH
+            } >= ${ZScorePossibleValueLimit.negOutTarget})) && (${AnthroSystemCodes.AGE_IN_MONTH
+            } >= ${MONTH_IN_YEARS * 8}))  && ((${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.True
+            }) && ((${clinicalSignChangeDay(CLINICAL_SIGNS.EDEMA)} - ${CARE_SESSION.DAYS_IN_PHASE
+            }) >= 14 )))`,
           variables: [],
         },
         description: "",
@@ -630,6 +696,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
         code: MilkType.F100,
         type: RECOMMENDED_TREATMENT_TYPE.NUTRITIONAL,
         duration: { type: "while_in_phase" },
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1,
+        },
       },
       {
         applicabilityCondition: {
@@ -652,6 +723,11 @@ export const CARE_PHASES: CarePhaseReference[] = [
           type: "while_in_phase",
         },
         type: RECOMMENDED_TREATMENT_TYPE.NUTRITIONAL,
+        frequency: {
+          intervalUnit: "day",
+          intervalValue: 1,
+          countInUnit: 1,
+        },
       },
     ],
     monitoringPlan: [
@@ -660,18 +736,27 @@ export const CARE_PHASES: CarePhaseReference[] = [
         code: AnthroSystemCodes.WEIGHT,
         frequency: { intervalUnit: "week", intervalValue: 1, countInUnit: 3 },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase",
+        },
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.CLINICAL_SIGNS,
         code: CLINICAL_SIGNS.EDEMA,
         frequency: { intervalUnit: "week", intervalValue: 1, countInUnit: 3 },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase",
+        },
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.ANTHROPOMETRIC,
         code: AnthroSystemCodes.MUAC,
         frequency: { intervalUnit: "week", intervalValue: 1, countInUnit: 1 },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase",
+        },
       },
       {
         category: MONITORING_ELEMENT_CATEGORY.DATA_FIELD,
@@ -681,6 +766,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
           intervalValue: 1,
           countInUnit: 1,
         },
+        duration: {
+          type: "while_in_phase",
+        },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
       },
 
@@ -689,6 +777,9 @@ export const CARE_PHASES: CarePhaseReference[] = [
         code: VITAL_SIGNS.TEMPERATURE,
         frequency: { intervalUnit: "day", intervalValue: 1, countInUnit: 1 },
         source: MONITORING_VALUE_SOURCE.NOT_CALCULATED,
+        duration: {
+          type: "while_in_phase",
+        },
       },
       // Ici en vrai on doit faire le monitoring des signes cliniques aussi
     ],

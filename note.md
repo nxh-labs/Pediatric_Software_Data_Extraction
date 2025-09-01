@@ -8,3 +8,4 @@ Dans une orientation, on a des treatment phase.
   ( la sortie est fait partie des critères de guerision . ) 
 
   J'ai déjà un module de calcule de la quantité de lait et peut importe la phase on pourra déterminée 
+
