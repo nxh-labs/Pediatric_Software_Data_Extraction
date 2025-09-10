@@ -30,7 +30,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F75 est administré lorsque le patient est en phase de stabilisation",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase de soin actuelle du patient (doit être CNT_PHASE1).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois pour ce tableau de doses).",
           },
@@ -44,7 +44,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: [admissionVariable(CLINICAL_SIGNS.EDEMA)]
                 },
                 description: "Appliqué lorsque le patient ne présente pas d'œdème bilatéral à l'admission.",
-                variableExplanation: {
+                variablesExplanation: {
                   [admissionVariable(CLINICAL_SIGNS.EDEMA)]: "Indique la présence d'œdème bilatéral (False = pas d'œdème)."
                 },
               }
@@ -57,7 +57,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "Le volume de lait à administrer par jour est calculé en multipliant le poids du patient (en kg) par 130. Cette formule est utilisée pour les patients sans œdème.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -70,7 +70,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: [admissionVariable(CLINICAL_SIGNS.EDEMA)]
                 },
                 description: "Appliqué lorsque le patient présente un œdème bilatéral à l'admission.",
-                variableExplanation: {
+                variablesExplanation: {
                   [admissionVariable(CLINICAL_SIGNS.EDEMA)]: "Indique la présence d'œdème bilatéral (True = œdème présent)."
                 },
               }
@@ -83,7 +83,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "Le volume de lait à administrer par jour est calculé en multipliant le poids du patient (en kg) par 100. Cette formule est utilisée pour les patients avec œdème.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -298,7 +298,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F75 se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui presente d'œdème bilateraux.",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE1 (stabilisation).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
@@ -314,7 +314,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -327,7 +327,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -399,7 +399,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F75 est donnée aux enfants de moins de 3kg ou moins de 6 mois allèté et presentant d'œdème",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_INFANT_LT6m_LT3kg.",
             [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes (True).",
           },
@@ -413,7 +413,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -426,7 +426,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -509,7 +509,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué est donnée aux enfants de moins de 3kg ou moins de 6 mois allèté et ne presentant d'œdème",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_INFANT_LT6m_LT3kg.",
             [CLINICAL_SIGNS.EDEMA]: "Absence d'œdèmes (False).",
           },
@@ -523,7 +523,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -536,7 +536,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -619,7 +619,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui ne presentent pas d'œdème bilateraux.",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE1 (stabilisation).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
@@ -635,7 +635,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -648,7 +648,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 130 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants sans œdème ou dans les cas standards.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -725,7 +725,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui sont en phase de transition",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_TRANS_PHASE (transition).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
@@ -741,7 +741,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -757,7 +757,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               },
               unit: DosageFormulaUnit.ML,
               desciption: "Le volume de lait à administrer par jour est compris entre le poids du patient (en kg) multiplié par 150 et 170. Cette formule est utilisée pour les enfants en phase de transition sans œdème.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -834,7 +834,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100-dilué se donne chez les enfants de moins de 6 mois ou moins de 3kg, non allaités et qui sont en phase de réhabilitation",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE2 (réhabilitation).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (< 6 mois).",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg (< 3 kg).",
@@ -850,7 +850,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -863,7 +863,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 200 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants en phase de réhabilitation sans œdème.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -944,7 +944,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100 est donné en phase de transition aux enfants de plus de 6 mois et plus de 3 kg de poids corporelle",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_TRANS_PHASE (transition).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
@@ -959,7 +959,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -975,7 +975,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               },
               unit: DosageFormulaUnit.ML,
               desciption: "Le volume de lait à administrer par jour est compris entre le poids du patient (en kg) multiplié par 150 et 220. Cette formule est utilisée pour les enfants en phase de transition sans œdème.",
-              variableExplanation: {
+              variablesExplanation: {
                 [admissionVariable(AnthroSystemCodes.WEIGHT)]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }
@@ -1137,7 +1137,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
           },
           descritption:
             "Le F100 est donné en phase de réhabilitation aux enfants de plus de 6 mois et plus de 3 kg de poids corporelle",
-          variableExplanation: {
+          variablesExplanation: {
             [CARE_SESSION.CURRENT_CARE_PHASE]: "Phase CNT_PHASE2 (réhabilitation).",
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
@@ -1152,7 +1152,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
                   variables: []
                 },
                 description: "Cette condition est toujours vraie et permet d'appliquer la formule par défaut pour le dosage, quel que soit le contexte clinique.",
-                variableExplanation: {
+                variablesExplanation: {
                   // Aucune variable nécessaire, la formule s'applique à tous les patients dans ce contexte.
                 },
               }
@@ -1165,7 +1165,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
               max: null,
               unit: DosageFormulaUnit.ML,
               desciption: "La quantité minimale recommandée est calculée en multipliant le poids du patient (en kg) par 220 pour obtenir le volume de lait en ml à administrer par jour. Cette formule est utilisée pour les enfants en phase de réhabilitation.",
-              variableExplanation: {
+              variablesExplanation: {
                 [AnthroSystemCodes.WEIGHT]: "Poids du patient en kilogrammes utilisé pour le calcul du volume de lait."
               }
             }

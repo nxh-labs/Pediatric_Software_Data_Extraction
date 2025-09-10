@@ -40,7 +40,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.WEIGHT],
         },
         description: "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
-        varaibleExplaination: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois (≥ 6 mois).",
           [AnthroSystemCodes.WEIGHT]: "Poids actuel de l'enfant en kilogrammes (≥ 3 kg).",
         },
@@ -121,7 +121,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             variables: [AnthroSystemCodes.AGE_IN_MONTH, CLINICAL_SIGNS.EDEMA],
           },
           descritpion: "F-75 indiqué en phase de stabilisation: ≥6 mois et ≥3 kg, ou <6 mois/<3 kg avec œdèmes.",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois pour distinguer <6m vs ≥6m.",
             [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes (True/False).",
           },
@@ -145,7 +145,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             variables: [AnthroSystemCodes.AGE_IN_MONTH, CLINICAL_SIGNS.EDEMA],
           },
           descritpion: "F-100 dilué en phase 1 pour les <6 mois ou <3 kg sans œdèmes.",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
             [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes (True/False).",
           },
@@ -168,7 +168,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             variables: [],
           },
           descritpion: "Antibiothérapie systématique (Amoxicilline) pendant la phase 1.",
-          variableExplanation: {},
+          variablesExplanation: {},
         },
         identifier: TREATMENT_PLAN_IDS.CNT_PHASE1_AMOXICILLIN,
         code: MEDICINE_CODES.AMOX,
@@ -306,7 +306,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.WEIGHT],
         },
         description: "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
-        varaibleExplaination: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
           [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
         },
@@ -383,7 +383,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             value: fExp`${ALWAYS_TRUE_CONDITION}`,
             variables: [],
           },
-          variableExplanation: {},
+          variablesExplanation: {},
           descritpion: "Amoxicilline pendant 5 jours au début de la phase de transition.",
         },
         identifier: TREATMENT_PLAN_IDS.CNT_TRANS_PHASE_AMOXICILLIN,
@@ -409,7 +409,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             ],
           },
           descritpion: "F-100 pour les enfants ≥ 6 mois et ≥ 3 kg durant la phase de transition.",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
           },
@@ -436,7 +436,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             ],
           },
           descritpion: "F-100 dilué pour les <6 mois ou <3 kg durant la phase de transition.",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
           },
@@ -580,7 +580,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
           variables: [AnthroSystemCodes.AGE_IN_MONTH, AnthroSystemCodes.WEIGHT],
         },
         description: "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
-        varaibleExplaination: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 6 mois).",
           [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
         },
@@ -687,7 +687,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             ],
           },
           descritpion: "F-100 en phase 2 pour les ≥ 6 mois et ≥ 3 kg jusqu'à la fin de la phase.",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
           },
@@ -712,7 +712,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             ],
           },
           descritpion: "F-100 dilué en phase 2 pour les <6 mois ou <3 kg jusqu'à la fin de la phase.",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois.",
             [AnthroSystemCodes.WEIGHT]: "Poids en kg.",
           },

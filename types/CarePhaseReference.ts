@@ -13,7 +13,7 @@ export interface CarePhaseReference {
   applicabilyConditions: {
     condition: ICondition;
     description: string;
-    varaibleExplaination: {};
+    variablesExplanation: {};
   }[];
   code: CARE_PHASE_CODES;
   name: string;
@@ -49,7 +49,7 @@ export interface RecommendedTreatment {
   applicabilityCondition: {
     condition: ICondition;
     descritpion: string;
-    variableExplanation: { [variable: string]: string };
+    variablesExplanation: { [variable: string]: string };
   };
   type: RECOMMENDED_TREATMENT_TYPE;
   code: MilkType | MEDICINE_CODES;
@@ -126,7 +126,7 @@ export interface FollowUpAction {
   applicabilities: {
     description: string;
     condition: ICondition;
-    variableExplanation: {};
+    variablesExplanation: {};
   }[];
   treatmentToApply: RecommendedTreatment[];
 }

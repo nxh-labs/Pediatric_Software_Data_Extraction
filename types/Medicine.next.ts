@@ -71,7 +71,7 @@ export interface DosageCase {
   dosageCondition: {
     condition: ICondition;
     description: string;
-    variableExplanation: Record<string, string>;
+    variablesExplanation: Record<string, string>;
   };
   baseDosage: BaseDosage;
   dosageRanges: DosageRange[];

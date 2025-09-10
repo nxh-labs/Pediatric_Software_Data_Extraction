@@ -13,7 +13,7 @@
           ]
         },
         "description": "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
-        "varaibleExplaination": {
+        "variablesExplanation": {
           "age_in_month": "Âge de l'enfant en mois (≥ 6 mois).",
           "weight": "Poids actuel de l'enfant en kilogrammes (≥ 3 kg)."
         }
@@ -91,7 +91,7 @@
             ]
           },
           "descritpion": "F-75 indiqué en phase de stabilisation: ≥6 mois et ≥3 kg, ou <6 mois/<3 kg avec œdèmes.",
-          "variableExplanation": {
+          "variablesExplanation": {
             "age_in_month": "Âge en mois pour distinguer <6m vs ≥6m.",
             "clinical_edema": "Présence d'œdèmes (True/False)."
           }
@@ -118,7 +118,7 @@
             ]
           },
           "descritpion": "F-100 dilué en phase 1 pour les <6 mois ou <3 kg sans œdèmes.",
-          "variableExplanation": {
+          "variablesExplanation": {
             "age_in_month": "Âge en mois.",
             "clinical_edema": "Présence d'œdèmes (True/False)."
           }
@@ -141,7 +141,7 @@
             "variables": []
           },
           "descritpion": "Antibiothérapie systématique (Amoxicilline) pendant la phase 1.",
-          "variableExplanation": {}
+          "variablesExplanation": {}
         },
         "identifier": "CNT_PHASE1::systematic::AMOXICILLIN",
         "code": "AMOX",
@@ -283,7 +283,7 @@
           ]
         },
         "description": "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
-        "varaibleExplaination": {
+        "variablesExplanation": {
           "age_in_month": "Âge en mois (≥ 6 mois).",
           "weight": "Poids en kg (≥ 3 kg)."
         }
@@ -346,7 +346,7 @@
             "value": "0==0",
             "variables": []
           },
-          "variableExplanation": {},
+          "variablesExplanation": {},
           "descritpion": "Amoxicilline pendant 5 jours au début de la phase de transition."
         },
         "identifier": "CNT_TRANS_PHASE::systematic::AMOXICILLIN",
@@ -372,7 +372,7 @@
             ]
           },
           "descritpion": "F-100 pour les enfants ≥ 6 mois et ≥ 3 kg durant la phase de transition.",
-          "variableExplanation": {
+          "variablesExplanation": {
             "age_in_month": "Âge en mois.",
             "weight": "Poids en kg."
           }
@@ -399,7 +399,7 @@
             ]
           },
           "descritpion": "F-100 dilué pour les <6 mois ou <3 kg durant la phase de transition.",
-          "variableExplanation": {
+          "variablesExplanation": {
             "age_in_month": "Âge en mois.",
             "weight": "Poids en kg."
           }
@@ -545,7 +545,7 @@
           ]
         },
         "description": "Phase applicable aux enfants de 6 mois et plus pesant au moins 3 kg.",
-        "varaibleExplaination": {
+        "variablesExplanation": {
           "age_in_month": "Âge en mois (≥ 6 mois).",
           "weight": "Poids en kg (≥ 3 kg)."
         }
@@ -642,7 +642,7 @@
             ]
           },
           "descritpion": "F-100 en phase 2 pour les ≥ 6 mois et ≥ 3 kg jusqu'à la fin de la phase.",
-          "variableExplanation": {
+          "variablesExplanation": {
             "age_in_month": "Âge en mois.",
             "weight": "Poids en kg."
           }
@@ -669,7 +669,7 @@
             ]
           },
           "descritpion": "F-100 dilué en phase 2 pour les <6 mois ou <3 kg jusqu'à la fin de la phase.",
-          "variableExplanation": {
+          "variablesExplanation": {
             "age_in_month": "Âge en mois.",
             "weight": "Poids en kg."
           }

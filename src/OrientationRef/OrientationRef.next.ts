@@ -39,7 +39,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           ],
         },
         description: "Enfant sans MAM/MAS (6-<96 mois) avec MUAC ≥125 ou WFLH > -2, sans œdème et sans complication: orientation domicile.",
-        variableExplanation: {
+        variablesExplanation: {
           [AnthroSystemCodes.MUAC]: "Périmètre brachial en mm; seuil normal ≥ 125 mm.",
           [AnthroSystemCodes.WFLH_UNISEX]: "Z-score poids-pour-taille OMS; normal si > -2.",
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (entre 6 et <96 mois).",
@@ -65,7 +65,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           ],
         },
         description: "",
-        variableExplanation: {},
+        variablesExplanation: {},
       },
       {
         condition: {
@@ -73,7 +73,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           variables: [TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_TREATMENT],
         },
         description: "Patient précédemment orienté au CNT (historique): maintien/retour vers CRENAM si état actuel compatible.",
-        variableExplanation: {
+        variablesExplanation: {
           [TREATMENT_HISTORY_VARIABLES_CODES.PREVIOUS_TREATMENT]: "Orientation précédente enregistrée dans l'historique (code).",
         },
       },
@@ -106,7 +106,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           ],
         },
         description: "Critères de MAS/complication (6-<96 mois, poids ≥3 kg): WFLH < -3 ou œdèmes, ou MUAC <115, ou complication, ou test d'appétit négatif ⇒ CNT.",
-        variableExplanation: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (6 à <96).",
           [AnthroSystemCodes.WEIGHT]: "Poids en kg (≥ 3 kg).",
           [AnthroSystemCodes.WFLH_UNISEX]: "Z-score OMS poids-pour-taille (< -3 = MAS).",
@@ -138,7 +138,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           ],
         },
         description: "≥8 ans: WFH (NCHS) < -3, ou œdèmes, ou complication, ou test d'appétit négatif ⇒ CNT.",
-        variableExplanation: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (≥ 96 jusqu'à < 228).",
           [AnthroSystemCodes.WFH_UNISEX_NCHS]: "Z-score NCHS poids-pour-taille (< -3 = MAS).",
           [CLINICAL_SIGNS.EDEMA]: "Œdèmes bilatéraux (True).",
@@ -160,7 +160,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           ],
         },
         description: "<6 mois ou <3 kg non allaité avec MAS/œdèmes/complications ⇒ CNT (unité nourrisson non allaité).",
-        variableExplanation: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (<6).",
           [AnthroSystemCodes.WEIGHT]: "Poids en kg (<3).",
           [AnthroSystemCodes.WFA]: "Z-score poids-pour-âge (< -3).",
@@ -190,7 +190,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
           ],
         },
         description: "<6 mois ou <3 kg allaité avec MAS/œdèmes/complications ⇒ CNT (unité nourrisson allaité).",
-        variableExplanation: {
+        variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge en mois (<6).",
           [AnthroSystemCodes.WEIGHT]: "Poids en kg (<3).",
           [AnthroSystemCodes.WFA]: "Z-score poids-pour-âge (< -3).",

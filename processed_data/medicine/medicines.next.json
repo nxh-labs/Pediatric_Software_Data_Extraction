@@ -16,7 +16,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -106,7 +106,7 @@
             ]
           },
           "description": "",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": ""
           }
         },
@@ -157,7 +157,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -264,7 +264,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -379,7 +379,7 @@
             ]
           },
           "description": "",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": ""
           }
         },
@@ -431,7 +431,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -537,7 +537,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -644,7 +644,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -755,7 +755,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -865,7 +865,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -920,7 +920,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -1028,7 +1028,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -1074,7 +1074,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },
@@ -1182,7 +1182,7 @@
             ]
           },
           "description": "Le poids doit être suppérieur à 3 kg ",
-          "variableExplanation": {
+          "variablesExplanation": {
             "weight": "Le poids du patient."
           }
         },

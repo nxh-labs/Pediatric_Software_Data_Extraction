@@ -15,7 +15,7 @@
           ]
         },
         "description": "Enfant sans MAM/MAS (6-<96 mois) avec MUAC ≥125 ou WFLH > -2, sans œdème et sans complication: orientation domicile.",
-        "variableExplanation": {
+        "variablesExplanation": {
           "muac": "Périmètre brachial en mm; seuil normal ≥ 125 mm.",
           "wflh_unisex": "Z-score poids-pour-taille OMS; normal si > -2.",
           "age_in_month": "Âge en mois (entre 6 et <96 mois).",
@@ -40,7 +40,7 @@
           ]
         },
         "description": "",
-        "variableExplanation": {}
+        "variablesExplanation": {}
       },
       {
         "condition": {
@@ -50,7 +50,7 @@
           ]
         },
         "description": "Patient précédemment orienté au CNT (historique): maintien/retour vers CRENAM si état actuel compatible.",
-        "variableExplanation": {
+        "variablesExplanation": {
           "history_previous_treatment": "Orientation précédente enregistrée dans l'historique (code)."
         }
       }
@@ -72,7 +72,7 @@
           ]
         },
         "description": "Critères de MAS/complication (6-<96 mois, poids ≥3 kg): WFLH < -3 ou œdèmes, ou MUAC <115, ou complication, ou test d'appétit négatif ⇒ CNT.",
-        "variableExplanation": {
+        "variablesExplanation": {
           "age_in_month": "Âge en mois (6 à <96).",
           "weight": "Poids en kg (≥ 3 kg).",
           "wflh_unisex": "Z-score OMS poids-pour-taille (< -3 = MAS).",
@@ -92,7 +92,7 @@
           ]
         },
         "description": "≥8 ans: WFH (NCHS) < -3, ou œdèmes, ou complication, ou test d'appétit négatif ⇒ CNT.",
-        "variableExplanation": {
+        "variablesExplanation": {
           "age_in_month": "Âge en mois (≥ 96 jusqu'à < 228).",
           "wfh_unisex_nchs": "Z-score NCHS poids-pour-taille (< -3 = MAS).",
           "clinical_edema": "Œdèmes bilatéraux (True).",
@@ -114,7 +114,7 @@
           ]
         },
         "description": "<6 mois ou <3 kg non allaité avec MAS/œdèmes/complications ⇒ CNT (unité nourrisson non allaité).",
-        "variableExplanation": {
+        "variablesExplanation": {
           "age_in_month": "Âge en mois (<6).",
           "weight": "Poids en kg (<3).",
           "wfa": "Z-score poids-pour-âge (< -3).",
@@ -144,7 +144,7 @@
           ]
         },
         "description": "<6 mois ou <3 kg allaité avec MAS/œdèmes/complications ⇒ CNT (unité nourrisson allaité).",
-        "variableExplanation": {
+        "variablesExplanation": {
           "age_in_month": "Âge en mois (<6).",
           "weight": "Poids en kg (<3).",
           "wfa": "Z-score poids-pour-âge (< -3).",

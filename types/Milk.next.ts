@@ -42,7 +42,7 @@ export interface DosageScenario {
   applicability: {
     condition: ICondition;
     descritption: string;
-    variableExplanation: { [variable: string]: string };
+    variablesExplanation: { [variable: string]: string };
   };
   conditionalDosageFormulas: ConditionalDosageFormula[];
   dosages: DosageByWeight[];
@@ -62,13 +62,13 @@ export interface ConditionalDosageFormula {
   applicabilities: Array<{
     condition: ICondition;
     description: string;
-    variableExplanation: Record<string, string>;
+    variablesExplanation: Record<string, string>;
   }>;
   formula: {
     min: ICondition;
     max: ICondition | null;
     unit: DosageFormulaUnit;
     desciption: string;
-    variableExplanation: Record<string, string>;
+    variablesExplanation: Record<string, string>;
   };
 }

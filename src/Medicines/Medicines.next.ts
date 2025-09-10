@@ -21,7 +21,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -109,7 +109,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: '',
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: ''
           }
         },
@@ -155,7 +155,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -245,7 +245,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -337,7 +337,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT, AnthroSystemCodes.AGE_IN_MONTH]
           },
           description: '',
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: ''
           }
         },
@@ -383,7 +383,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -472,7 +472,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -561,7 +561,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -650,7 +650,7 @@ const antibacterials: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -742,7 +742,7 @@ const antifungals: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -791,7 +791,7 @@ const antifungals: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -885,7 +885,7 @@ const cardiacfailure: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -930,7 +930,7 @@ const alternatives: Next_Medicine[] = [
             variables: [AnthroSystemCodes.WEIGHT]
           },
           description: "Le poids doit être suppérieur à 3 kg ",
-          variableExplanation: {
+          variablesExplanation: {
             [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
@@ -1019,7 +1019,7 @@ const alternatives: Next_Medicine[] = [
           variables: [AnthroSystemCodes.WEIGHT]
         },
         description: "Le poids doit être suppérieur à 3 kg ",
-        variableExplanation: {
+        variablesExplanation: {
           [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
         }
       },

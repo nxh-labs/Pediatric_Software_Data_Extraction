@@ -10,5 +10,5 @@ export interface Next_OrientationRef {
 export interface AdmissionCriteria {
   condition: ICondition;
   description: string;
-  variableExplanation: { [variable: string]: string };
+  variablesExplanation: { [variable: string]: string };
 }
