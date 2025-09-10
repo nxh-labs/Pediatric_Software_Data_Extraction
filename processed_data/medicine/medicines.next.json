@@ -105,9 +105,9 @@
               "weight"
             ]
           },
-          "description": "",
+          "description": "Le poids doit être inférieur à 3 kg",
           "variablesExplanation": {
-            "weight": ""
+            "weight": "Le poids du patient."
           }
         },
         "dosageRanges": [
@@ -378,9 +378,10 @@
               "age_in_month"
             ]
           },
-          "description": "",
+          "description": "Le poids doit être inférieur à 3 kg ou l'âge en mois doit être inférieur à 6 mois",
           "variablesExplanation": {
-            "weight": ""
+            "weight": "Le poids du patient.",
+            "age_in_month": "L'âge du patient en mois."
           }
         },
         "dosageRanges": [

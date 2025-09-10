@@ -108,9 +108,9 @@ const antibacterials: Next_Medicine[] = [
             value: fExp`(${AnthroSystemCodes.WEIGHT} <3)`,
             variables: [AnthroSystemCodes.WEIGHT]
           },
-          description: '',
+          description: 'Le poids doit être inférieur à 3 kg',
           variablesExplanation: {
-            [AnthroSystemCodes.WEIGHT]: ''
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.'
           }
         },
         dosageRanges: [{
@@ -336,9 +336,10 @@ const antibacterials: Next_Medicine[] = [
             value: fExp`(${AnthroSystemCodes.WEIGHT} <3) || (${AnthroSystemCodes.AGE_IN_MONTH} < 6)`,
             variables: [AnthroSystemCodes.WEIGHT, AnthroSystemCodes.AGE_IN_MONTH]
           },
-          description: '',
+          description: 'Le poids doit être inférieur à 3 kg ou l\'âge en mois doit être inférieur à 6 mois',
           variablesExplanation: {
-            [AnthroSystemCodes.WEIGHT]: ''
+            [AnthroSystemCodes.WEIGHT]: 'Le poids du patient.',
+            [AnthroSystemCodes.AGE_IN_MONTH]: 'L\'âge du patient en mois.'
           }
         },
         dosageRanges: [{
