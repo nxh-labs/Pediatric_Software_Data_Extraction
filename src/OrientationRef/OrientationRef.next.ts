@@ -64,7 +64,7 @@ export const next_orientationRefs: Next_OrientationRef[] = [
             CLINICAL_SIGNS.EDEMA,
           ],
         },
-        description: "",
+        description: "Enfant de 6 mois et plus présentant une malnutrition aiguë modérée (Z-score Poids/Taille entre -3 et -2 ou PB entre 115mm et 125mm) sans œdème.",
         variablesExplanation: {},
       },
       {

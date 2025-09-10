@@ -672,7 +672,7 @@ export const CARE_PHASES: CarePhaseReference[] = [
             }) >= 14 )))`,
           variables: [],
         },
-        description: "",
+        description: "Critère de sortie: Z-score P/T ≥ -1.5 ou PB > 125mm pour les enfants de moins de 96 mois.",
         variablesExplanation: {},
       },
     ],
