@@ -935,7 +935,7 @@ export const nutritionalProducts: NutitionalProduct[] = [
       {
         applicability: {
           condition: {
-            value: fExp`(${CARE_SESSION.CURRENT_CARE_PHASE} == ${CARE_PHASE_CODES.CNT_TRANS_PHASE}) && (${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.WEIGHT} >=3)`,
+            value: fExp`(${CARE_SESSION.CURRENT_CARE_PHASE} == "${CARE_PHASE_CODES.CNT_TRANS_PHASE}") && (${AnthroSystemCodes.AGE_IN_MONTH} >= 6) && (${AnthroSystemCodes.WEIGHT} >=3)`,
             variables: [
               CARE_SESSION.CURRENT_CARE_PHASE,
               AnthroSystemCodes.AGE_IN_MONTH,

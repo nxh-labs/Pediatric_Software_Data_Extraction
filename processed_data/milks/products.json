@@ -925,7 +925,7 @@
       {
         "applicability": {
           "condition": {
-            "value": "(current_care_phase == cnt_phase_transition) && (age_in_month >= 6) && (weight >=3)",
+            "value": "(current_care_phase == \"cnt_phase_transition\") && (age_in_month >= 6) && (weight >=3)",
             "variables": [
               "current_care_phase",
               "age_in_month",
