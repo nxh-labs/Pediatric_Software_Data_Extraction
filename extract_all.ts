@@ -9,6 +9,7 @@ import {
   saveOrientationRefs,
   saveMedicines,
   saveDiagnosticRules,
+  saveNextDiagnosticRules,
   saveAppetiteTestRefs,
   saveAnthropometricMeasures,
   saveUnits,
@@ -52,6 +53,7 @@ async function runExtraction(): Promise<void> {
     },
     { name: "Medicines", exec: () => saveMedicines() },
     { name: "DiagnosticRules", exec: () => saveDiagnosticRules() },
+    { name: "DiagnosticRules (Next)", exec: () => saveNextDiagnosticRules() },
     {
       name: "BiochemicalRef (verified & notVerified)",
       exec: () => saveBiochemicalRef(),
