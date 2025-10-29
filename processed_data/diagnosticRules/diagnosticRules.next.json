@@ -1,0 +1,325 @@
+[
+  {
+    "name": "Malnutrition aiguë sévère",
+    "code": "SEVERE_ACUTE_MALNUTRITION",
+    "priority": 1,
+    "criterions": [
+      {
+        "condition": {
+          "value": "(wflh_unisex<(-3)) || (wflh<(-3))",
+          "variables": [
+            "wflh_unisex"
+          ]
+        },
+        "description": "Z-score Poids/Taille (P/T) est inférieur à -3. Ce critère est générique et conservé pour compatibilité.",
+        "variablesExplanation": {
+          "wflh_unisex": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
+          "wflh": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy)."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "((age_in_month >= 6) && (age_in_month< 96)) && ((wflh_unisex<(-3)) || (wflh<(-3)))",
+          "variables": [
+            "age_in_month",
+            "wflh_unisex"
+          ]
+        },
+        "description": "Z-score Poids/Taille (P/T) est inférieur à -3 pour les enfants de 6 à 59 mois.",
+        "variablesExplanation": {
+          "age_in_month": "Âge de l'enfant en mois.",
+          "wflh_unisex": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
+          "wflh": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy)."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "((age_in_month >= 6) && (age_in_month<96)) && (muac<115)",
+          "variables": [
+            "age_in_month",
+            "muac"
+          ]
+        },
+        "description": "Périmètre brachial (MUAC) est inférieur à 115mm pour les enfants de 6 à 59 mois.",
+        "variablesExplanation": {
+          "age_in_month": "Âge de l'enfant en mois.",
+          "muac": "Périmètre brachial (MUAC) en millimètres."
+        },
+        "priority": 2
+      },
+      {
+        "condition": {
+          "value": "clinical_edema == 1",
+          "variables": [
+            "clinical_edema"
+          ]
+        },
+        "description": "Présence d'œdèmes bilatéraux, quel que soit l'âge.",
+        "variablesExplanation": {
+          "clinical_edema": "Présence d'œdèmes bilatéraux."
+        },
+        "priority": 1
+      },
+      {
+        "condition": {
+          "value": "(age_in_month<6) && ((wflh_unisex<(-3)) || (wflh<(-3)))",
+          "variables": [
+            "age_in_month",
+            "wflh_unisex"
+          ]
+        },
+        "description": "Pour les enfants de moins de 6 mois avec un Z-score Poids/Taille (P/T) disponible, celui-ci est inférieur à -3.",
+        "variablesExplanation": {
+          "age_in_month": "Âge de l'enfant en mois.",
+          "wflh_unisex": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
+          "wflh": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy)."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "(age_in_month<6) && (wfa<(-3))",
+          "variables": [
+            "age_in_month",
+            "wfa"
+          ]
+        },
+        "description": "Pour les enfants de moins de 6 mois, en l'absence de Z-score P/T, le Z-score Poids/Âge (P/A) est inférieur à -3.",
+        "variablesExplanation": {
+          "age_in_month": "Âge de l'enfant en mois.",
+          "wfa": "Z-score Poids/Âge (P/A)."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "((age_in_month >= 60) && (age_in_month <= 216)) && (bmi_for_age<(-3))",
+          "variables": [
+            "age_in_month",
+            "bmi_for_age"
+          ]
+        },
+        "description": "Pour les enfants de 60 à 228 mois, le Z-score de l'IMC pour l'âge est inférieur à -3 (selon les normes OMS 2007).",
+        "variablesExplanation": {
+          "age_in_month": "Âge de l'enfant en mois.",
+          "bmi_for_age": "Z-score de l'Indice de Masse Corporelle (IMC) pour l'âge."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "((age_in_month >= 96) && (age_in_month <=  216)) && (wfh_unisex_nchs<(-3))",
+          "variables": [
+            "age_in_month",
+            "wfh_unisex_nchs"
+          ]
+        },
+        "description": "Critère optionnel de transition pour les enfants de 96 à 228 mois : le Z-score Poids/Taille (P/T) est inférieur à -3 (selon les normes NCHS).",
+        "variablesExplanation": {
+          "age_in_month": "Âge de l'enfant en mois.",
+          "wfh_unisex_nchs": "Z-score Poids/Taille (P/T) unisexe selon les normes NCHS."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "observation_muscle_loss == 1",
+          "variables": [
+            "observation_muscle_loss"
+          ]
+        },
+        "description": "Présence de signes cliniques de marasme (si cette donnée est collectée).",
+        "variablesExplanation": {
+          "observation_muscle_loss": "Signe clinique de marasme (perte musculaire visible)."
+        },
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "name": "Malnutrition aiguë modérée",
+    "code": "MODERATE_ACUTE_MALNUTRITION",
+    "priority": 2,
+    "criterions": [
+      {
+        "condition": {
+          "value": "((wflh_unisex >= (-3)) || (wflh >= (-3))) && ((wflh_unisex < (-2)) || (wflh < (-2)))",
+          "variables": [
+            "wflh_unisex"
+          ]
+        },
+        "description": "Z-score Poids/Taille (P/T) est compris entre -3 (inclus) et -2 (exclus).",
+        "variablesExplanation": {
+          "wflh_unisex": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
+          "wflh": "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy)."
+        },
+        "priority": 3
+      },
+      {
+        "condition": {
+          "value": "(muac >= 115) && (muac < 125)",
+          "variables": [
+            "muac"
+          ]
+        },
+        "description": "Périmètre brachial (MUAC) est compris entre 115mm (inclus) et 125mm (exclus).",
+        "variablesExplanation": {
+          "muac": "Périmètre brachial (MUAC) en millimètres."
+        },
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "name": "Malnutrition chronique sévère",
+    "code": "SEVERE_CHRONIC_MALNUTRITION",
+    "priority": 3,
+    "criterions": [
+      {
+        "condition": {
+          "value": "hfa < (-3)",
+          "variables": [
+            "hfa"
+          ]
+        },
+        "description": "Z-score Taille/Âge (T/A) est inférieur à -3.",
+        "variablesExplanation": {
+          "hfa": "Z-score Taille/Âge (T/A)."
+        },
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "name": "Malnutrition chronique modérée",
+    "code": "MODERATE_CHRONIC_MALNUTRITION",
+    "priority": 4,
+    "criterions": [
+      {
+        "condition": {
+          "value": "(hfa >= (-3)) && (hfa < (-2))",
+          "variables": [
+            "hfa"
+          ]
+        },
+        "description": "Z-score Taille/Âge (T/A) est compris entre -3 (inclus) et -2 (exclus).",
+        "variablesExplanation": {
+          "hfa": "Z-score Taille/Âge (T/A)."
+        },
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "name": "Insuffisance pondérale sévère",
+    "code": "SEVERE_UNDERWEIGHT",
+    "priority": 5,
+    "criterions": [
+      {
+        "condition": {
+          "value": "wfa < (-3)",
+          "variables": [
+            "wfa"
+          ]
+        },
+        "description": "Z-score Poids/Âge (P/A) est inférieur à -3.",
+        "variablesExplanation": {
+          "wfa": "Z-score Poids/Âge (P/A)."
+        },
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "name": "Insuffisance pondérale modérée",
+    "code": "MODERATE_UNDERWEIGHT",
+    "priority": 6,
+    "criterions": [
+      {
+        "condition": {
+          "value": "(wfa >= (-3)) && (wfa < (-2))",
+          "variables": [
+            "wfa"
+          ]
+        },
+        "description": "Z-score Poids/Âge (P/A) est compris entre -3 (inclus) et -2 (exclus).",
+        "variablesExplanation": {
+          "wfa": "Z-score Poids/Âge (P/A)."
+        },
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "name": "Obésité",
+    "code": "OBESITY",
+    "priority": 7,
+    "criterions": [
+      {
+        "condition": {
+          "value": "bmi_for_age > 3",
+          "variables": [
+            "bmi_for_age"
+          ]
+        },
+        "description": "Z-score de l'IMC pour l'âge est supérieur à +3.",
+        "variablesExplanation": {
+          "bmi_for_age": "Z-score de l'Indice de Masse Corporelle (IMC) pour l'âge."
+        },
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "name": "Surpoids",
+    "code": "OVERWEIGHT",
+    "priority": 8,
+    "criterions": [
+      {
+        "condition": {
+          "value": "(bmi_for_age > 2) && (bmi_for_age <= 3)",
+          "variables": [
+            "bmi_for_age"
+          ]
+        },
+        "description": "Z-score de l'IMC pour l'âge est compris entre +2 (exclus) et +3 (inclus).",
+        "variablesExplanation": {
+          "bmi_for_age": "Z-score de l'Indice de Masse Corporelle (IMC) pour l'âge."
+        },
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "name": "État nutritionnel normal",
+    "code": "NORMAL_NUTRITIONAL_STATUS",
+    "priority": 9,
+    "criterions": [
+      {
+        "condition": {
+          "value": "\n          (wflh_unisex >= (-2)) &&\n          (wflh_unisex <= 2) &&\n          (muac >= 125) &&\n          (clinical_edema == 0) &&\n          (hfa >= (-2)) &&\n          (hfa <= 2) &&\n          (wfa >= (-2)) &&\n          (wfa <= 2) &&\n          (bmi_for_age >= (-2)) &&\n          (bmi_for_age <= 2)\n        ",
+          "variables": [
+            "wflh_unisex",
+            "muac",
+            "clinical_edema",
+            "hfa",
+            "wfa",
+            "bmi_for_age"
+          ]
+        },
+        "description": "L'état nutritionnel est considéré comme normal lorsque tous les indicateurs anthropométriques et cliniques sont dans les limites de la normale.",
+        "variablesExplanation": {
+          "wflh_unisex": "Z-score Poids/Taille (P/T) est entre -2 et +2.",
+          "muac": "Périmètre brachial (MUAC) est supérieur ou égal à 125mm.",
+          "clinical_edema": "Absence d'œdèmes bilatéraux.",
+          "hfa": "Z-score Taille/Âge (T/A) est entre -2 et +2.",
+          "wfa": "Z-score Poids/Âge (P/A) est entre -2 et +2.",
+          "bmi_for_age": "Z-score de l'IMC pour l'âge est entre -2 et +2."
+        },
+        "priority": 3
+      }
+    ]
+  }
+]

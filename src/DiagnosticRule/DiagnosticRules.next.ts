@@ -15,6 +15,7 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
   {
     name: "Malnutrition aiguë sévère",
     code: DIAGNOSTIC_CODES.SEVERE_ACUTE_MALNUTRITION,
+    priority: 1,
     criterions: [
       {
         condition: {
@@ -25,7 +26,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         variablesExplanation: {
           [AnthroSystemCodes.WFLH_UNISEX]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
           [AnthroSystemCodes.WFLH]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy).",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -37,7 +39,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois.",
           [AnthroSystemCodes.WFLH_UNISEX]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
           [AnthroSystemCodes.WFLH]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy).",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -48,7 +51,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois.",
           [AnthroSystemCodes.MUAC]: "Périmètre brachial (MUAC) en millimètres.",
-        }
+        },
+        priority: 2,
       },
       {
         condition: {
@@ -58,7 +62,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Présence d'œdèmes bilatéraux, quel que soit l'âge.",
         variablesExplanation: {
           [CLINICAL_SIGNS.EDEMA]: "Présence d'œdèmes bilatéraux.",
-        }
+        },
+        priority: 1,
       },
       {
         condition: {
@@ -70,7 +75,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois.",
           [AnthroSystemCodes.WFLH_UNISEX]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
           [AnthroSystemCodes.WFLH]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy).",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -81,7 +87,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois.",
           [AnthroSystemCodes.WFA]: "Z-score Poids/Âge (P/A).",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -92,7 +99,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois.",
           [AnthroSystemCodes.BMI_FOR_AGE]: "Z-score de l'Indice de Masse Corporelle (IMC) pour l'âge.",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -103,7 +111,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         variablesExplanation: {
           [AnthroSystemCodes.AGE_IN_MONTH]: "Âge de l'enfant en mois.",
           [AnthroSystemCodes.WFH_UNISEX_NCHS]: "Z-score Poids/Taille (P/T) unisexe selon les normes NCHS.",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -113,13 +122,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Présence de signes cliniques de marasme (si cette donnée est collectée).",
         variablesExplanation: {
           [OBSERVATIONS.MUSCLE_LOSS]: "Signe clinique de marasme (perte musculaire visible).",
-        }
+        },
+        priority: 1,
       },
     ],
   },
   {
     name: "Malnutrition aiguë modérée",
     code: DIAGNOSTIC_CODES.MODERATE_ACUTE_MALNUTRITION,
+    priority: 2,
     criterions: [
       {
         condition: {
@@ -130,7 +141,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         variablesExplanation: {
           [AnthroSystemCodes.WFLH_UNISEX]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans.",
           [AnthroSystemCodes.WFLH]: "Z-score Poids/Taille (P/T) pour les enfants de 0 à 5 ans (legacy).",
-        }
+        },
+        priority: 3,
       },
       {
         condition: {
@@ -140,13 +152,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Périmètre brachial (MUAC) est compris entre 115mm (inclus) et 125mm (exclus).",
         variablesExplanation: {
           [AnthroSystemCodes.MUAC]: "Périmètre brachial (MUAC) en millimètres.",
-        }
+        },
+        priority: 2,
       },
     ],
   },
   {
     name: "Malnutrition chronique sévère",
     code: DIAGNOSTIC_CODES.SEVERE_CHRONIC_MALNUTRITION,
+    priority: 3,
     criterions: [
       {
         condition: {
@@ -156,13 +170,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Z-score Taille/Âge (T/A) est inférieur à -3.",
         variablesExplanation: {
           [AnthroSystemCodes.HFA]: "Z-score Taille/Âge (T/A).",
-        }
+        },
+        priority: 3,
       },
     ],
   },
   {
     name: "Malnutrition chronique modérée",
     code: DIAGNOSTIC_CODES.MODERATE_CHRONIC_MALNUTRITION,
+    priority: 4,
     criterions: [
       {
         condition: {
@@ -172,13 +188,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Z-score Taille/Âge (T/A) est compris entre -3 (inclus) et -2 (exclus).",
         variablesExplanation: {
           [AnthroSystemCodes.HFA]: "Z-score Taille/Âge (T/A).",
-        }
+        },
+        priority: 3,
       },
     ],
   },
   {
     name: "Insuffisance pondérale sévère",
     code: DIAGNOSTIC_CODES.SEVERE_UNDERWEIGHT,
+    priority: 5,
     criterions: [
       {
         condition: {
@@ -188,13 +206,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Z-score Poids/Âge (P/A) est inférieur à -3.",
         variablesExplanation: {
           [AnthroSystemCodes.WFA]: "Z-score Poids/Âge (P/A).",
-        }
+        },
+        priority: 3,
       },
     ],
   },
   {
     name: "Insuffisance pondérale modérée",
     code: DIAGNOSTIC_CODES.MODERATE_UNDERWEIGHT,
+    priority: 6,
     criterions: [
       {
         condition: {
@@ -204,13 +224,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Z-score Poids/Âge (P/A) est compris entre -3 (inclus) et -2 (exclus).",
         variablesExplanation: {
           [AnthroSystemCodes.WFA]: "Z-score Poids/Âge (P/A).",
-        }
+        },
+        priority: 3,
       },
     ],
   },
   {
     name: "Obésité",
     code: DIAGNOSTIC_CODES.OBESITY,
+    priority: 7,
     criterions: [
       {
         condition: {
@@ -220,13 +242,15 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Z-score de l'IMC pour l'âge est supérieur à +3.",
         variablesExplanation: {
           [AnthroSystemCodes.BMI_FOR_AGE]: "Z-score de l'Indice de Masse Corporelle (IMC) pour l'âge.",
-        }
+        },
+        priority: 3,
       },
     ],
   },
   {
     name: "Surpoids",
     code: DIAGNOSTIC_CODES.OVERWEIGHT,
+    priority: 8,
     criterions: [
       {
         condition: {
@@ -236,18 +260,20 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
         description: "Z-score de l'IMC pour l'âge est compris entre +2 (exclus) et +3 (inclus).",
         variablesExplanation: {
           [AnthroSystemCodes.BMI_FOR_AGE]: "Z-score de l'Indice de Masse Corporelle (IMC) pour l'âge.",
-        }
+        },
+        priority: 3,
       },
     ],
   },
   {
     name: "État nutritionnel normal",
     code: DIAGNOSTIC_CODES.NORMAL_NUTRITIONAL_STATUS,
+    priority: 9,
     criterions: [
       {
         condition: {
           value: fExp`
-          (${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg2}) && 
+          (${AnthroSystemCodes.WFLH_UNISEX} >= ${ZScorePossibleValueLimit.neg2}) &&
           (${AnthroSystemCodes.WFLH_UNISEX} <= ${ZScorePossibleValueLimit.pos2}) &&
           (${AnthroSystemCodes.MUAC} >= 125) &&
           (${CLINICAL_SIGNS.EDEMA} == ${ConditionResult.False}) &&
@@ -275,7 +301,8 @@ export const nextDiagnosticRules: NextDiagnosticRule[] = [
           [AnthroSystemCodes.HFA]: "Z-score Taille/Âge (T/A) est entre -2 et +2.",
           [AnthroSystemCodes.WFA]: "Z-score Poids/Âge (P/A) est entre -2 et +2.",
           [AnthroSystemCodes.BMI_FOR_AGE]: "Z-score de l'IMC pour l'âge est entre -2 et +2.",
-        }
+        },
+        priority: 3,
       },
     ],
   },
