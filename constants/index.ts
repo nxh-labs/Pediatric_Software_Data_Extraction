@@ -353,6 +353,29 @@ export enum UnitType {
   SCORE = "SCORE",
   PERCENTILE = "PERCENTILE",
 }
+export enum UnitCode {
+  CM = "cm",
+  M = "m",
+  MM = "mm",
+  G = "g",
+  KG = "kg",
+  MG = "mg",
+  UG = "µg",
+  MMOL_PER_L = "mmol/l",
+  UMOL_PER_L = "µmol/l",
+  G_PER_L = "g/l",
+  U_PER_L = "U/l",
+  ML = "ml",
+  L = "l",
+  DEGREES_CELSIUS = "°C",
+  BPM = "bpm",
+  PERCENT = "%",
+  MMHG = "mmHg",
+  ML_PER_KG = "ml/kg",
+  ML_PER_H = "ml/h",
+  Z_SCORE = "z-score",
+  P = "p",
+}
 
 export enum WeightRangeLimit {
   MIN = "min_weight",

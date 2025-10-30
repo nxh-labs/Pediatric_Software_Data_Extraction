@@ -1,196 +1,171 @@
 import { UnitProps } from "../../types";
-import { UnitType } from "../../constants";
+import { UnitType, UnitCode } from "../../constants";
 
 export const units: UnitProps[] = [
   // Unités de longueur/taille
   {
     name: "centimètre",
-    code: "cm",
+    code: UnitCode.CM,
     conversionFactor: 1,
-    baseUnitCode: "cm",
+    baseUnitCode: UnitCode.CM,
     type: UnitType.LENGTH,
   },
   {
     name: "mètre",
-    code: "m",
+    code: UnitCode.M,
     conversionFactor: 100,
-    baseUnitCode: "cm",
+    baseUnitCode: UnitCode.CM,
     type: UnitType.LENGTH,
   },
   {
     name: "millimètre",
-    code: "mm",
+    code: UnitCode.MM,
     conversionFactor: 0.1,
-    baseUnitCode: "cm",
+    baseUnitCode: UnitCode.CM,
     type: UnitType.LENGTH,
   },
 
   // Unités de poids/masse
   {
     name: "gramme",
-    code: "g",
+    code: UnitCode.G,
     conversionFactor: 0.001,
-    baseUnitCode: "kg",
+    baseUnitCode: UnitCode.KG,
     type: UnitType.WEIGHT,
   },
   {
     name: "kilogramme",
-    code: "kg",
+    code: UnitCode.KG,
     conversionFactor: 1,
-    baseUnitCode: "kg",
+    baseUnitCode: UnitCode.KG,
     type: UnitType.WEIGHT,
   },
   {
     name: "milligramme",
-    code: "mg",
+    code: UnitCode.MG,
     conversionFactor: 0.001,
-    baseUnitCode: "g",
+    baseUnitCode: UnitCode.G,
     type: UnitType.WEIGHT,
   },
   {
     name: "microgramme",
-    code: "µg",
+    code: UnitCode.UG,
     conversionFactor: 0.000001,
-    baseUnitCode: "g",
+    baseUnitCode: UnitCode.G,
     type: UnitType.WEIGHT,
   },
 
   // Unités biochimiques
   {
     name: "millimole par litre",
-    code: "mmol/l",
+    code: UnitCode.MMOL_PER_L,
     conversionFactor: 1,
-    baseUnitCode: "mmol/l",
+    baseUnitCode: UnitCode.MMOL_PER_L,
     type: UnitType.CONCENTRATION,
   },
   {
     name: "micromole par litre",
-    code: "µmol/l",
+    code: UnitCode.UMOL_PER_L,
     conversionFactor: 0.001,
-    baseUnitCode: "mmol/l",
+    baseUnitCode: UnitCode.MMOL_PER_L,
     type: UnitType.CONCENTRATION,
   },
   {
     name: "gramme par litre",
-    code: "g/l",
+    code: UnitCode.G_PER_L,
     conversionFactor: 1000,
-    baseUnitCode: "mmol/l",
+    baseUnitCode: UnitCode.MMOL_PER_L,
     type: UnitType.CONCENTRATION,
   },
   {
     name: "unité internationale par litre",
-    code: "U/l",
+    code: UnitCode.U_PER_L,
     conversionFactor: 1,
-    baseUnitCode: "U/l",
+    baseUnitCode: UnitCode.U_PER_L,
     type: UnitType.ENZYME,
   },
 
   // Unités de volume
   {
     name: "millilitre",
-    code: "ml",
+    code: UnitCode.ML,
     conversionFactor: 0.001,
-    baseUnitCode: "l",
+    baseUnitCode: UnitCode.L,
     type: UnitType.VOLUME,
   },
   {
     name: "litre",
-    code: "l",
+    code: UnitCode.L,
     conversionFactor: 1,
-    baseUnitCode: "l",
+    baseUnitCode: UnitCode.L,
     type: UnitType.VOLUME,
   },
 
   // Unités de température
   {
     name: "degré Celsius",
-    code: "°C",
+    code: UnitCode.DEGREES_CELSIUS,
     conversionFactor: 1,
-    baseUnitCode: "°C",
+    baseUnitCode: UnitCode.DEGREES_CELSIUS,
     type: UnitType.TEMPERATURE,
   },
 
   // Unités de fréquence (respiratoire, cardiaque)
   {
     name: "par minute",
-    code: "bpm",
+    code: UnitCode.BPM,
     conversionFactor: 1,
-    baseUnitCode: "bpm",
+    baseUnitCode: UnitCode.BPM,
     type: UnitType.FREQUENCY,
   },
 
   // Unités de pourcentage
   {
     name: "pourcentage",
-    code: "%",
+    code: UnitCode.PERCENT,
     conversionFactor: 1,
-    baseUnitCode: "%",
+    baseUnitCode: UnitCode.PERCENT,
     type: UnitType.PERCENTAGE,
   },
 
   // Unités de pression
   {
     name: "millimètre de mercure",
-    code: "mmHg",
+    code: UnitCode.MMHG,
     conversionFactor: 1,
-    baseUnitCode: "mmHg",
+    baseUnitCode: UnitCode.MMHG,
     type: UnitType.PRESSURE,
-  },
-
-  // Unités de surface corporelle
-  {
-    name: "mètre carré",
-    code: "m²",
-    conversionFactor: 1,
-    baseUnitCode: "m²",
-    type: UnitType.SURFACE,
-  },
-
-  // Unités pour médicaments/dosage
-  {
-    name: "milligramme",
-    code: "mg",
-    conversionFactor: 0.001,
-    baseUnitCode: "g",
-    type: UnitType.WEIGHT,
-  },
-  {
-    name: "microgramme",
-    code: "µg",
-    conversionFactor: 0.000001,
-    baseUnitCode: "g",
-    type: UnitType.WEIGHT,
   },
 
   // Unités pour fluides corporels
   {
     name: "millilitre par kilogramme",
-    code: "ml/kg",
+    code: UnitCode.ML_PER_KG,
     conversionFactor: 1,
-    baseUnitCode: "ml/kg",
+    baseUnitCode: UnitCode.ML_PER_KG,
     type: UnitType.FLUID_RATE,
   },
   {
     name: "millilitre par heure",
-    code: "ml/h",
+    code: UnitCode.ML_PER_H,
     conversionFactor: 1,
-    baseUnitCode: "ml/h",
+    baseUnitCode: UnitCode.ML_PER_H,
     type: UnitType.FLOW_RATE,
   },
 
   // Unités pour scores
   {
     name: "score z",
-    code: "z-score",
+    code: UnitCode.Z_SCORE,
     conversionFactor: 1,
-    baseUnitCode: "z-score",
+    baseUnitCode: UnitCode.Z_SCORE,
     type: UnitType.SCORE,
   },
   {
     name: "percentile",
-    code: "p",
+    code: UnitCode.P,
     conversionFactor: 1,
-    baseUnitCode: "p",
+    baseUnitCode: UnitCode.P,
     type: UnitType.PERCENTILE,
   },
 ];

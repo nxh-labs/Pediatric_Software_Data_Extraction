@@ -119,27 +119,6 @@
     "type": "PRESSURE"
   },
   {
-    "name": "mètre carré",
-    "code": "m²",
-    "conversionFactor": 1,
-    "baseUnitCode": "m²",
-    "type": "SURFACE"
-  },
-  {
-    "name": "milligramme",
-    "code": "mg",
-    "conversionFactor": 0.001,
-    "baseUnitCode": "g",
-    "type": "WEIGHT"
-  },
-  {
-    "name": "microgramme",
-    "code": "µg",
-    "conversionFactor": 0.000001,
-    "baseUnitCode": "g",
-    "type": "WEIGHT"
-  },
-  {
     "name": "millilitre par kilogramme",
     "code": "ml/kg",
     "conversionFactor": 1,
